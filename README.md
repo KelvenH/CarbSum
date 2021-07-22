@@ -12,30 +12,30 @@ Screenshot
 ***
 
 ## Contents
-1. [About](#About)
-2. Disclaimer (e.g. not medical advice) (#Disclaimer)
-3. Project Brief (UI / UX) (incl screenshots / wireframes etc);
-    - Purpose
-    - User Stories
-    - Scope
-    - Structure
-    - Skeleton
-    - Surface
-
+- [About](#About)
+- Disclaimer (e.g. not medical advice) (#Disclaimer)
+- Project Brief (UI / UX) (incl screenshots / wireframes etc);
+  * User Stories
+- Scope
+- Structure
+  * Content 
+  * Features
+  * Data
+- Skeleton
+- Surface
+  * Styles (Mood Board images / extracts)
+  * Images / Icons (?)
+- Technologies Used
+- Testing (including against User Stories)
+- Bugs & Defects (link to list plus call out any major o/s)
+- Future Enhancements
+- Deployment
+- Acknowledgements
 
 ```
 example - how to reference specific code sections
 ```
 
-4. Content & Design Features
-5. Styles (Mood Board images / extracts)
-6. Images / Icons (?)
-7. Technologies Used
-8. Testing (including against User Stories)
-9. Bugs & Defects (link to list plus call out any major o/s)
-10. Future Enhancements
-11. Deployment
-12. Acknowledgements
 ------
 
 ## About 
@@ -73,14 +73,51 @@ Thank you for taking the time to read the above........ now onto the fun stuff!
 ------
 ## Disclaimer (e.g. not medical advice)
 
-
+Examples of where this means additional steps are needed to calculate actual carb gramms include;
 ------
 ## Project Brief (UI / UX) (REMEMBER to incl screenshots / wireframes etc)
 
-- User Stories - 
+   ### Problem Statement
+   * Food labelling - can be good, but;
+        - is often printed very small and / or lacks contrast with packaging (hard for grandparents and those with less than 20/20 vision to read!)
+        - often only states the minimum information requirement of carbs per 100g weight, additional calculations are needed to translate that to the actual weight being consumed (e.g. 1 sweet)
+   - does not account for cooked weight (e.g. nutritional ratio of uncooked vs cooked pasta differ)
+   - cooking / preparation style (e.g. deep fried vs oven baked)
+   
+   * Unlabelled - not all food types are labelled (raw ingredients such as fruit and vegetables), or common ingreients like adding milk to a tea! 
+   
+   * Multiple Calculations - meals prepared at home often consist of a mix of labelled and unlabelled and require multiple calculations. For example, a roast dinner consisting of potatoes & vegetables (unlabelled) with gravy (labelled). Throw a home-made yorskhire pudding in and there's a mini-collection for the flour, milk and eggs to consider! The ability to create a menu of meals would make this a lot quicker / easier especially if you could add / swap items and adjust the individual portion sizes.
 
-- Terget (to meet User needs);
+   * Fats Flag! - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps remind users where additional coniderations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
+
+
+   ### User Stories
+   
+   #### New User
+   * access the site without registering to see if this is use to me
+   * be able to register easily 
+    
+   #### All Users (i.e. incl existing users without need to 'sign-in)
+   * easily find items by name and / or appropriate categorisations
+   * adjust parameters (e.g. weight / portion sizes; cooked / uncooked; preperation style e.g. fried / baked)
+   * understand / verify how the carb values have been calculated
+   * create / edit / delete own versions of item card & edit carb values
+   * ability to add notes
+  
+   #### Existing User (Signed in)
+   * sign in / out easily
+   * save 'favourite' items
+   * create 'menu' of a collection of items
+   * submit new card for review / approval by site admin for visibility by all site visitors
+   *  
+
+  ### Design Principles (Supports User Stories & Problem Statement);
   Design a website / app which provides quick and easy calculations of food carbohydrates (used as an input to determine insulin needs).
+  Clear categorisaitions (with sub-categories where needed)
+  Clear identification and ability to select 'size' (e.g. by weight, portion, volume)
+  Distinction of preparation type; for example, roast potato vs. mashed potato
+  
+  
  
 - Scope
 
@@ -107,23 +144,38 @@ Thank you for taking the time to read the above........ now onto the fun stuff!
 
 ------
 ## Languages, Frameworks and Technologies Used
-Development Stage 
+
+### Design & Development; 
 - Adobe XD (UI / UX development stage)
 - Lucidchart (process mapping of functions) 
 
-Build Stage
-- GitHub
-- GitPod / VS Code
-- HTML
-- CSS
-- Materialise (html / css styles framework)
+### Build Stage
+- GitHub (host repo)
+- GitPod / VS Code (building code)
+- HTML5
+- CSS3
+- Materialize (html / css styles framework)
+- FontAwesome
 - Python
 - Flask
-- Jinja
-- MongoDB (database)
+- Jinja (templating HTML)
 
-Deployment
+### Back End
+- MongoDB (hosting database)
+
+### Testing
+- Lighthouse
+- HTML Validator
+- .......css / python / responsiveness / pythontutor
+
+### Deployment
 - Heroku 
+
+### Miscellaneous
+Linters / extensions/ pword generator
+
+
+
 
 ------
 ## Testing (inlduing against User Stories)
@@ -148,5 +200,6 @@ Deployment
 ------
 ## Acknowledgements
 - BringYourOwnLaptop(BYOL) Youtube channel - used for guidance on UI / UX and using Adobe XD
+- Carbsandcals.com
 
 ------
