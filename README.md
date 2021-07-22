@@ -103,6 +103,7 @@ ADD LINK HERE!!!!
    * Fats Flag! - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps  to remind users where additional considerations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
 
 
+---
    ### User Stories
    
    #### New User
