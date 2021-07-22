@@ -41,7 +41,7 @@ example - how to reference specific code sections
 ## About 
 Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended nor should it be inferred that this provides any form of medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin thereapy management and carb counting. 
 
-###What is Diabetes?
+### What is Diabetes?
 In it's most simplest form, Diabetes is a serious condition which affects the body's blood glucose levels. Everybody needs to fuel their body with glucose (sugar) as this provides energy for the body to function (both internally and physically). Glucose is present in many (but not all!) of the foods and drinks we consume. Our digestive system breaks down the nutrients into small molecules for our body to absorb, alongwith the breakdown of other nutrients, minerals and vitamins, carbohydrates are broken down into glucose. 
 
 In a typical healthy person, the pancreas senses when glucose has entered the bloodstream and releases the right amount of a hormone called insulin. This acts as a key which lets cells within muscles and organs absorb the glucose. There's far more to it than that (such as the bodies natural release of insulin at specific times of the day).
@@ -49,12 +49,12 @@ In a typical healthy person, the pancreas senses when glucose has entered the bl
 Type 1 Diabetes (T1) is an auto-immune disease whereby the immune system has attacked and destroyed the insulin producing cells in the pancreas. Without insluin, the glucose cannot enter the cells; blood sugar levels will rise (hyperglycemic). Conversely, too little glucose (hypoglycemic) is equally serious. Someone with either hypo / hyper blood sugar levels may struggle to function properly as they feel severe fatigue, dizzinness, confusion, impaired vision. The way that body attempts to manage excess glucose or seek alternative sources of energy can also lead to long term consequences if not managed appropriately.
 
 
-###How Is Diabetes Treated?
+### How Is Diabetes Treated?
 There is currently no 'cure' for T1 - but medical advancements coupled with good management techinques can significantly reduce the occurrence of hypos / hypers and therefore reduce the likelihood of short term and long term health consquences. Diabetics need to adminster insulin to mimic the natural rise and decrease of insulin - and that's 24hours not just at meal times!
 
 There are a variety of approaches, but typically diabtics will have an approach which manages levels 'round the clock' (basal) and for mealtimes /food in-take (bolus). 
 
-###So How Does CarbSum Come Into This?
+### So How Does CarbSum Come Into This?
 CarbSum is a tool which is specifically intended to support Diabetics using an approach known as 'carb counting'. As mentioned earlier, it's vital to ensure that the body receives the right level of insulin. There are 2 key parts to this calculation;
 
 ```
