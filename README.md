@@ -23,14 +23,14 @@ Screenshot
 
 
 ```
-example - how to referrence specific code sections
+example - how to reference specific code sections
 ```
 
 4. Content & Design Features
 5. Styles (Mood Board images / extracts)
 6. Images / Icons (?)
 7. Technologies Used
-8. Testing (inlduing against User Stories)
+8. Testing (including against User Stories)
 9. Bugs & Defects (link to list plus call out any major o/s)
 10. Future Enhancements
 11. Deployment
@@ -88,7 +88,7 @@ Build Stage
 - Jinja
 - MongoDB (database)
 
-Deploment
+Deployment
 - Heroku 
 
 ------
