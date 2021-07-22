@@ -46,40 +46,55 @@ example - how to referrence specific code sections
 ------
 ## UI / UX (incl screenshots / wireframes etc)
 
--User Stories
+- User Stories
 
--Scope
+- Scope
 
--Structure
+- Structure
 
--Skeleton
+- Skeleton
 
--Surface
+- Surface
 
 ------
 ## Content & Design Features
 
+
+
 ------
 ## Styles (Mood Board images / extracts)
 
+
+
 ------
 ## Images / Icons (?)
+
+
 
 ------
 ## Technologies Used
 
 
+
 ------
 ## Testing (inlduing against User Stories)
+
+
 
 ------
 ## Bugs & Defects (link to list plus call out any major o/s)
 
+
+
 ------
 ## Future Enhancements
 
+
+
 ------
 ## Deployment
+
+
 
 ------
 ## Acknowledgements
