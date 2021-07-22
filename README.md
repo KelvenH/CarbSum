@@ -72,9 +72,24 @@ example - how to referrence specific code sections
 
 
 ------
-## Technologies Used
+## Languages, Frameworks and Technologies Used
+Development Stage 
+- Adobe XD (UI / UX development stage)
+- Lucidchart (process mapping of functions) 
 
+Build Stage
+- GitHub
+- GitPod / VS Code
+- HTML
+- CSS
+- Materialise (html / css styles framework)
+- Python
+- Flask
+- Jinja
+- MongoDB (database)
 
+Deploment
+- Heroku 
 
 ------
 ## Testing (inlduing against User Stories)
