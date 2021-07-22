@@ -12,7 +12,7 @@ Screenshot
 ***
 
 ## Contents
-1. [About] (#About)
+1. [About](#About)
 2. Disclaimer (e.g. not medical advice) (#Disclaimer)
 3. Project Brief (UI / UX) (incl screenshots / wireframes etc);
     - Purpose
