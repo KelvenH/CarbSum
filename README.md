@@ -16,8 +16,9 @@ Screenshot
 - [About](#About)
 -  UI / UX (incl screenshots / wireframes etc);
   * Problem Statement
+  * Intended Users
   * User Stories
- * Project Brief
+  * Project Brief
 - Scope
 - Structure
   * Content 
@@ -104,6 +105,13 @@ ADD LINK HERE!!!!
 
 
 ---
+
+   ### Intended Users
+   `CarbSum` is intended to be used by Type 1 Diabetics and / or parents / guardians who follow the 'carb counting' technique to support their insulin therapy.
+    
+   
+----
+
    ### User Stories
    
    #### New User
