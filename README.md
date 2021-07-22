@@ -11,7 +11,7 @@ TL:DR;
 Screenshot
 ***
 
-##Contents
+## Contents
 1. [Overview] (#Overview)
 2. Disclaimer (e.g. not medical advice) (#Disclaimer)
 3. UI / UX (incl screenshots / wireframes etc);
@@ -22,9 +22,9 @@ Screenshot
     - Surface
 
 
-
+```
 example - how to referrence specific code sections
-
+```
 
 4. Content & Design Features
 5. Styles (Mood Board images / extracts)
