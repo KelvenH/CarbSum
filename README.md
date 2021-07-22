@@ -12,10 +12,12 @@ Screenshot
 ***
 
 ## Contents
-- [About](#About)
 - Disclaimer (e.g. not medical advice) (#Disclaimer)
-- Project Brief (UI / UX) (incl screenshots / wireframes etc);
+- [About](#About)
+-  UI / UX (incl screenshots / wireframes etc);
+  * Problem Statement
   * User Stories
+ * Project Brief
 - Scope
 - Structure
   * Content 
@@ -38,42 +40,52 @@ example - how to reference specific code sections
 
 ------
 
-## About 
-Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended nor should it be inferred that this provides any form of medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin thereapy management and carb counting. 
+## Disclaimer
+Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin therapy management and carb counting. 
+
+
+------
+
+## About
 
 ### What is Diabetes?
-In it's most simplest form, Diabetes is a serious condition which affects the body's blood glucose levels. Everybody needs to fuel their body with glucose (sugar) as this provides energy for the body to function (both internally and physically). Glucose is present in many (but not all!) of the foods and drinks we consume. Our digestive system breaks down the nutrients into small molecules for our body to absorb, alongwith the breakdown of other nutrients, minerals and vitamins, carbohydrates are broken down into glucose. 
+In its simplest form, Diabetes is a serious condition which affects the body's blood glucose levels. Everybody needs to fuel their body with glucose (sugar) as this provides energy for the body to function (both internally and physically). Glucose is present in many (but not all!) of the foods and drinks we consume. Our digestive system breaks down the nutrients into small molecules for our body to absorb, along with the breakdown of other nutrients, minerals and vitamins, carbohydrates are broken down into glucose. 
 
-In a typical healthy person, the pancreas senses when glucose has entered the bloodstream and releases the right amount of a hormone called insulin. This acts as a key which lets cells within muscles and organs absorb the glucose. There's far more to it than that (such as the bodies natural release of insulin at specific times of the day).
+In a typical healthy person, the pancreas senses when glucose has entered the bloodstream and releases the right amount of a hormone called insulin. This acts as a key which lets cells within muscles and organs absorb the glucose. There's far more to it than that (such as the body’s natural release of insulin at specific times of the day).
 
-Type 1 Diabetes (T1) is an auto-immune disease whereby the immune system has attacked and destroyed the insulin producing cells in the pancreas. Without insluin, the glucose cannot enter the cells; blood sugar levels will rise (hyperglycemic). Conversely, too little glucose (hypoglycemic) is equally serious. Someone with either hypo / hyper blood sugar levels may struggle to function properly as they feel severe fatigue, dizzinness, confusion, impaired vision. The way that body attempts to manage excess glucose or seek alternative sources of energy can also lead to long term consequences if not managed appropriately.
+Type 1 Diabetes (T1) is an auto-immune disease whereby the immune system has attacked and destroyed the insulin producing cells in the pancreas. Without insulin, the glucose cannot enter the cells; blood sugar levels will rise (hyperglycaemic). Conversely, too little glucose (hypoglycaemic) is equally serious. Someone with either hypo / hyper blood sugar levels may struggle to function properly as they feel severe fatigue, dizziness, confusion, impaired vision. The way that body attempts to manage excess glucose or seek alternative sources of energy can also lead to long term consequences if not managed appropriately.
 
 
+--
 ### How Is Diabetes Treated?
-There is currently no 'cure' for T1 - but medical advancements coupled with good management techinques can significantly reduce the occurrence of hypos / hypers and therefore reduce the likelihood of short term and long term health consquences. Diabetics need to adminster insulin to mimic the natural rise and decrease of insulin - and that's 24hours not just at meal times!
+There is currently no 'cure' for T1 - but medical advancements coupled with good management techniques can significantly reduce the occurrence of hypos / hypers and therefore reduce the likelihood of short term and long-term health consequences. Diabetics need to administer insulin to mimic the natural rise and decrease of insulin - and that's 24hours not just at mealtimes!
 
-There are a variety of approaches, but typically diabtics will have an approach which manages levels 'round the clock' (basal) and for mealtimes /food in-take (bolus). 
+There are a variety of approaches, but typically diabetics will have an approach which manages levels 'round the clock' (basal) and for mealtimes /food in-take (bolus). 
 
-### So How Does CarbSum Come Into This?
+
+--
+### So How Does CarbSum Come into This?
 CarbSum is a tool which is specifically intended to support Diabetics using an approach known as 'carb counting'. As mentioned earlier, it's vital to ensure that the body receives the right level of insulin. There are 2 key parts to this calculation;
 
 ```
-Amount of carbs   x    insluin (mmols) per carb    =     insulin (mmols) to be adminstered
+Amount of carbs   x    insulin (mmols) per carb    =     insulin (mmols) to be administered
 ```
 
-The second part of the equation (how much insulin should they receive per gram of carbs) is completely unique to each individual and is agreed with the Diabetic's doctor / medical support team and will have a range of factors (age, type of insulin, etc) **this app in no way makes any recommendations to this part of the formula and patients should always follow the advice of their Doctor / medical support team** 
+The second part of the equation (how much insulin should they receive per gram of carbs) is completely unique to each individual and is agreed with the Diabetic's doctor / medical support team and will have a range of factors (age, type of insulin, etc) **this app in no way makes any recommendations to this part of the formula and patients should always follow the advice of their doctor / medical support team** 
 
 But what it does do is help with the initial input - the amount of carbs being consumed.
 
-###Isn't this information already available?
-Often yes, food labelling is generally good, restaurants tend to have better understanding & able to share nutritional infomation, good resources / apps exist. But as a parent of a T1 Diabetic (son was diagnosed at the age of 2!) my wife and I encounter a variety of 'challenges'. Each on their own may not be that significant, but multiply that by the number of times we need to reach for the calculator each day and there's an opportunity to make life that bit easier. Additionally, as our son nears an age of having to take more control, I also want to ensure he has tools to minimise impact upon his life. The UI / UX section below goes into the specific challanges in more detail.
 
-Thank you for taking the time to read the above........ now onto the fun stuff!
+--
+### Isn't this information already available?
+Often yes, food labelling is generally good, restaurants tend to have better understanding & able to share nutritional information, good resources / apps exist. But as a parent of a T1 Diabetic (son was diagnosed at the age of 2!) my wife and I encounter a variety of 'challenges'. Each on their own may not be that significant but multiply that by the number of times we need to reach for the calculator each day and there's an opportunity to make life that bit easier. Additionally, as our son nears an age of having to take more control, I also want to ensure he has tools to minimise impact upon his life. The UI / UX section below goes into the specific challenges in more detail.
 
-------
-## Disclaimer (e.g. not medical advice)
+Thank you for taking the time to read the above, below are some recommended links to external sites for more information and support on Diabetes ........ now onto the fun stuff!
 
-Examples of where this means additional steps are needed to calculate actual carb gramms include;
+Add links here!!!!
+ADD LINK HERE!!!!
+
+
 ------
 ## Project Brief (UI / UX) (REMEMBER to incl screenshots / wireframes etc)
 
@@ -82,13 +94,13 @@ Examples of where this means additional steps are needed to calculate actual car
         - is often printed very small and / or lacks contrast with packaging (hard for grandparents and those with less than 20/20 vision to read!)
         - often only states the minimum information requirement of carbs per 100g weight, additional calculations are needed to translate that to the actual weight being consumed (e.g. 1 sweet)
    - does not account for cooked weight (e.g. nutritional ratio of uncooked vs cooked pasta differ)
-   - cooking / preparation style (e.g. deep fried vs oven baked)
+   - cooking / preparation style (e.g. deep-fried vs oven baked)
    
-   * Unlabelled - not all food types are labelled (raw ingredients such as fruit and vegetables), or common ingreients like adding milk to a tea! 
+   * Unlabelled - not all food types are labelled (raw ingredients such as fruit and vegetables), or common ingredients like adding milk to a tea! 
    
-   * Multiple Calculations - meals prepared at home often consist of a mix of labelled and unlabelled and require multiple calculations. For example, a roast dinner consisting of potatoes & vegetables (unlabelled) with gravy (labelled). Throw a home-made yorskhire pudding in and there's a mini-collection for the flour, milk and eggs to consider! The ability to create a menu of meals would make this a lot quicker / easier especially if you could add / swap items and adjust the individual portion sizes.
+   * Multiple Calculations - meals prepared at home often consist of a mix of labelled and unlabelled and require multiple calculations. For example, a roast dinner consisting of potatoes & vegetables (unlabelled) with gravy (labelled). Throw a home-made Yorkshire pudding in and there's a mini collection for the flour, milk and eggs to consider! The ability to create a menu of meals would make this a lot quicker / easier especially if you could add / swap items and adjust the individual portion sizes.
 
-   * Fats Flag! - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps remind users where additional coniderations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
+   * Fats Flag! - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps  to remind users where additional considerations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
 
 
    ### User Stories
@@ -99,7 +111,7 @@ Examples of where this means additional steps are needed to calculate actual car
     
    #### All Users (i.e. incl existing users without need to 'sign-in)
    * easily find items by name and / or appropriate categorisations
-   * adjust parameters (e.g. weight / portion sizes; cooked / uncooked; preperation style e.g. fried / baked)
+   * adjust parameters (e.g. weight / portion sizes; cooked / uncooked; preparation style e.g. fried / baked)
    * understand / verify how the carb values have been calculated
    * create / edit / delete own versions of item card & edit carb values
    * ability to add notes
@@ -111,38 +123,46 @@ Examples of where this means additional steps are needed to calculate actual car
    * submit new card for review / approval by site admin for visibility by all site visitors
    *  
 
+---
   ### Design Principles (Supports User Stories & Problem Statement);
-  Design a website / app which provides quick and easy calculations of food carbohydrates (used as an input to determine insulin needs).
-  Clear categorisaitions (with sub-categories where needed)
-  Clear identification and ability to select 'size' (e.g. by weight, portion, volume)
-  Distinction of preparation type; for example, roast potato vs. mashed potato
+  * Design a website / app which provides quick and easy calculations of food carbohydrates (used as an input to determine insulin needs).
+  * Clear categorisations (with sub-categories where needed)
+  * Clear identification and ability to select 'size' (e.g. by weight, portion, volume)
+  * Distinction of preparation type; for example, roast potato vs. mashed potato
   
   
- 
-- Scope
+ ------
 
-- Structure
-
-- Skeleton
-
-- Surface
-
-------
-## Content & Design Features
+## Scope
 
 
 
 ------
-## Styles (Mood Board images / extracts)
+
+##  Structure
+  ### Content
+  ### Features
+  ### Data
 
 
 
 ------
-## Images / Icons (?)
+
+##  Skeleton
 
 
 
 ------
+
+##  Surface
+
+### Styles (Mood Board images / extracts)
+
+ ### Images / Icons (?)
+
+
+------
+
 ## Languages, Frameworks and Technologies Used
 
 ### Design & Development; 
@@ -176,28 +196,32 @@ Linters / extensions/ pword generator
 
 
 
+------
+
+## Testing (including against User Stories)
+
+
 
 ------
-## Testing (inlduing against User Stories)
 
-
-
-------
 ## Bugs & Defects (link to list plus call out any major o/s)
 
 
 
 ------
+
 ## Future Enhancements
 
 
 
 ------
+
 ## Deployment
 
 
 
 ------
+
 ## Acknowledgements
 - BringYourOwnLaptop(BYOL) Youtube channel - used for guidance on UI / UX and using Adobe XD
 - Carbsandcals.com
