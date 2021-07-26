@@ -165,7 +165,12 @@ ADD LINK HERE!!!!
 
 ##  Skeleton
 
-Video demo of initial wireframes & screen flows:
+Low Fidelity - wireframe image;
+
+![Low Fidelity Wireframe](https://user-images.githubusercontent.com/73842369/127049903-2efe8cae-9393-4b8e-939f-38102f983b4f.png)
+
+
+Medium Fidelity - video demo of wireframes & screen flow:
 
 https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-a49b-4599be8f1b3b.mp4
 
