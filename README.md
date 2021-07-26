@@ -165,9 +165,11 @@ ADD LINK HERE!!!!
 
 ##  Skeleton
 
-Video (mp4) of initial wireframe & screen flows:
+Video demo of initial wireframes & screen flows:
 
-https://user-images.githubusercontent.com/73842369/127033695-afb4985c-4175-47a5-8bae-9c3d5a31886e.mp4
+https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-a49b-4599be8f1b3b.mp4
+
+
 
 
 ------
