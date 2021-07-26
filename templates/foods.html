@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template!</h2>
-
     {% for food in foods %}
         {{ food.cat_name }}<br>
         {{ food.base_carbs }}<br>
