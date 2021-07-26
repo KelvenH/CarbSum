@@ -101,7 +101,7 @@ ADD LINK HERE!!!!
    
    * Multiple Calculations - meals prepared at home often consist of a mix of labelled and unlabelled and require multiple calculations. For example, a roast dinner consisting of potatoes & vegetables (unlabelled) with gravy (labelled). Throw a home-made Yorkshire pudding in and there's a mini collection for the flour, milk and eggs to consider! The ability to create a menu of meals would make this a lot quicker / easier especially if you could add / swap items and adjust the individual portion sizes.
 
-   * Fats Flag! - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps  to remind users where additional considerations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
+   * Fats Flag! (![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) earmarked for removal or consider as future enhancement) - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps  to remind users where additional considerations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
 
 
 ---
@@ -135,9 +135,15 @@ ADD LINK HERE!!!!
 ---
   ### Design Principles (Supports User Stories & Problem Statement);
   * Design a website / app which provides quick and easy calculations of food carbohydrates (used as an input to determine insulin needs).
-  * Clear categorisations (with sub-categories where needed)
-  * Clear identification and ability to select 'size' (e.g. by weight, portion, volume)
-  * Distinction of preparation type; for example, roast potato vs. mashed potato
+  * Clear categorisations (with additional 'tags' for quick identification)
+  * Ability to adjust 'size' of portion (e.g. weight, portion, volume)
+  * Distinction of preparation type; for example, roast potato vs. mashed potato (to be managed via 'tags')
+  * Enable 'quick' use i.e. access core functions without need to sign-in
+  * Further 'personalised' options available after sign-in
+  * Minimal use of images and animations to enhance screen loading times
+  * Allow user to build a menu of multiple items and save for future use
+  * Allow users to create their own entries and edit existing entries (including previously saved menus)
+  * Add an alarm feature - used to support reminder where later bolus is also required
   
   
  ------
