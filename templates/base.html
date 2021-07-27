@@ -20,7 +20,7 @@
 <body>
     <header>
         <!-- top navbar-->
-        <nav>
+        <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">CarbSum</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
@@ -38,16 +38,23 @@
                     <li><a href="#">Set Reminder</a></li>
                     <li><a href="#">How to Use</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Manage New Entries</a></li>
-                    <li><a href="#">Manage Tags</a></li>
-                    <li><a href="#">Manage Categories</a></li>
-                    
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown">Admin<i
+                                class="fas fa-arrow-down"></i></a></li>
+                    <!-- Dropdown Structure -->
+                    <ul id="admin_dropdown" class="dropdown-content">
+                        <li><a href="#!">Manage New Entries</a></li>
+                        <li><a href="#!">Manage Tags</a></li>
+                        <li><a href="#!">Manage Categories</a></li>
+                    </ul>                 
                 </ul>
             </div>
         </nav>
         <!-- mobile side nav-->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align">CarbSum</h4></li>
+            <li>
+                <h4 class="center-align">CarbSum</h4>
+            </li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Quick Calc</a></li>
