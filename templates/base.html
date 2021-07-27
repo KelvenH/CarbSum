@@ -28,10 +28,10 @@
         </ul>  
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">CarbSum</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <a href="{{ url_for('get_foods') }}" class="brand-logo">CarbSum</a> <!--temp href - re-map to new index.html-->
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('get_foods') }}">Home</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="#">Quick Calc</a></li>
                     <li><a href="#">Profile</a></li>
@@ -55,7 +55,7 @@
             <li>
                 <h4 class="center-align">CarbSum</h4>
             </li>
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('get_foods') }}">Home</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Quick Calc</a></li>
             <li><a href="#">Profile</a></li>

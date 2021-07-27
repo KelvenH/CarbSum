@@ -18,11 +18,12 @@ body {
     background-color: var(--champagne);
 }
 
-nav {
-    text-shadow: 2px 2px 2px rgba (0,0,0,0.5); /*--change these from lesson settings */
+nav {  
     background-color: var(--green_celadon);
 }
 
-nav ul a {
+nav ul a,
+.brand-logo {
     color: var(--salmon);
+    text-shadow: 2px 2px 2px rgba (0,0,0,0.5); /*--change these from lesson settings */
 }
