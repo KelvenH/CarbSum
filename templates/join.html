@@ -2,25 +2,25 @@
 {% block content %}
 
 
-<h3 class="center-align">Join CabSum</h3>
+<h3 class="center-align">Join CarbSum</h3>
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('join') }}">
         <div class="card-panel">
             <div class="row">
                 <!--username-->
-                <div class="input-field col s6">
+                <div class="input-field col s9">
                     <i class="material-icons prefix">person_add</i>
                     <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                     <label for="username">Username</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Usernames must be between 5 - 15 characters in length</span>
+                    <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">Usernames must be between 5 - 15 characters in length</span>
                 </div>
                 <!--email-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">email</i>
                     <input id="email" type="email" class="validate" required>
                     <label for="email">Email</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">joebloggs@mail.com</span>
+                    <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">joebloggs@mail.com</span>
                 </div>
 
             </div>
@@ -32,7 +32,7 @@
                     <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
                     <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="password">Password</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Passwords must be between 5 - 15 characters in length</span>
+                    <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">Passwords must be between 5 - 15 characters in length</span>
                 </div>
             </div>
             <!--submit-->

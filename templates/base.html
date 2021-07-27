@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+    <!--link to Adbode Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/utd8vjq.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,10 +30,10 @@
             <li><a href="#!">Manage Categories</a></li>
         </ul>
         <nav class="nav-extended">
+            <div class="nav-outer">
+                <a href="{{ url_for('home') }}" class="brand-logo center">CarbSum</a>
+            </div>
             <div class="nav-wrapper">
-                <i id="logo-icon" class="material-icons">insert_photo</i>
-                <a href="{{ url_for('home') }}" class="brand-logo">CarbSum</a>
-                               
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -40,28 +42,28 @@
                     <li><a href="#">Search</a></li>
                     <li><a href="#">Quick Calc</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
-                        <li><a href="#">Favourites</a></li>
-                        <li><a href="#">Meals</a></li>
-                        <li><a href="#">Create New Item</a></li>
-                        <li><a href="#">Set Reminder</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
+                    <li><a href="#">Favourites</a></li>
+                    <li><a href="#">Meals</a></li>
+                    <li><a href="#">Create New Item</a></li>
+                    <li><a href="#">Set Reminder</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('join') }}">Join</a></li>
-                        <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
+                    <li><a href="{{ url_for('join') }}">Join</a></li>
+                    <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
                     {% endif %}
                     <!--investigate way of making dropdown Admin only-->
                     <li><a href="{{ url_for('get_foods') }}">Foods</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown">Admin<i
                                 class="fas fa-arrow-down" style="margin-left:1vw"></i></a></li>
-                    
+
                 </ul>
             </div>
         </nav>
         <!-- mobile side nav-->
-         <!-- Dropdown Structure (Side Nav)-->
-         <ul id="admin_dropdown_side" class="dropdown-content">
+        <!-- Dropdown Structure (Side Nav)-->
+        <ul id="admin_dropdown_side" class="dropdown-content">
             <li><a href="#!">Manage New Entries</a></li>
             <li><a href="#!">Manage Tags</a></li>
             <li><a href="#!">Manage Categories</a></li>
@@ -72,25 +74,25 @@
             </li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="#">How to Use</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Quick Calc</a></li>
-                    {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
-                        <li><a href="#">Favourites</a></li>
-                        <li><a href="#">Meals</a></li>
-                        <li><a href="#">Create New Item</a></li>
-                        <li><a href="#">Set Reminder</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('join') }}">Join</a></li>
-                        <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
-                    {% endif %}
-                    <!--investigate way of making dropdown Admin only-->
-                    <li><a href="{{ url_for('get_foods') }}">Foods</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown_side">Admin<i
-                                class="fas fa-arrow-down"></i></a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Quick Calc</a></li>
+            {% if session.user %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
+            <li><a href="#">Favourites</a></li>
+            <li><a href="#">Meals</a></li>
+            <li><a href="#">Create New Item</a></li>
+            <li><a href="#">Set Reminder</a></li>
+            {% else %}
+            <li><a href="{{ url_for('join') }}">Join</a></li>
+            <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
+            {% endif %}
+            <!--investigate way of making dropdown Admin only-->
+            <li><a href="{{ url_for('get_foods') }}">Foods</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown_side">Admin<i
+                        class="fas fa-arrow-down"></i></a></li>
         </ul>
 
     </header>
@@ -99,13 +101,13 @@
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 

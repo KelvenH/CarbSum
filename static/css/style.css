@@ -1,7 +1,7 @@
 /*----------------------------Global Root Variables---------------------------------------*/
 
 :root {
-    /*---Font Variables---*/
+/*---Color Variables---*/
     --green_celadon: #A1E0AD;
     --green_emerald: #79C384;
     --salmon: #ED806C;
@@ -10,22 +10,59 @@
     --silver: #6C7479;
     --purpblue: #44578F;
     
+/*---Font Variables---*/
+
+--standardfont: bilo, Arial, sans-serif;
+--specialfont: filson-soft, Arial, sans-serif;
+
 }
+/*---------------------Responsive Font Groups -----------------------------------------*/
+html {
+    font-size:16px;
+}
+
+.title-txt {font-family: var(--specialfont);font-weight: 700;color: var(--champagne);}
+
+body, div, p {font-family: var(--standardfont);font-weight: 400;color: var(--green_emerald);}
+
+.focus-txt {font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
+
+.large-label {font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+
+.med-label {font-size:0.75rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+
+.small-label {font-size:0.75rem;font-family: var(--standardfont);font-weight: 400;font-style:italic;color: var(--purpblue);}
+
+
 /*---------------------------------------------------------------------------------------*/
+
+
+
 
 /*--base.html ----*/
 
 body {
     background-color: var(--champagne);
+    font-family:filson-soft;
 }
 
 nav {  
-    background-color: var(--green_celadon);
+    background-color: var(--green_emerald);
 }
+
+/*--created seperate nav-outer div to create seperation between logo and menu items--*/
+
+.nav-outer {
+    padding-bottom:3vh;
+    
+}
+
 
 .nav-wrapper {
     padding:1vh 3vw;
 }
+
+
 
 nav ul a,
 .brand-logo {
@@ -33,14 +70,86 @@ nav ul a,
     text-shadow: 2px 2px 2px rgba (0,0,0,0.5); /*--change these from lesson settings */
 }
 
-#logo-icon {
-    display:inline-block;
-    height:100%;
-}
+
 
 .flashes h4 {
     line-height:2;
 }
+
+
+/*--index.html / Home ---*/
+
+#home-user-pane {
+    margin-top:2vh;
+}
+
+
+#home-user-pane {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--green_celadon);
+    border-radius: 20px;
+    padding-top: 2vh;
+}
+
+#home-user-pane .btn-large,
+#home-low-pane .btn,
+#footer .btn-large {
+    width:100%;
+    border-radius: 20px;
+    padding-left:-20px;
+    text-align:center;
+}
+
+#home-mid-pane {
+    border:solid 2px var(--green_emerald);
+    border-radius: 20px;
+    padding-top:2vh;
+}
+
+#home-low-pane {
+    border:solid 2px var(--green_emerald);
+    border-radius: 20px;
+    padding-top:2vh;
+    margin-top:2vh;
+}
+
+#home-mid-pane .btn-large {
+    width:100%;
+    border-radius: 20px;
+}
+
+#alarm {
+    padding:0;
+}
+
+.btn-neutral {
+    background-color:var(--champagne);
+    border: 1px solid var(--salmon);
+}
+
+.btn-green {
+    background-color:var(--green_emerald);
+}
+
+
+.btn-icon {
+    padding-left:5px;
+}
+
+#footer {
+position:absolute;
+bottom:0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 /*-- registration form --*/
 
@@ -59,3 +168,4 @@ nav ul a,
 #join-btn-img {
     padding-right: 2vw;
 }
+
