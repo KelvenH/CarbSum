@@ -13,6 +13,7 @@
 }
 /*---------------------------------------------------------------------------------------*/
 
+/*--base.html ----*/
 
 body {
     background-color: var(--champagne);
@@ -22,10 +23,19 @@ nav {
     background-color: var(--green_celadon);
 }
 
+.nav-wrapper {
+    padding:1vh 3vw;
+}
+
 nav ul a,
 .brand-logo {
     color: var(--salmon);
     text-shadow: 2px 2px 2px rgba (0,0,0,0.5); /*--change these from lesson settings */
+}
+
+#logo-icon {
+    display:inline-block;
+    height:100%;
 }
 
 .flashes h4 {

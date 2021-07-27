@@ -21,7 +21,7 @@
 <body>
     <header>
         <!-- top navbar-->
-        <!-- Dropdown Structure -->
+        <!-- Dropdown Structure (Main nav)-->
         <ul id="admin_dropdown" class="dropdown-content">
             <li><a href="#!">Manage New Entries</a></li>
             <li><a href="#!">Manage Tags</a></li>
@@ -29,11 +29,12 @@
         </ul>
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_foods') }}" class="brand-logo">CarbSum</a>
-                <!--temp href - re-map to new index.html-->
+                <i id="logo-icon" class="material-icons">insert_photo</i>
+                <a href="{{ url_for('home') }}" class="brand-logo">CarbSum</a>
+                               
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_foods') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="#">How to Use</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Search</a></li>
@@ -50,19 +51,26 @@
                         <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
                     {% endif %}
                     <!--investigate way of making dropdown Admin only-->
+                    <li><a href="{{ url_for('get_foods') }}">Foods</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown">Admin<i
-                                class="fas fa-arrow-down"></i></a></li>
+                                class="fas fa-arrow-down" style="margin-left:1vw"></i></a></li>
                     
                 </ul>
             </div>
         </nav>
         <!-- mobile side nav-->
+         <!-- Dropdown Structure (Side Nav)-->
+         <ul id="admin_dropdown_side" class="dropdown-content">
+            <li><a href="#!">Manage New Entries</a></li>
+            <li><a href="#!">Manage Tags</a></li>
+            <li><a href="#!">Manage Categories</a></li>
+        </ul>
         <ul class="sidenav" id="mobile-demo">
             <li>
                 <h4 class="center-align">CarbSum</h4>
             </li>
-            <li><a href="{{ url_for('get_foods') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="#">How to Use</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Search</a></li>
@@ -79,8 +87,9 @@
                         <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
                     {% endif %}
                     <!--investigate way of making dropdown Admin only-->
+                    <li><a href="{{ url_for('get_foods') }}">Foods</a></li>
                     <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown">Admin<i
+                    <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown_side">Admin<i
                                 class="fas fa-arrow-down"></i></a></li>
         </ul>
 
