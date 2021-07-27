@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
@@ -35,7 +36,7 @@
                     <li><a href="#">Search</a></li>
                     <li><a href="#">Quick Calc</a></li>
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="#">Sign In</a></li>
                     <li><a href="#">Sign Out</a></li>
                     <li><a href="#">Favourites</a></li>
@@ -59,7 +60,7 @@
             <li><a href="#">Search</a></li>
             <li><a href="#">Quick Calc</a></li>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="#">Sign In</a></li>
             <li><a href="#">Sign Out</a></li>
             <li><a href="#">Favourites</a></li>
