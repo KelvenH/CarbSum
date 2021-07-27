@@ -48,8 +48,34 @@ def join():
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Success! Welcome to CarbSum")
+        flash("Sign-up was successful. Welcome to CarbSum! We hope you find this a helpful aid to support your carb counting")
     return render_template("join.html")
+
+
+@app.route("/signIn", methods=["GET", "POST"])
+def signIn():
+    if request.method == "POST":
+        # check if username exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+        # check hashed password in db matches user input
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome back {}".format(request.form.get("username")))
+            else:
+                #invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("signIn"))
+
+        else:
+            #username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("signIn"))
+
+    return render_template("sign-in.html")
 
 
 if __name__ == "__main__":
