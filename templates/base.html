@@ -36,7 +36,7 @@
                     <li><a href="{{ url_for('get_foods') }}">Home</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="#">Quick Calc</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('join') }}">Join</a></li>
                     <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
                     <li><a href="#">Sign Out</a></li>
@@ -60,7 +60,7 @@
             <li><a href="{{ url_for('get_foods') }}">Home</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Quick Calc</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('join') }}">Join</a></li>
             <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
             <li><a href="#">Sign Out</a></li>
