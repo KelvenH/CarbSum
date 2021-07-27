@@ -1,3 +1,25 @@
+/*----------------------------Global Root Variables---------------------------------------*/
+
+:root {
+    /*---Font Variables---*/
+    --green_celadon: #A1E0AD;
+    --green_emerald: #79C384;
+    --salmon: #ED806C;
+    --champagne: #F9E3D6;
+    --pink: #E7BEBF;
+    --silver: #6C7479;
+    --purpblue: #44578F;
+    
+}
+
+
+
 body {
-    background-color: red;
+    background-color: #F9E3D6;
+}
+
+nav {
+    text-shadow: 2px 2px 2px rgba (0,0,0,0.5); /*--change these from lesson settings */
+    background-color: var(--green_celadon);
+    color: var(--salmon);
 }

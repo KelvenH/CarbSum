@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    
+
     <title>CarbSum</title>
 </head>
-<body>
 
+<body>
+    <header>
+        <!-- top navbar-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">CarbSum</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Quick Calc</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                    <li><a href="#">Favourites</a></li>
+                    <li><a href="#">Meals</a></li>
+                    <li><a href="#">Create New Item</a></li>
+                    <li><a href="#">Set Reminder</a></li>
+                    <li><a href="#">How to Use</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Manage New Entries</a></li>
+                    <li><a href="#">Manage Tags</a></li>
+                    <li><a href="#">Manage Categories</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <!-- mobile side nav-->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align">CarbSum</h4></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Quick Calc</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Out</a></li>
+            <li><a href="#">Favourites</a></li>
+            <li><a href="#">Meals</a></li>
+            <li><a href="#">Create New Item</a></li>
+            <li><a href="#">Set Reminder</a></li>
+            <li><a href="#">How to Use</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Manage New Entries</a></li>
+            <li><a href="#">Manage Tags</a></li>
+            <li><a href="#">Manage Categories</a></li>
+        </ul>
+
+    </header>
     {% block content %}
     {% endblock %}
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 </body>
+
 </html>
