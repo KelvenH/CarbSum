@@ -75,7 +75,7 @@ def signIn():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("signIn"))
 
-    return render_template("sign-in.html")
+    return render_template("signin.html")
 
 
 if __name__ == "__main__":

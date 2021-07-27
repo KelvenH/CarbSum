@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h3 class="center-align">Sign-In</h3>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signIn') }}">
+        <div class="card-panel">
+            <div class="row">
+                <!--username-->
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                    <label for="username">Username</label>
+                   
+                </div>
+                
+            </div>
+            <!--password-->
+            <div class="row">
+                <div id="password-wrapper" class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <!--added show / hide password toggle icon-->
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                    
+                </div>
+            </div>
+            <!--Sign In-->
+            <div class="row">
+                <button id="submit-join" type="submit" class="col s12 btn-large"><i
+                        id="join-btn-img" class="material-icons prefix">border_color</i>Sign In!
+                </button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+<div class="row">
+    <div class="col s12">
+        <p class="center-align">
+            Haven't signed-up to CarbSum yet? 
+            <a href="{{ url_for('join') }}" class="light-blue-text text-darken-4">Join CarbSum!</a>
+        </p>
+    </div>
+</div>
+
+
+
+{% endblock %}
