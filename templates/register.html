@@ -8,13 +8,13 @@
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel">
             <div class="row">
-
+                <!--username-->
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="username" name="username" type="text" class="validate">
                     <label for="username">Username</label>
                 </div>
-
+                <!--email-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">email</i>
                     <input id="email" type="email" class="validate">
@@ -23,19 +23,22 @@
                 </div>
 
             </div>
-
+            <!--password-->
             <div class="row">
-                <div class="input-field col s12">
+                <div id="password-wrapper" class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
+                    <!--added show / hide password toggle icon-->
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
                     <input id="password" name="password" type="password" class="validate">
                     <label for="password">Password</label>
                 </div>
             </div>
-
+            <!--submit-->
             <div class="row">
-                <button type="submit" class="col s12 btn-large">Register<i class="material-icons prefix">border_color</i></button> 
+                <button type="submit" class="col s12 btn-large"><i
+                        class="material-icons prefix">border_color</i>Register</button>
             </div>
-            
+
         </div>
     </form>
 </div>

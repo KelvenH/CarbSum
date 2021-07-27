@@ -9,6 +9,7 @@ if os.path.exists("env.py"):
     import env
 
 
+# Create Flask instance
 app = Flask(__name__)
 
 
@@ -19,7 +20,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# Route decorators
 @app.route("/")
 @app.route("/get_foods")
 def get_foods():
@@ -29,6 +30,26 @@ def get_foods():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username '{}' taken, please try another".format(
+                request.form.get("username")))  #Acknowledgement codemy.com https://www.youtube.com/watch?v=4yaG-jFfePc
+
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"]= request.form.get("username").lower()
+        flash("Registration Successful")
     return render_template("register.html")
 
 
