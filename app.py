@@ -28,8 +28,8 @@ def get_foods():
     return render_template("foods.html", foods=foods)
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
+@app.route("/join", methods=["GET", "POST"])
+def join():
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -37,20 +37,19 @@ def register():
 
         if existing_user:
             flash("Username '{}' taken, please try another".format(
-                request.form.get("username")))  #Acknowledgement codemy.com https://www.youtube.com/watch?v=4yaG-jFfePc
+                request.form.get("username"))) #Added display of the attempted username within Flash message, Acknowledgement codemy.com https://www.youtube.com/watch?v=4yaG-jFfePc
+            return redirect(url_for("join"))
 
-            return redirect(url_for("register"))
-
-        register = {
+        join = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(register)
+        mongo.db.users.insert_one(join)
 
         # put the new user into 'session' cookie
-        session["user"]= request.form.get("username").lower()
-        flash("Registration Successful")
-    return render_template("register.html")
+        session["user"] = request.form.get("username").lower()
+        flash("Success! Welcome to CarbSum")
+    return render_template("join.html")
 
 
 if __name__ == "__main__":

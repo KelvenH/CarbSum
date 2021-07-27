@@ -2,10 +2,10 @@
 {% block content %}
 
 
-<h3 class="center-align">Register</h3>
+<h3 class="center-align">Join CabSum</h3>
 
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('join') }}">
         <div class="card-panel">
             <div class="row">
                 <!--username-->
@@ -36,7 +36,7 @@
             <!--submit-->
             <div class="row">
                 <button type="submit" class="col s12 btn-large"><i
-                        class="material-icons prefix">border_color</i>Register</button>
+                        class="material-icons prefix">border_color</i>Click to Join!</button>
             </div>
 
         </div>
@@ -44,8 +44,3 @@
 </div>
 
 {% endblock %}
-
-
-
-
-<i class="material-icons">add</i>
