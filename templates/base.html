@@ -26,10 +26,11 @@
             <li><a href="#!">Manage New Entries</a></li>
             <li><a href="#!">Manage Tags</a></li>
             <li><a href="#!">Manage Categories</a></li>
-        </ul>  
+        </ul>
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_foods') }}" class="brand-logo">CarbSum</a> <!--temp href - re-map to new index.html-->
+                <a href="{{ url_for('get_foods') }}" class="brand-logo">CarbSum</a>
+                <!--temp href - re-map to new index.html-->
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_foods') }}">Home</a></li>
@@ -47,7 +48,7 @@
                     <li><a href="#">About</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown">Admin<i
-                                class="fas fa-arrow-down"></i></a></li>         
+                                class="fas fa-arrow-down"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -75,8 +76,27 @@
         </ul>
 
     </header>
-    {% block content %}
-    {% endblock %}
+
+
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

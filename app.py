@@ -36,7 +36,7 @@ def join():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username '{}' taken, please try another".format(
+            flash("Username {} taken, please try another".format(
                 request.form.get("username"))) #Added display of the attempted username within Flash message, Acknowledgement codemy.com https://www.youtube.com/watch?v=4yaG-jFfePc
             return redirect(url_for("join"))
 

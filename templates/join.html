@@ -11,13 +11,14 @@
                 <!--username-->
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="username" name="username" type="text" class="validate">
+                    <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                     <label for="username">Username</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Usernames must be between 5 - 15 characters in length</span>
                 </div>
                 <!--email-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" class="validate" required>
                     <label for="email">Email</label>
                     <span class="helper-text" data-error="wrong" data-success="right">joebloggs@mail.com</span>
                 </div>
@@ -29,14 +30,15 @@
                     <i class="material-icons prefix">lock</i>
                     <!--added show / hide password toggle icon-->
                     <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
-                    <input id="password" name="password" type="password" class="validate">
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="password">Password</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Passwords must be between 5 - 15 characters in length</span>
                 </div>
             </div>
             <!--submit-->
             <div class="row">
-                <button type="submit" class="col s12 btn-large"><i
-                        class="material-icons prefix">border_color</i>Click to Join!</button>
+                <button id="submit-join" type="submit" class="col s12 btn-large"><i
+                        id="join-btn-img" class="material-icons prefix">border_color</i>Click to Join!</button>
             </div>
 
         </div>
