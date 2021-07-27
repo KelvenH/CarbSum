@@ -11,7 +11,7 @@
     --purpblue: #44578F;
     
 }
-
+/*---------------------------------------------------------------------------------------*/
 
 
 body {
@@ -21,5 +21,8 @@ body {
 nav {
     text-shadow: 2px 2px 2px rgba (0,0,0,0.5); /*--change these from lesson settings */
     background-color: var(--green_celadon);
+}
+
+nav ul a {
     color: var(--salmon);
 }
