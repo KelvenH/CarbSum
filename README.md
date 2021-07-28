@@ -53,15 +53,11 @@ Screenshot
     * [Mood Board Images](#mood-board-images)
     * [Typography and Colors](#typography-and-colors)
 - [Technologies, Languages and Frameworks Used](#technologies-languages-and-frameworks-used)
-- Testing (including against User Stories)
-- Bugs & Defects (link to list plus call out any major o/s)
-- Future Enhancements
-- Deployment
-- Acknowledgements
-
-```
-example - how to reference specific code sections
-```
+- [Testing](#testing)
+- [Bugs and Defects](#bugs-and-defects)
+- [Future Enhancements](#future-enhancements)
+- [Deployment](#deployment)
+- [Acknowledgements](#acknowledgements)
 
 ------
 
@@ -261,13 +257,14 @@ Linters / extensions/ pword generator
 
 ------
 
-## Testing (including against User Stories)
-
+## Testing
+- to cover user stories
 
 
 ------
 
-## Bugs & Defects (link to list plus call out any major o/s)
+## Bugs & Defects 
+- link to list plus call out any major o/s
 
 
 
@@ -290,3 +287,7 @@ Linters / extensions/ pword generator
 - Carbsandcals.com
 
 ------
+
+```
+example - how to reference specific code sections
+```
