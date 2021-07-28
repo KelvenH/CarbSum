@@ -35,11 +35,11 @@ Screenshot
     * [How Is Diabetes Treated?](#how-is-diabetes-treated)
     * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this)
     * [Links to external references](#links-to-external-references)
--  [UI / UX](#uiux)
+-  [UI / UX](#ui ux)
     * [Problem Statement](#problem-statement)
     * [Intended Users](#intended-users)
     * [User Stories](#user-stories)
-    * [Project Brief](#project-brief)
+    * [Design Principles](#design-principles)
 - Scope
 - Structure
     * Content 
@@ -62,7 +62,7 @@ example - how to reference specific code sections
 
 ------
 
-## Disclaimer ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+## Disclaimer
 Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of dietary or medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin therapy management and carb counting. 
 
 
