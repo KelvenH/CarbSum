@@ -52,7 +52,7 @@ Screenshot
 - [Surface](#surface)
     * [Mood Board Images](#mood-board-images)
     * [Typography and Colors](#typography-and-colors)
-- [Technologies, Frameworks and Languages Used](#technologies-frameworks-and-languages-used)
+- [Technologies, Languages and Frameworks Used](#technologies-languages-and-frameworks-used)
 - Testing (including against User Stories)
 - Bugs & Defects (link to list plus call out any major o/s)
 - Future Enhancements
