@@ -29,22 +29,26 @@ Screenshot
 ***
 
 ## Contents
-- Disclaimer (e.g. not medical advice) (#Disclaimer)
+- [Disclaimer](#Disclaimer)
 - [About](#About)
--  UI / UX (incl screenshots / wireframes etc);
-  * Problem Statement
-  * Intended Users
-  * User Stories
-  * Project Brief
+    * [What is Diabetes?](#What is Diabetes?)
+    * [How Is Diabetes Treated?](#How Is Diabetes Treated?)
+    * [So How Does CarbSum Come into This?](#So How Does CarbSum Come into This?)
+    * [Links to external references](#Links to external references)
+-  [UI / UX](#UI / UX)
+    * [Problem Statement](#Problem Statement)
+    * [Intended Users](#Intended Users)
+    * [User Stories](#User Stories)
+    * [Project Brief](#Project Brief)
 - Scope
 - Structure
-  * Content 
-  * Features
-  * Data
+    * Content 
+    * Features
+    * Data
 - Skeleton
 - Surface
-  * Styles (Mood Board images / extracts)
-  * Images / Icons (?)
+    * Styles (Mood Board images / extracts)
+    * Images / Icons (?)
 - Technologies Used
 - Testing (including against User Stories)
 - Bugs & Defects (link to list plus call out any major o/s)
@@ -100,8 +104,9 @@ Often yes, food labelling is generally good, restaurants tend to have better und
 
 Thank you for taking the time to read the above, below are some recommended links to external sites for more information and support on Diabetes ........ now onto the fun stuff!
 
-Add links here!!!!
-ADD LINK HERE!!!!
+Links to external sites; 
+Add external links here!!!!
+
 
 
 ------
