@@ -31,9 +31,9 @@ Screenshot
 ## Contents
 - [Disclaimer](#disclaimer)
 - [About](#about)
-    * [What is Diabetes?](#what-is-diabetes?)
-    * [How Is Diabetes Treated?](#how-is-diabetes-treated?)
-    * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this?)
+    * [What is Diabetes?](#what-is-diabetes)
+    * [How Is Diabetes Treated?](#how-is-diabetes-treated)
+    * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this)
     * [Links to external references](#links-to-external-references)
 -  [UI / UX](#ui/ux)
     * [Problem Statement](#problem-statement)
