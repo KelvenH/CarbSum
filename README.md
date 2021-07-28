@@ -35,7 +35,7 @@ Screenshot
     * [How Is Diabetes Treated?](#how-is-diabetes-treated)
     * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this)
     * [Links to external references](#links-to-external-references)
--  [UI / UX](#ui ux)
+-  [User Experience Design - UI/UX](#user-experience-design)
     * [Problem Statement](#problem-statement)
     * [Intended Users](#intended-users)
     * [User Stories](#user-stories)
@@ -110,14 +110,17 @@ Add external links here!!!!
 
 
 ------
-## UI / UX
+## User Experience Design - UI/UX
 
    ### Problem Statement
+   The following problems summarise small scale field research with parents of Type 1 Diabetics and our own experiences;
+   
    * Food labelling - can be good, but;
         - is often printed very small and / or lacks contrast with packaging (hard for grandparents and those with less than 20/20 vision to read!)
+        - may not be present where labelling is only stated on main packaging but not on individual items (e.g. multi-packs)
         - often only states the minimum information requirement of carbs per 100g weight, additional calculations are needed to translate that to the actual weight being consumed (e.g. 1 sweet)
    - does not account for cooked weight (e.g. nutritional ratio of uncooked vs cooked pasta differ)
-   - cooking / preparation style (e.g. deep-fried vs oven baked)
+   - impact of cooking / preparation styles  (e.g. deep-fried vs oven baked)
    
    * Unlabelled - not all food types are labelled (raw ingredients such as fruit and vegetables), or common ingredients like adding milk to a tea! 
    
@@ -155,7 +158,8 @@ Add external links here!!!!
    *  
 
 ---
-  ### Design Principles (Supports User Stories & Problem Statement);
+  ### Design Principles 
+  The following design principles are informed by the problem statement and user stories and underpin the design and feature set;
   * Design a website / app which provides quick and easy calculations of food carbohydrates (used as an input to determine insulin needs).
   * Clear categorisations (with additional 'tags' for quick identification)
   * Ability to adjust 'size' of portion (e.g. weight, portion, volume)
