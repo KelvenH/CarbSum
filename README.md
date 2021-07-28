@@ -263,7 +263,7 @@ Linters / extensions/ pword generator
 
 ------
 
-## Bugs & Defects 
+## Bugs and Defects 
 - link to list plus call out any major o/s
 
 
