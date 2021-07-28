@@ -29,17 +29,17 @@ Screenshot
 ***
 
 ## Contents
-- [Disclaimer](#Disclaimer)
-- [About](#About)
-    * [What is Diabetes?](#What is Diabetes?)
-    * [How Is Diabetes Treated?](#How Is Diabetes Treated?)
-    * [So How Does CarbSum Come into This?](#So How Does CarbSum Come into This?)
-    * [Links to external references](#Links to external references)
--  [UI / UX](#UI / UX)
-    * [Problem Statement](#Problem Statement)
-    * [Intended Users](#Intended Users)
-    * [User Stories](#User Stories)
-    * [Project Brief](#Project Brief)
+- [Disclaimer](#disclaimer)
+- [About](#about)
+    * [What is Diabetes?](#what-is-diabetes?)
+    * [How Is Diabetes Treated?](#how-is-diabetes-treated?)
+    * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this?)
+    * [Links to external references](#links-to-external-references)
+-  [UI / UX](#ui/ux)
+    * [Problem Statement](#problem-statement)
+    * [Intended Users](#intended-users)
+    * [User Stories](#user-stories)
+    * [Project Brief](#project-brief)
 - Scope
 - Structure
     * Content 
