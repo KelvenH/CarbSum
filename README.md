@@ -51,7 +51,7 @@ Screenshot
     * [High Fidelity Wireframes](#high-fidelity-wireframes)
 - [Surface](#surface)
     * [Mood Board Images](#mood-board-images)
-    * [Typography & Colors](#typography---colors)
+    * [Typography and Colors](#typography-and-colors)
 - [Technologies Used](#technologies-used)
 - Testing (including against User Stories)
 - Bugs & Defects (link to list plus call out any major o/s)
@@ -217,7 +217,7 @@ https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-
 ![CarbSum Moodboard - Imagery](https://user-images.githubusercontent.com/73842369/127062370-47eebf88-8c9c-48cc-85f4-68c4bc9d3806.png)
 
 
- ### Typography & Colors
+ ### Typography and Colors
  
 ![CarbSum Moodboard - Fonts   Colors](https://user-images.githubusercontent.com/73842369/127062386-1df4f221-4000-4632-99df-9f40c4d638ef.png)
 
