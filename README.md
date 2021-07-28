@@ -35,7 +35,7 @@ Screenshot
     * [How Is Diabetes Treated?](#how-is-diabetes-treated)
     * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this)
     * [Links to external references](#links-to-external-references)
--  [User Experience Design - UI/UX](#user-experience-design---ui/ux)
+-  [User Experience (UX)](#user-experience--ux-)
     * [Problem Statement](#problem-statement)
     * [Intended Users](#intended-users)
     * [User Stories](#user-stories)
@@ -110,7 +110,7 @@ Add external links here!!!!
 
 
 ------
-## User Experience Design - UI/UX
+## User Experience (UX)
 
    ### Problem Statement
    The following problems summarise small scale field research with parents of Type 1 Diabetics and our own experiences;
