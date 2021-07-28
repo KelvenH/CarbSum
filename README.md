@@ -35,7 +35,7 @@ Screenshot
     * [How Is Diabetes Treated?](#how-is-diabetes-treated)
     * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this)
     * [Links to external references](#links-to-external-references)
--  [User Experience Design - UI/UX](#user-experience-design)
+-  [User Experience Design - UI/UX](#user-experience-design---ui/ux)
     * [Problem Statement](#problem-statement)
     * [Intended Users](#intended-users)
     * [User Stories](#user-stories)
