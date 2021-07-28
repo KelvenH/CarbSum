@@ -40,16 +40,19 @@ Screenshot
     * [Intended Users](#intended-users)
     * [User Stories](#user-stories)
     * [Design Principles](#design-principles)
-- Scope
-- Structure
-    * Content 
-    * Features
-    * Data
-- Skeleton
-- Surface
-    * Styles (Mood Board images / extracts)
-    * Images / Icons (?)
-- Technologies Used
+- [Scope](#scope)
+- [Structure](#structure)
+    * [Content](#content)
+    * [Features](#features)
+    * [Data](#data)
+- [Skeleton](#skeleton)
+    * [Low Fidelity Wireframes](#low-fidelity-wireframes)
+    * [Medium Fidelity Wireframes](#medium-fidelity-wireframes)
+    * [High Fidelity Wireframes](#high-fidelity-wireframes)
+- [Surface](#surface)
+    * [Mood Board Images](#mood-board-images)
+    * [Typography & Colors](#typography-&-colors)
+- [Technologies Used](#technologies-used)
 - Testing (including against User Stories)
 - Bugs & Defects (link to list plus call out any major o/s)
 - Future Enhancements
@@ -191,23 +194,25 @@ Add external links here!!!!
 
 ##  Skeleton
 
-Low Fidelity - wireframe image;
+### Low Fidelity Wireframes
 
 ![Low Fidelity Wireframe](https://user-images.githubusercontent.com/73842369/127049903-2efe8cae-9393-4b8e-939f-38102f983b4f.png)
 
 
-Medium Fidelity - video demo of wireframes & screen flow:
+### Medium Fidelity Wireframes
+
+Recorded demo of wireframes & screen flow:
 
 https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-a49b-4599be8f1b3b.mp4
 
 
-
+### High Fidelity Wireframes
 
 ------
 
 ##  Surface
 
-### Mood Board images
+### Mood Board Images
 
 ![CarbSum Moodboard - Imagery](https://user-images.githubusercontent.com/73842369/127062370-47eebf88-8c9c-48cc-85f4-68c4bc9d3806.png)
 
