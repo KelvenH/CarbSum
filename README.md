@@ -52,7 +52,7 @@ Screenshot
 - [Surface](#surface)
     * [Mood Board Images](#mood-board-images)
     * [Typography and Colors](#typography-and-colors)
-- [Technologies Used](#technologies-used)
+- [Technologies, Frameworks and Languages Used](#technologies-frameworks-and-languages-used)
 - Testing (including against User Stories)
 - Bugs & Defects (link to list plus call out any major o/s)
 - Future Enhancements
@@ -226,7 +226,7 @@ https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-
 
 ------
 
-## Languages, Frameworks and Technologies Used
+## Technologies, Languages and Frameworks Used
 
 ### Design & Development; 
 - Adobe XD (UI / UX development stage)
