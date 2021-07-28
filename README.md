@@ -62,7 +62,7 @@ example - how to reference specific code sections
 
 ------
 
-## Disclaimer
+## Disclaimer ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of dietary or medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin therapy management and carb counting. 
 
 
@@ -104,7 +104,7 @@ Often yes, food labelling is generally good, restaurants tend to have better und
 
 Thank you for taking the time to read the above, below are some recommended links to external sites for more information and support on Diabetes ........ now onto the fun stuff!
 
-Links to external sites; 
+### Links to external references
 Add external links here!!!!
 
 
