@@ -51,7 +51,7 @@ Screenshot
     * [High Fidelity Wireframes](#high-fidelity-wireframes)
 - [Surface](#surface)
     * [Mood Board Images](#mood-board-images)
-    * [Typography & Colors](#typography-&-colors)
+    * [Typography & Colors](#typography---colors)
 - [Technologies Used](#technologies-used)
 - Testing (including against User Stories)
 - Bugs & Defects (link to list plus call out any major o/s)
