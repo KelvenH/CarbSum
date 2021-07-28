@@ -3,8 +3,25 @@ insert logo here
 ***
 
 TL:DR; 
-- `CarbSum` is .... brief overview including purpose (link to external site for further information on diabetes management and carb counting)
-- How to Use `CarbSum`
+- `CarbSum` is a tool to support Type 1 Diabetics who perform carb counting to manage the amount of insulin taken with food and drinks. Carb counting is the practice of working out how many carbohydrates are present in the food and drink being consumed which is then calculated against their personal carb to insulin ratios to determine the correct level of insulin to be taken (which is called a bolus). The tool aims to act as both a reference tool (how much carbs are typically present in the food item) but also a simple calculator. More enhanced features such as saving favourites and building a complete meal aim to make daily life easier by reducing the time taken to establish the carbs useful when at home but also perhaps more importantly when eating out / on the go when you do not have access to weighing scales. 
+
+This supports working with both labelled (nutritional values are printed) and unlabelled meals such as home cooked or raw (fruit / vegetables). Some common examples are;
+
+    - a packet of biscuits states 60g of carbs per 100g weight - but how do you determine the carbs for a single biscuit when you do not have access to weighing scales?
+    - packet of pasta states the uncooked nutritional values, but what is it once cooked (given the nutritional ratio changes due to the amount of water absorbed)?
+    - a home cooked meal consists of multiple ingredients, how can the calculations of each of these be more readily obtained?  
+
+- Key features of `CarbSum`;
+  Quick access (no log in required) to;
+    - editable database of food items, search by category, name or tags
+    - calculator which determines amount of carbs present when the value per 100g is provided
+
+  If logged in, access to personalised features such as;
+    - save common items as favourites - making reference quicker
+    - build meals, i.e. equivalent to a playlist of multiple items which can be individually edited (both portion and carbs) 
+    - create new items to expand the list
+    - apply tags to improve the search / find functionality (e.g. baked or fried, brand names)
+
 - link to deployed site (with icons)
 
 ***
@@ -42,7 +59,7 @@ example - how to reference specific code sections
 ------
 
 ## Disclaimer
-Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin therapy management and carb counting. 
+Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of dietary or medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin therapy management and carb counting. 
 
 
 ------
