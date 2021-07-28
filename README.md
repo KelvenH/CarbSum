@@ -110,7 +110,7 @@ Add external links here!!!!
 
 
 ------
-## Project Brief (UI / UX) (REMEMBER to incl screenshots / wireframes etc)
+## UI / UX
 
    ### Problem Statement
    * Food labelling - can be good, but;
