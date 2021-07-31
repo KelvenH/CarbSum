@@ -39,12 +39,11 @@ Screenshot
     * [Problem Statement](#problem-statement)
     * [Intended Users](#intended-users)
     * [User Stories](#user-stories)
-    * [Design Principles](#design-principles)
 - [Scope](#scope)
 - [Structure](#structure)
-    * [Content](#content)
-    * [Features](#features)
+    * [Design Principles and Features](#design-principles-and-features)
     * [Data](#data)
+    * [Userflow and Screens](#userflow_and_screens)
 - [Skeleton](#skeleton)
     * [Low Fidelity Wireframes](#low-fidelity-wireframes)
     * [Medium Fidelity Wireframes](#medium-fidelity-wireframes)
@@ -154,10 +153,21 @@ Add external links here!!!!
    * save 'favourite' items
    * create 'menu' of a collection of items
    * submit new card for review / approval by site admin for visibility by all site visitors
-   *  
 
----
-  ### Design Principles 
+
+ 
+  
+ ------
+
+## Scope
+
+
+
+------
+
+##  Structure
+
+  ### Design Principles and Features
   The following design principles are informed by the problem statement and user stories and underpin the design and feature set;
   * Design a website / app which provides quick and easy calculations of food carbohydrates (used as an input to determine insulin needs).
   * Clear categorisations (with additional 'tags' for quick identification)
@@ -170,20 +180,12 @@ Add external links here!!!!
   * Allow users to create their own entries and edit existing entries (including previously saved menus)
   * Add an alarm feature - used to support reminder where later bolus is also required
   
-  
- ------
-
-## Scope
-
-
-
-------
-
-##  Structure
-  ### Content
-  ### Features
   ### Data
+  Data will be held in a series of collections hosted on MongoDB.
 
+  ### Userflow and Screens
+  
+![CarbSum Site Flow and Data Structure](https://user-images.githubusercontent.com/73842369/127577915-c7551ebc-8229-43d9-836a-8071a67f2109.png)
 
 
 ------
