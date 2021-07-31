@@ -89,7 +89,7 @@ nav ul a,
     padding-top: 2vh;
 }
 
-#home-user-pane .btn-large,
+#home-user-pane .btn,
 #home-mid-pane .btn,
 #home-bottom-pane  .btn-large {
     width:100%;
@@ -115,6 +115,10 @@ nav ul a,
 #home-top-pane .btn-large {
     width:100%;
     border-radius: 20px;
+}
+
+#disabled-txt {
+    margin-top:0;
 }
 
 #alarm {
