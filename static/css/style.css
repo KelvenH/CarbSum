@@ -89,14 +89,6 @@ nav ul a,
     padding-top: 2vh;
 }
 
-#home-user-pane .btn,
-#home-mid-pane .btn,
-#home-bottom-pane  .btn-large {
-    width:100%;
-    border-radius: 20px;
-    padding-left:-20px;
-    text-align:center;
-}
 
 #home-top-pane {
     border:solid 2px var(--green_emerald);
@@ -112,9 +104,12 @@ nav ul a,
     margin-top:2vh;
 }
 
-#home-top-pane .btn-large {
+.btn, .btn-large {
     width:100%;
     border-radius: 20px;
+    padding-left:-20px;
+    text-align:center;
+    
 }
 
 #disabled-txt {
@@ -160,4 +155,6 @@ nav ul a,
 #join-btn-img {
     padding-right: 2vw;
 }
+
+/*-- sign-in form --*/
 
