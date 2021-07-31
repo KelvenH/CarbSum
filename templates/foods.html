@@ -2,10 +2,14 @@
 {% block content %}
 
     {% for food in foods %}
+        {{ food._id }}<br>
         {{ food.cat_name }}<br>
+        {{ food.food_title }}<br>
+        {{ food.food_subtitle }}<br>
         {{ food.base_carbs }}<br>
-        {{ food.food_name }}<br>
         {{ food.tag }}<br>
+        {{ food.temp }}<br>
+        <br>
     {% endfor %}
 
 {% endblock %}

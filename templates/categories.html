@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for category in categories %}
+        {{ category._id }}<br>
+        {{ category.cat_name }}<br>
+
+    {% endfor %}
+
+{% endblock %}

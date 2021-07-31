@@ -29,10 +29,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/get_foods")
-def get_foods():
-    foods = mongo.db.foods.find()
-    return render_template("foods.html", foods=foods)
+
 
 
 @app.route("/join", methods=["GET", "POST"])
@@ -105,6 +102,26 @@ def logout():
     flash("You have signed-out successfully")
     session.pop("user")
     return redirect(url_for("signIn"))
+
+
+# admin restricted content
+@app.route("/get_foods")
+def get_foods():
+    foods = mongo.db.foods.find()
+    return render_template("foods.html", foods=foods)
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = mongo.db.food_categories.find()
+    return render_template("categories.html", categories=categories)
+
+
+@app.route("/get_tags")
+def get_tags():
+    tags = mongo.db.tags.find()
+    return render_template("tags.html", tags=tags)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

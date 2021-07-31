@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for tag in tags %}
+        {{ tag._id }}<br>
+        {{ tag.tag_name }}<br>
+    {% endfor %}
+
+{% endblock %}

@@ -27,8 +27,8 @@
         <!-- Admin Dropdown Structure (Main nav)-->
         <ul id="admin_dropdown" class="dropdown-content">
             <li><a href="{{ url_for('get_foods') }}">Manage Foods</a></li>
-            <li><a href="#!">Manage Categories</a></li>
-            <li><a href="#!">Manage Tags</a></li> 
+            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+            <li><a href="{{ url_for('get_tags') }}">Manage Tags</a></li>
         </ul>
 
         <nav class="nav-extended">
@@ -36,13 +36,13 @@
                 <a href="{{ url_for('home') }}" class="brand-logo center">CarbSum</a>
             </div>
             <div class="nav-wrapper">
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                                     
                     <li><a href="#">Search</a></li>
                     <li><a href="#">Quick Calc</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
                         <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
                       
                     {% else %}
@@ -50,10 +50,10 @@
                         <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
                     
                     <!-- Dropdown Trigger - Admin Restricted-->
-                        {% if session.admin == true %}
+                        
                             <li><a class="dropdown-trigger" href="#!" data-target="admin_dropdown">Admin<i
                                         class="fas fa-arrow-down" style="margin-left:1vw"></i></a></li>
-                        {% endif %}
+                        
                     {% endif %}
                 </ul>
             </div>
@@ -64,19 +64,19 @@
         <!-- Admin Dropdown Structure (Side Nav)-->
         <ul id="admin_dropdown_side" class="dropdown-content">
             <li><a href="{{ url_for('get_foods') }}">Manage Foods</a></li>
-            <li><a href="#!">Manage Categories</a></li>
-            <li><a href="#!">Manage Tags</a></li>
+            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+            <li><a href="{{ url_for('get_tags') }}">Manage Tags</a></li>
         </ul>
 
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav" id="mobile-nav">
             <li>
                 <h4 class="center-align">CarbSum</h4>
             </li>
             
-            
+            <li><a href="#">Search</a></li>
             <li><a href="#">Quick Calc</a></li>
             {% if session.user: %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
                 <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
                
             {% else %}
