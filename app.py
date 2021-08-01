@@ -111,10 +111,41 @@ def get_foods():
     return render_template("foods.html", foods=foods)
 
 
+@app.route("/add_foods", methods=["GET", "POST"])
+def add_foods():
+    if request.method == "POST":
+        food = {
+            "cat_name": request.form.get("cat_name"),
+            "food_title": request.form.get("cat_name"),
+            "food_subtitle": request.form.get("cat_name"),
+            "base_carbs": request.form.get("cat_name"),
+            "tag": request.form.get("cat_name"),
+            "temp": request.form.get("cat_name"),
+        }
+        mongo.db.foods.insert_one(food)
+        flash("New Food Entry Added")
+        return redirect(url_for("get_foods"))
+
+    return render_template("add_foods.html")
+
+
 @app.route("/get_categories")
 def get_categories():
     categories = mongo.db.food_categories.find()
     return render_template("categories.html", categories=categories)
+
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Category Added")
+        return redirect(url_for("get_categories"))
+
+    return render_template("add_category.html")
 
 
 @app.route("/get_tags")
