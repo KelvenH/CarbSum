@@ -5,6 +5,7 @@
     --green_emerald: #79C384;
     --green_celadon: #A1E0AD;
     --green_honeydew: #D9EEDC;
+    --off_white: #FFFAF1;
     --salmon: #ED806C;
     --champagne: #F9E3D6;
     --pink: #E7BEBF;
@@ -22,7 +23,7 @@ html {
     font-size:16px;
 }
 
-.title-txt {font-family: var(--specialfont);font-weight: 700;color: var(--champagne);}
+.title-txt {font-family: var(--specialfont);font-weight: 700;color: var(--off_white);}
 
 body, div, p {font-family: var(--standardfont);font-weight: 400;color: var(--green_emerald);}
 
@@ -81,28 +82,35 @@ nav ul a,
     border:solid 2px var(--green_celadon);
     background-color: var(--green_honeydew);
     border-radius: 20px;
-    padding-top: 2vh;
+    padding-top: 2vh 0;
 }
 
 .filled-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--green_honeydew);
     border-radius: 20px;
-    padding-top: 2vh;  
+    padding: 2vh 0;  
 }
 
 .inactive-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--silver);
     border-radius: 20px;
-    padding-top: 2vh;  
+    padding-top: 2vh 0;  
 }
 
 .admin-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--purpblue);
     border-radius: 20px;
-    padding-top: 2vh;  
+    padding-top: 2vh 0;  
+}
+
+.focus-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--green_emerald);
+    border-radius: 20px;
+      
 }
 
 #home-user-pane {
