@@ -2,8 +2,9 @@
 
 :root {
 /*---Color Variables---*/
-    --green_celadon: #A1E0AD;
     --green_emerald: #79C384;
+    --green_celadon: #A1E0AD;
+    --green_honeydew: #D9EEDC;
     --salmon: #ED806C;
     --champagne: #F9E3D6;
     --pink: #E7BEBF;
@@ -76,32 +77,29 @@ nav ul a,
 
 
 /*--index.html / Profile ---*/
-
-#home-user-pane {
-    margin-top:2vh;
-}
-
-
-#home-user-pane {
+.outline-box {
     border:solid 2px var(--green_celadon);
-    background-color: var(--green_celadon);
+    background-color: var(--green_honeydew);
     border-radius: 20px;
     padding-top: 2vh;
 }
 
-
-#home-top-pane {
-    border:solid 2px var(--green_emerald);
+.filled-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--green_honeydew);
     border-radius: 20px;
-    padding-top:2vh;
+    padding-top: 2vh;  
 }
 
-#home-mid-pane,
-#home-bottom-pane {
-    border:solid 2px var(--green_emerald);
+.inactive-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--silver);
     border-radius: 20px;
-    padding-top:2vh;
-    margin-top:2vh;
+    padding-top: 2vh;  
+}
+
+#home-user-pane {
+    margin-top:2vh
 }
 
 .btn, .btn-large {
@@ -157,4 +155,11 @@ nav ul a,
 }
 
 /*-- sign-in form --*/
+
+
+/*-- quick calc --*/
+
+#calc-results-wrapper > * {
+    display:inline-block;
+}
 

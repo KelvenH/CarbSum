@@ -5,7 +5,7 @@
     <div class="col s12">
         <div class="card-panel">
             <!--signup / log-in panel-->
-            <div class="row" id="home-user-pane">
+            <div class="row outline-box s12" id="home-user-pane">
 
                 <!--Join-->
                 <div class="col s6">
@@ -22,20 +22,20 @@
                     <p class="small-label">Remember to log-in to access your favourites and create meals</p>
                 </div>
                 <!--close Sign in wrapper-->
-            </div> <!-- close join / signin pane-->
+            </div> <!-- close user pane-->
 
 
-            <div id="home-top-pane">
+            <div class="row filled-box s12" id="home-top-pane">
                 <!--Search-->
                 <div class="row" id="home-search-wrapper">
-                    <div class="col s12">
+                    <div class="col s10 offset-s1">
                         <a class="waves-effect waves-light btn-large large-label btn-green"><i
                                 class="material-icons left icon">search</i>Search</a>
                     </div>
                 </div> <!-- close search wrapper-->
                 <!--Quick Calc-->
                 <div class="row" id="home-quick-calc-wrapper">
-                    <div class="col s12">
+                    <div class="col s10 offset-s1">
                         <a class="waves-effect waves-light btn-large large-label btn-green"><i
                                 class="fas fa-calculator left icon"></i>Quick Calc</a>
                     </div>
@@ -44,27 +44,27 @@
             </div> <!-- close top pane-->
 
 
-            <div id="home-mid-pane">
+            <div class="row inactive-box s12" id="home-mid-pane">
                 <p id="disabled-txt" class="center-align">Sign In to access these personalised features</p>
                 <div class="row">
-                    <div class="col s6" id="home-favourite-wrapper">
+                    <div class="col s5 offset-s1" id="home-favourite-wrapper">
                         <a class="waves-effect waves-light btn med-label btn-green disabled"><i
                                 class="material-icons left btn-icon">favorite</i>Favourites</a>
                     </div> <!-- close favourites wrapper-->
 
-                    <div class="col s6" id="home-meals-wrapper">
+                    <div class="col s5" id="home-meals-wrapper">
                         <a class="waves-effect waves-light btn med-label btn-green disabled"><i
                                 class="material-icons left btn-icon">restaurant</i>Meals</a>
                     </div> <!-- close meals wrapper-->
                 </div>
 
                 <div class="row">
-                    <div class="col s6" id="home-create-food-wrapper">
+                    <div class="col s5 offset-s1" id="home-create-food-wrapper">
                         <a class="waves-effect waves-light btn med-label btn-green disabled"><i
                                 class="material-icons left btn-icon">timer</i>Create New Food Card</a>
                     </div> <!-- close reminder wrapper-->
 
-                    <div class="col s6" id="home-create-menu-wrapper">
+                    <div class="col s5" id="home-create-menu-wrapper">
                         <a id="alarm" class="waves-effect waves-light btn med-label btn-green disabled"><i
                                 class="material-icons left btn-icon">playlist_add</i>Create New Menu</a>
                     </div> <!-- close create new item wrapper-->
@@ -73,20 +73,20 @@
 
 
 
-            <div id="home-bottom-pane">
+            <div class="row filled-box s12" id="home-bottom-pane">
                 <div class="row">
-                    <div class="col s6">
+                    <div class="col s5 offset-s1">
                         <a class="waves-effect waves-light btn-large med-label btn-green btn-label">How to Use</a>
                     </div>
 
-                    <div class="col s6">
+                    <div class="col s5">
                         <a class="waves-effect waves-light btn-large med-label btn-green btn-label">About</a>
                     </div>
                 </div>
             </div><!-- close bottom pane-->
-        </div>
-    </div>
-</div>
-<!--close page container-->
+
+        </div>  <!--close page card-->
+    </div><!--close full page col-->
+</div><!--close page row-->
 
 {% endblock %}
