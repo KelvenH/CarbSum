@@ -98,6 +98,13 @@ nav ul a,
     padding-top: 2vh;  
 }
 
+.admin-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--purpblue);
+    border-radius: 20px;
+    padding-top: 2vh;  
+}
+
 #home-user-pane {
     margin-top:2vh
 }
