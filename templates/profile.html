@@ -10,6 +10,9 @@
             <h3 class="center-align light-blue-text text-darken-4">
                 {{ username|capitalize }}'s Dashboard
             </h3>
+            {% if 'admin_role' in session and session['admin_role'] %}
+                <h5 class=center-align>You are Logged in with Admin permissions</h5>
+            {% endif %}
             <div id="home-top-pane">
                 <!--Search-->
                 <div class="row" id="home-search-wrapper">
@@ -28,6 +31,7 @@
                 </div>
                 <!--close quick calc wrapper-->
             </div> <!-- close top pane-->
+
 
 
             <div id="home-mid-pane">

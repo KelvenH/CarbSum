@@ -29,9 +29,6 @@ def home():
     return render_template("index.html")
 
 
-
-
-
 @app.route("/join", methods=["GET", "POST"])
 def join():
     if request.method == "POST":
@@ -46,12 +43,13 @@ def join():
 
         join = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "admin_role": False
         }
         mongo.db.users.insert_one(join)
 
         # put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
+        session["user"] = request.form.get("username").lower(),
         flash("Sign-up was successful. Welcome to CarbSum! We hope you find this a helpful aid to support your carb counting")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("join.html")
@@ -69,8 +67,8 @@ def signIn():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                    return redirect(url_for("profile", username=session["user"]))
+            
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -87,13 +85,15 @@ def signIn():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    user = mongo.db.users.find_one({"username": username})
+    
+    if user:
+        session['admin_role'] = user['admin_role']
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
+    if 'user' in session:
+        return render_template("profile.html", username=user["username"])
 
-    return redirect(url_for("signin"))
+    return redirect(url_for("signIn"))
 
 
 @app.route("/logout")
@@ -101,6 +101,7 @@ def logout():
     #remove user from session cookies
     flash("You have signed-out successfully")
     session.pop("user")
+    session.pop("admin_role")
     return redirect(url_for("signIn"))
 
 
