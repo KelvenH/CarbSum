@@ -40,7 +40,7 @@
                 <ul class="right hide-on-med-and-down">
                                     
                     <li><a href="#">Search</a></li>
-                    <li><a href="#">Quick Calc</a></li>
+                    <li><a href="{{ url_for('quick_calc') }}">Quick Calc</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
                         <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
@@ -75,7 +75,7 @@
             </li>
             
             <li><a href="#">Search</a></li>
-            <li><a href="#">Quick Calc</a></li>
+            <li><a href="{{ url_for('quick_calc') }}">Quick Calc</a></li>
             {% if session.user: %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
                 <li><a href="{{ url_for('logout') }}">Sign Out</a></li>

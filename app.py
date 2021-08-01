@@ -28,7 +28,7 @@ mongo = PyMongo(app)
 def home():
     return render_template("index.html")
 
-
+# Registration
 @app.route("/join", methods=["GET", "POST"])
 def join():
     if request.method == "POST":
@@ -54,7 +54,7 @@ def join():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("join.html")
 
-
+# Sign In
 @app.route("/signIn", methods=["GET", "POST"])
 def signIn():
     if request.method == "POST":
@@ -81,7 +81,7 @@ def signIn():
 
     return render_template("signin.html")
 
-
+# Profile (Dashboard)
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -95,7 +95,7 @@ def profile(username):
 
     return redirect(url_for("signIn"))
 
-
+# Sign Out
 @app.route("/logout")
 def logout():
     #remove user from session cookies
@@ -103,6 +103,12 @@ def logout():
     session.pop("user")
     session.pop("admin_role")
     return redirect(url_for("signIn"))
+
+
+# Quick Calc
+@app.route("/quick_calc")
+def quick_calc():
+    return render_template("quickcalc.html")
 
 
 # admin restricted content
