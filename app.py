@@ -102,7 +102,7 @@ def logout():
     flash("You have signed-out successfully")
     session.pop("user")
     session.pop("admin_role")
-    return redirect(url_for("signIn"))
+    return redirect(url_for("home"))
 
 
 # Quick Calc

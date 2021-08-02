@@ -82,12 +82,12 @@ nav ul a,
     border:solid 2px var(--green_celadon);
     background-color: var(--green_honeydew);
     border-radius: 20px;
-    padding-top: 2vh 0;
+    padding: 2vh 0;
 }
 
 .filled-box {
     border:solid 2px var(--green_celadon);
-    background-color: var(--green_honeydew);
+    background-color: var(--green_emerald);
     border-radius: 20px;
     padding: 2vh 0;  
 }
@@ -96,21 +96,27 @@ nav ul a,
     border:solid 2px var(--green_celadon);
     background-color: var(--silver);
     border-radius: 20px;
-    padding-top: 2vh 0;  
+    padding: 2vh 0;  
 }
 
 .admin-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--purpblue);
     border-radius: 20px;
-    padding-top: 2vh 0;  
+    padding: 2vh 0;  
 }
 
 .focus-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--green_emerald);
-    border-radius: 20px;
-      
+    border-radius: 20px; 
+}
+
+.key-value-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--champagne);
+    border-radius: 20px; 
+    padding: 1vh 1vw; 
 }
 
 #home-user-pane {
@@ -122,7 +128,6 @@ nav ul a,
     border-radius: 20px;
     padding-left:-20px;
     text-align:center;
-    
 }
 
 #disabled-txt {
@@ -174,7 +179,12 @@ nav ul a,
 
 /*-- quick calc --*/
 
-#calc-results-wrapper > * {
-    display:inline-block;
+
+/*-- Defect : Fix - materialize valign switches display to flex (centers), additional css to force right alignment--*/
+
+#calc-result {
+    display:felx;
+    justify-content:flex-end;
+ 
 }
 

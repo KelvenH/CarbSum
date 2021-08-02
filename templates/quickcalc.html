@@ -17,24 +17,52 @@
 
             <!--Result-->
             <div class="row">
-                <div id="calc-top-pane" class="col s12 filled-box center-align">
+                <div id="calc-top-pane" class="col s12 outline-box">
                     <div class="row">
-                        <div id="calc-results-wrapper" class="col s12 input-field col focus-box">
+                        <div id="calc-results-wrapper" class="input-field valign-wrapper">
                             <h4 class="large-label">Total Carbs:</h4>
-                            <h4 id="calc-result" class="outline-box right">36<span>g</span></h4>
+                            <h4 id="calc-result" class="large-label key-value-box right-align">36<span>g</span></h4>
                         </div> <!-- close Result wrapper-->
                     </div> <!-- close row-->
 
                     <div class="row">
-                        <div> Number of Items:</div>
-                        <div> 2 </div>
+                        <div class="input-field valign-wrapper">
+                            <h5 class="focus-txt">Number of Items:</h5>
+                            <h5 id="quick-calc-total-items" class="right-align key-value-box focus-txt"> 2 </h5>
+                        </div> <!-- close wrapper-->
                     </div> <!-- close row-->
-                </div>
-                <!--close top pane-->
-            </div>
+                </div> <!--close top pane-->
+            </div>  <!-- close row-->
+
+                
+            <div class="row">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">arrow_drop_down_circle</i>
+                            <h6>Item 1</h6>
+                        </div>
+                        <div class="collapsible-body">
+                            <div>Base Weight:</div>
+                            <input>0</input>
+                            <div>Base Carbs:</div>
+                            <input>0</input>
+                            <div>Portion Size:</div>
+                            <input>0</input>
+                            <div>Item Carbs:</div>
+                            <input>0</input>
+                        </div>
+                    </li>
+                </ul>
+            </div> <!--close row-->
+
+
+
+
+
         </div> <!-- close card-->
-    </form>
-</div>
+    </form>   <!-- close form-->
+</div>         <!-- close page row-->
 
 
 
