@@ -174,10 +174,10 @@ nav ul a,
     padding-right: 2vw;
 }
 
-/*-- sign-in form --*/
+/*-- Sign-In Form --*/
 
 
-/*-- quick calc --*/
+/*-- Quick Calc --*/
 
 
 /*-- Defect : Fix - materialize valign switches display to flex (centers), additional css to force right alignment--*/
@@ -188,3 +188,18 @@ nav ul a,
  
 }
 
+#qc-item-carbs-big {
+    border-bottom: none;
+}
+
+/*-- animation on collapsible dropdown arrow  --*/ 
+
+.collapsible li i {
+    transform: rotate(270deg);
+}
+
+
+.collapsible li.active i {
+    transform: rotate(0deg);
+  }
+  
