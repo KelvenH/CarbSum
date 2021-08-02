@@ -202,4 +202,17 @@ nav ul a,
 .collapsible li.active i {
     transform: rotate(0deg);
   }
-  
+
+.collapsible-body > .input-field {
+    margin-left: 5vw;
+}
+
+.collapsible-body > .input-field > input {
+    margin-left: 30vw;
+    width:25%;
+}
+
+
+/*--#qc-base_weight {
+    width:25%;
+} --*/
