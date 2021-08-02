@@ -28,6 +28,12 @@ mongo = PyMongo(app)
 def home():
     return render_template("index.html")
 
+# Temporary - must be deleted prior to submission
+@app.route("/test")
+def test():
+    return render_template("test.html")
+
+
 # Registration
 @app.route("/join", methods=["GET", "POST"])
 def join():

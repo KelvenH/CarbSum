@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+<div class="row">
+    <form class="col s12">
+        <div class="card-panel">
+            <!--Title-->
+            <div class="row">
+                <h3 class="center-align title-txt filled-box">
+                    Quick Calc
+                </h3>
+            </div>
+            <!--Close title row-->
+
+            <!--Result-->
+            <div class="row">
+                <div id="calc-top-pane" class="col s12 outline-box">
+                    <div class="row">
+                        <div id="calc-results-wrapper" class="input-field valign-wrapper">
+                            <h4 class="col s9 large-label">Total Carbs:</h4>
+                            <h4 id="col s3 calc-result" class="large-label key-value-box right-align">36<span>g</span></h4>
+                        </div> <!-- close Result wrapper-->
+                    </div> <!-- close row-->
+
+                    <div class="row">
+                        <div class="input-field valign-wrapper">
+                            <h5 class="focus-txt">Number of Items:</h5>
+                            <h5 id="quick-calc-total-items" class="right-align key-value-box focus-txt"> 2 </h5>
+                        </div> <!-- close wrapper-->
+                    </div> <!-- close row-->
+                </div> <!--close top pane-->
+            </div>  <!-- close row-->
+
+             <!--Result-->
+        <div class="col s12 outline-box">
+            <div class="row">
+                <div class="col s9 large label">
+                    Text box
+                </div>
+                <div class="col s3 large-label key-value-box">
+                    Value box
+                </div>
+            </div>
+        </div>
+                
+            <div class="row">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">arrow_drop_down_circle</i>
+                            <h6>Item 1</h6>
+                        </div>
+                        <div class="collapsible-body">
+                            <div>Base Weight:</div>
+                            <input>0</input>
+                            <div>Base Carbs:</div>
+                            <input>0</input>
+                            <div>Portion Size:</div>
+                            <input>0</input>
+                            <div>Item Carbs:</div>
+                            <input>0</input>
+                        </div>
+                    </li>
+                </ul>
+            </div> <!--close row-->
+
+
+
+
+
+        </div> <!-- close card-->
+    </form>   <!-- close form-->
+</div>         <!-- close page row-->
+
+
+
+
+
+
+{% endblock %}

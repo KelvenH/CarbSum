@@ -20,49 +20,78 @@
                 <div id="calc-top-pane" class="col s12 outline-box">
                     <div class="row">
                         <div id="calc-results-wrapper" class="input-field valign-wrapper">
-                            <h4 class="large-label">Total Carbs:</h4>
-                            <h4 id="calc-result" class="large-label key-value-box right-align">36<span>g</span></h4>
+                            <h4 class="col s9 large-label right-align">Total Carbs:</h4>
+                            <h4 id="calc-result" class="col s3 large-label key-value-box center-align">36<span>g</span>
+                            </h4>
                         </div> <!-- close Result wrapper-->
                     </div> <!-- close row-->
-
+                    <div class="divider"></div>
                     <div class="row">
                         <div class="input-field valign-wrapper">
-                            <h5 class="focus-txt">Number of Items:</h5>
-                            <h5 id="quick-calc-total-items" class="right-align key-value-box focus-txt"> 2 </h5>
+                            <h5 class="col s9 focus-txt right-align">Number of Items:</h5>
+                            <h5 id="quick-calc-total-items" class="col s3 center-align key-value-box focus-txt"> 2 </h5>
                         </div> <!-- close wrapper-->
                     </div> <!-- close row-->
-                </div> <!--close top pane-->
-            </div>  <!-- close row-->
+                </div>
+                <!--close top pane-->
+            </div> <!-- close row-->
 
-                
+
             <div class="row">
                 <ul class="collapsible">
+                    <!-- Item 1 --->
                     <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">arrow_drop_down_circle</i>
-                            <h6>Item 1</h6>
-                        </div>
+                        <div class="collapsible-header valign-wrapper row">
+                            <i class="material-icons col s2">arrow_drop_down_circle</i>
+                            <h5 class="col s4">Item 1</h5>
+                            <h5 class="col s4"><input id="qc-item-carbs-big" name="qc-item-carbs" type="number" class="right-align" disabled></input></h5>
+                            <h5 class="left-align col s2">grams</h5>
+                        </div> <!-- Close collapsible header--->
                         <div class="collapsible-body">
-                            <div>Base Weight:</div>
-                            <input>0</input>
-                            <div>Base Carbs:</div>
-                            <input>0</input>
-                            <div>Portion Size:</div>
-                            <input>0</input>
-                            <div>Item Carbs:</div>
-                            <input>0</input>
+                            <form>
+                                <div class="input-field valign-wrapper col s12">
+                                    <div class="col s6">Base Weight:</div>
+                                    <input id="qc-base_weight" name="qc-base_weight" type="number" step="1" min="0"
+                                        class="validate right-align col s4" value="100" oninput="carbPerGram();" required></input>
+                                    <span class="col s2">grams</span>
+                                </div>
+                                <div class="input-field valign-wrapper col s12">
+                                    <div class="col s6">Base Carbs:</div>
+                                    <input id="qc-base_carbs" name="qc-base_carbs" type="number" step="0.001"
+                                        class="right-align col s4" oninput="carbPerGram();"></input>
+                                    <span class="col s2">grams</span>
+                                </div>
+                                <div class="input-field valign-wrapper col s12">
+                                    <input id="qc-carb-per-g" name="qc-carb-per-g" type="number" class="validate right-align col s4 offset-s6" value="0" disabled></input>
+                                    <div class="col s2">Carbs per Gram</div>
+                                </div>
+                                <div class="input-field valign-wrapper col s12">
+                                    <div class="col s6">Portion Size:</div>
+                                    <input id="qc-portion_weight" name="qc-portion_weight" type="number" step="1"
+                                        min="0" class="validate right-align col s4" value="0" oninput="qcItemCarbs();" required></input>
+                                    <span class="col s2">grams</span>
+                                </div>
+                                <div class="input-field valign-wrapper col s12">
+                                    <div class="col s6">Total Carbs For Item:</div>
+                                    <input id="qc-item-carbs" name="qc-item-carbs" type="number" 
+                                        class="right-align col s4" disabled></input>
+                                    <span class="col s2">Carb grams</span>
+                                </div>
+                            </form>
                         </div>
+                        <!--close collapsible body item 1-->
                     </li>
                 </ul>
-            </div> <!--close row-->
+            </div>
+            <!--close row-->
 
 
 
 
 
         </div> <!-- close card-->
-    </form>   <!-- close form-->
-</div>         <!-- close page row-->
+    </form> <!-- close form-->
+</div> <!-- close page row-->
 
 
 
