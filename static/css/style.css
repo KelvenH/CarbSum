@@ -10,6 +10,7 @@
     --champagne: #F9E3D6;
     --pink: #E7BEBF;
     --silver: #6C7479;
+    --green_silver: #90A591;
     --purpblue: #44578F;
     
 /*---Font Variables---*/
@@ -29,9 +30,9 @@ body, div, p {font-family: var(--standardfont);font-weight: 400;}
 
 .focus-txt {font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
 
-.large-label {font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+.large-label {font-size:1.5rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
-.med-label {font-size:0.75rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+.med-label {font-size:1.25rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
 .small-label {font-size:0.75rem;font-family: var(--standardfont);font-weight: 400;font-style:italic;color: var(--purpblue);}
 
@@ -261,34 +262,51 @@ nav ul a,
 
 
 #item-card-admin {
-    align-items: center;
+    
+    border: 2px solid var(--green_silver);
     border-radius: 0.5vw;
     display: grid;
     background: var(--green_honeydew);
     margin-bottom: 1vh;
     padding: 1vh 1vw;
     grid-template-columns: 5;
-    grid-template-rows: 5;
-    row-gap: 1vh;
+    grid-gap: 0;
+    row-gap: 0.25vh;
     /*-- CSS BEAUTIFIER AUTO-STYLING GRID-LAYOUT ON SINGLE ROW???--*/
     grid-template-areas: 
-    "A1  A1   A3   A4   A4"
+    "A1  A1   A1   A4   A4"
     "B1  B2   B2   B4   B5" 
     "C1  C2   C2   C2   C2" 
     "D1  D2   D2   D4   D5" 
     "E1  E2   E2   E4   E5" 
    }
 
-#itm-cd-title {
-    grid-area: A1;
+#item-card-admin > * {
+    padding: 0 0.5vw;
 }
 
-#itm-cd-spacer {
-    grid-area: A3;
+.itm-cd-label {
+    border: 2px solid var(--green_silver);
+    border-right:0;
+    text-align:right;
+    background-color:var(--green_celadon);
+}
+
+.itm-cd-value {
+    border: 2px solid var(--green_silver);
+    border-left:0;
+    text-align:left; 
+}
+
+#itm-cd-title {
+    grid-area: A1;
+    text-align:center;
+    background-color:var(--green_emerald);
 }
 
 #itm-cd-subtitle {
     grid-area: A4;
+    background-color:var(--green_emerald);
 }
 
 #itm-cd-cat-label {
@@ -347,3 +365,7 @@ nav ul a,
     grid-area: E5;
 }
 
+#item-card-admin > .btn-small {
+    border: 2px solid var(--green_silver);
+
+}
