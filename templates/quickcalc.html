@@ -44,191 +44,196 @@
                         <div class="collapsible-header valign-wrapper">
                             <i class="material-icons col">arrow_drop_down_circle</i>
                             <h5 class="col s3">Item 1</h5>
-                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-item1-carbs-big"
-                                    name="qc-item1-carbs" type="number" class="right-align" disabled></input></h5>
+                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-carbs-big-item1"
+                                    name="qc-carbs-big-item1" type="number" class="right-align" disabled></input></h5>
                             <h5 class="left-align col">grams</h5>
                         </div>
                         <div class="collapsible-body">
-                            
+
                             <div class="input-field valign-wrapper">
                                 <div>Base Weight:</div>
-                                <input id="qc-base_weight1" name="qc-base_weight1" type="number" step="1" min="0" class="offset-s8 validate right-align collapsible-input" value="100" oninput="carbPerGram1();" required></input>
+                                <input id="qc-base-weight-item1" name="qc-base-weight-item1" type="number" step="1"
+                                    min="0" class="offset-s8 validate right-align collapsible-input" value="100"
+                                    oninput="carbPerGram(this.id);" required></input>
                                 <span>grams</span>
                             </div>
 
                             <div class="input-field valign-wrapper">
                                 <div>Base Carbs:</div>
-                                <input id="qc-base_carbs1" name="qc-base_carbs1" type="number" step="0.1"
-                                    class="right-align" oninput="carbPerGram1();"></input>
+                                <input id="qc-base-carbs-item1" name="qc-base-carbs-item1" type="number" step="0.1"
+                                    class="right-align" oninput="carbPerGram(this.id);"></input>
                                 <span>grams</span>
                             </div>
 
-                            <div id="qc-carbs-perG-wrapper1" class="input-field valign-wrapper">
-                                <input id="qc-carb-per-g1" name="qc-carb-per-g1" type="number"
+                            <div id="qc-carbs-perG-wrapper4" class="input-field valign-wrapper">
+                                <input id="qc-carb-per-g-item1" name="qc-carb-per-g-item1" type="number"
                                     class="validate right-align offset-s6" value="0" disabled></input>
                                 <div>Carbs per Gram</div>
                             </div>
 
                             <div class="input-field valign-wrapper">
                                 <div>Portion Size:</div>
-                                <input id="qc-portion_weight1" name="qc-portion_weight1" type="number" step="1" min="0" class="validate right-align" value="0" oninput="qcItemCarbs1();"
-                                    required></input>
+                                <input id="qc-portion-weight-item1" name="qc-portion-weight-item1" type="number"
+                                    step="1" min="0" class="validate right-align" value="0"
+                                    oninput="qcItemCarbs(this.id);" required></input>
                                 <span>grams</span>
                             </div>
 
                             <div class="input-field valign-wrapper">
                                 <div>Total Carbs For Item:</div>
-                                <input id="qc-item-carbs1" name="qc-item-carbs1" type="number"
-                                    class="right-align" disabled></input>
+                                <input id="qc-carbs-item1" name="qc-carbs-item1" type="number" class="right-align"
+                                    disabled></input>
                                 <span>g (of Carbs)</span>
                             </div>
-
                         </div>
-                      </li>
-
+                    </li>
 
                     <!-- Item 2 --->
                     <li>
                         <div class="collapsible-header valign-wrapper">
                             <i class="material-icons col">arrow_drop_down_circle</i>
                             <h5 class="col s3">Item 2</h5>
-                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-item2-carbs-big"
-                                    name="qc-item2-carbs" type="number" class="right-align" disabled></input></h5>
+                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-carbs-big-item2"
+                                    name="qc-carbs-big-item2" type="number" class="right-align" disabled></input></h5>
                             <h5 class="left-align col">grams</h5>
                         </div>
                         <div class="collapsible-body">
-                            
+
                             <div class="input-field valign-wrapper">
                                 <div>Base Weight:</div>
-                                <input id="qc-base_weight2" name="qc-base_weight2" type="number" step="1" min="0" class="offset-s8 validate right-align collapsible-input" value="100" oninput="carbPerGram2();" required></input>
+                                <input id="qc-base-weight-item2" name="qc-base-weight-item2" type="number" step="1"
+                                    min="0" class="offset-s8 validate right-align collapsible-input" value="100"
+                                    oninput="carbPerGram(this.id);" required></input>
                                 <span>grams</span>
                             </div>
 
                             <div class="input-field valign-wrapper">
                                 <div>Base Carbs:</div>
-                                <input id="qc-base_carbs2" name="qc-base_carbs2" type="number" step="0.1"
-                                    class="right-align" oninput="carbPerGram();"></input>
-                                <span>grams</span>
-                            </div>
-
-                            <div id="qc-carbs-perG-wrapper2" class="input-field valign-wrapper">
-                                <input id="qc-carb-per-g2" name="qc-carb-per-g2" type="number"
-                                    class="validate right-align offset-s6" value="0" disabled></input>
-                                <div>Carbs per Gram</div>
-                            </div>
-
-                            <div class="input-field valign-wrapper">
-                                <div>Portion Size:</div>
-                                <input id="qc-portion_weight2" name="qc-portion_weight2" type="number" step="1" min="0" class="validate right-align" value="0" oninput="qcItemCarbs();"
-                                    required></input>
-                                <span>grams</span>
-                            </div>
-
-                            <div class="input-field valign-wrapper">
-                                <div>Total Carbs For Item:</div>
-                                <input id="qc-item-carbs2" name="qc-item-carbs2" type="number"
-                                    class="right-align" disabled></input>
-                                <span>g (of Carbs)</span>
-                            </div>
-
-                        </div>
-                      </li>
-
-
-                      <!-- Item 3 --->
-                      <li>
-                        <div class="collapsible-header valign-wrapper">
-                            <i class="material-icons col">arrow_drop_down_circle</i>
-                            <h5 class="col s3">Item 3</h5>
-                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-item3-carbs-big"
-                                    name="qc-item3-carbs" type="number" class="right-align" disabled></input></h5>
-                            <h5 class="left-align col">grams</h5>
-                        </div>
-                        <div class="collapsible-body">
-                            
-                            <div class="input-field valign-wrapper">
-                                <div>Base Weight:</div>
-                                <input id="qc-base_weight3" name="qc-base_weight3" type="number" step="1" min="0" class="offset-s8 validate right-align collapsible-input" value="100" oninput="carbPerGram3();" required></input>
-                                <span>grams</span>
-                            </div>
-
-                            <div class="input-field valign-wrapper">
-                                <div>Base Carbs:</div>
-                                <input id="qc-base_carbs3" name="qc-base_carbs3" type="number" step="0.1"
-                                    class="right-align" oninput="carbPerGram();"></input>
-                                <span>grams</span>
-                            </div>
-
-                            <div id="qc-carbs-perG-wrapper3" class="input-field valign-wrapper">
-                                <input id="qc-carb-per-g3" name="qc-carb-per-g3" type="number"
-                                    class="validate right-align offset-s6" value="0" disabled></input>
-                                <div>Carbs per Gram</div>
-                            </div>
-
-                            <div class="input-field valign-wrapper">
-                                <div>Portion Size:</div>
-                                <input id="qc-portion_weight3" name="qc-portion_weight3" type="number" step="1" min="0" class="validate right-align" value="0" oninput="qcItemCarbs();"
-                                    required></input>
-                                <span>grams</span>
-                            </div>
-
-                            <div class="input-field valign-wrapper">
-                                <div>Total Carbs For Item:</div>
-                                <input id="qc-item-carbs3" name="qc-item-carbs3" type="number"
-                                    class="right-align" disabled></input>
-                                <span>g (of Carbs)</span>
-                            </div>
-
-                        </div>
-                      </li>
-
-                      <!-- Item 4 --->
-                      <li>
-                        <div class="collapsible-header valign-wrapper">
-                            <i class="material-icons col">arrow_drop_down_circle</i>
-                            <h5 class="col s3">Item 4</h5>
-                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-item4-carbs-big"
-                                    name="qc-item4-carbs" type="number" class="right-align" disabled></input></h5>
-                            <h5 class="left-align col">grams</h5>
-                        </div>
-                        <div class="collapsible-body">
-                            
-                            <div class="input-field valign-wrapper">
-                                <div>Base Weight:</div>
-                                <input id="qc-base_weight4" name="qc-base_weight4" type="number" step="1" min="0" class="offset-s8 validate right-align collapsible-input" value="100" oninput="carbPerGram4();" required></input>
-                                <span>grams</span>
-                            </div>
-
-                            <div class="input-field valign-wrapper">
-                                <div>Base Carbs:</div>
-                                <input id="qc-base_carbs4" name="qc-base_carbs4" type="number" step="0.1"
-                                    class="right-align" oninput="carbPerGram();"></input>
+                                <input id="qc-base-carbs-item2" name="qc-base-carbs-item2" type="number" step="0.1"
+                                    class="right-align" oninput="carbPerGram(this.id);"></input>
                                 <span>grams</span>
                             </div>
 
                             <div id="qc-carbs-perG-wrapper4" class="input-field valign-wrapper">
-                                <input id="qc-carb-per-g4" name="qc-carb-per-g4" type="number"
+                                <input id="qc-carb-per-g-item2" name="qc-carb-per-g-item2" type="number"
                                     class="validate right-align offset-s6" value="0" disabled></input>
                                 <div>Carbs per Gram</div>
                             </div>
 
                             <div class="input-field valign-wrapper">
                                 <div>Portion Size:</div>
-                                <input id="qc-portion_weight4" name="qc-portion_weight4" type="number" step="1" min="0" class="validate right-align" value="0" oninput="qcItemCarbs();"
-                                    required></input>
+                                <input id="qc-portion-weight-item2" name="qc-portion-weight-item2" type="number"
+                                    step="1" min="0" class="validate right-align" value="0"
+                                    oninput="qcItemCarbs(this.id);" required></input>
                                 <span>grams</span>
                             </div>
 
                             <div class="input-field valign-wrapper">
                                 <div>Total Carbs For Item:</div>
-                                <input id="qc-item-carbs4" name="qc-item-carbs4" type="number"
-                                    class="right-align" disabled></input>
+                                <input id="qc-carbs-item2" name="qc-carbs-item2" type="number" class="right-align"
+                                    disabled></input>
                                 <span>g (of Carbs)</span>
                             </div>
-
                         </div>
-                      </li>
+                    </li>
 
+                    <!-- Item 3 --->
+                    <li>
+                        <div class="collapsible-header valign-wrapper">
+                            <i class="material-icons col">arrow_drop_down_circle</i>
+                            <h5 class="col s3">Item 3</h5>
+                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-carbs-big-item3"
+                                    name="qc-carbs-big-item3" type="number" class="right-align" disabled></input></h5>
+                            <h5 class="left-align col">grams</h5>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <div class="input-field valign-wrapper">
+                                <div>Base Weight:</div>
+                                <input id="qc-base-weight-item3" name="qc-base-weight-item3" type="number" step="1"
+                                    min="0" class="offset-s8 validate right-align collapsible-input" value="100"
+                                    oninput="carbPerGram(this.id);" required></input>
+                                <span>grams</span>
+                            </div>
+
+                            <div class="input-field valign-wrapper">
+                                <div>Base Carbs:</div>
+                                <input id="qc-base-carbs-item3" name="qc-base-carbs-item3" type="number" step="0.1"
+                                    class="right-align" oninput="carbPerGram(this.id);"></input>
+                                <span>grams</span>
+                            </div>
+
+                            <div id="qc-carbs-perG-wrapper4" class="input-field valign-wrapper">
+                                <input id="qc-carb-per-g-item3" name="qc-carb-per-g-item3" type="number"
+                                    class="validate right-align offset-s6" value="0" disabled></input>
+                                <div>Carbs per Gram</div>
+                            </div>
+
+                            <div class="input-field valign-wrapper">
+                                <div>Portion Size:</div>
+                                <input id="qc-portion-weight-item3" name="qc-portion-weight-item3" type="number"
+                                    step="1" min="0" class="validate right-align" value="0"
+                                    oninput="qcItemCarbs(this.id);" required></input>
+                                <span>grams</span>
+                            </div>
+
+                            <div class="input-field valign-wrapper">
+                                <div>Total Carbs For Item:</div>
+                                <input id="qc-carbs-item3" name="qc-carbs-item3" type="number" class="right-align"
+                                    disabled></input>
+                                <span>g (of Carbs)</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Item 4 --->
+                    <li>
+                        <div class="collapsible-header valign-wrapper">
+                            <i class="material-icons col">arrow_drop_down_circle</i>
+                            <h5 class="col s3">Item 4</h5>
+                            <h5 class="col s3 offset-s2 large-label key-value-box"><input id="qc-carbs-big-item4"
+                                    name="qc-carbs-big-item4" type="number" class="right-align" disabled></input></h5>
+                            <h5 class="left-align col">grams</h5>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <div class="input-field valign-wrapper">
+                                <div>Base Weight:</div>
+                                <input id="qc-base-weight-item4" name="qc-base-weight-item4" type="number" step="1"
+                                    min="0" class="offset-s8 validate right-align collapsible-input" value="100"
+                                    oninput="carbPerGramTest(this.id);" required></input>
+                                <span>grams</span>
+                            </div>
+
+                            <div class="input-field valign-wrapper">
+                                <div>Base Carbs:</div>
+                                <input id="qc-base-carbs-item4" name="qc-base-carbs-item4" type="number" step="0.1"
+                                    class="right-align" oninput="carbPerGram(this.id);"></input>
+                                <span>grams</span>
+                            </div>
+
+                            <div id="qc-carbs-perG-wrapper4" class="input-field valign-wrapper">
+                                <input id="qc-carb-per-g-item4" name="qc-carb-per-g-item4" type="number"
+                                    class="validate right-align offset-s6" value="0" disabled></input>
+                                <div>Carbs per Gram</div>
+                            </div>
+
+                            <div class="input-field valign-wrapper">
+                                <div>Portion Size:</div>
+                                <input id="qc-portion-weight-item4" name="qc-portion-weight-item4" type="number"
+                                    step="1" min="0" class="validate right-align" value="0"
+                                    oninput="qcItemCarbs(this.id);" required></input>
+                                <span>grams</span>
+                            </div>
+
+                            <div class="input-field valign-wrapper">
+                                <div>Total Carbs For Item:</div>
+                                <input id="qc-carbs-item4" name="qc-carbs-item4" type="number" class="right-align"
+                                    disabled></input>
+                                <span>g (of Carbs)</span>
+                            </div>
+                        </div>
+                    </li>
 
                 </ul>
             </div>

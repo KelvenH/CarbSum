@@ -10,57 +10,77 @@ $(document).ready(function () {
   });
 });
 
-// Quick Calc Function
+// Quick Calc Functions
 
 //Calculate base carbs (carb per gram) 
 
 /* --Defect : despite setting input step value to 2 decimal places, calculated results can still display float to multiple decimal places
 Status : Resolved - '.toFixed(2)' added to float being parsed to limit to 2 decimal places */
 
-//original calcs by ID need to changce to be reuseable
+//Plan to Revisit to Simplify
 
-function carbPerGram() {
-  let baseWeight = parseFloat(document.getElementById("qc-base_weight").value, 10);
-  let baseCarbs = parseFloat(document.getElementById("qc-base_carbs").value, 10);
-  let result = baseCarbs / baseWeight;
-  document.getElementById("qc-carb-per-g").value = parseFloat(result).toFixed(2);
+function carbPerGram(selectObject) {
+  if (selectObject.includes("-item1")) {
+    let baseWeight = parseFloat(document.getElementById("qc-base-weight-item1").value, 10);
+    let baseCarbs = parseFloat(document.getElementById("qc-base-carbs-item1").value, 10);
+    let result = baseCarbs / baseWeight;
+    document.getElementById("qc-carb-per-g-item1").value = parseFloat(result).toFixed(2);
+  }
+  if (selectObject.includes("-item2")) {
+    let baseWeight = parseFloat(document.getElementById("qc-base-weight-item2").value, 10);
+    let baseCarbs = parseFloat(document.getElementById("qc-base-carbs-item2").value, 10);
+    let result = baseCarbs / baseWeight;
+    document.getElementById("qc-carb-per-g-item2").value = parseFloat(result).toFixed(2);
+  }
+  if (selectObject.includes("-item3")) {
+    let baseWeight = parseFloat(document.getElementById("qc-base-weight-item3").value, 10);
+    let baseCarbs = parseFloat(document.getElementById("qc-base-carbs-item3").value, 10);
+    let result = baseCarbs / baseWeight;
+    document.getElementById("qc-carb-per-g-item3").value = parseFloat(result).toFixed(2);
+  }
+  if (selectObject.includes("-item4")) {
+    let baseWeight = parseFloat(document.getElementById("qc-base-weight-item4").value, 10);
+    let baseCarbs = parseFloat(document.getElementById("qc-base-carbs-item4").value, 10);
+    let result = baseCarbs / baseWeight;
+    document.getElementById("qc-carb-per-g-item4").value = parseFloat(result).toFixed(2);
+  }
 }
+
 
 //Calculate portion carbs
 
-function qcItemCarbs() {
-  let portionSize = parseFloat(document.getElementById("qc-portion_weight").value, 10);
-  let carbsPerG = parseFloat(document.getElementById("qc-carb-per-g").value, 10);
-  let result = portionSize * carbsPerG;
-  document.getElementById("qc-item-carbs").value = parseFloat(result).toFixed(2);
-  document.getElementById("qc-item-carbs-big").value = parseFloat(result).toFixed(2);
+/* --Defect :
+Status : Outstanding - consider invoking both functions to capture changes. */
+
+function qcItemCarbs(selectObject) {
+  if (selectObject.includes("-item1")) {
+    let portionSize = parseFloat(document.getElementById("qc-portion-weight-item1").value, 10);
+    let carbsPerG = parseFloat(document.getElementById("qc-carb-per-g-item1").value, 10);
+    let result = portionSize * carbsPerG;
+    document.getElementById("qc-carbs-item1").value = parseFloat(result).toFixed(2);
+    document.getElementById("qc-carbs-big-item1").value = parseFloat(result).toFixed(2);
+  }
+  if (selectObject.includes("-item2")) {
+    let portionSize = parseFloat(document.getElementById("qc-portion-weight-item2").value, 10);
+    let carbsPerG = parseFloat(document.getElementById("qc-carb-per-g-item2").value, 10);
+    let result = portionSize * carbsPerG;
+    document.getElementById("qc-carbs-item2").value = parseFloat(result).toFixed(2);
+    document.getElementById("qc-carbs-big-item2").value = parseFloat(result).toFixed(2);
+  }
+  if (selectObject.includes("-item3")) {
+    let portionSize = parseFloat(document.getElementById("qc-portion-weight-item3").value, 10);
+    let carbsPerG = parseFloat(document.getElementById("qc-carb-per-g-item3").value, 10);
+    let result = portionSize * carbsPerG;
+    document.getElementById("qc-carbs-item3").value = parseFloat(result).toFixed(2);
+    document.getElementById("qc-carbs-big-item3").value = parseFloat(result).toFixed(2);
+  }
+  if (selectObject.includes("-item4")) {
+    let portionSize = parseFloat(document.getElementById("qc-portion-weight-item4").value, 10);
+    let carbsPerG = parseFloat(document.getElementById("qc-carb-per-g-item4").value, 10);
+    let result = portionSize * carbsPerG;
+    document.getElementById("qc-carbs-item4").value = parseFloat(result).toFixed(2);
+    document.getElementById("qc-carbs-big-item4").value = parseFloat(result).toFixed(2);
+  }
 }
 
 //Update Item Count
-
-// dependent on resolving the recreation of the id based functions
-
-
-
-
-
-//Recreated to work for item 1
-
-function carbPerGram1() {
-  let baseWeight = parseFloat(document.getElementById("qc-base_weight1").value, 10);
-  let baseCarbs = parseFloat(document.getElementById("qc-base_carbs1").value, 10);
-  let result = baseCarbs / baseWeight;
-  document.getElementById("qc-carb-per-g1").value = parseFloat(result).toFixed(2);
-}
-
-
-//Calculate portion carbs
-
-function qcItemCarbs1() {
-  let portionSize = parseFloat(document.getElementById("qc-portion_weight1").value, 10);
-  let carbsPerG = parseFloat(document.getElementById("qc-carb-per-g1").value, 10);
-  let result = portionSize * carbsPerG;
-  document.getElementById("qc-item-carbs1").value = parseFloat(result).toFixed(2);
-  document.getElementById("qc-item1-carbs-big").value = parseFloat(result).toFixed(2);
-}
-
