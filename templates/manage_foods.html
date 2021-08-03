@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Manage Food Items</h3>
+
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_foods') }}" class="btn-large btn-green">
+            Add New Food Entry<i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row card-panel grey lighten-5">
+    <form action="" method="POST" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix"></i>
+                <input type="text" name="query" id="query" class="validate" minlength="3" required>
+                <label for="query">Search Foods</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_foods') }}" class="red btn text-shadow">Reset</a>
+                <button type="submit" class="btn btn-green text-shadow">Search</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% for food in foods %}
+<div id="item-card-admin">
+    <h4 id="itm-cd-title">{{ food.food_title }}</h4>
+    <h4 id="itm-cd-spacer"> - </h4>
+    <h4 id="itm-cd-subtitle">{{ food.food_subtitle }}</h4>
+    <p id="itm-cd-cat-label">Category:</p>
+    <h5 id="itm-cd-category">{{ food.cat_name }}</h5>
+    <p id="itm-cd-carbs-label">Carbs Per Gram:</p>
+    <h5 id="itm-cd-carbs">{{ food.base_carbs }}</h5>
+    <p id="itm-cd-tags-label">Tags:</p>
+    <h5 id="itm-cd-tags">{{ food.tag }}</h5>
+    <p id="itm-cd-created-label">Created By:</p>
+    <p id="itm-cd-createdby">{{ food.created_by }}</p>
+    <p id="itm-cd-status-label">Status:</p>
+    <p id="itm-cd-status">{{ food.status }}</p>
+    <p id="itm-cd-id-label">ID:</p>
+    <p id="itm-cd-id">{{ food._id }}</p>
+    <a id="itm-cd-editbtn" href="" class="btn-small">Edit</a>
+    <a id="itm-cd-deletebtn" href="" class="btn-small">Delete</a>
+</div>
+{% endfor %}
+
+{% endblock %}
+

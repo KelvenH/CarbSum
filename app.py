@@ -121,7 +121,7 @@ def quick_calc():
 @app.route("/get_foods")
 def get_foods():
     foods = mongo.db.foods.find()
-    return render_template("foods.html", foods=foods)
+    return render_template("manage_foods.html", foods=foods)
 
 
 @app.route("/add_foods", methods=["GET", "POST"])
@@ -145,7 +145,7 @@ def add_foods():
 @app.route("/get_categories")
 def get_categories():
     categories = mongo.db.food_categories.find()
-    return render_template("categories.html", categories=categories)
+    return render_template("manage_categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
@@ -164,7 +164,7 @@ def add_category():
 @app.route("/get_tags")
 def get_tags():
     tags = mongo.db.tags.find()
-    return render_template("tags.html", tags=tags)
+    return render_template("manage_tags.html", tags=tags)
 
 
 if __name__ == "__main__":

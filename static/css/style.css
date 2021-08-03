@@ -25,7 +25,7 @@ html {
 
 .title-txt {font-family: var(--specialfont);font-weight: 700;color: var(--off_white);}
 
-body, div, p {font-family: var(--standardfont);font-weight: 400;color: var(--green_emerald);}
+body, div, p {font-family: var(--standardfont);font-weight: 400;}
 
 .focus-txt {font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
 
@@ -249,3 +249,101 @@ nav ul a,
 .collapsible-body > .input-field > input {
     width:25%;
 }
+
+/*-- Admin Content --*/
+
+/*-- Manage Foods--*/
+
+.item-card {
+    padding: 1vh 1vw;
+    display:grid;
+}
+
+
+#item-card-admin {
+    align-items: center;
+    border-radius: 0.5vw;
+    display: grid;
+    background: var(--green_honeydew);
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    grid-template-columns: 5;
+    grid-template-rows: 5;
+    row-gap: 1vh;
+    /*-- CSS BEAUTIFIER AUTO-STYLING GRID-LAYOUT ON SINGLE ROW???--*/
+    grid-template-areas: 
+    "A1  A1   A3   A4   A4"
+    "B1  B2   B2   B4   B5" 
+    "C1  C2   C2   C2   C2" 
+    "D1  D2   D2   D4   D5" 
+    "E1  E2   E2   E4   E5" 
+   }
+
+#itm-cd-title {
+    grid-area: A1;
+}
+
+#itm-cd-spacer {
+    grid-area: A3;
+}
+
+#itm-cd-subtitle {
+    grid-area: A4;
+}
+
+#itm-cd-cat-label {
+    grid-area: B1;
+}
+
+#itm-cd-category {
+    grid-area: B2;
+}
+
+#itm-cd-carbs-label {
+    grid-area: B4;
+}
+
+#itm-cd-carbs {
+    grid-area: B5;
+}
+
+#itm-cd-tags-label {
+    grid-area: C1;
+}
+
+#itm-cd-tags {
+    grid-area: C2;
+}
+
+#itm-cd-created-label {
+    grid-area: D1;
+}
+
+#itm-cd-createdby {
+    grid-area: D2;
+}
+
+#itm-cd-status-label {
+    grid-area: D4;
+}
+
+#itm-cd-status {
+    grid-area: D5;
+}
+
+#itm-cd-id-label {
+    grid-area: E1;
+}
+
+#itm-cd-id {
+    grid-area: E2;
+}
+
+#itm-cd-editbtn {
+    grid-area: E4;
+}
+
+#itm-cd-deletebtn {
+    grid-area: E5;
+}
+
