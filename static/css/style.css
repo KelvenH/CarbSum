@@ -190,21 +190,21 @@ nav ul a,
     padding-right:2vw;
 }
 
-#calc-result {
+#qc-calc-result {
     display:flex;
     justify-content:flex-end;
 }
 
 /*--Materialize inout styles cannot be overridden by class, specificty requires naming of IDs hence multiple ID listings--*/
 
-#qc-item1-carbs-big,
-#qc-carb-per-g1,
-#qc-item2-carbs-big,
-#qc-carb-per-g2,
-#qc-item3-carbs-big,
-#qc-carb-per-g3,
-#qc-item4-carbs-big,
-#qc-carb-per-g4 {
+#qc-carbs-big-item1,
+#qc-carb-per-g-item1,
+#qc-carbs-big-item2,
+#qc-carb-per-g-item2,
+#qc-carbs-big-item3,
+#qc-carb-per-g-item3,
+#qc-carbs-big-item4,
+#qc-carb-per-g-item4 {
     border-bottom: none;
 }
 
@@ -247,7 +247,5 @@ nav ul a,
 }
 
 .collapsible-body > .input-field > input {
-    
     width:25%;
-    
 }
