@@ -394,19 +394,18 @@ nav ul a,
 /*-- Edit Food--*/
 #edit-item-card,
 #add-item-card {
-    
     border: 2px solid var(--green_silver);
     border-radius: 0.5vw;
     display: grid;
     background: var(--green_honeydew);
     margin-bottom: 1vh;
     padding: 1vh 1vw;
-    grid-template-columns: 5;
     grid-gap: 0;
     row-gap: 0.25vh;
    }
 
 #edit-item-card {
+   grid-template-columns: 5;
    grid-template-areas: 
    "EA1  EA1   EA1   EA4   EA4"
    "EB1  EB2   EB2   EB4   EB5" 
@@ -517,12 +516,12 @@ nav ul a,
 /*-- as noted above, to override materialize styles on input fields seperate grids had to be created, as validator requires unique ids, and classes do not override materialize--*/
 
 #add-item-card {
+    grid-template-columns: 4;
     grid-template-areas: 
-   "AA1  AA2   AA2   AA4   AA5"
-   "AB1  AB2   AB2   AB4   AB5" 
-   "AC1  AC2   AC2   AC2   AC2" 
-   "AD1  AD2   AD2   AD4   AD5" 
-   "AE1  AE2   AE2   AE4   AE5" 
+   "AA1  AA2   AA3   AA4"
+   "AB1  AB2   AB3   AB4" 
+   "AC1  AC2   AC2   AC2" 
+
 }
 
 #add-item-card > * {
@@ -563,11 +562,11 @@ nav ul a,
 
 #add-food-subtitle-label {
 
-    grid-area: AA4;
+    grid-area: AA3;
 }
 
 #add-food-subtitle {
-    grid-area: AA5;
+    grid-area: AA4;
     background-color:var(--green_emerald);
     font-size:1.5rem;
     margin-bottom:0;
@@ -577,16 +576,25 @@ nav ul a,
     grid-area: AB1;
 }
 
-#add-cat-name {
+#add-cat-name-wrapper {
     grid-area: AB2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
+}
+
+/*--Targets category dropdown and option values--*/
+.select-dropdown,
+ul.dropdown-content.select-dropdown li span {
+    color:var(--purpblue);
 }
 
 #add-itm-cd-carbs-label {
-    grid-area: AB4;
+    grid-area: AB3;
 }
 
 #add-base-carbs {
-    grid-area: AB5;
+    grid-area: AB4;
 }
 
 #add-itm-cd-tags-label {

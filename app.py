@@ -150,7 +150,8 @@ def add_food():
         flash("New Food Entry Added")
         return redirect(url_for("get_foods"))
 
-    return render_template("add_food.html")
+    categories = mongo.db.food_categories.find().sort("cat_name, 1")
+    return render_template("add_food.html", categories=categories)
 
 
 
