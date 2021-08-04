@@ -392,7 +392,8 @@ nav ul a,
 
 
 /*-- Edit Food--*/
-#edit-item-card {
+#edit-item-card,
+#add-item-card {
     
     border: 2px solid var(--green_silver);
     border-radius: 0.5vw;
@@ -403,14 +404,16 @@ nav ul a,
     grid-template-columns: 5;
     grid-gap: 0;
     row-gap: 0.25vh;
-    /*-- CSS BEAUTIFIER AUTO-STYLING GRID-LAYOUT ON SINGLE ROW???--*/
-    grid-template-areas: 
-    "EA1  EA1   EA1   EA4   EA4"
-    "EB1  EB2   EB2   EB4   EB5" 
-    "EC1  EC2   EC2   EC2   EC2" 
-    "ED1  ED2   ED2   ED4   ED5" 
-    "EE1  EE2   EE2   EE4   EE5" 
    }
+
+#edit-item-card {
+   grid-template-areas: 
+   "EA1  EA1   EA1   EA4   EA4"
+   "EB1  EB2   EB2   EB4   EB5" 
+   "EC1  EC2   EC2   EC2   EC2" 
+   "ED1  ED2   ED2   ED4   ED5" 
+   "EE1  EE2   EE2   EE4   EE5" 
+}
 
 #edit-item-card > * {
     padding: 0 0.5vw;
@@ -430,7 +433,7 @@ nav ul a,
     margin-bottom:0;
 }
 
-#food_title {
+#food-title {
     font-size:1.5rem;
     grid-area: EA1;
     padding-right:5vw;
@@ -440,7 +443,7 @@ nav ul a,
     background-color:var(--green_emerald);
 }
 
-#food_subtitle {
+#food-subtitle {
     grid-area: EA4;
     background-color:var(--green_emerald);
     font-size:1.5rem;
@@ -450,7 +453,7 @@ nav ul a,
     grid-area: EB1;
 }
 
-#cat_name {
+#cat-name {
     grid-area: EB2;
 }
 
@@ -458,7 +461,7 @@ nav ul a,
     grid-area: EB4;
 }
 
-#base_carbs {
+#base-carbs {
     grid-area: EB5;
 }
 
@@ -466,7 +469,7 @@ nav ul a,
     grid-area: EC1;
 }
 
-#food_tag {
+#food-tag {
     grid-area: EC2;
 }
 
@@ -474,7 +477,7 @@ nav ul a,
     grid-area: ED1;
 }
 
-#food_createdby {
+#food-createdby {
     grid-area: ED2;
 }
 
@@ -482,7 +485,7 @@ nav ul a,
     grid-area: ED4;
 }
 
-#food_status {
+#food-status {
     grid-area: ED5;
 }
 
@@ -490,7 +493,7 @@ nav ul a,
     grid-area: EE1;
 }
 
-#food_id {
+#food-id {
     grid-area: EE2;
 }
 
@@ -509,3 +512,91 @@ nav ul a,
 #edit-itm-cd-new-btn {
     margin-bottom: 1vh;
 }
+
+/*--Add Food --*/
+/*-- as noted above, to override materialize styles on input fields seperate grids had to be created, as validator requires unique ids, and classes do not override materialize--*/
+
+#add-item-card {
+    grid-template-areas: 
+   "AA1  AA2   AA2   AA4   AA5"
+   "AB1  AB2   AB2   AB4   AB5" 
+   "AC1  AC2   AC2   AC2   AC2" 
+   "AD1  AD2   AD2   AD4   AD5" 
+   "AE1  AE2   AE2   AE4   AE5" 
+}
+
+#add-item-card > * {
+    padding: 0 0.5vw;
+}
+
+
+#add-item-card > .itm-cd-label {
+    border: 2px solid var(--green_silver);
+    border-right:0;
+    text-align:right;
+    background-color:var(--green_celadon);
+}
+
+#add-item-card > .itm-cd-value {
+    border: 2px solid var(--green_silver);
+    border-left:0;
+    text-align:left; 
+    margin-bottom:0;
+}
+
+#add-food-title-label {
+    grid-area: AA1;
+}
+
+#add-food-title,
+#add-food-subtitle {
+    font-size:1.5rem;
+    
+    background-color:var(--green_emerald);
+    margin-bottom:0;
+}
+
+#add-food-title {
+    grid-area: AA2;
+}
+
+
+#add-food-subtitle-label {
+
+    grid-area: AA4;
+}
+
+#add-food-subtitle {
+    grid-area: AA5;
+    background-color:var(--green_emerald);
+    font-size:1.5rem;
+    margin-bottom:0;
+}
+
+#add-itm-cd-cat-label {
+    grid-area: AB1;
+}
+
+#add-cat-name {
+    grid-area: AB2;
+}
+
+#add-itm-cd-carbs-label {
+    grid-area: AB4;
+}
+
+#add-base-carbs {
+    grid-area: AB5;
+}
+
+#add-itm-cd-tags-label {
+    grid-area: AC1;
+}
+
+#add-food-tag {
+    grid-area: AC2;
+}
+
+
+
+

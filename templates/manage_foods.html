@@ -45,8 +45,8 @@
     <div id="itm-cd-status" class="itm-cd-value med-label ">{{ food.status }}</div>
     <div id="itm-cd-id-label" class="itm-cd-label">ID:</div>
     <div id="itm-cd-id" class="itm-cd-value small-label">{{ food._id }}</div>
-    <a id="itm-cd-editbtn" href="{{ url_for('edit_food', food_id=food._id) }}" class="btn-small blue lighten-1">Edit</a>
-    <a id="itm-cd-deletebtn" href="#confirm-delete-modal-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
+    <a href="{{ url_for('edit_food', food_id=food._id) }}" class="btn-small blue lighten-1">Edit</a>
+    <a href="#confirm-delete-modal-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
 </div>
 
 
