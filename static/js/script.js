@@ -8,6 +8,7 @@ $(document).ready(function () {
     var input = $("#password");
     input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
   });
+  $('.modal').modal();
 });
 
 // Quick Calc Functions

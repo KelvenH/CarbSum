@@ -1,4 +1,3 @@
-  
 import os
 from flask import (
     Flask, flash, render_template,
@@ -120,20 +119,20 @@ def quick_calc():
 # admin restricted content
 @app.route("/get_foods")
 def get_foods():
-    foods = mongo.db.foods.find()
+    foods = list(mongo.db.foods.find())
     return render_template("manage_foods.html", foods=foods)
 
 @app.route("/edit_food/<food_id>", methods=["GET","POST"])
 def edit_food(food_id):
-    
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     return render_template("edit_food.html",food=food)
 
 
-
-
-
-
+@app.route("/delete_food/<food_id>")
+def delete_food(food_id):
+    mongo.db.foods.delete_one({"_id": ObjectId(food_id)})
+    flash("Food entry has been successfully deleted")
+    return redirect(url_for("get_foods"))
 
 
 @app.route("/add_food", methods=["GET", "POST"])
