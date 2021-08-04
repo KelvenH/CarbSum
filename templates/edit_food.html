@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align title-txt filled-box">Edit Food</h3>
+
+<p>Please Note: You are viewing a global library item which you do not have permissions to change. Instead, please follow the link below to create a new item. This will be available exclusively to you and would be editable here.</p>
+
+<a id="edit-itm-cd-new-btn" href="" class="btn blue lighten-1">Create New Item</a>
+
+<div id="edit-item-card">
+    <input id="food_title" name="food_title" class="large-label validate" minlength="3" maxlength="25" value="{{ food.food_title }}" type="text" required>
+    
+    <input id="food_subtitle" name="food_subtitle" class="itm-cd-value large-label" value="( {{ food.food_subtitle }} )">
+    
+    <div id="edit-itm-cd-cat-label" class="itm-cd-label">Category:</div>
+    <input id="cat_name" name="cat_name" class="itm-cd-value med-label" value="{{ food.cat_name }}"> 
+
+    <div id="edit-itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
+    <input id="base_carbs" name="base_carbs" class="itm-cd-value med-label" value="{{ food.base_carbs }}">
+    
+    <div id="edit-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
+    <input id="food_tag" name="food_tag" class="itm-cd-value med-label" value="{{ food.tag }}">
+    
+    <div id="edit-itm-cd-created-label" class="itm-cd-label">Created By:</div>
+    <input id="food_createdby" name="food_createdby" class="itm-cd-value med-label" value="{{ food.created_by }}">
+    
+    <div id="edit-itm-cd-status-label" class="itm-cd-label">Status:</div>
+    <input id="food_status" name="food_status" class="itm-cd-value med-label" value="{{ food.status }}">
+    
+    <div id="edit-itm-cd-id-label" class="itm-cd-label">ID:</div>
+    <input id="food_id" name="food_id" class="itm-cd-value small-label" value="{{ food._id }}">
+    
+
+</div>
+
+
+<div class="outline-box center-align">
+    <a id="edit-itm-cd-editbtn" href="" class="btn-small green lighten-1">Save</a>
+    <a id="edit-itm-cd-editbtn" href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+    <a id="edit-itm-cd-deletebtn" href="" class="btn-small red">Delete</a>
+</div>
+{% endblock %}
