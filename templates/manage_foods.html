@@ -54,15 +54,15 @@
 
     <div class="modal-content blue-grey lighten-4">
         <div class="card-content red-text">
-            <i id="warning-icon" class="material-icons prefix yellow-text">warning</i>
+            <i class="material-icons prefix yellow-text warning-icon">warning</i>
             <h4 class="modal-title">Confirm Deletion</h4>
         </div>
         <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before proceeding! </p>
         <p>ID of item to be deleted: {{ food._id }}</p>    
 
         <div class="card-action">
-            <a id="edit-itm-cd-editbtn" href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
-            <a id="delete-food" href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
+            <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+            <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
         </div>
     </div>
 
