@@ -1,10 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for category in categories %}
-        {{ category._id }}<br>
-        {{ category.cat_name }}<br>
+<h3 class="center-align title-txt filled-box">Manage Categories</h3>
 
-    {% endfor %}
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="" class="btn-large btn-green">
+            Add New Category<i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row card-panel grey lighten-5">
+    <form action="" method="POST" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix"></i>
+                <input type="text" name="query" id="query" class="validate" minlength="3" required>
+                <label for="query">Search Foods</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_categories') }}" class="orange darken-1 btn text-shadow">Reset</a>
+                <button type="submit" class="btn btn-green text-shadow">Search</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div id="category-card-admin">
+    <div class="row title-row">
+        <div class="col s5 large-label cat-cd-title">Category Name</div>
+        <div class="col s4 large-label cat-cd-title">Cat. ID</div>
+        <div class="col s3 large-label cat-cd-title">Actions</div>
+    </div>
+        {% for category in categories %}
+        <div class="row cat-row-wrap valign-wrapper">
+            <div id="cat-cd-name" class="col s5 large-label cat-cd-value">{{ category.cat_name }}</div>
+            <div id="cat-cd-id" class="col s4 cat-cd-value"> {{ category._id }}</div>
+            <div id="cat-cd-btn-wrapper" class="col s3 cat-cd-value">
+                <a class="btn-small">Edit</a>
+                <a class="btn-small">Delete</a>
+            </div>
+        </div> <!--close looped row-->
+        {% endfor %}
+</div>
 
 {% endblock %}

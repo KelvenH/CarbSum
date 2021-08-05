@@ -293,7 +293,6 @@ nav ul a,
     grid-template-columns: 5;
     grid-gap: 0;
     row-gap: 0.25vh;
-    /*-- CSS BEAUTIFIER AUTO-STYLING GRID-LAYOUT ON SINGLE ROW???--*/
     grid-template-areas: 
     "A1  A1   A1   A4   A4"
     "B1  B2   B2   B4   B5" 
@@ -606,5 +605,60 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 
+/*--Manage Categories. --*/
+
+.cat-cd-title {
+    border: 2px solid var(--green_silver);
+    background: var(--green_emerald);
+    display:inline-block;
+    border-radius: 0.5vw;
+    padding: 1vh 1vw;
+    text-align:center;
+}
+
+.title-row {
+    margin-bottom:0.5vh;
+}
+
+.cat-row-wrap {
+    border: 2px solid var(--green_silver);
+    background: var(--green_celadon);
+    margin-bottom:0.5vh;
+    padding: 0.25vh 0;
+}
+
+.cat-cd-value {
+    
+    
+}
 
 
+/*--
+
+#category-card-admin > * {
+    padding: 0 0.5vw;
+}
+
+.cat-cd-label {
+    border: 2px solid var(--green_silver);
+    text-align:center;
+    background-color:var(--green_celadon);
+}
+
+.cat-cd-value {
+    border: 2px solid var(--green_silver);
+    text-align:center; 
+}
+
+.cat-cd-name {
+    grid-area:CA1;
+}
+
+.cat-cd-id {
+    grid-area:CA2;
+}
+
+.cat-cd-btn-wrapper {
+    grid-area:CA3;
+}
+--*/
