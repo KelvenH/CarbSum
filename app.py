@@ -132,6 +132,7 @@ def edit_food(food_id):
 def add_food():
     if request.method == "POST":
         created_by = "admin" if session['admin_role'] else session["user"],
+        status = "global" if session['admin_role'] else "private"
         food = {
             "food_title": request.form.get("add-food-title"),
              "food_subtitle": request.form.get("add-food-subtitle"),
@@ -139,7 +140,7 @@ def add_food():
             "base_carbs": request.form.get("add-base-carbs"),
             "tag": request.form.get("add-food-tag"),
             "created_by": str(created_by[0]),
-            "status": "private"
+            "status": status
         }
         mongo.db.foods.insert_one(food)
         print(created_by)
