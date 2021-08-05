@@ -175,6 +175,12 @@ def add_category():
 
     return render_template("add_category.html")
 
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.food_categories.delete_one({"_id": ObjectId(category_id)})
+    flash("Category has been successfully deleted")
+    return redirect(url_for("get_categories"))
+
 
 @app.route("/get_tags")
 def get_tags():
