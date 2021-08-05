@@ -548,8 +548,7 @@ nav ul a,
 
 #add-food-title,
 #add-food-subtitle {
-    font-size:1.5rem;
-    
+    font-size:1.5rem; 
     background-color:var(--green_emerald);
     margin-bottom:0;
 }
@@ -627,38 +626,14 @@ ul.dropdown-content.select-dropdown li span {
     padding: 0.25vh 0;
 }
 
-.cat-cd-value {
-    
-    
-}
 
+/*--Add Category --*/
 
-/*--
-
-#category-card-admin > * {
-    padding: 0 0.5vw;
-}
-
-.cat-cd-label {
+#add-category-label,
+#add-category-name  {
     border: 2px solid var(--green_silver);
-    text-align:center;
-    background-color:var(--green_celadon);
+    height:3rem;
+    box-sizing: border-box;
+    margin-top:2vh;
+    margin-bottom:0;
 }
-
-.cat-cd-value {
-    border: 2px solid var(--green_silver);
-    text-align:center; 
-}
-
-.cat-cd-name {
-    grid-area:CA1;
-}
-
-.cat-cd-id {
-    grid-area:CA2;
-}
-
-.cat-cd-btn-wrapper {
-    grid-area:CA3;
-}
---*/

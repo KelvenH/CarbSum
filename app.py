@@ -143,7 +143,6 @@ def add_food():
             "status": status
         }
         mongo.db.foods.insert_one(food)
-        print(created_by)
         flash("New Food Entry Added")
         return redirect(url_for("get_foods"))
 
@@ -168,9 +167,9 @@ def get_categories():
 def add_category():
     if request.method == "POST":
         category = {
-            "category_name": request.form.get("category_name")
+            "cat_name": request.form.get("add-category-name")
         }
-        mongo.db.categories.insert_one(category)
+        mongo.db.food_categories.insert_one(category)
         flash("New Category Added")
         return redirect(url_for("get_categories"))
 

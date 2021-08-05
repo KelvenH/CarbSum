@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col s12 center-align">
-        <a href="" class="btn-large btn-green">
+        <a href="{{ url_for('add_category') }}" class="btn-large blue lighten-1">
             Add New Category<i class="fas fa-plus-square right"></i>
         </a>
     </div>
@@ -40,8 +40,8 @@
             <div id="cat-cd-name" class="col s5 large-label cat-cd-value">{{ category.cat_name }}</div>
             <div id="cat-cd-id" class="col s4 cat-cd-value"> {{ category._id }}</div>
             <div id="cat-cd-btn-wrapper" class="col s3 cat-cd-value">
-                <a class="btn-small">Edit</a>
-                <a class="btn-small">Delete</a>
+                <a class="btn-small btn-small blue lighten-1">Edit</a>
+                <a class="btn-small red">Delete</a>
             </div>
         </div> <!--close looped row-->
         {% endfor %}
