@@ -88,21 +88,34 @@ function qcItemCarbs(selectObject) {
 
 //Update Item Count & Total Carbs
 
-
+//create array on partial id match for each of the 4 carb items & push associated value into array
 function qcItemCount() {
-  let items = [];                                         // create empty array
-  $('input[id*=qc-carbs-big]').each(function(index) {     // find inputs with partial id match (i.e. all 4)
-  items.push(+$(this).val())  // push associated value into array (note'+' after push converted string to number)
-  });
+  let items = [];
+  $('input[id*=qc-carbs-big]').each(function(index) {     
+    items.push(+$(this).val())  // note'+' after push converted string to number
+    //console.log("ITMSB", items);     
+    }
+  );
 
-  let count = items.filter(String).length;                // count no of array items with a string value
+  // Count: no of array items with a value > 0
+  let count = 0;
+  //console.log("COUNTA", count);
+  items.forEach(item =>{
+    if(item !="0"){
+      count+=1;
+    //console.log("COUNTB", count);
+    }
+  });
   document.getElementById("qc-total-items").innerHTML = parseInt(count);
-  console.log(count);
-  
-  let total=0;                                             //loop through array values and count 
-  for (let item in items)
-  { total += items[item]; };
+  //console.log("COUNTC", count);
+
+
+  //Sum: loop through array values and sum total
+  let total=0;                                            
+  for (let item in items){
+    total += items[item];
+  };
   document.getElementById("qc-calc-result").innerHTML = parseInt(total);
-  console.log(total);
+  //console.log(total);
 
 };
