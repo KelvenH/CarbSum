@@ -7,7 +7,7 @@
     follow the link below to create a new item. This will be available exclusively to you and would be editable here.
 </p>
 
-<a id="edit-itm-cd-new-btn" href="" class="btn blue lighten-1">Create New Item</a>
+<a id="edit-itm-cd-new-btn" href="{{ url_for('add_food') }}" class="btn blue lighten-1">Add New Food Entry</a>
 
 <div id="edit-item-card">
     <input id="food-title" name="food-title" class="large-label validate" minlength="3" maxlength="25" value="{{ food.food_title }}" type="text" required>
