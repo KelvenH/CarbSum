@@ -131,16 +131,18 @@ def edit_food(food_id):
 @app.route("/add_food", methods=["GET", "POST"])
 def add_food():
     if request.method == "POST":
+        created_by = "admin" if session['admin_role'] else session["user"],
         food = {
             "food_title": request.form.get("add-food-title"),
              "food_subtitle": request.form.get("add-food-subtitle"),
             "cat_name": request.form.get("add-cat-name"),
             "base_carbs": request.form.get("add-base-carbs"),
             "tag": request.form.get("add-food-tag"),
-            "created_by": session["user"],
+            "created_by": str(created_by[0]),
             "status": "private"
         }
         mongo.db.foods.insert_one(food)
+        print(created_by)
         flash("New Food Entry Added")
         return redirect(url_for("get_foods"))
 
