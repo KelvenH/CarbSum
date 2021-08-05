@@ -32,7 +32,7 @@
 {% for food in foods %}
 <div id="item-card-admin">
     <div id="itm-cd-title" class="itm-cd-label large-label">{{ food.food_title }}</div>
-    <div id="itm-cd-subtitle" class="itm-cd-value large-label">( {{ food.food_subtitle }} )</div>
+    <div id="itm-cd-subtitle" class="itm-cd-value large-label">{{ food.food_subtitle }}</div>
     <div id="itm-cd-cat-label" class="itm-cd-label">Category:</div>
     <div id="itm-cd-category" class="itm-cd-value med-label">{{ food.cat_name }}</div>
     <div id="itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>

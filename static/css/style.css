@@ -409,8 +409,9 @@ nav ul a,
    "EA1  EA1   EA1   EA4   EA4"
    "EB1  EB2   EB2   EB4   EB5" 
    "EC1  EC2   EC2   EC2   EC2" 
+   "xxx  xxx   xxx   xxx   xxx"
    "ED1  ED2   ED2   ED4   ED5" 
-   "EE1  EE2   EE2   EE4   EE5" 
+   "EE1  EE2   EE2   EE4   EE4" 
 }
 
 #edit-item-card > * {
@@ -431,7 +432,7 @@ nav ul a,
     margin-bottom:0;
 }
 
-#food-title {
+#edit-food-title {
     font-size:1.5rem;
     grid-area: EA1;
     padding-right:5vw;
@@ -441,7 +442,7 @@ nav ul a,
     background-color:var(--green_emerald);
 }
 
-#food-subtitle {
+#edit-food-subtitle {
     grid-area: EA4;
     background-color:var(--green_emerald);
     font-size:1.5rem;
@@ -451,23 +452,21 @@ nav ul a,
     grid-area: EB1;
 }
 
-#cat-name {
-    grid-area: EB2;
-}
 
 #edit-itm-cd-carbs-label {
     grid-area: EB4;
 }
 
-#base-carbs {
+#edit-base-carbs {
     grid-area: EB5;
+    
 }
 
 #edit-itm-cd-tags-label {
     grid-area: EC1;
 }
 
-#food-tag {
+#edit-food-tag {
     grid-area: EC2;
 }
 
@@ -475,7 +474,7 @@ nav ul a,
     grid-area: ED1;
 }
 
-#food-createdby {
+#edit-food-createdby {
     grid-area: ED2;
 }
 
@@ -483,7 +482,7 @@ nav ul a,
     grid-area: ED4;
 }
 
-#food-status {
+#edit-food-status {
     grid-area: ED5;
 }
 
@@ -491,24 +490,29 @@ nav ul a,
     grid-area: EE1;
 }
 
-#food-id {
+#edit-food-id {
     grid-area: EE2;
 }
 
-#edit-itm-cd-editbtn {
+#edit-itm-cd-act-btns {
     grid-area: EE4;
 }
 
-#edit-itm-cd-deletebtn {
-    grid-area: EE5;
-}
-
-#edit-item-card-admin > .btn-small {
-    border: 2px solid var(--green_silver);
-}
 
 #edit-itm-cd-new-btn {
     margin-bottom: 1vh;
+}
+
+#edit-cat-name-wrapper {
+    grid-area: EB2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
+}
+
+#disabled-label {
+    grid-area: xxx;
+    margin-bottom:0;
 }
 
 /*--Add Food --*/

@@ -122,10 +122,23 @@ def get_foods():
     foods = list(mongo.db.foods.find())
     return render_template("manage_foods.html", foods=foods)
 
-@app.route("/edit_food/<food_id>", methods=["GET","POST"])
+
+@app.route("/edit_food/<food_id>", methods=["GET", "POST"])
 def edit_food(food_id):
+    if request.method == "POST":
+        submit = {
+            "food_title": request.form.get("edit-food-title"),
+            "food_subtitle": request.form.get("edit-food-subtitle"),
+            "cat_name": request.form.get("edit-cat-name"),
+            "base_carbs": request.form.get("edit-base-carbs"),
+            "tag": request.form.get("edit-food-tag")
+        }
+        mongo.db.foods.update({"_id": ObjectId(food_id)},submit)
+        flash("Food Item Successfully Updated")
+
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
-    return render_template("edit_food.html",food=food)
+    categories = mongo.db.food_categories.find().sort("cat_name, 1")
+    return render_template("edit_food.html", food=food, categories=categories)
 
 
 @app.route("/add_food", methods=["GET", "POST"])

@@ -9,41 +9,69 @@
 
 <a id="edit-itm-cd-new-btn" href="{{ url_for('add_food') }}" class="btn blue lighten-1">Add New Food Entry</a>
 
-<div id="edit-item-card">
-    <input id="food-title" name="food-title" class="large-label validate" minlength="3" maxlength="25" value="{{ food.food_title }}" type="text" required>
+<form id="edit-item-card" method="POST" action="{{ url_for('edit_food', food_id=food._id)}}">
+    <!--Food Item Title-->
+    <input id="edit-food-title" name="edit-food-title" class="large-label validate" minlength="3" maxlength="25"
+        value="{{ food.food_title }}" type="text" required>
 
-    <input id="food-subtitle" name="food-subtitle" class="itm-cd-value large-label"
-        value="( {{ food.food_subtitle }} )">
+    <!--Food Item SubTitle-->
+    <input id="edit-food-subtitle" name="edit-food-subtitle" class="itm-cd-value large-label validate" minlength="3"
+        maxlength="25" type="text" value="{{ food.food_subtitle }}">
 
+    <!--Food Category-->
     <div id="edit-itm-cd-cat-label" class="itm-cd-label">Category:</div>
-    <input id="cat-name" name="cat-name" class="itm-cd-value med-label" value="{{ food.cat_name }}">
+    <div id="edit-cat-name-wrapper" class="input-field col s12 itm-cd-value med-label">
+        <select id="edit-cat-name" name="edit-cat-name" required>
+            <option value="" disabled selected>Choose Category</option>
+            {% for category in categories %}
+                {% if category.cat_name == food.cat_name %}
+                    <option value="{{ category.cat_name }}" selected>{{ food.cat_name }}</option>
+                {% else %}
+                    <option value="{{ category.cat_name }}">{{ category.cat_name }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    </div>
 
+
+    <!--Carbs Per Gram-->
     <div id="edit-itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
-    <input id="base-carbs" name="base-carbs" class="itm-cd-value med-label" value="{{ food.base_carbs }}">
+    <div class="itm-cd-value">
+        <input id="edit-base-carbs" name="edit-base-carbs" class="med-label validate" type="number" step="0.001" required value="{{ food.base_carbs }}">
+    </div>
 
+    <!--Tags-->
     <div id="edit-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-    <input id="food-tag" name="food-tag" class="itm-cd-value med-label" value="{{ food.tag }}">
+    <input id="edit-food-tag" name="edit-food-tag" class="itm-cd-value med-label" value="{{ food.tag }}">
 
+    <em id="disabled-label">The following is displayed for information purposes only and cannot be edited</em>
+
+    <!--Created By (locked for editing : display for info only)-->
     <div id="edit-itm-cd-created-label" class="itm-cd-label">Created By:</div>
-    <input id="food-createdby" name="food-createdby" class="itm-cd-value med-label" value="{{ food.created_by }}">
+    <input id="edit-food-createdby" name="food-createdby" class="itm-cd-value med-label" type="text" disabled
+        value="{{ food.created_by }}">
 
+    <!--Status (locked for editing : display for info only)-->
     <div id="edit-itm-cd-status-label" class="itm-cd-label">Status:</div>
-    <input id="food-status" name="food-status" class="itm-cd-value med-label" value="{{ food.status }}">
+    <input id="edit-food-status" name="food-status" class="itm-cd-value med-label" type="text" disabled
+        value="{{ food.status }}">
 
+    <!--ID (locked for editing : display for info only)-->
     <div id="edit-itm-cd-id-label" class="itm-cd-label">ID:</div>
-    <input id="food-id" name="food-id" class="itm-cd-value small-label" value="{{ food._id }}">
+    <input id="edit-food-id" name="food-id" class="itm-cd-value small-label" type="text" disabled
+        value="{{ food._id }}">
 
 
-</div>
+    <!--Action Buttons-->
+    <div id="edit-itm-cd-act-btns" class="center-align">
+        <button type="submit" class="btn-small green lighten-1">Save</button>
+        <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+        <a href="#confirm-delete-modal2-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
+    </div>
 
+</form>
 
-<div class="outline-box center-align">
-    <a href="" class="btn-small green lighten-1">Save</a>
-    <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
-    <a href="#confirm-delete-modal2-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
-</div>
-
-
+<!--Confirm Deletion Modal-->
 <div id="confirm-delete-modal2-{{ food._id }}" class="modal warning-box">
 
     <div class="modal-content blue-grey lighten-4">
@@ -51,12 +79,14 @@
             <i class="material-icons prefix yellow-text warning-icon">warning</i>
             <h4 class="modal-title">Confirm Deletion</h4>
         </div>
-        <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before proceeding! </p>
-        <p>ID of item to be deleted: {{ food._id }}</p>   
-        
+        <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
+            proceeding! </p>
+        <p>ID of item to be deleted: {{ food._id }}</p>
+
         <div class="card-action">
             <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
-            <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
+            <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm
+                Deletion</a>
         </div>
     </div>
 </div>
