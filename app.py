@@ -128,23 +128,17 @@ def edit_food(food_id):
     return render_template("edit_food.html",food=food)
 
 
-@app.route("/delete_food/<food_id>")
-def delete_food(food_id):
-    mongo.db.foods.delete_one({"_id": ObjectId(food_id)})
-    flash("Food entry has been successfully deleted")
-    return redirect(url_for("get_foods"))
-
-
 @app.route("/add_food", methods=["GET", "POST"])
 def add_food():
     if request.method == "POST":
         food = {
-            "cat_name": request.form.get("cat_name"),
-            "food_title": request.form.get("cat_name"),
-            "food_subtitle": request.form.get("cat_name"),
-            "base_carbs": request.form.get("cat_name"),
-            "tag": request.form.get("cat_name"),
-            "temp": request.form.get("cat_name"),
+            "food_title": request.form.get("add-food-title"),
+             "food_subtitle": request.form.get("add-food-subtitle"),
+            "cat_name": request.form.get("add-cat-name"),
+            "base_carbs": request.form.get("add-base-carbs"),
+            "tag": request.form.get("add-food-tag"),
+            "created_by": session["user"],
+            "status": "private"
         }
         mongo.db.foods.insert_one(food)
         flash("New Food Entry Added")
@@ -153,6 +147,12 @@ def add_food():
     categories = mongo.db.food_categories.find().sort("cat_name, 1")
     return render_template("add_food.html", categories=categories)
 
+
+@app.route("/delete_food/<food_id>")
+def delete_food(food_id):
+    mongo.db.foods.delete_one({"_id": ObjectId(food_id)})
+    flash("Food entry has been successfully deleted")
+    return redirect(url_for("get_foods"))
 
 
 @app.route("/get_categories")
