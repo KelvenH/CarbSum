@@ -114,6 +114,14 @@ def quick_calc():
     return render_template("quickcalc.html")
 
 
+# Search
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    foods = list(mongo.db.foods.find({"$text": {"$search": query}}))
+    return render_template("manage_foods.html", foods=foods)
+
+
 # Foods - Create
 @app.route("/add_food", methods=["GET", "POST"])
 def add_food():
@@ -133,8 +141,8 @@ def add_food():
         flash("New Food Entry Added")
         return redirect(url_for("get_foods"))
 
-    categories = mongo.db.food_categories.find().sort("cat_name, 1")
-    tags = mongo.db.tags.find().sort("tag_name, 1")
+    categories = mongo.db.food_categories.find().sort("cat_name", 1)
+    tags = mongo.db.tags.find().sort("tag_name", 1)
     return render_template("add_food.html", categories=categories, tags=tags)
 
 
@@ -161,8 +169,8 @@ def edit_food(food_id):
         return redirect(url_for("get_foods"))
 
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
-    categories = mongo.db.food_categories.find().sort("cat_name, 1")
-    tags = mongo.db.tags.find().sort("tag_name, 1")
+    categories = mongo.db.food_categories.find().sort("cat_name", 1)
+    tags = mongo.db.tags.find().sort("tag_name", 1)
     return render_template("edit_food.html", food=food, categories=categories, tags=tags)
 
 
