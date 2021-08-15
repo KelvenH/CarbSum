@@ -10,7 +10,14 @@ $(document).ready(function () {
   });
   $('.modal').modal();
   $('select').formSelect();
+
 });
+
+//navigation purposes to go back to previous page
+
+function goBack() {
+  window.history.back();
+}
 
 // Quick Calc Functions
 

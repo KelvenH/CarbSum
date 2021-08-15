@@ -25,6 +25,7 @@
         <!-- top navbar-->
 
         <!-- Admin Dropdown Structure (Main nav)-->
+        
         <ul id="admin_dropdown" class="dropdown-content">
             <li><a href="{{ url_for('get_foods') }}">Manage Foods</a></li>
             <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
@@ -33,13 +34,14 @@
 
         <nav class="nav-extended">
             <div class="nav-outer">
-                <a href="{{ url_for('home') }}" class="brand-logo center">CarbSum</a>
+                <button id="return" onclick="goBack()"><i  class="material-icons">forward</i></button>
+                <a href="{{ url_for('home') }}" class="brand-logo title-txt center">CarbSum</a>
             </div>
+           
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                                     
-                    <li><a href="#">Search</a></li>
                     <li><a href="{{ url_for('quick_calc') }}">Quick Calc</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
@@ -74,7 +76,6 @@
                 <h4 class="center-align">CarbSum</h4>
             </li>
             
-            <li><a href="#">Search</a></li>
             <li><a href="{{ url_for('quick_calc') }}">Quick Calc</a></li>
             {% if session.user: %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
