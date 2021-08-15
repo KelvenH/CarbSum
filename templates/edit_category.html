@@ -35,6 +35,24 @@
     </form>
 </div>
 
+<!--Confirm Deletion Modal-->
+<div id="confirm-delete-modal4-{{ category._id }}" class="modal warning-box">
+
+    <div class="modal-content blue-grey lighten-4">
+        <div class="card-content red-text">
+            <i class="material-icons prefix yellow-text warning-icon">warning</i>
+            <h4 class="modal-title">Confirm Deletion</h4>
+        </div>
+        <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
+            proceeding! </p>
+        <p>ID of item to be deleted: {{ category._id }}</p>
+
+        <div class="card-action">
+            <a href="{{ url_for('get_categories') }}" class="btn-small grey lighten-1">Cancel</a>
+            <a href="{{ url_for('delete_category', category_id=category._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
