@@ -603,9 +603,14 @@ ul.dropdown-content.select-dropdown li span {
     grid-area: AC1;
 }
 
-#add-food-tag {
+#add-tag-name-wrapper {
     grid-area: AC2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
 }
+
+
 
 
 /*--Manage Categories. --*/

@@ -27,11 +27,6 @@ mongo = PyMongo(app)
 def home():
     return render_template("index.html")
 
-# Temporary - must be deleted prior to submission
-@app.route("/test")
-def test():
-    return render_template("test.html")
-
 
 # Registration
 @app.route("/join", methods=["GET", "POST"])
@@ -59,6 +54,7 @@ def join():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("join.html")
 
+
 # Sign In
 @app.route("/signIn", methods=["GET", "POST"])
 def signIn():
@@ -85,6 +81,7 @@ def signIn():
             return redirect(url_for("signIn"))
 
     return render_template("signin.html")
+
 
 # Profile (Dashboard)
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -125,10 +122,10 @@ def add_food():
         status = "global" if session['admin_role'] else "private"
         food = {
             "food_title": request.form.get("add-food-title"),
-             "food_subtitle": request.form.get("add-food-subtitle"),
+            "food_subtitle": request.form.get("add-food-subtitle"),
             "cat_name": request.form.get("add-cat-name"),
             "base_carbs": request.form.get("add-base-carbs"),
-            "tag": request.form.get("add-food-tag"),
+            "tag": request.form.get("add-tag-name"),
             "created_by": str(created_by[0]),
             "status": status
         }
@@ -137,7 +134,8 @@ def add_food():
         return redirect(url_for("get_foods"))
 
     categories = mongo.db.food_categories.find().sort("cat_name, 1")
-    return render_template("add_food.html", categories=categories)
+    tags = mongo.db.tags.find().sort("tag_name, 1")
+    return render_template("add_food.html", categories=categories, tags=tags)
 
 
 # Foods - Read
@@ -220,7 +218,7 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
-# Categories - Create
+# Tags - Create
 @app.route("/add_tag", methods=["GET", "POST"])
 def add_tag():
     if request.method == "POST":
@@ -234,14 +232,14 @@ def add_tag():
     return render_template("add_tag.html")
 
 
-# Categories - Read
+# Tags - Read
 @app.route("/get_tags")
 def get_tags():
     tags = mongo.db.tags.find()
     return render_template("manage_tags.html", tags=tags)
 
 
-# Categories - Update
+# Tags - Update
 @app.route("/edit_tag/<tag_id>", methods=["GET", "POST"])
 def edit_tag(tag_id):
     if request.method == "POST":
@@ -257,7 +255,7 @@ def edit_tag(tag_id):
     return render_template("edit_tag.html", tag=tag)
 
 
-# Categories - Delete
+# Tags - Delete
 @app.route("/delete_tag/<tag_id>")
 def delete_tag(tag_id):
     mongo.db.tags.delete_one({"_id": ObjectId(tag_id)})
