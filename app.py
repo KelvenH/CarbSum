@@ -125,7 +125,7 @@ def add_food():
             "food_subtitle": request.form.get("add-food-subtitle"),
             "cat_name": request.form.get("add-cat-name"),
             "base_carbs": request.form.get("add-base-carbs"),
-            "tag": request.form.get("add-tag-name"),
+            "tag": request.form.getlist("add-tag-name"),
             "created_by": str(created_by[0]),
             "status": status
         }
@@ -154,7 +154,7 @@ def edit_food(food_id):
             "food_subtitle": request.form.get("edit-food-subtitle"),
             "cat_name": request.form.get("edit-cat-name"),
             "base_carbs": request.form.get("edit-base-carbs"),
-            "tag": request.form.get("edit-food-tag")
+            "tag": request.form.getlist("edit-food-tag")
         }
         mongo.db.foods.update({"_id": ObjectId(food_id)},submit)
         flash("Food Item Successfully Updated")
@@ -162,7 +162,8 @@ def edit_food(food_id):
 
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     categories = mongo.db.food_categories.find().sort("cat_name, 1")
-    return render_template("edit_food.html", food=food, categories=categories)
+    tags = mongo.db.tags.find().sort("tag_name, 1")
+    return render_template("edit_food.html", food=food, categories=categories, tags=tags)
 
 
 # Foods - Delete

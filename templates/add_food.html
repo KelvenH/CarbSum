@@ -37,7 +37,7 @@
             <div id="add-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
             <div id="add-tag-name-wrapper" class="input-field col s12 itm-cd-value med-label">
                 <select multiple id="add-tag-name" name="add-tag-name">
-                    <option value="" disabled selected>Select Tags (optional)</option>
+                    <option value="" disabled >Select Tags (optional)</option>
                     {% for tag in tags %}
                         <option value="{{ tag.tag_name }}">{{ tag.tag_name }}</option>
                     {% endfor %}

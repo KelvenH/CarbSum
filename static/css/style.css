@@ -452,6 +452,12 @@ nav ul a,
     grid-area: EB1;
 }
 
+#edit-cat-name-wrapper {
+    grid-area: EB2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
+}
 
 #edit-itm-cd-carbs-label {
     grid-area: EB4;
@@ -461,14 +467,30 @@ nav ul a,
     grid-area: EB5;
     
 }
-
+/*--temp--*/
 #edit-itm-cd-tags-label {
     grid-area: EC1;
 }
 
-#edit-food-tag {
+#edit-itm-cd-tag-wrapper {
     grid-area: EC2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
 }
+
+/*--
+#edit-itm-cd-tags-label {
+    grid-area: EC1;
+}
+
+#edit-tag-name-wrapper {
+    grid-area: EC2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
+}
+--*/
 
 #edit-itm-cd-created-label {
     grid-area: ED1;
@@ -503,12 +525,7 @@ nav ul a,
     margin-bottom: 1vh;
 }
 
-#edit-cat-name-wrapper {
-    grid-area: EB2;
-    border: 2px solid var(--green_silver);
-    margin:0;
-    color:var(--purpblue);
-}
+
 
 #disabled-label {
     grid-area: xxx;

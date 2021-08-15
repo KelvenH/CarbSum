@@ -20,7 +20,7 @@
 
     <!--Food Category-->
     <div id="edit-itm-cd-cat-label" class="itm-cd-label">Category:</div>
-    <div id="edit-cat-name-wrapper" class="input-field col s12 itm-cd-value med-label">
+    <div id="edit-cat-name-wrapper" class="input-field col itm-cd-value med-label">
         <select id="edit-cat-name" name="edit-cat-name" required>
             <option value="" disabled selected>Choose Category</option>
             {% for category in categories %}
@@ -40,10 +40,22 @@
         <input id="edit-base-carbs" name="edit-base-carbs" class="med-label validate" type="number" step="0.001" required value="{{ food.base_carbs }}">
     </div>
 
-    <!--Tags-->
+        <!-- Tags -->
     <div id="edit-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-    <input id="edit-food-tag" name="edit-food-tag" class="itm-cd-value med-label" value="{{ food.tag }}">
+    <div id="edit-itm-cd-tag-wrapper" class="input-field col itm-cd-value med-label">
+        <select multiple id="edit-food-tag" name="edit-food-tag" required>
+            <option value="" disabled >Select Tags (optional)</option>
+            {% for tag in tags %}
+                {% if tag.tag_name == tag.tag_name %}
+                    <option value="{{ tag.tag_name }}" selected >{{ tag.tag_name }}</option>
+                {% else %}
+                    <option value="{{ tag.tag_name }}">{{ tag.tag_name }}</option>
+                {% endif %}    
+            {% endfor %}
+        </select>
+    </div>
 
+    <!--info section-->
     <em id="disabled-label">The following is displayed for information purposes only and cannot be edited</em>
 
     <!--Created By (locked for editing : display for info only)-->
