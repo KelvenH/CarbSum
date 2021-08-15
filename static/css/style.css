@@ -634,10 +634,64 @@ ul.dropdown-content.select-dropdown li span {
 /*--Add Category --*/
 
 #add-category-label,
-#add-category-name  {
+#add-category-name {
     border: 2px solid var(--green_silver);
     height:3rem;
     box-sizing: border-box;
     margin-top:2vh;
     margin-bottom:0;
 }
+
+/*--Edit Category --*/
+
+#edit-category-card {
+    border: 2px solid var(--green_silver);
+    border-radius: 0.5vw;
+    display: grid;
+    background: var(--green_honeydew);
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    grid-gap: 0;
+    
+    grid-template-columns: 2;
+    grid-template-areas: 
+   "ECA1  ECA1"
+   "ECB1  ECB1" 
+   "ECC1  ECC1" 
+}
+
+#edit-category-label,
+#edit-category-name,
+#edit-cat-id-label,
+#edit-category-id {
+    border: 2px solid var(--green_silver);
+    height:3rem;
+    box-sizing: border-box;
+    margin-bottom:0;
+    padding: 1vh 1vw;
+}
+
+#edit-category-name-wrapper {
+    grid-area: ECA1;
+}
+
+#edit-category-id-wrapper {
+    grid-area: ECB1;
+}
+
+
+
+#edit-category-name {
+   font-size:1.5rem;
+    
+}
+
+
+#edit-category-id {
+    border: 2px solid var(--green_silver);
+}
+ 
+#edit-cat-act-btns {
+    grid-area: ECC1;
+}
+

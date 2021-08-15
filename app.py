@@ -116,31 +116,14 @@ def quick_calc():
     return render_template("quickcalc.html")
 
 
-# admin restricted content
+# Foods - Read
 @app.route("/get_foods")
 def get_foods():
     foods = list(mongo.db.foods.find())
     return render_template("manage_foods.html", foods=foods)
 
 
-@app.route("/edit_food/<food_id>", methods=["GET", "POST"])
-def edit_food(food_id):
-    if request.method == "POST":
-        submit = {
-            "food_title": request.form.get("edit-food-title"),
-            "food_subtitle": request.form.get("edit-food-subtitle"),
-            "cat_name": request.form.get("edit-cat-name"),
-            "base_carbs": request.form.get("edit-base-carbs"),
-            "tag": request.form.get("edit-food-tag")
-        }
-        mongo.db.foods.update({"_id": ObjectId(food_id)},submit)
-        flash("Food Item Successfully Updated")
-
-    food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
-    categories = mongo.db.food_categories.find().sort("cat_name, 1")
-    return render_template("edit_food.html", food=food, categories=categories)
-
-
+# Foods - Create
 @app.route("/add_food", methods=["GET", "POST"])
 def add_food():
     if request.method == "POST":
@@ -163,6 +146,27 @@ def add_food():
     return render_template("add_food.html", categories=categories)
 
 
+# Foods - Update
+@app.route("/edit_food/<food_id>", methods=["GET", "POST"])
+def edit_food(food_id):
+    if request.method == "POST":
+        submit = {
+            "food_title": request.form.get("edit-food-title"),
+            "food_subtitle": request.form.get("edit-food-subtitle"),
+            "cat_name": request.form.get("edit-cat-name"),
+            "base_carbs": request.form.get("edit-base-carbs"),
+            "tag": request.form.get("edit-food-tag")
+        }
+        mongo.db.foods.update({"_id": ObjectId(food_id)},submit)
+        flash("Food Item Successfully Updated")
+        return redirect(url_for("get_foods"))
+
+    food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
+    categories = mongo.db.food_categories.find().sort("cat_name, 1")
+    return render_template("edit_food.html", food=food, categories=categories)
+
+
+# Foods - Delete
 @app.route("/delete_food/<food_id>")
 def delete_food(food_id):
     mongo.db.foods.delete_one({"_id": ObjectId(food_id)})
@@ -170,12 +174,14 @@ def delete_food(food_id):
     return redirect(url_for("get_foods"))
 
 
+# Categories - Read
 @app.route("/get_categories")
 def get_categories():
     categories = mongo.db.food_categories.find()
     return render_template("manage_categories.html", categories=categories)
 
 
+# Categories - Create
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -188,6 +194,24 @@ def add_category():
 
     return render_template("add_category.html")
 
+
+# Categories - Update
+@app.route("/edit_category/<category_id>", methods=["GET", "POST"])
+def edit_category(category_id):
+    if request.method == "POST":
+        submit = {
+            "cat_name": request.form.get("edit-cat-name")
+        }
+
+        mongo.db.foods.update({"_id": ObjectId(category_id)},submit)
+        flash("Category Successfully Updated")
+        return redirect(url_for("get_categories"))
+        
+    category = mongo.db.food_categories.find_one({"_id": ObjectId(category_id)})
+    return render_template("edit_category.html", category=category)
+
+
+# Categories - Delete
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.food_categories.delete_one({"_id": ObjectId(category_id)})
@@ -195,6 +219,8 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+
+# Categories - Read
 @app.route("/get_tags")
 def get_tags():
     tags = mongo.db.tags.find()
