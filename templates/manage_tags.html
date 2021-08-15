@@ -39,7 +39,7 @@
         {% for tag in tags %}
             <div class="row cat-row-wrap valign-wrapper">
                 <div id="tag-cd-name" class="col s5 large-label cat-cd-value">{{ tag.tag_name }}</div>
-                <div id="ctag-cd-id" class="col s4 cat-cd-value"> {{ tag._id }}</div>
+                <div id="tag-cd-id" class="col s4 cat-cd-value"> {{ tag._id }}</div>
                 <div id="tag-cd-btn-wrapper" class="col s3 cat-cd-value">
                     <a href="{{ url_for('edit_tag', tag_id=tag._id) }}" class="btn-small blue lighten-1">Edit</a>
                     <a href="#confirm-delete-modal5-{{ tag._id }}" class="modal-trigger btn-small red">Delete</a>

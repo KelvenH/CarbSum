@@ -640,6 +640,11 @@ ul.dropdown-content.select-dropdown li span {
     box-sizing: border-box;
     margin-top:2vh;
     margin-bottom:0;
+    padding: 1vh 1vw;
+}
+
+#add-category-name {
+    font-size:1.5rem;  
 }
 
 /*--Edit Category --*/
@@ -679,11 +684,8 @@ ul.dropdown-content.select-dropdown li span {
     grid-area: ECB1;
 }
 
-
-
 #edit-category-name {
-   font-size:1.5rem;
-    
+   font-size:1.5rem;   
 }
 
 
@@ -695,3 +697,18 @@ ul.dropdown-content.select-dropdown li span {
     grid-area: ECC1;
 }
 
+/*--Add Tag --*/
+
+#add-tag-label,
+#add-tag-name {
+    border: 2px solid var(--green_silver);
+    height:3rem;
+    box-sizing: border-box;
+    margin-top:2vh;
+    margin-bottom:0;
+    padding: 1vh 1vw;
+}
+
+#add-tag-name {
+    font-size:1.5rem;  
+}

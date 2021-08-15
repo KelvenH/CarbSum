@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align title-txt filled-box">Add New Tag</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('add_tag')}}">
+
+        
+        <div id="add-tag-card" class="row col s12 valign-wrapper">
+            <div id="add-tag-label" class="col s4 itm-cd-label med-label">Tag Name:</div>
+            <input id="add-tag-name" name="add-tag-name" class="col s8 itm-cd-value large-label validate" minlength="3" maxlength="25" type="text" required>
+        </div>
+
+        <!--Action Buttons-->
+        <div id="add-actions" class="outline-box center-align">
+            <button type="submit" class="btn-small green lighten-1">Save</button>
+            <a href="{{ url_for('get_tags') }}" class="btn-small grey lighten-1">Cancel</a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
