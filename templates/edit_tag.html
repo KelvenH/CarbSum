@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align title-txt filled-box">Edit Tag</h3>
+
+<a id="edit-itm-cd-new-btn" href="{{ url_for('add_tag') }}" class="btn blue lighten-1">Add New Tag</a>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_tag', tag_id=tag._id) }}">
+
+        <div id="edit-tag-card"> 
+            <div id="edit-tag-name-wrapper" class="row col s12 valign-wrapper">
+            <!--Tag-->
+                <div id="edit-tag-label" class="col s4 itm-cd-label med-label">Tag:</div>
+                <input id="edit-tag-name" name="edit-tag-name" class="col s8 large-label itm-cd-value validate"
+                minlength="3" maxlength="25" value="{{ tag.tag_name }}" type="text" required>
+            </div>
+
+            <!--ID (locked for editing : display for info only)-->
+            <div id="edit-tag-id-wrapper" class="row col s12 valign-wrapper">
+                <div id="edit-tag-id-label" class="col s4 itm-cd-label med-label">ID:</div>
+                <input id="edit-tag-id" name="edit-tag-id" class="col s8 itm-cd-value small-label" type="text" disabled
+                value="{{ tag._id }}">
+            </div>
+
+            <!--Action Buttons-->
+            <div id="edit-tag-act-btns" class="center-align">
+                <button type="submit" class="btn-small green lighten-1">Save</button>
+                <a href="{{ url_for('get_tags') }}" class="btn-small grey lighten-1">Cancel</a>
+                <a href="#confirm-delete-modal6-{{ tag._id }}" class="modal-trigger btn-small red">Delete</a>
+            </div>
+
+
+        </div>
+    </form>
+</div>
+
+<!--Confirm Deletion Modal-->
+<div id="confirm-delete-modal6-{{ tag._id }}" class="modal warning-box">
+
+    <div class="modal-content blue-grey lighten-4">
+        <div class="card-content red-text">
+            <i class="material-icons prefix yellow-text warning-icon">warning</i>
+            <h4 class="modal-title">Confirm Deletion</h4>
+        </div>
+        <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
+            proceeding! </p>
+        <p>ID of item to be deleted: {{ tag._id }}</p>
+
+        <div class="card-action">
+            <a href="{{ url_for('get_tags') }}" class="btn-small grey lighten-1">Cancel</a>
+            <a href="{{ url_for('delete_tag', tag_id=tag._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

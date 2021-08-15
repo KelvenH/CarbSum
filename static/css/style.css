@@ -712,3 +712,53 @@ ul.dropdown-content.select-dropdown li span {
 #add-tag-name {
     font-size:1.5rem;  
 }
+
+/*--Edit Tag --*/
+
+#edit-tag-card {
+    border: 2px solid var(--green_silver);
+    border-radius: 0.5vw;
+    display: grid;
+    background: var(--green_honeydew);
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    grid-gap: 0;
+    
+    grid-template-columns: 2;
+    grid-template-areas: 
+   "ETA1  ETA1"
+   "ETB1  ETB1" 
+   "ETC1  ETC1" 
+}
+
+#edit-tag-label,
+#edit-tag-name,
+#edit-tag-id-label,
+#edit-tag-id {
+    border: 2px solid var(--green_silver);
+    height:3rem;
+    box-sizing: border-box;
+    margin-bottom:0;
+    padding: 1vh 1vw;
+}
+
+#edit-tag-name-wrapper {
+    grid-area: ETA1;
+}
+
+#edit-tag-id-wrapper {
+    grid-area: ETB1;
+}
+
+#edit-tag-name {
+   font-size:1.5rem;   
+}
+
+
+#edit-tag-id {
+    border: 2px solid var(--green_silver);
+}
+ 
+#edit-tag-act-btns {
+    grid-area: ETC1;
+}
