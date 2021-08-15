@@ -200,10 +200,10 @@ def add_category():
 def edit_category(category_id):
     if request.method == "POST":
         submit = {
-            "cat_name": request.form.get("edit-cat-name")
+            "cat_name": request.form.get("edit-category-name")
         }
 
-        mongo.db.foods.update({"_id": ObjectId(category_id)},submit)
+        mongo.db.food_categories.update({"_id": ObjectId(category_id)},submit)
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
         
