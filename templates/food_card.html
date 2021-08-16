@@ -19,8 +19,44 @@
 <div>Create New Variant</div>
 
 
-{% for food in foods %}
 
-{% endfor %}
+<div class="row">
+    <form id="user-food-card" class="col s12">
+        <div class="card-panel">
+            <!--food card title-->
+            <div id="food-card-title-wrapper" class="col s12 valign-wrapper filled-box white-txt">
+                <button id="return" onclick="goBack()"><i  class="material-icons">forward</i></button>
+                <h4 class="col s6 right-align">{{ food.food_title }}</h4>
+                <h4 class="col s1"> - </h4>
+                <h4 class="col s5 left-align">{{ food.food_subtitle }}</h4>
+            </div>
+
+            <!--food card info-->
+            <div id="food-card-info-wrapper" class="col s12 valign-wrapper outline-box">
+                <div id="food-card-image" class="col s4 key-value-box">image placeholder</div>
+                 
+                <!--nested info column-->
+                <div class="col s8">
+                    <div id="food-card-carbs" class="row focus-box">
+                        <h4 class="col s8 right-align">Total Carbs:</h4>
+                        <h4 id="food-calc-result" class="col s4 center-align white-box">0<span>g</span></h4>
+                    </div>
+                </div>
+            </div>
+
+            <!--food card actions-->
+            
+            
+            <div>{{ food.cat_name }}</div>
+            <div>{{ food.base_carbs }}</div>
+            <div>{{ food.tag }}</div>
+            <div>{{ food.created_by }}</div>
+            <div>{{ food.status }}</div>
+            <div>{{ food._id }}</div>
+        </div> <!--close card panel-->
+    </form>
+</div>
+
+
 
 {% endblock %}

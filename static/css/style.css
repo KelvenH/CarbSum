@@ -61,7 +61,7 @@ margin-top: 1vh;
 margin-left:2vw;
 background-color:inherit;
 color: var(--off_white);
-border: solid 2px var(--off_white);
+border: none;
 }
 
 /*--created seperate nav-outer div to create seperation between logo and menu items--*/
@@ -99,6 +99,13 @@ border: solid 2px var(--off_white);
 .filled-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--green_emerald);
+    border-radius: 20px;
+    padding: 2vh 0;  
+}
+
+.white-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--off_white);
     border-radius: 20px;
     padding: 2vh 0;  
 }
@@ -815,3 +822,34 @@ ul.dropdown-content.select-dropdown li span {
     margin-bottom: 1vh;
 }
 
+/*-- Food Card --*/
+#food-card-title-wrapper {
+    display:flex;
+    margin-bottom:1vh;
+}
+
+#food-card-title-wrapper > * {
+    display:inline-block;
+    
+}
+
+#food-card-info-wrapper {
+    padding: 1vh 1vw;
+}
+
+#food-card-image {
+    height: 15vh;
+}
+
+#food-card-carbs {
+    display:flex;
+    padding: 1vh 1vw;
+    
+}
+
+#food-card-carbs > * {
+    height: 3rem;
+    line-height:3rem;
+    margin-top:0;
+    margin-bottom:0;
+}
