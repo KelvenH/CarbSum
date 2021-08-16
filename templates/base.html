@@ -44,7 +44,7 @@
                                     
                     <li><a href="{{ url_for('quick_calc') }}">Quick Calc</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
+                        <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
                         <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
                         <!-- Dropdown Trigger - Admin Restricted-->
                         {% if 'admin_role' in session and session['admin_role'] %}
@@ -78,7 +78,7 @@
             
             <li><a href="{{ url_for('quick_calc') }}">Quick Calc</a></li>
             {% if session.user: %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
+                <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
                 <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
                 <!-- Dropdown Trigger - Admin Restricted-->
                 {% if 'admin_role' in session and session['admin_role'] %}

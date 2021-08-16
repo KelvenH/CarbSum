@@ -51,7 +51,7 @@ def join():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower(),
         flash("Sign-up was successful. Welcome to CarbSum! We hope you find this a helpful aid to support your carb counting")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("dashboard", username=session["user"]))
     return render_template("join.html")
 
 
@@ -68,7 +68,7 @@ def signIn():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    return redirect(url_for("profile", username=session["user"]))
+                    return redirect(url_for("dashboard", username=session["user"]))
             
             else:
                 # invalid password match
@@ -83,9 +83,9 @@ def signIn():
     return render_template("signin.html")
 
 
-# Profile (Dashboard)
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+# Dashboard
+@app.route("/dashboard/<username>", methods=["GET", "POST"])
+def dashboard(username):
     # grab the session user's username from db
     user = mongo.db.users.find_one({"username": username})
     
@@ -93,7 +93,7 @@ def profile(username):
         session['admin_role'] = user['admin_role']
 
     if 'user' in session:
-        return render_template("profile.html", username=user["username"])
+        return render_template("dashboard.html", username=user["username"])
 
     return redirect(url_for("signIn"))
 
@@ -122,6 +122,55 @@ def search():
     return render_template("manage_foods.html", foods=foods)
 
 
+# User Content
+
+
+# Find Food Items
+@app.route("/find_foods")
+def find_foods():
+    foods = list(mongo.db.foods.find())
+    return render_template("find_foods.html", foods=foods)
+
+
+# View Food Card
+
+
+# Create New Food Variant (Private)
+
+
+# Update Food Variant (Private)
+
+
+# Delete Food Variant (Private)
+
+
+# View Favourites
+
+
+# Add Food to Favourites
+
+
+# Remove Food from Favourites
+
+
+# View Meals
+
+
+# Create Meals
+
+
+# Add Food to Meal
+
+
+# Edit Meal
+
+
+# Delete Meal
+
+
+
+
+# ADMIN Restricted Content
 # Foods - Create
 @app.route("/add_food", methods=["GET", "POST"])
 def add_food():
