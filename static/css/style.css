@@ -39,7 +39,7 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
 
 .med-label {font-size:1.25rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
-.small-label {font-size:0.75rem;font-family: var(--standardfont);font-weight: 400;font-style:italic;color: var(--purpblue);}
+.small-label {font-size:1.15rem;font-family: var(--standardfont);font-weight: 400;font-style:italic;color: var(--purpblue);}
 
 .btn-label {font-size:2rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
@@ -225,7 +225,8 @@ nav .brand-logo {
     margin-top:2vh
 }
 
-#home-mid-pane div {
+#home-mid-pane div,
+#dashboard-mid-pane div {
     margin-bottom: 1vh;
 }
 
