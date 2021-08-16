@@ -828,9 +828,8 @@ ul.dropdown-content.select-dropdown li span {
 /*-- Find Foods --*/
 
 #find-food-user {
-    border: 2px solid var(--green_silver);
-    background: var(--green_honeydew);
     margin-bottom: 1vh;
+    padding:0;
 }
 
 /*-- Food Card --*/
@@ -904,4 +903,22 @@ ul.dropdown-content.select-dropdown li span {
     font-size:1.25rem;      /*--Bug - input field not appying font styles from class name re-applied here--*/
     color: var(--purpblue);
     border-bottom: none;
+}
+
+#food-card-actions-outer-wrapper {
+   margin-bottom: 1vh;
+}
+
+#food-card-actions-inner-wrapper {
+    padding: 1vh 1vw;
+    margin-bottom: -1vh;
+}
+
+#food-card-actions-inner-wrapper > a {
+    margin-bottom:1vh;
+}
+
+#food-card-admin-wrapper {
+    padding: 1vh 1vw 0vh 1vw;
+    margin-bottom: -1vh;
 }

@@ -44,10 +44,9 @@
 
 {% if foods|length > 0 %}
     {% for food in foods %}
-    <div id="find-food-user" class="row">
+    <div id="find-food-user" class="row filled-box">
         <a href="{{ url_for('user_view_food', food_id=food._id) }}">
-            <div id="find-food-title" class="col s6 large-label right-align">{{ food.food_title }}</div>
-            <div id="find-food-subtitle" class="col s6 large-label left-align">{{ food.food_subtitle }}</div>
+            <div id="find-food-title" class="col s12 large-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
         </a>      
     </div>
 
