@@ -26,8 +26,6 @@ function goBack() {
 /* --Defect : despite setting input step value to 1 decimal place, calculated results can still display float to multiple decimal places
 Status : Resolved - '.toFixed(1)' added to float being parsed to limit to 1 decimal place */
 
-//Plan to Revisit to Simplify
-
 function carbPerGram(selectObject) {
   if (selectObject.includes("-item1")) {
     let baseWeight = parseFloat(document.getElementById("qc-base-weight-item1").value, 10);
@@ -90,6 +88,7 @@ function qcItemCarbs(selectObject) {
     document.getElementById("qc-carbs-item4").value = parseFloat(result).toFixed(1);
     document.getElementById("qc-carbs-big-item4").value = parseFloat(result).toFixed(1);
   }
+
   qcItemCount()
 }
 
@@ -125,4 +124,18 @@ function qcItemCount() {
   document.getElementById("qc-calc-result").innerHTML = parseInt(total);
   //console.log(total);
 
+};
+
+// Food Card Calculations
+
+function calcFoodCardCarbs() {
+  
+    let portionSize = parseFloat(document.getElementById("food-card-portion-data").value, 10);
+    let carbsPerG = parseFloat(document.getElementById("food-base-carbs").value, 10);
+    let result = portionSize * carbsPerG;
+    console.log(portionSize);
+    console.log(carbsPerG);
+    console.log(result);
+    document.getElementById("food-calc-result").innerHTML = parseFloat(result).toFixed(1);
+    
 };
