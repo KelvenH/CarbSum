@@ -114,15 +114,14 @@ def quick_calc():
     return render_template("quickcalc.html")
 
 
-# Search
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    foods = list(mongo.db.foods.find({"$text": {"$search": query}}))
-    return render_template("manage_foods.html", foods=foods)
-
-
 # User Content
+
+# User Search
+@app.route("/user_search", methods=["GET", "POST"])
+def user_search():
+    user_query = request.form.get("user_query")
+    foods = list(mongo.db.foods.find({"$text": {"$search": user_query}}))
+    return render_template("find_foods.html", foods=foods)
 
 
 # Find Food Items
@@ -171,6 +170,15 @@ def find_foods():
 
 
 # ADMIN Restricted Content
+
+# Admin Search
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    foods = list(mongo.db.foods.find({"$text": {"$search": query}}))
+    return render_template("manage_foods.html", foods=foods)
+
+
 # Foods - Create
 @app.route("/add_food", methods=["GET", "POST"])
 def add_food():
