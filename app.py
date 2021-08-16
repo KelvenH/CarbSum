@@ -132,7 +132,10 @@ def find_foods():
 
 
 # View Food Card
-
+@app.route("/user_view_food/<food_id>")
+def user_view_food(food_id):
+    food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
+    return render_template("food_card.html", food=food)
 
 # Create New Food Variant (Private)
 

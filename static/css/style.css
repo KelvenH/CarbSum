@@ -148,6 +148,20 @@ border: solid 2px var(--off_white);
     text-align:center;
 }
 
+/*-- override button styling to allow text wrap for longer text --*/
+
+.long-txt {
+    height: auto;
+    min-height: 2rem;
+    line-height: 2rem;
+    padding: 0.5vh;
+    position:relative;
+}
+
+.long-txt>i {
+    vertical-align: text-bottom;
+}
+
 #disabled-txt {
     margin-top:0;
 }

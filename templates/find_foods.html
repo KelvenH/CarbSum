@@ -3,6 +3,27 @@
 
 <h3 class="center-align title-txt filled-box">Find Food Items</h3>
 
+<div class="row outline-box s12" id="find-food-top-pane">
+   
+    <div class="row">
+        <div class="col s12 m4">
+            <a href=""class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
+                    class="material-icons left icon">search</i>Search Categories</a>
+        </div>
+        
+        <div class="col s12 m4">
+            <a href=""class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
+                    class="material-icons left icon">search</i>Search By Tags</a>
+        </div>
+
+        <div class="col s12 m4">
+            <a href=""class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
+                    class="material-icons left icon">search</i>View Favourites</a>
+        </div>
+    
+    </div> <!--close row-->
+</div> <!-- close top pane-->
+
 
 <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('user_search') }}" method="POST" class="col s12">
@@ -24,12 +45,11 @@
 {% if foods|length > 0 %}
     {% for food in foods %}
     <div id="find-food-user" class="row">
-        <div id="find-food-title" class="col s6 large-label right-align">{{ food.food_title }}</div>
-        <div id="find-food-subtitle" class="col s6 large-label left-align">{{ food.food_subtitle }}</div>      
+        <a href="{{ url_for('user_view_food', food_id=food._id) }}">
+            <div id="find-food-title" class="col s6 large-label right-align">{{ food.food_title }}</div>
+            <div id="find-food-subtitle" class="col s6 large-label left-align">{{ food.food_subtitle }}</div>
+        </a>      
     </div>
-
-
-    
 
     {% endfor %}
 
