@@ -8,17 +8,17 @@
     <div class="row">
         <div class="col s12 m4">
             <a href=""class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
-                    class="material-icons left icon">search</i>Search Categories</a>
+                    class="material-icons left icon">view_list</i>Search Categories</a>
         </div>
         
         <div class="col s12 m4">
             <a href=""class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
-                    class="material-icons left icon">search</i>Search By Tags</a>
+                    class="material-icons left icon">local_offer</i>Search By Tags</a>
         </div>
 
         <div class="col s12 m4">
             <a href=""class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
-                    class="material-icons left icon">search</i>View Favourites</a>
+                    class="material-icons left icon">favorite</i>View Favourites</a>
         </div>
     
     </div> <!--close row-->
@@ -48,9 +48,9 @@
         <a href="{{ url_for('user_view_food', food_id=food._id) }}">
             <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
             {% if food.food_subtitle|length > 0 %}
-            <div id="find-food-title" class="col s12 large-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
+            <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
             {% else %}
-            <div id="find-food-title" class="col s12 large-label center-align">{{ food.food_title }}</div>
+            <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }}</div>
             {% endif %}
         </a>      
     </div>
