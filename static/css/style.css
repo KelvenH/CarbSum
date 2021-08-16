@@ -45,6 +45,8 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
 
 .btn-label {font-size:2rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
+.btn-med-label {font-size:1.75rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+
 .btn-small-label {font-size:1.25rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
 
@@ -916,7 +918,7 @@ ul.dropdown-content.select-dropdown li span {
 
 #food-card-tag-wrapper {
     padding:0.5vh 1vw;
-    height:2.5rem;
+    min-height:3.5rem; /*--bug fix: div not expanding to height of content--*/
     margin-bottom:-1vh;
 }
 
