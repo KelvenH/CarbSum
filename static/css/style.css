@@ -790,3 +790,14 @@ ul.dropdown-content.select-dropdown li span {
 #edit-tag-act-btns {
     grid-area: ETC1;
 }
+
+/*--User Content --*/
+
+/*-- Find Foods --*/
+
+#find-food-user {
+    border: 2px solid var(--green_silver);
+    background: var(--green_honeydew);
+    margin-bottom: 1vh;
+}
+

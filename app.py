@@ -127,7 +127,7 @@ def user_search():
 # Find Food Items
 @app.route("/find_foods")
 def find_foods():
-    foods = list(mongo.db.foods.find())
+    foods = list(mongo.db.foods.find().sort("food_title", 1))
     return render_template("find_foods.html", foods=foods)
 
 
