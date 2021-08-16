@@ -55,13 +55,16 @@ nav {
     background-color: var(--green_emerald);
 }
 
-#return {
-transform: rotate(180deg);
-margin-top: 1vh;
-margin-left:2vw;
-background-color:inherit;
-color: var(--off_white);
-border: none;
+.btn-return {
+    transform: rotate(180deg);
+    background-color:inherit;
+    color: var(--off_white);
+    border: none;
+}
+
+#nav-btn-return {
+    margin-top: 1vh;
+    margin-left:2vw;
 }
 
 /*--created seperate nav-outer div to create seperation between logo and menu items--*/
@@ -831,37 +834,50 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 /*-- Food Card --*/
+
+#user-food-card {
+    padding:0;
+}
+
 #food-card-title-wrapper {
-    display:flex;
-    margin-bottom:1vh;
+    padding:1vh 1vw;
+    margin-bottom: 1vh;
+    line-height:1rem;
 }
 
 #food-card-title-wrapper > * {
-    display:inline-block;
+    margin:0;
 }
 
 #food-card-info-wrapper {
-    padding: 1vh 1vw;   
+    padding: 1vh 1vw;
+    margin-bottom:2vh;   
 }
 
-#food-card-info-left {
-  
+#food-card-cat-wrapper {
+    padding:0;
+    margin-bottom:-1vh;
 }
 
-#food-card-image {
-   padding:0.5vh, 0.5vw;
-   
-   height:10.5rem;
+#food-card-cat-wrapper > * {
+    margin:0.5vh;
 }
 
-#food-card-info-right {
-    width:100%;
+#food-card-tag-wrapper {
+    padding:0.5vh 1vw;
+    height:2.5rem;
+    margin-bottom:-1vh;
+}
+
+
+#food-card-carbsdata-wrapper {
+    padding: 1vh 1vw;
+    margin-bottom:2vh; 
 }
 
 #food-card-carbs {
-    display:flex;
     padding: 1vh 1vw;
-    margin-bottom:0.5vh;
+    margin-bottom:-1vh; /*--negative margin to offset auto margin for rows--*/
 }
 
 #food-card-carbs > * {
@@ -872,24 +888,20 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 #food-card-base {
-    margin-bottom:0.5vh;
+    margin-bottom:-1vh;
 }
 
 #food-card-base > * {
      margin:0.5vh;
 }
 
-#food-card-cat-wrapper {
-    padding:0;
-    margin-bottom:0.5vh;
+#food-card-portion {
+    margin-bottom:-1vh;
 }
 
-#food-card-cat-wrapper > * {
+#food-card-portion > * {
     margin:0.5vh;
-}
-
-#food-card-tag-wrapper {
-    padding:0.5vh 1vw;
-    margin-top:-1.5vh; /*--negative margin to off-set auto spacing for new row--*/
-    height:2.5rem;
+    font-size:1.25rem;      /*--Bug - input field not appying font styles from class name re-applied here--*/
+    color: var(--purpblue);
+    border-bottom: none;
 }
