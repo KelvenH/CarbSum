@@ -15,20 +15,21 @@
     --green_silver: #90A591;
     --purpblue: #44578F;
     
-/*---Font Variables---*/
+/*---Font Variables----------------------*/
 
 --standardfont: bilo, Arial, sans-serif;
 --specialfont: filson-soft, Arial, sans-serif;
 
 }
-/*---------------------Responsive Font Groups -----------------------------------------*/
+
+/*---Responsive Font Groups --------------*/
 html {
-    font-size:16px;
+    font-size:10px;
 }
 
-.title-txt {font-family: var(--specialfont);font-weight: 700;color: var(--off_white);}
+.title-txt {font-size:3rem;font-family: var(--specialfont);font-weight: 700;color: var(--off_white);}
 
-body, div, p {font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
+body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
 
 .white-txt {font-family: var(--standardfont);font-weight: 400;color: var(--off_white);}
 
@@ -40,61 +41,15 @@ body, div, p {font-family: var(--standardfont);font-weight: 400;color: var(--pur
 
 .small-label {font-size:0.75rem;font-family: var(--standardfont);font-weight: 400;font-style:italic;color: var(--purpblue);}
 
+.btn-label {font-size:2rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
-/*---------------------------------------------------------------------------------------*/
-
-
-/*--base.html ----*/
-
-body {
-    background-color: var(--champagne);
-    font-family:filson-soft;
-}
-
-nav {  
-    background-color: var(--green_emerald);
-}
-
-.btn-return {
-    transform: rotate(180deg);
-    background-color:inherit;
-    color: var(--off_white);
-    border: none;
-}
-
-#nav-btn-return {
-    margin-top: 1vh;
-    margin-left:2vw;
-}
-
-/*--created seperate nav-outer div to create seperation between logo and menu items--*/
-
-.nav-outer {
-    padding-bottom:3vh;
-    margin-bottom:-5vh; /*-- negative margin applied to pull nav-wrapper up --*/
-}
+.btn-small-label {font-size:1.25rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
 
-.nav-wrapper {
-    padding:1vh 3vw;
-}
-
-
-.nav ul a {
-    color: var(--off_white);
-    text-shadow: 2px 2px 2px rgba (0,0,0,00.8); 
-}
-
-
-.flashes h4 {
-    line-height:2rem;
-}
-
-
-/*--index.html / Profile ---*/
+/*--Box Settings------------------------------*/
 
 .card-panel {
-     border-radius: 20px;
+    border-radius: 20px;
 }
 
 .outline-box {
@@ -160,37 +115,73 @@ nav {
     padding: 1vh 0; 
 }
 
-#home-user-pane {
-    margin-top:2vh
+/*--base.html ----*/
+
+body {
+    background-color: var(--champagne);
+    font-family:filson-soft;
 }
+
+nav {  
+    background-color: var(--green_emerald);
+}
+
+.btn-return {
+    transform: rotate(180deg);
+    background-color:inherit;
+    color: var(--off_white);
+    border: none;
+}
+
+#nav-btn-return {
+    margin-top: 1vh;
+    margin-left:2vw;
+}
+
+/*--created seperate nav-outer div to create seperation between logo and menu items--*/
+
+.nav-outer {
+    padding-bottom:3vh;
+    margin-bottom:-5vh; /*-- negative margin applied to pull nav-wrapper up --*/
+}
+
+
+.nav-wrapper {
+    padding:1vh 3vw;
+}
+
+/*--Override materialize font styles for nav & logo (class names insufficient)--*/
+nav ul a {
+    color: var(--off_white);
+    font-size: 2rem;
+}
+
+nav .brand-logo {
+    font-size: 3rem;
+}
+
+.btn i {
+    margin-right:2vw;
+    font-size:2rem;
+}
+
+.btn-large i {
+    margin-right:3vw;
+    font-size:2.5rem;
+}
+
+.flashes h4 {
+    line-height:2rem;
+}
+
+
+/*--Buttons - includes overrides of materialize styles for buttons & icons (class names insufficient)--*/
 
 .btn, .btn-large {
     width:100%;
     border-radius: 20px;
     padding-left:-20px;
     text-align:center;
-}
-
-/*-- override button styling to allow text wrap for longer text --*/
-
-.long-txt {
-    height: auto;
-    min-height: 2rem;
-    line-height: 2rem;
-    padding: 0.5vh;
-    position:relative;
-}
-
-.long-txt>i {
-    vertical-align: text-bottom;
-}
-
-#disabled-txt {
-    margin-top:0;
-}
-
-#alarm {
-    padding:0;
 }
 
 .btn-neutral {
@@ -209,6 +200,43 @@ nav {
 .btn-icon {
     padding-left:5px;
 }
+
+
+/*-- override button styling to allow text wrap for longer text --*/
+
+.long-txt {
+    height: auto;
+    min-height: 2rem;
+    line-height: 2rem;
+    padding: 0.5vh;
+    position:relative;
+}
+
+.long-txt>i {
+    vertical-align: text-bottom;
+}
+
+
+
+/*--index.html & Dashboard ---*/
+
+
+#home-user-pane {
+    margin-top:2vh
+}
+
+#home-mid-pane div {
+    margin-bottom: 1vh;
+}
+
+#disabled-txt {
+    margin-top:0;
+}
+
+#alarm {
+    padding:0;
+}
+
 
 
 /*-- registration form --*/
