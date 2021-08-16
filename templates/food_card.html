@@ -25,35 +25,67 @@
         <div class="card-panel">
             <!--food card title-->
             <div id="food-card-title-wrapper" class="col s12 valign-wrapper filled-box white-txt">
-                <button id="return" onclick="goBack()"><i  class="material-icons">forward</i></button>
+                <button id="return" onclick="goBack()"><i class="material-icons">forward</i></button>
                 <h4 class="col s6 right-align">{{ food.food_title }}</h4>
                 <h4 class="col s1"> - </h4>
                 <h4 class="col s5 left-align">{{ food.food_subtitle }}</h4>
             </div>
 
             <!--food card info-->
-            <div id="food-card-info-wrapper" class="col s12 valign-wrapper outline-box">
-                <div id="food-card-image" class="col s4 key-value-box">image placeholder</div>
-                 
-                <!--nested info column-->
-                <div class="col s8">
-                    <div id="food-card-carbs" class="row focus-box">
-                        <h4 class="col s8 right-align">Total Carbs:</h4>
-                        <h4 id="food-calc-result" class="col s4 center-align white-box">0<span>g</span></h4>
+            <div id="food-card-info-wrapper" class="col s12 outline-box">
+                <div class="row">
+
+                    <!--nested left (image) column-->
+                    <div id="food-card-info-left" class="col s4">
+                        <div id="food-card-image" class="key-value-box center-align">image placeholder</div>
                     </div>
-                </div>
-            </div>
+
+                    <!--nested right (info) column-->
+                    <div class="col s8">
+                        <div id="food-card-info-right" class="col 12">  <!--secondary col applied to enforce side margin-->
+                            <!--total carbs-->
+                            <div id="food-card-carbs" class="row focus-box valign-wrapper">
+                                <h4 class="col s8 right-align">Total Carbs:</h4>
+                                <h4 id="food-calc-result" class="col s4 center-align white-box">0<span>g</span></h4>
+                            </div>
+                            <!--base carbs-->
+                            <div id="food-card-base" class="row info-box valign-wrapper">
+                                <h5 class="col s8 right-align">Carbs per gram:</h5>
+                                <h5 id="food-base-carbs" class="col s4 center-align">{{ food.base_carbs }}<span>g</span>
+                                </h5>
+                            </div>
+                            <!--category-->
+                            <div id="food-card-cat-wrapper" class="row outline-box valign-wrapper">
+                                <h5 class="col s4 right-align">Category:</h5>
+                                <h5 class="col s8 center-align">{{ food.cat_name }}</h5>
+                            </div>
+                        </div>
+                    </div><!--close right / info col-->
+                </div><!--close first row (nested cols)-->
+
+                <!--tags (on seperate row to enable full width)-->
+                <div class="row">
+                    <div class="col s12">
+                        <div id="food-card-tag-wrapper" class="outline-box">
+                            <div class="col s1">Tags:</div>
+                            <div class="col s11">{{ food.tag }}</div>
+                        </div>
+                    </div>
+                </div><!--close second row (tags)-->
+
+            </div><!--close info wrapper-->
 
             <!--food card actions-->
-            
-            
-            <div>{{ food.cat_name }}</div>
-            <div>{{ food.base_carbs }}</div>
+
+
+
+
             <div>{{ food.tag }}</div>
             <div>{{ food.created_by }}</div>
             <div>{{ food.status }}</div>
             <div>{{ food._id }}</div>
-        </div> <!--close card panel-->
+        </div>
+        <!--close card panel-->
     </form>
 </div>
 

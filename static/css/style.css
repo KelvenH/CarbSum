@@ -114,7 +114,15 @@ border: none;
     border:solid 2px var(--green_celadon);
     background-color: var(--silver);
     border-radius: 20px;
-    padding: 2vh 0;  
+    padding: 2vh 0;
+    color: var(--off_white);
+}
+
+.info-box {
+    border:solid 2px var(--green_celadon);
+    background-color: var(--green_silver);
+    border-radius: 20px;
+    color: var(--off_white);
 }
 
 .admin-box {
@@ -830,26 +838,54 @@ ul.dropdown-content.select-dropdown li span {
 
 #food-card-title-wrapper > * {
     display:inline-block;
-    
 }
 
 #food-card-info-wrapper {
-    padding: 1vh 1vw;
+    padding: 1vh 1vw;   
+}
+
+#food-card-info-left {
+    display:flex;
+    align-items: stretch;
 }
 
 #food-card-image {
-    height: 15vh;
+   padding:0.5vh, 0.5vw;
+   flex-grow:1; 
 }
 
 #food-card-carbs {
     display:flex;
     padding: 1vh 1vw;
-    
+    margin-bottom:0.5vh;
 }
 
 #food-card-carbs > * {
-    height: 3rem;
+    height: 3.5rem;
     line-height:3rem;
     margin-top:0;
     margin-bottom:0;
+}
+
+#food-card-base {
+    margin-bottom:0.5vh;
+}
+
+#food-card-base > * {
+     margin:0.5vh;
+}
+
+#food-card-cat-wrapper {
+    padding:0;
+    margin-bottom:0.5vh;
+}
+
+#food-card-cat-wrapper > * {
+    margin:0.5vh;
+}
+
+#food-card-tag-wrapper {
+    padding:0.5vh 1vw;
+    margin-top:-1.5vh; /*--negative margin to off-set auto spacing for new row--*/
+    height:2.5rem;
 }
