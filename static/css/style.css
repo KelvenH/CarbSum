@@ -950,9 +950,9 @@ ul.dropdown-content.select-dropdown li span {
     margin-bottom:-1vh;
 }
 
-#food-card-portion > * {
+#food-card-portion input {
     margin:0.5vh;
-    font-size:1.25rem;      /*--Bug - input field not appying font styles from class name re-applied here--*/
+    font-size:2rem;      /*--Bug - input field not appying font styles from class name re-applied here--*/
     color: var(--purpblue);
     border-bottom: none;
 }

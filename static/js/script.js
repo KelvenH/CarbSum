@@ -121,7 +121,7 @@ function qcItemCount() {
   for (let item in items){
     total += items[item];
   };
-  document.getElementById("qc-calc-result").innerHTML = parseInt(total) + "g";
+  document.getElementById("qc-calc-result").innerHTML = (parseInt(total) + "g");
   //console.log(total);
 
 };
@@ -136,6 +136,6 @@ function calcFoodCardCarbs() {
     console.log(portionSize);
     console.log(carbsPerG);
     console.log(result);
-    document.getElementById("food-calc-result").innerHTML = parseFloat(result).toFixed(1);
+    document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
     
 };
