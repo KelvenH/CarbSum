@@ -46,7 +46,12 @@
     {% for food in foods %}
     <div id="find-food-user" class="row filled-box">
         <a href="{{ url_for('user_view_food', food_id=food._id) }}">
+            <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
+            {% if food.food_subtitle|length > 0 %}
             <div id="find-food-title" class="col s12 large-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
+            {% else %}
+            <div id="find-food-title" class="col s12 large-label center-align">{{ food.food_title }}</div>
+            {% endif %}
         </a>      
     </div>
 

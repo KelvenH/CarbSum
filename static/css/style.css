@@ -92,6 +92,11 @@ nav {
 
 
 /*--index.html / Profile ---*/
+
+.card-panel {
+     border-radius: 20px;
+}
+
 .outline-box {
     border:solid 2px var(--green_celadon);
     background-color: var(--green_honeydew);
@@ -833,6 +838,14 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 /*-- Food Card --*/
+
+#find-food-top-pane {
+    padding-bottom:0;
+}
+
+#find-food-top-pane a {
+    margin-bottom: 1vh;
+}
 
 #user-food-card {
     padding:0;
