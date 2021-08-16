@@ -33,11 +33,13 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
 
 .white-txt {font-family: var(--standardfont);font-weight: 400;color: var(--off_white);}
 
+/*-- potentially remove as no different to standard text
 .focus-txt {font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
+--*/
 
-.large-label {font-size:1.5rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+.large-label {font-size:3rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
-.med-label {font-size:1.25rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
+.med-label {font-size:2rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
 .small-label {font-size:1.15rem;font-family: var(--standardfont);font-weight: 400;font-style:italic;color: var(--purpblue);}
 
@@ -279,7 +281,7 @@ nav .brand-logo {
     justify-content:flex-end;
 }
 
-/*--Materialize inout styles cannot be overridden by class, specificty requires naming of IDs hence multiple ID listings--*/
+/*--Materialize input styles cannot be overridden by class, specificty requires naming of IDs hence multiple ID listings--*/
 
 #qc-carbs-big-item1,
 #qc-carb-per-g-item1,
@@ -290,6 +292,14 @@ nav .brand-logo {
 #qc-carbs-big-item4,
 #qc-carb-per-g-item4 {
     border-bottom: none;
+    margin-bottom:0;
+}
+
+#qc-carbs-big-item1,
+#qc-carbs-big-item2,
+#qc-carbs-big-item3,
+#qc-carbs-big-item4  {
+    color:var(--purpblue);
 }
 
 #qc-carbs-perG-wrapper1,

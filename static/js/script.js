@@ -98,7 +98,7 @@ function qcItemCarbs(selectObject) {
 function qcItemCount() {
   let items = [];
   $('input[id*=qc-carbs-big]').each(function(index) {     
-    items.push(+$(this).val())  // note'+' after push converted string to number
+    items.push(+$(this).val())  // note'+' after push converts string to number
     //console.log("ITMSB", items);     
     }
   );
@@ -121,7 +121,7 @@ function qcItemCount() {
   for (let item in items){
     total += items[item];
   };
-  document.getElementById("qc-calc-result").innerHTML = parseInt(total);
+  document.getElementById("qc-calc-result").innerHTML = parseInt(total) + "g";
   //console.log(total);
 
 };
