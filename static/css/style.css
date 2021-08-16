@@ -845,13 +845,17 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 #food-card-info-left {
-    display:flex;
-    align-items: stretch;
+  
 }
 
 #food-card-image {
    padding:0.5vh, 0.5vw;
-   flex-grow:1; 
+   
+   height:10.5rem;
+}
+
+#food-card-info-right {
+    width:100%;
 }
 
 #food-card-carbs {

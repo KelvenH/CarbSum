@@ -22,7 +22,7 @@
 
 <div class="row">
     <form id="user-food-card" class="col s12">
-        <div class="card-panel">
+        
             <!--food card title-->
             <div id="food-card-title-wrapper" class="col s12 valign-wrapper filled-box white-txt">
                 <button id="return" onclick="goBack()"><i class="material-icons">forward</i></button>
@@ -36,28 +36,28 @@
                 <div class="row">
 
                     <!--nested left (image) column-->
-                    <div id="food-card-info-left" class="col s4">
+                    <div id="food-card-info-left" class="col s3">
                         <div id="food-card-image" class="key-value-box center-align">image placeholder</div>
                     </div>
 
                     <!--nested right (info) column-->
-                    <div class="col s8">
+                    <div class="col s9">
                         <div id="food-card-info-right" class="col 12">  <!--secondary col applied to enforce side margin-->
                             <!--total carbs-->
                             <div id="food-card-carbs" class="row focus-box valign-wrapper">
-                                <h4 class="col s8 right-align">Total Carbs:</h4>
+                                <h4 class="col s10 right-align">Total Carbs:</h4>
                                 <h4 id="food-calc-result" class="col s4 center-align white-box">0<span>g</span></h4>
                             </div>
                             <!--base carbs-->
                             <div id="food-card-base" class="row info-box valign-wrapper">
-                                <h5 class="col s8 right-align">Carbs per gram:</h5>
-                                <h5 id="food-base-carbs" class="col s4 center-align">{{ food.base_carbs }}<span>g</span>
-                                </h5>
+                                <div class="col s8 right-align">Carbs per gram:</div>
+                                <div id="food-base-carbs" class="col s4 center-align">{{ food.base_carbs }}<span>g</span>
+                                </div>
                             </div>
                             <!--category-->
                             <div id="food-card-cat-wrapper" class="row outline-box valign-wrapper">
-                                <h5 class="col s4 right-align">Category:</h5>
-                                <h5 class="col s8 center-align">{{ food.cat_name }}</h5>
+                                <div class="col s3 right-align">Category:</div>
+                                <div class="col s9 center-align">{{ food.cat_name }}</div>
                             </div>
                         </div>
                     </div><!--close right / info col-->
@@ -84,8 +84,7 @@
             <div>{{ food.created_by }}</div>
             <div>{{ food.status }}</div>
             <div>{{ food._id }}</div>
-        </div>
-        <!--close card panel-->
+        
     </form>
 </div>
 
