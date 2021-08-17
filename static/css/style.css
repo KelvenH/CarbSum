@@ -230,9 +230,6 @@ ul.dropdown-content.select-dropdown li span {
     color:var(--purpblue);
 }
 
-input {
-    text-align:center;
-}
 
 /*--index.html & Dashboard ---*/
 
@@ -888,9 +885,11 @@ input {
 
 /*--Search Categories --*/
 
-#option-cat-name {
+/*--class on selector ignored as materialize converts select to input--*/
+#find-cat-name-wrapper input {
     text-align:center;
 }
+
 
 /*-- Food Card --*/
 
