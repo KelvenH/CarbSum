@@ -847,18 +847,30 @@ ul.dropdown-content.select-dropdown li span {
 #edit-tag-id-label,
 #edit-tag-id {
     border: 2px solid var(--green_silver);
-    height:3rem;
     box-sizing: border-box;
-    margin-bottom:0;
     padding: 1vh 1vw;
+    margin-bottom:0;
+    height:4rem;
+    /*--
+    
+    
+    --*/
 }
 
 #edit-tag-name-wrapper {
     grid-area: ETA1;
+    margin-left:1vh;
+    margin-right:1vh;
 }
 
 #edit-tag-id-wrapper {
     grid-area: ETB1;
+    margin-left:1vh;
+    margin-right:1vh;
+}
+
+#edit-tag-id-wrapper input {
+    font-size:1rem;
 }
 
 #edit-tag-name {
