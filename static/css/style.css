@@ -145,7 +145,7 @@ nav {
 /*--created seperate nav-outer div to create seperation between logo and menu items--*/
 
 .nav-outer {
-    padding-bottom:3vh;
+    padding-bottom:0;
     margin-bottom:-5vh; /*-- negative margin applied to pull nav-wrapper up --*/
 }
 
