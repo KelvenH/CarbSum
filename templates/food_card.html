@@ -24,7 +24,7 @@
             <!--tags (on seperate row to enable full width)-->
             <div class="row">
                 <div id="food-card-tag-wrapper" class="col s10 offset-s1 outline-box">
-                    <div class="col s11">Tags: {{ food.tag }}</div>
+                    <div class="col s11">Tags: {{ food.tag|join(', ') }}</div>
                 </div>
             </div>
 

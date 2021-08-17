@@ -138,10 +138,8 @@ def search_categories():
 
     if request.method == "POST":
         foods = list(mongo.db.foods.find({"cat_name": request.form.get("find-cat-name")}))
-        
         return render_template("search_categories.html", categories=categories, foods=foods)
 
-    
     foods = list(mongo.db.foods.find().sort("food_title", 1))
     return render_template("search_categories.html",
             categories=categories, foods=foods)
