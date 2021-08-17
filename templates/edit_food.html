@@ -8,81 +8,85 @@
 </p>
 
 <a id="edit-itm-cd-new-btn" href="{{ url_for('add_food') }}" class="btn blue lighten-1">Add New Food Entry</a>
+<div class="row">
+    <form id="edit-item-card" method="POST" action="{{ url_for('edit_food', food_id=food._id)}}" class="col s12">
+        <!--Food Item Title-->
+        <input id="edit-food-title" name="edit-food-title" class="large-label validate" minlength="3" maxlength="25"
+            value="{{ food.food_title }}" type="text" required>
 
-<form id="edit-item-card" method="POST" action="{{ url_for('edit_food', food_id=food._id)}}">
-    <!--Food Item Title-->
-    <input id="edit-food-title" name="edit-food-title" class="large-label validate" minlength="3" maxlength="25"
-        value="{{ food.food_title }}" type="text" required>
+        <!--Food Item SubTitle-->
+        <input id="edit-food-subtitle" name="edit-food-subtitle" class="col itm-cd-value large-label validate" minlength="3"
+            maxlength="25" type="text" value="{{ food.food_subtitle }}">
 
-    <!--Food Item SubTitle-->
-    <input id="edit-food-subtitle" name="edit-food-subtitle" class="itm-cd-value large-label validate" minlength="3"
-        maxlength="25" type="text" value="{{ food.food_subtitle }}">
-
-    <!--Food Category-->
-    <div id="edit-itm-cd-cat-label" class="itm-cd-label">Category:</div>
-    <div id="edit-cat-name-wrapper" class="input-field col itm-cd-value med-label">
-        <select id="edit-cat-name" name="edit-cat-name" required>
-            <option value="" disabled selected>Choose Category</option>
-            {% for category in categories %}
+        <!--Food Category-->
+        <div id="edit-itm-cd-cat-label" class="itm-cd-label">Category:</div>
+        <div id="edit-cat-name-wrapper" class="input-field itm-cd-value med-label">
+            <select id="edit-cat-name" name="edit-cat-name" required>
+                <option value="" disabled selected>Choose Category</option>
+                {% for category in categories %}
                 {% if category.cat_name == food.cat_name %}
-                    <option value="{{ category.cat_name }}" selected>{{ food.cat_name }}</option>
+                <option value="{{ category.cat_name }}" selected>{{ food.cat_name }}</option>
                 {% else %}
-                    <option value="{{ category.cat_name }}">{{ category.cat_name }}</option>
+                <option value="{{ category.cat_name }}">{{ category.cat_name }}</option>
                 {% endif %}
-            {% endfor %}
-        </select>
-    </div>
+                {% endfor %}
+            </select>
+        </div>
 
 
-    <!--Carbs Per Gram-->
-    <div id="edit-itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
-    <div class="itm-cd-value">
-        <input id="edit-base-carbs" name="edit-base-carbs" class="med-label validate" type="number" step="0.001" required value="{{ food.base_carbs }}">
-    </div>
+        <!--Carbs Per Gram-->
+        <div id="edit-itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
+        <div id="edit-carbs-wrapper" class="input-field col itm-cd-value med-label">
+            <input id="edit-base-carbs" name="edit-base-carbs" class="validate med-label" type="number" step="0.001"
+                required value="{{ food.base_carbs }}">
+        </div>
 
         <!-- Tags -->
-    <div id="edit-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-    <div id="edit-itm-cd-tag-wrapper" class="input-field col itm-cd-value med-label">
-        <select multiple id="edit-food-tag" name="edit-food-tag" required>
-            <option value="" disabled >Select Tags (optional)</option>
-            {% for tag in tags %}
+        <div id="edit-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
+        <div id="edit-itm-cd-tag-wrapper" class="input-field col itm-cd-value med-label">
+            <select multiple id="edit-food-tag" name="edit-food-tag" required>
+                <option value="" disabled>Select Tags (optional)</option>
+                {% for tag in tags %}
                 {% if tag.tag_name == tag.tag_name %}
-                    <option value="{{ tag.tag_name }}" selected >{{ tag.tag_name }}</option>
+                <option value="{{ tag.tag_name }}" selected>{{ tag.tag_name }}</option>
                 {% else %}
-                    <option value="{{ tag.tag_name }}">{{ tag.tag_name }}</option>
-                {% endif %}    
-            {% endfor %}
-        </select>
-    </div>
+                <option value="{{ tag.tag_name }}">{{ tag.tag_name }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
 
-    <!--info section-->
-    <em id="disabled-label">The following is displayed for information purposes only and cannot be edited</em>
+        <!--info section-->
+        <em id="disabled-label" class="small-label">The following is displayed for information purposes only and cannot
+            be edited</em>
 
-    <!--Created By (locked for editing : display for info only)-->
-    <div id="edit-itm-cd-created-label" class="itm-cd-label">Created By:</div>
-    <input id="edit-food-createdby" name="food-createdby" class="itm-cd-value med-label" type="text" disabled
-        value="{{ food.created_by }}">
+        <!--Created By (locked for editing : display for info only)-->
+        <div id="edit-itm-cd-created-label" class="itm-cd-label">Created By:</div>
+        <input id="edit-food-createdby" name="food-createdby" class="itm-cd-value med-label" type="text" disabled value="{{ food.created_by }}">
 
-    <!--Status (locked for editing : display for info only)-->
-    <div id="edit-itm-cd-status-label" class="itm-cd-label">Status:</div>
-    <input id="edit-food-status" name="food-status" class="itm-cd-value med-label" type="text" disabled
-        value="{{ food.status }}">
+        <!--Status (locked for editing : display for info only)-->
+        <div id="edit-itm-cd-status-label" class="itm-cd-label">Status:</div>
+        <div id="edit-food-status-wrapper" class="input-field col itm-cd-value med-label">
+            <input id="edit-food-status" name="food-status" class="itm-cd-value med-label" type="text" disabled value="{{ food.status }}">
+        </div>
 
-    <!--ID (locked for editing : display for info only)-->
-    <div id="edit-itm-cd-id-label" class="itm-cd-label">ID:</div>
-    <input id="edit-food-id" name="food-id" class="itm-cd-value small-label" type="text" disabled
-        value="{{ food._id }}">
+        <!--ID (locked for editing : display for info only)-->
+        <div id="edit-itm-cd-id-label" class="itm-cd-label">ID:</div>
+        <div id="edit-food-id-wrapper" class="input-field col itm-cd-value med-label">
+            <input id="edit-food-id" name="food-id" class="itm-cd-value small-label" type="text" disabled
+            value="{{ food._id }}">
+        </div>
 
 
-    <!--Action Buttons-->
-    <div id="edit-itm-cd-act-btns" class="center-align">
-        <button type="submit" class="btn-small green lighten-1">Save</button>
-        <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
-        <a href="#confirm-delete-modal2-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
-    </div>
+        <!--Action Buttons-->
+        <div id="edit-itm-cd-act-btns" class="center-align">
+            <button type="submit" class="btn-small green lighten-1">Save</button>
+            <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+            <a href="#confirm-delete-modal2-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
+        </div>
 
-</form>
-
+    </form>
+</div>
 <!--Confirm Deletion Modal-->
 <div id="confirm-delete-modal2-{{ food._id }}" class="modal warning-box">
 

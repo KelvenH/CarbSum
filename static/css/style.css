@@ -497,14 +497,16 @@ ul.dropdown-content.select-dropdown li span {
    }
 
 #edit-item-card {
-   grid-template-columns: 5;
+   grid-template-columns: 1.5fr 1fr 1fr 1fr;
    grid-template-areas: 
-   "EA1  EA1   EA1   EA4   EA4"
-   "EB1  EB2   EB2   EB4   EB5" 
-   "EC1  EC2   EC2   EC2   EC2" 
-   "xxx  xxx   xxx   xxx   xxx"
-   "ED1  ED2   ED2   ED4   ED5" 
-   "EE1  EE2   EE2   EE4   EE4" 
+   "EA1  EA1   EA3   EA3"
+   "EB1  EB2   EB2   EB2" 
+   "EC1  EC2   EC2   EC2" 
+   "ED1  ED2   ED2   ED2" 
+   "EE1  EE1   EE1   EE1" 
+   "EF1  EF2   EF3   EF4"
+   "EG1  EG2   EG2   EG2"
+   "EH1  EH1   EH1   EH1"
 }
 
 #edit-item-card > * {
@@ -526,8 +528,8 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 #edit-food-title {
-    font-size:1.5rem;
     grid-area: EA1;
+    font-size:1.5rem;
     padding-right:5vw;
     border: 2px solid var(--green_silver);
     border-right:0;
@@ -536,9 +538,10 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 #edit-food-subtitle {
-    grid-area: EA4;
+    grid-area: EA3;
     background-color:var(--green_emerald);
     font-size:1.5rem;
+
 }
 
 #edit-itm-cd-cat-label {
@@ -547,70 +550,73 @@ ul.dropdown-content.select-dropdown li span {
 
 #edit-cat-name-wrapper {
     grid-area: EB2;
-    border: 2px solid var(--green_silver);
-    margin:0;
-    color:var(--purpblue);
+    margin:0; /*--Bug Fix: many instances of margin 0 applied to input wrappers to force alignment with siblings. The wrappers themselves exist to respect parent padding (i.e. avoid input field expanding into padding area--*/
 }
 
 #edit-itm-cd-carbs-label {
-    grid-area: EB4;
-}
-
-#edit-base-carbs {
-    grid-area: EB5;
-    
-}
-/*--temp--*/
-#edit-itm-cd-tags-label {
     grid-area: EC1;
 }
 
-#edit-itm-cd-tag-wrapper {
+#edit-carbs-wrapper {
     grid-area: EC2;
-    border: 2px solid var(--green_silver);
+    display:flex;
     margin:0;
-    color:var(--purpblue);
 }
 
-/*--
 #edit-itm-cd-tags-label {
-    grid-area: EC1;
-}
-
-#edit-tag-name-wrapper {
-    grid-area: EC2;
-    border: 2px solid var(--green_silver);
-    margin:0;
-    color:var(--purpblue);
-}
---*/
-
-#edit-itm-cd-created-label {
     grid-area: ED1;
 }
 
-#edit-food-createdby {
+#edit-itm-cd-tag-wrapper {
     grid-area: ED2;
+    border: 2px solid var(--green_silver);
+    margin:0;
+    color:var(--purpblue);
+/*-- display:flex; --commented out but retained in file to demonstrate attempt to address wrapping of inout fields - see outstanding bug below--*/
+}
+
+/*--BUG : Outstanding, unable to word wrap contents of an input field. Commented out as not wrapping text and causes input width to reduce but retained in file to demonstrate attempted fix
+
+#edit-itm-cd-tag-wrapper .select-wrapper input.select-dropdown {
+    flex-wrap: wrap;
+}
+--*/
+
+
+#disabled-label {
+    grid-area: EE1;
+    margin-bottom:0;
+}
+
+#edit-itm-cd-created-label {
+    grid-area: EF1;
+}
+
+#edit-food-createdby {
+    grid-area: EF2;
+    height:4.5rem; /*--BUG Fix - materialise input field height not matching siblings--*/
 }
 
 #edit-itm-cd-status-label {
-    grid-area: ED4;
+    grid-area: EF3;
 }
 
-#edit-food-status {
-    grid-area: ED5;
+#edit-food-status-wrapper {
+    grid-area: EF4;
+    margin:0;
 }
 
 #edit-itm-cd-id-label {
-    grid-area: EE1;
+    grid-area: EG1;
 }
 
-#edit-food-id {
-    grid-area: EE2;
+#edit-food-id-wrapper {
+    grid-area: EG2;
+    margin:0;
 }
 
 #edit-itm-cd-act-btns {
-    grid-area: EE4;
+    grid-area: EH1;
 }
 
 
@@ -619,11 +625,6 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 
-
-#disabled-label {
-    grid-area: xxx;
-    margin-bottom:0;
-}
 
 /*--Add Food --*/
 /*-- as noted above, to override materialize styles on input fields seperate grids had to be created, as validator requires unique ids, and classes do not override materialize--*/
