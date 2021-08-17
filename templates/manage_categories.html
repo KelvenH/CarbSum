@@ -11,35 +11,14 @@
     </div>
 </div>
 
-<div class="row card-panel grey lighten-5">
-    <form action="" method="POST" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix"></i>
-                <input type="text" name="query" id="query" class="validate" minlength="3" required>
-                <label for="query">Search Categories</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_categories') }}" class="orange darken-1 btn text-shadow">Reset</a>
-                <button type="submit" class="btn btn-green text-shadow">Search</i>
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
-
 
 <div id="category-card-admin">
-    <div class="row title-row">
-        <div class="col s5 large-label cat-cd-title">Category Name</div>
-        <div class="col s4 large-label cat-cd-title">Cat. ID</div>
-        <div class="col s3 large-label cat-cd-title">Actions</div>
-    </div>
+
         {% for category in categories %}
-        <div class="row cat-row-wrap valign-wrapper">
-            <div id="cat-cd-name" class="col s5 large-label cat-cd-value">{{ category.cat_name }}</div>
-            <div id="cat-cd-id" class="col s4 cat-cd-value"> {{ category._id }}</div>
-            <div id="cat-cd-btn-wrapper" class="col s3 cat-cd-value">
+        <div class="row cat-row-wrap">
+            <div id="cat-cd-name" class="col s12 m6 med-label cat-cd-value">{{ category.cat_name }}</div>
+            <div id="cat-cd-id" class="col s6 m3 small-label cat-cd-value"> {{ category._id }}</div>
+            <div id="cat-cd-btn-wrapper" class="col s6 m3 cat-cd-value">
                 <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-small blue lighten-1">Edit</a>
                 <a href="#confirm-delete-modal3-{{ category._id }}" class="modal-trigger btn-small red">Delete</a>
             </div>
