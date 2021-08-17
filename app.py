@@ -132,9 +132,16 @@ def find_foods():
 
 
 # Search Categories
-@app.route("/search_categories")
+@app.route("/search_categories", methods=["GET", "POST"])
 def search_categories():
     categories = mongo.db.food_categories.find().sort("cat_name", 1)
+
+    if request.method == "POST":
+        foods = list(mongo.db.foods.find({"cat_name": request.form.get("find-cat-name")}))
+        
+        return render_template("search_categories.html", categories=categories, foods=foods)
+
+    
     foods = list(mongo.db.foods.find().sort("food_title", 1))
     return render_template("search_categories.html",
             categories=categories, foods=foods)
