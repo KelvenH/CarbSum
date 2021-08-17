@@ -31,16 +31,12 @@
 
 
     <div id="tag-card-admin">
-        <div class="row title-row">
-            <div class="col s5 large-label cat-cd-title">Tag Name</div>
-            <div class="col s4 large-label cat-cd-title">Tag ID</div>
-            <div class="col s3 large-label cat-cd-title">Actions</div>
-        </div>
+
         {% for tag in tags %}
-            <div class="row cat-row-wrap valign-wrapper">
-                <div id="tag-cd-name" class="col s5 large-label cat-cd-value">{{ tag.tag_name }}</div>
-                <div id="tag-cd-id" class="col s4 cat-cd-value"> {{ tag._id }}</div>
-                <div id="tag-cd-btn-wrapper" class="col s3 cat-cd-value">
+            <div class="row cat-row-wrap">
+                <div id="tag-cd-name" class="col s12 m6 med-label cat-cd-value center-align">{{ tag.tag_name }}</div>
+                <div id="tag-cd-id" class="col s6 m3 small-label cat-cd-value"> {{ tag._id }}</div>
+                <div id="tag-cd-btn-wrapper" class="col s6 m3 cat-cd-value">
                     <a href="{{ url_for('edit_tag', tag_id=tag._id) }}" class="btn-small blue lighten-1">Edit</a>
                     <a href="#confirm-delete-modal5-{{ tag._id }}" class="modal-trigger btn-small red">Delete</a>
                 </div>
