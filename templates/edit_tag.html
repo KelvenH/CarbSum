@@ -9,7 +9,7 @@
     <form class="col s12" method="POST" action="{{ url_for('edit_tag', tag_id=tag._id) }}">
 
         <div id="edit-tag-card"> 
-            <div id="edit-tag-name-wrapper" class="row col s12 valign-wrapper">
+            <div id="edit-tag-name-wrapper" class="row col s12 m8 valign-wrapper">
             <!--Tag-->
                 <div id="edit-tag-label" class="col s4 itm-cd-label ">Tag:</div>
                 <input id="edit-tag-name" name="edit-tag-name" class="col s8 itm-cd-value validate"
@@ -17,7 +17,7 @@
             </div>
 
             <!--ID (locked for editing : display for info only)-->
-            <div id="edit-tag-id-wrapper" class="row col s12 valign-wrapper">
+            <div id="edit-tag-id-wrapper" class="row col s12 m8 valign-wrapper">
                 <div id="edit-tag-id-label" class="col s4 itm-cd-label">ID:</div>
                 <input id="edit-tag-id" name="edit-tag-id" class="col s8 itm-cd-value" type="text" disabled
                 value="{{ tag._id }}">
