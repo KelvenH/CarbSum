@@ -747,12 +747,13 @@ ul.dropdown-content.select-dropdown li span {
 #add-category-label,
 #add-category-name {
     border: 2px solid var(--green_silver);
-    height:3rem;
+    height: 4rem;
     box-sizing: border-box;
     margin-top:2vh;
     margin-bottom:0;
     padding: 1vh 1vw;
 }
+
 
 #add-category-name {
     font-size:1.5rem;  
