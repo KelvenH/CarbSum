@@ -6,9 +6,9 @@
         <div class="row outline-box s12" id="find-food-top-pane">
         
             <div class="row">
-                <div class="col s12 m4">
-                    <select id="find-cat-name" name="find-cat-name" >
-                        <option value="" disabled selected>Choose Category</option>
+                <div class="col s8">
+                    <select id="find-cat-name" name="find-cat-name">
+                        <option id="option-cat-name" value=""  disabled selected>Choose Category</option>
                         {% for category in categories %}
                             <option value="{{ category.cat_name }}">{{ category.cat_name }}</option>
                         {% endfor %}

@@ -38,7 +38,7 @@
         <div id="itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
         <div id="itm-cd-carbs" class="itm-cd-value">{{ food.base_carbs }}</div>
         <div id="itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-        <div id="itm-cd-tags" class="itm-cd-value">{{ food.tag }}</div>
+        <div id="itm-cd-tags" class="itm-cd-value">{{ food.tag|join(', ') }}</div>
         <div id="itm-cd-created-label" class="itm-cd-label">Created By:</div>
         <div id="itm-cd-createdby" class="itm-cd-value">{{ food.created_by }}</div>
         <div id="itm-cd-status-label" class="itm-cd-label">Status:</div>
