@@ -813,11 +813,11 @@ ul.dropdown-content.select-dropdown li span {
 #add-tag-label,
 #add-tag-name {
     border: 2px solid var(--green_silver);
-    height:3rem;
+    height:4rem;
     box-sizing: border-box;
-    margin-top:2vh;
-    margin-bottom:0;
     padding: 1vh 1vw;
+    margin-top: 2vh;
+    margin-bottom:0;
 }
 
 #add-tag-name {
@@ -847,14 +847,12 @@ ul.dropdown-content.select-dropdown li span {
 #edit-tag-id-label,
 #edit-tag-id {
     border: 2px solid var(--green_silver);
+    height:4rem;
     box-sizing: border-box;
     padding: 1vh 1vw;
     margin-bottom:0;
-    height:4rem;
-    /*--
     
-    
-    --*/
+
 }
 
 #edit-tag-name-wrapper {
