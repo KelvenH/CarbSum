@@ -66,10 +66,10 @@ def signIn():
         if existing_user:
             # check hashed password in db matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for("dashboard", username=session["user"]))
-            
+               existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for("dashboard", username=session["user"]))
+
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -88,7 +88,7 @@ def signIn():
 def dashboard(username):
     # grab the session user's username from db
     user = mongo.db.users.find_one({"username": username})
-    
+
     if user:
         session['admin_role'] = user['admin_role']
 
@@ -101,7 +101,7 @@ def dashboard(username):
 # Sign Out
 @app.route("/logout")
 def logout():
-    #remove user from session cookies
+    # remove user from session cookies
     flash("You have signed-out successfully")
     session.pop("user")
     session.pop("admin_role")
@@ -129,6 +129,15 @@ def user_search():
 def find_foods():
     foods = list(mongo.db.foods.find().sort("food_title", 1))
     return render_template("find_foods.html", foods=foods)
+
+
+# Search Categories
+@app.route("/search_categories")
+def search_categories():
+    categories = mongo.db.food_categories.find().sort("food_title", 1)
+    foods = mongo.db.foods.find().sort("food_title", 1)
+    return render_template("search_categories.html",
+            categories=categories, foods=foods)
 
 
 # View Food Card
@@ -168,8 +177,6 @@ def user_view_food(food_id):
 
 
 # Delete Meal
-
-
 
 
 # ADMIN Restricted Content
@@ -224,7 +231,7 @@ def edit_food(food_id):
             "base_carbs": request.form.get("edit-base-carbs"),
             "tag": request.form.getlist("edit-food-tag")
         }
-        mongo.db.foods.update({"_id": ObjectId(food_id)},submit)
+        mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)
         flash("Food Item Successfully Updated")
         return redirect(url_for("get_foods"))
 
@@ -271,10 +278,10 @@ def edit_category(category_id):
             "cat_name": request.form.get("edit-category-name")
         }
 
-        mongo.db.food_categories.update({"_id": ObjectId(category_id)},submit)
+        mongo.db.food_categories.update({"_id": ObjectId(category_id)}, submit)
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
-        
+
     category = mongo.db.food_categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
@@ -316,10 +323,10 @@ def edit_tag(tag_id):
             "tag_name": request.form.get("edit-tag-name")
         }
 
-        mongo.db.tags.update({"_id": ObjectId(tag_id)},submit)
+        mongo.db.tags.update({"_id": ObjectId(tag_id)}, submit)
         flash("Tag Successfully Updated")
         return redirect(url_for("get_tags"))
-        
+
     tag = mongo.db.tags.find_one({"_id": ObjectId(tag_id)})
     return render_template("edit_tag.html", tag=tag)
 
