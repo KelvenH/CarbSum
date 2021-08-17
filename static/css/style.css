@@ -142,16 +142,20 @@ nav {
     margin-left:2vw;
 }
 
+nav i.material-icons {
+    font-size:4rem;
+}
+
 /*--created seperate nav-outer div to create seperation between logo and menu items--*/
 
 .nav-outer {
     padding-bottom:0;
-    margin-bottom:-5vh; /*-- negative margin applied to pull nav-wrapper up --*/
+    margin-bottom:0; /*-- negative margin applied to pull nav-wrapper up --*/
 }
 
 
 .nav-wrapper {
-    padding:1vh 3vw;
+    /*--padding:1vh 3vw;--*/
 }
 
 /*--Override materialize font styles for nav & logo (class names insufficient)--*/
