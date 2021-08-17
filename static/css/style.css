@@ -781,7 +781,7 @@ ul.dropdown-content.select-dropdown li span {
 #edit-cat-id-label,
 #edit-category-id {
     border: 2px solid var(--green_silver);
-    height:3rem;
+    height:4rem;
     box-sizing: border-box;
     margin-bottom:0;
     padding: 1vh 1vw;
@@ -789,10 +789,18 @@ ul.dropdown-content.select-dropdown li span {
 
 #edit-category-name-wrapper {
     grid-area: ECA1;
+    margin-left:1vh;
+    margin-right:1vh;
 }
 
 #edit-category-id-wrapper {
     grid-area: ECB1;
+    margin-left:1vh;
+    margin-right:1vh;
+}
+
+#edit-category-id-wrapper input {
+    font-size:1rem;
 }
 
 #edit-category-name {
