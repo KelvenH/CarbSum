@@ -632,10 +632,11 @@ ul.dropdown-content.select-dropdown li span {
 #add-item-card {
     grid-template-columns: 4;
     grid-template-areas: 
-   "AA1  AA2   AA3   AA4"
-   "AB1  AB2   AB3   AB4" 
-   "AC1  AC2   AC2   AC2" 
-
+   "AA1  AA2   AA2   AA2"
+   "AB1  AB2   AB2   AB2" 
+   "AC1  AC2   AC2   AC2"
+   "AD1  AD2   AD2   AD2" 
+   "AE1  AE2   AE2   AE2"
 }
 
 #add-item-card > * {
@@ -661,57 +662,54 @@ ul.dropdown-content.select-dropdown li span {
     grid-area: AA1;
 }
 
-#add-food-title,
-#add-food-subtitle {
+#add-food-title-wrapper,
+#add-food-subtitle-wrapper {
     font-size:1.5rem; 
     background-color:var(--green_emerald);
-    margin-bottom:0;
+    margin:0;
 }
 
-#add-food-title {
+#add-food-title-wrapper {
     grid-area: AA2;
 }
 
 
 #add-food-subtitle-label {
 
-    grid-area: AA3;
+    grid-area: AB1;
 }
 
-#add-food-subtitle {
-    grid-area: AA4;
+#add-food-subtitle-wrapper {
+    grid-area: AB2;
     background-color:var(--green_emerald);
     font-size:1.5rem;
     margin-bottom:0;
 }
 
 #add-itm-cd-cat-label {
-    grid-area: AB1;
-}
-
-#add-cat-name-wrapper {
-    grid-area: AB2;
-    border: 2px solid var(--green_silver);
-    margin:0;
-    color:var(--purpblue);
-}
-
-
-
-#add-itm-cd-carbs-label {
-    grid-area: AB3;
-}
-
-#add-base-carbs {
-    grid-area: AB4;
-}
-
-#add-itm-cd-tags-label {
     grid-area: AC1;
 }
 
-#add-tag-name-wrapper {
+#add-cat-name-wrapper {
     grid-area: AC2;
+    margin:0;
+}
+
+#add-itm-cd-carbs-label {
+    grid-area: AD1;
+}
+
+#add-carbs-wrapper {
+    grid-area: AD2;
+    margin:0;
+}
+
+#add-itm-cd-tags-label {
+    grid-area: AE1;
+}
+
+#add-tag-name-wrapper {
+    grid-area: AE2;
     border: 2px solid var(--green_silver);
     margin:0;
     color:var(--purpblue);
