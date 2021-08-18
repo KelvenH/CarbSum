@@ -484,8 +484,7 @@ ul.dropdown-content.select-dropdown li span {
 
 
 /*-- Edit Food--*/
-#edit-item-card,
-#add-item-card {
+#edit-item-card {
     border: 2px solid var(--green_silver);
     border-radius: 0.5vw;
     display: grid;
@@ -494,11 +493,8 @@ ul.dropdown-content.select-dropdown li span {
     padding: 1vh 1vw;
     grid-gap: 0;
     row-gap: 0.25vh;
-   }
-
-#edit-item-card {
-   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-   grid-template-areas: 
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: 
    "EA1  EA1   EA3   EA3"
    "EB1  EB2   EB2   EB2" 
    "EC1  EC2   EC2   EC2" 
@@ -630,17 +626,22 @@ ul.dropdown-content.select-dropdown li span {
 /*-- as noted above, to override materialize styles on input fields seperate grids had to be created, as validator requires unique ids, and classes do not override materialize--*/
 
 #add-food-card {
+    border: 2px solid var(--green_silver);
+    border-radius: 0.5vw;
+    display: grid;
+    background: var(--green_honeydew);
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    grid-gap: 0;
+    row-gap: 0.25vh;
     grid-template-columns: 4;
     grid-template-areas: 
    "AA1  AA2   AA2   AA2"
    "AB1  AB2   AB2   AB2" 
    "AC1  AC2   AC2   AC2"
-   "AD1  AD2   AD3   AD4" 
-   "AE1  AE2   AE2   AE2"
-   "AF1  AF2   AF3   AF4"
-   "AG1  AG2   AG3   AG4"
-   "AH1  AH2   AH2   AH2"
+   "ZZ1  ZZ1   ZZ1   ZZ1"
    
+   "AH1  AH2   AH2   AH2"
 }
 
 #add-food-card > * {
@@ -648,14 +649,14 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 
-#add-food-card > .itm-cd-label {
+#add-food-card .itm-cd-label {
     border: 2px solid var(--green_silver);
     border-right:0;
     text-align:right;
     background-color:var(--green_celadon);
 }
 
-#add-food-card > .itm-cd-value {
+#add-food-card .itm-cd-value {
     border: 2px solid var(--green_silver);
     border-left:0;
     text-align:left; 
@@ -679,7 +680,6 @@ ul.dropdown-content.select-dropdown li span {
 
 
 #add-food-subtitle-label {
-
     grid-area: AB1;
 }
 
@@ -700,57 +700,69 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 #add-food-carb-wrapper {
+    grid-area:ZZ1;
     border: 2px solid var(--green_silver);
     background:var(--purpblue);
+    display:grid;
+    padding: 1vh 1vw;
+    /*--margin-bottom: 1vh;
+    
+    grid-gap: 0;
+    row-gap: 0.25vh;--*/
+    grid-template-columns: 4;
+    grid-template-areas: 
+    "AD1  AD2   AD2   AD2" 
+    "AE1  AE2   AE3   AE4"
+    "AF1  AF2   AF3   AF4"
+    "AG1  AG2   AG3   AG4"
 }
 
 #add-food-portion-descrip-label {
-    grid-area: AE1;
+    grid-area: AD1;
 }
 
 #add-portion-descrip-wrapper {
-    grid-area: AE2;
-}
-
-#add-food-portion-unit-label {
-    grid-area: AD3;
-}
-
-#add-portion-unit-wrapper {
-    grid-area: AD4;
-}
-
-#add-food-carbs-source-label {
-    grid-area: AD1;
-}
-
-#add-carbs-source-wrapper {
-    grid-area: AD1;
-}
-
-
-#add-food-portion-size-label {
-    grid-area: AD1;
-}
-
-#add-portion-size-wrapper {
     grid-area: AD2;
 }
 
-#add-food-carbs-per-portion-label {
+#add-food-portion-unit-label {
+    grid-area: AE1;
+}
+
+#add-portion-unit-wrapper {
+    grid-area: AE2;
+}
+
+#add-food-carbs-source-label {
+    grid-area: AE3;
+}
+
+#add-carbs-source-wrapper {
+    grid-area: AE4;
+}
+
+#add-food-portion-size-label {
     grid-area: AF1;
+}
+
+#add-portion-size-wrapper {
+    grid-area: AF2;
+}
+
+#add-food-carbs-per-portion-label {
+    grid-area: AF3;
 }   
 
 #add-carbs-per-portion-wrapper {
-    grid-area: AF1;
+    grid-area: AF4;
 }
 
 #add-food-carbs-per100-label {
-    grid-area: AF1;
+    grid-area: AG1;
 }
 
 #add-carbs-per100-wrapper {
-    grid-area: AF1;
+    grid-area: AG2;
 }
 
 #add-food-carbs-per-gram-label {
@@ -762,23 +774,11 @@ ul.dropdown-content.select-dropdown li span {
     margin:0;
 }
 
-#add-food-carbs-source-label {
-    grid-area: AF1;
-}
-
-#add-carbs-source-wrapper {
-    grid-area: AF1;
-}
-
-
-
-
-
-#add-itm-cd-tags-label {
+#add-food-tags-label {
     grid-area: AH1;
 }
 
-#add-tag-name-wrapper {
+#add-tag-wrapper {
     grid-area: AH2;
     border: 2px solid var(--green_silver);
     margin:0;
