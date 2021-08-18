@@ -147,10 +147,12 @@ function calcAddFoodCarbs() {
   let portionSize = parseFloat(document.getElementById("add-portion-size").value, 10);
   let carbsPerPortion = parseFloat(document.getElementById("add-carbs-per-portion").value, 10);
   /*--divide carbs by portion for carb per g--*/
-  let result = carbsPerPortion / portionSize;
+  let carbPerG = carbsPerPortion / portionSize;
   console.log("Port Size:", portionSize);
   console.log("Carb per Port:", carbsPerPortion);
-  console.log("Result", result);
-  document.getElementById("add-carbs-per-gram").value = parseFloat(result).toFixed(2);
-  
+  console.log("CarbPerG", carbPerG);
+  document.getElementById("add-carbs-per-gram").value = parseFloat(carbPerG).toFixed(2);
+  let carbPer100 = carbPerG * 100;
+  console.log("carbPer100", carbPer100);
+  document.getElementById("add-carbs-per100").value = parseFloat(carbPer100).toFixed(1);
 };
