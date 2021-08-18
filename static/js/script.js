@@ -133,9 +133,6 @@ function calcFoodCardCarbs() {
     let portionSize = parseFloat(document.getElementById("food-card-portion-data").value, 10);
     let carbsPerG = parseFloat(document.getElementById("food-base-carbs").value, 10);
     let result = portionSize * carbsPerG;
-    console.log(portionSize);
-    console.log(carbsPerG);
-    console.log(result);
     document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
     
 };
@@ -155,4 +152,22 @@ function calcAddFoodCarbs() {
   let carbPer100 = carbPerG * 100;
   console.log("carbPer100", carbPer100);
   document.getElementById("add-carbs-per100").value = parseFloat(carbPer100).toFixed(1);
+};
+
+
+// Edit Food Card Calculations
+
+function calcEditFoodCarbs() {
+  
+  let portionSize = parseFloat(document.getElementById("edit-portion-size").value, 10);
+  let carbsPerPortion = parseFloat(document.getElementById("edit-carbs-per-portion").value, 10);
+  /*--divide carbs by portion for carb per g--*/
+  let carbPerG = carbsPerPortion / portionSize;
+  console.log("Port Size:", portionSize);
+  console.log("Carb per Port:", carbsPerPortion);
+  console.log("CarbPerG", carbPerG);
+  document.getElementById("edit-carbs-per-gram").value = parseFloat(carbPerG).toFixed(2);
+  let carbPer100 = carbPerG * 100;
+  console.log("carbPer100", carbPer100);
+  document.getElementById("edit-carbs-per100").value = parseFloat(carbPer100).toFixed(1);
 };
