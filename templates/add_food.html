@@ -6,7 +6,7 @@
 <div class="row">
     <form class="col s12" method="POST" action="{{ url_for('add_food')}}">
 
-        <div id="add-item-card">
+        <div id="add-food-card">
         
             <!--Food Item Title-->
             <div id="add-food-title-label" class="itm-cd-label">Item Title:</div>
@@ -21,8 +21,8 @@
             </div>
             
             <!--Food Category-->
-            <div id="add-itm-cd-cat-label" class="itm-cd-label">Category:</div>
-            <div id="add-cat-name-wrapper" class="input-field col s12 itm-cd-value med-label">
+            <div id="add-food-cat-label" class="itm-cd-label">Category:</div>
+            <div id="add-food-cat-wrapper" class="input-field col s12 itm-cd-value med-label">
                 <select id="add-cat-name" name="add-cat-name"  required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
@@ -32,16 +32,16 @@
             </div>
 
             <!--Carb Section-->
-            <div id="add-itm-cd-carb-wrapper">
+            <div id="add-food-carb-wrapper">
                 
                 <!--Portion Size-->
-                <div id="add-itm-cd-portion-size-label" class="itm-cd-label">Portion Size:</div>
+                <div id="add-food-portion-size-label" class="itm-cd-label">Portion Size:</div>
                 <div id="add-portion-size-wrapper" class="input-field col itm-cd-value med-label"> 
                     <input id="add-portion-size" name="add-portion-size" class="med-label validate" type="number" step="1" required>
                 </div>
 
                 <!--Portion Unit-->
-                <div id="add-itm-cd-portion-unit-label" class="itm-cd-label">Portion Unit:</div>
+                <div id="add-food-portion-unit-label" class="itm-cd-label">Portion Unit:</div>
                 <div id="add-portion-unit-wrapper" class="input-field col itm-cd-value med-label"> 
                     <select id="add-portion-unit" name="add-portion-unit" required>
                         <option value="g" selected>g</option>
@@ -50,7 +50,10 @@
                 </div>
                 
                 <!--Portion Description-->
-                <div>Portion Description</div>
+                <div id="add-food-portion-descrip-label" class="itm-cd-label">Portion Description:</div>
+                <div id="add-portion-descrip-wrapper" class="input-field col itm-cd-value med-label"> 
+                    <input id="add-portion-descrip" name="add-portion-descrip" class="med-label validate" type="text" minlength="3" maxlength="25" required>
+                </div>
 
                 <!--Carbs Per Portion-->
                 <div>Carbs Per Portion</div>
@@ -59,7 +62,7 @@
                 <div>Carbs Per 100 g/ml</div>
 
                 <!--Carbs Per Gram-->
-                <div id="add-itm-cd-carbs-per-gram-label" class="itm-cd-label">Carbs Per Gram:</div>
+                <div id="add-food-carbs-per-gram-label" class="itm-cd-label">Carbs Per Gram:</div>
                 <div id="add-carbs-wrapper" class="input-field col itm-cd-value med-label"> 
                     <input id="add-base-carbs" name="add-base-carbs" class="med-label validate" type="number" step="0.001" required>
                 </div>
@@ -69,8 +72,8 @@
 
 
             <!--Tags-->
-            <div id="add-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-            <div id="add-tag-name-wrapper" class="input-field col s12 itm-cd-value med-label">
+            <div id="add-food-tags-label" class="itm-cd-label">Tags:</div>
+            <div id="add-tag-wrapper" class="input-field col s12 itm-cd-value med-label">
                 <select multiple id="add-tag-name" name="add-tag-name">
                     <option value="" disabled >Select Tags (optional)</option>
                     {% for tag in tags %}

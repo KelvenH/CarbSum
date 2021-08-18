@@ -629,29 +629,33 @@ ul.dropdown-content.select-dropdown li span {
 /*--Add Food --*/
 /*-- as noted above, to override materialize styles on input fields seperate grids had to be created, as validator requires unique ids, and classes do not override materialize--*/
 
-#add-item-card {
+#add-food-card {
     grid-template-columns: 4;
     grid-template-areas: 
    "AA1  AA2   AA2   AA2"
    "AB1  AB2   AB2   AB2" 
    "AC1  AC2   AC2   AC2"
-   "AD1  AD2   AD2   AD2" 
+   "AD1  AD2   AD3   AD4" 
    "AE1  AE2   AE2   AE2"
+   "AF1  AF2   AF3   AF4"
+   "AG1  AG2   AG3   AG4"
+   "AH1  AH2   AH2   AH2"
+   
 }
 
-#add-item-card > * {
+#add-food-card > * {
     padding: 0 0.5vw;
 }
 
 
-#add-item-card > .itm-cd-label {
+#add-food-card > .itm-cd-label {
     border: 2px solid var(--green_silver);
     border-right:0;
     text-align:right;
     background-color:var(--green_celadon);
 }
 
-#add-item-card > .itm-cd-value {
+#add-food-card > .itm-cd-value {
     border: 2px solid var(--green_silver);
     border-left:0;
     text-align:left; 
@@ -686,41 +690,69 @@ ul.dropdown-content.select-dropdown li span {
     margin-bottom:0;
 }
 
-#add-itm-cd-cat-label {
+#add-food-cat-label {
     grid-area: AC1;
 }
 
-#add-cat-name-wrapper {
+#add-food-cat-wrapper {
     grid-area: AC2;
     margin:0;
 }
 
-#add-itm-cd-carb-wrapper {
+#add-food-carb-wrapper {
     border: 2px solid var(--green_silver);
     background:var(--purpblue);
 }
 
-add-itm-cd-portion-size-label
-add-portion-size-wrapper
-
-
-
-
-#add-itm-cd-carbs-per-gram-label {
+#add-food-portion-size-label {
     grid-area: AD1;
 }
 
-#add-carbs-wrapper {
+#add-portion-size-wrapper {
     grid-area: AD2;
+}
+
+#add-food-portion-unit-label {
+    grid-area: AD3;
+}
+
+#add-portion-unit-wrapper {
+    grid-area: AD4;
+}
+
+
+#add-itm-cd-portion-descrip-label {
+    grid-area: AE1;
+}
+
+#add-portion-descrip-wrapper {
+    grid-area: AE2;
+}
+   
+    
+    grid-area: AF1;
+    grid-area: AF2;
+    grid-area: AF3;
+    grid-area: AF4;
+    grid-area: AG1;
+    grid-area: AG2;
+    
+
+#add-itm-cd-carbs-per-gram-label {
+    grid-area: AG3;
+}
+
+#add-carbs-wrapper {
+    grid-area: AG4;
     margin:0;
 }
 
 #add-itm-cd-tags-label {
-    grid-area: AE1;
+    grid-area: AH1;
 }
 
 #add-tag-name-wrapper {
-    grid-area: AE2;
+    grid-area: AH2;
     border: 2px solid var(--green_silver);
     margin:0;
     color:var(--purpblue);
