@@ -271,7 +271,7 @@ def add_category():
 # Categories - Read
 @app.route("/get_categories")
 def get_categories():
-    categories = mongo.db.food_categories.find()
+    categories = mongo.db.food_categories.find().sort("cat_name", 1)
     return render_template("manage_categories.html", categories=categories)
 
 
