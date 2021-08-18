@@ -240,9 +240,15 @@ def edit_food(food_id):
             "food_title": request.form.get("edit-food-title"),
             "food_subtitle": request.form.get("edit-food-subtitle"),
             "cat_name": request.form.get("edit-cat-name"),
+            "portion_desc": request.form.get("edit-portion-descrip"),
+            "portion_unit": request.form.get("edit-portion-unit"),
+            "portion_size": request.form.get("edit-portion-size"),
+            "portion_carbs": request.form.get("edit-carbs-per-portion"),
+            "carbs_per_100g": request.form.get("edit-carbs-per100"),
             "base_carbs": request.form.get("edit-base-carbs"),
             "tag": request.form.getlist("edit-food-tag")
         }
+        
         mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)
         flash("Food Item Successfully Updated")
         return redirect(url_for("get_foods"))
