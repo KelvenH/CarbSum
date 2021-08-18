@@ -206,8 +206,8 @@ def add_food():
             "cat_name": request.form.get("add-cat-name"),
             "portion_desc": request.form.get("add-portion-descrip"),
             "portion_unit": request.form.get("add-portion-unit"),
-            "portion_size": request.form.get("add-portion-size"),
-            "portion_carbs": request.form.get("add-carbs-per-portion"),
+            "portion_size": float(request.form.get("add-portion-size")),
+            "portion_carbs": float(request.form.get("add-carbs-per-portion")),
             "carbs_per_100g": request.form.get("add-carbs-per100"),
             "base_carbs": request.form.get("add-carbs-per-gram"),
             "carb_source": request.form.get("add-carbs-source"),
@@ -216,9 +216,11 @@ def add_food():
             "status": status
         }
         
+        print(food)
+
         mongo.db.foods.insert_one(food)
         flash("New Food Entry Added")
-        return redirect(url_for("get_foods"))
+       # return redirect(url_for("get_foods"))
 
     categories = mongo.db.food_categories.find().sort("cat_name", 1)
     tags = mongo.db.tags.find().sort("tag_name", 1)
