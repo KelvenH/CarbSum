@@ -767,7 +767,7 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-carbs-per100-wrapper {
     grid-area: AG2;
-    background: var(--green_honeydew);
+    background-color:var(--green_silver);
     margin:0;
 }
 
@@ -777,9 +777,15 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-carbs-per-gram-wrapper {
     grid-area: AG4;
-    background: var(--green_honeydew);
+    background-color:var(--green_silver);
     margin:0;
 }
+
+#add-carbs-per100-wrapper input,
+#add-carbs-per-gram-wrapper input {
+    color:var(--off_white);
+}
+
 
 #add-food-carbs-source-label {
     grid-area: AH1;
