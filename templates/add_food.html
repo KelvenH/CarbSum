@@ -33,12 +33,12 @@
 
             <!--Carb Section-->
             <div id="add-food-carb-wrapper">
-                
-                <!--Portion Size-->
-                <div id="add-food-portion-size-label" class="itm-cd-label">Portion Size:</div>
-                <div id="add-portion-size-wrapper" class="input-field col itm-cd-value med-label"> 
-                    <input id="add-portion-size" name="add-portion-size" class="med-label validate" type="number" step="1" required>
-                </div>
+
+                 <!--Portion Description-->
+                 <div id="add-food-portion-descrip-label" class="itm-cd-label">Portion Description:</div>
+                 <div id="add-portion-descrip-wrapper" class="input-field col itm-cd-value med-label"> 
+                     <input id="add-portion-descrip" name="add-portion-descrip" class="med-label validate" type="text" minlength="3" maxlength="25" required>
+                 </div>
 
                 <!--Portion Unit-->
                 <div id="add-food-portion-unit-label" class="itm-cd-label">Portion Unit:</div>
@@ -48,11 +48,17 @@
                         <option value="ml" selected>ml</option>
                     </select>
                 </div>
-                
-                <!--Portion Description-->
-                <div id="add-food-portion-descrip-label" class="itm-cd-label">Portion Description:</div>
-                <div id="add-portion-descrip-wrapper" class="input-field col itm-cd-value med-label"> 
-                    <input id="add-portion-descrip" name="add-portion-descrip" class="med-label validate" type="text" minlength="3" maxlength="25" required>
+
+                  <!--Source-->
+                  <div id="add-food-carbs-source-label" class="itm-cd-label">Carbs Per Gram:</div>
+                  <div id="add-carbs-source-wrapper" class="input-field col itm-cd-value med-label"> 
+                      <input id="add-carbs-source" name="add-carbs-source" class="med-label validate" type="text" minlength="3" maxlength="25" required>
+                  </div>
+
+                <!--Portion Size-->
+                <div id="add-food-portion-size-label" class="itm-cd-label">Portion Size:</div>
+                <div id="add-portion-size-wrapper" class="input-field col itm-cd-value med-label"> 
+                    <input id="add-portion-size" name="add-portion-size" class="med-label validate" type="number" step="1" required>
                 </div>
 
                 <!--Carbs Per Portion-->
@@ -73,11 +79,7 @@
                     <input id="add-carbs-per-gram" name="add-carbs-per-gram" class="med-label validate" type="number" step="0.001" required>
                 </div>
                 
-                 <!--Source-->
-                 <div id="add-food-carbs-source-label" class="itm-cd-label">Carbs Per Gram:</div>
-                 <div id="add-carbs-source-wrapper" class="input-field col itm-cd-value med-label"> 
-                     <input id="add-carbs-source" name="add-carbs-source" class="med-label validate" type="text" minlength="3" maxlength="25" required>
-                 </div>
+                
 
             </div> <!-- close Carb Section-->
 
