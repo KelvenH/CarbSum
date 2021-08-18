@@ -44,21 +44,21 @@
                 <div id="add-food-portion-unit-label" class="itm-cd-label">Portion Unit:</div>
                 <div id="add-portion-unit-wrapper" class="input-field col itm-cd-value med-label"> 
                     <select id="add-portion-unit" name="add-portion-unit" required>
-                        <option value="g" selected>g</option>
-                        <option value="ml" selected>ml</option>
+                        <option value="g" selected>grams</option>
+                        <option value="ml">ml</option>
                     </select>
                 </div> 
 
                 <!--Portion Size-->
                 <div id="add-food-portion-size-label" class="itm-cd-label">Portion Size:</div>
                 <div id="add-portion-size-wrapper" class="input-field col itm-cd-value"> 
-                    <input id="add-portion-size" name="add-portion-size" class="med-label validate" type="number" step="1" min="1" required>
+                    <input id="add-portion-size" name="add-portion-size" class="med-label validate" type="number" step="1" min="1" oninput="calcAddFoodCarbs();" required>
                 </div>
 
                 <!--Carbs Per Portion-->
                 <div id="add-food-carbs-per-portion-label" class="itm-cd-label">Carbs Per Portion:</div>
                 <div id="add-carbs-per-portion-wrapper" class="input-field col itm-cd-value"> 
-                    <input id="add-carbs-per-portion" name="add-carbs-per-portion" class="med-label" type="number" min="0" step="0.5">
+                    <input id="add-carbs-per-portion" name="add-carbs-per-portion" class="med-label" type="number" min="0" oninput="calcAddFoodCarbs();" step="0.5">
                 </div>
 
                 <!--Carbs Per 100 g/ml-->
@@ -70,7 +70,7 @@
                 <!--Carbs Per Gram-->
                 <div id="add-food-carbs-per-gram-label" class="itm-cd-label">Carbs Per Gram:</div>
                 <div id="add-carbs-per-gram-wrapper" class="input-field col itm-cd-value"> 
-                    <input id="add-carbs-per-gram" name="add-carbs-per-gram" class="med-label validate" type="number" disabled>
+                    <input id="add-carbs-per-gram" name="add-carbs-per-gram" class="med-label" type="number" value="0" step="0.01" disabled>
                 </div>
                 
                 <!--Source-->

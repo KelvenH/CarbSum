@@ -139,3 +139,18 @@ function calcFoodCardCarbs() {
     document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
     
 };
+
+// Add Food Card Calculations
+
+function calcAddFoodCarbs() {
+  
+  let portionSize = parseFloat(document.getElementById("add-portion-size").value, 10);
+  let carbsPerPortion = parseFloat(document.getElementById("add-carbs-per-portion").value, 10);
+  /*--divide carbs by portion for carb per g--*/
+  let result = carbsPerPortion / portionSize;
+  console.log("Port Size:", portionSize);
+  console.log("Carb per Port:", carbsPerPortion);
+  console.log("Result", result);
+  document.getElementById("add-carbs-per-gram").innerHTML = parseFloat(result).toFixed(1);
+  
+};
