@@ -151,6 +151,6 @@ function calcAddFoodCarbs() {
   console.log("Port Size:", portionSize);
   console.log("Carb per Port:", carbsPerPortion);
   console.log("Result", result);
-  document.getElementById("add-carbs-per-gram").innerHTML = parseFloat(result).toFixed(1);
+  document.getElementById("add-carbs-per-gram").value = parseFloat(result).toFixed(2);
   
 };
