@@ -484,7 +484,7 @@ ul.dropdown-content.select-dropdown li span {
 
 
 /*-- Edit Food--*/
-#edit-item-card {
+#edit-food-card {
     border: 2px solid var(--green_silver);
     border-radius: 0.5vw;
     display: grid;
@@ -496,27 +496,28 @@ ul.dropdown-content.select-dropdown li span {
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     grid-template-areas: 
    "EA1  EA1   EA3   EA3"
-   "EB1  EB2   EB2   EB2" 
-   "EC1  EC2   EC2   EC2" 
-   "ED1  ED2   ED2   ED2" 
-   "EE1  EE1   EE1   EE1" 
-   "EF1  EF2   EF3   EF4"
-   "EG1  EG2   EG2   EG2"
-   "EH1  EH1   EH1   EH1"
+   "EB1  EB2   EB2   EB2"  
+   "YY1  YY1   YY1   YY1"
+   /*-- nested carb data grid inserted here--*/
+   "EI1  EI2   EI2   EI2"
+   "EJ1  EJ1   EJ1   EJ1"
+   "EK1  EK2   EK3   EK4"
+   "EL1  EL2   EL2   EL2"
+   "EM1  EM1   EM1   EM1"
 }
 
-#edit-item-card > * {
+#edit-food-card > * {
     padding: 0 0.5vw;
 }
 
-#edit-item-card > .itm-cd-label {
+#edit-food-card > .itm-cd-label {
     border: 2px solid var(--green_silver);
     border-right:0;
     text-align:right;
     background-color:var(--green_celadon);
 }
 
-#edit-item-card > .itm-cd-value {
+#edit-food-card > .itm-cd-value {
     border: 2px solid var(--green_silver);
     border-left:0;
     text-align:left; 
@@ -540,31 +541,121 @@ ul.dropdown-content.select-dropdown li span {
 
 }
 
-#edit-itm-cd-cat-label {
+#edit-food-cat-label {
     grid-area: EB1;
 }
 
-#edit-cat-name-wrapper {
+#edit-food-cat-wrapper {
     grid-area: EB2;
     margin:0; /*--Bug Fix: many instances of margin 0 applied to input wrappers to force alignment with siblings. The wrappers themselves exist to respect parent padding (i.e. avoid input field expanding into padding area--*/
 }
 
-#edit-itm-cd-carbs-label {
+#edit-food-carb-wrapper {
+    grid-area:YY1;
+    border: 2px solid var(--green_silver);
+    background:var(--pink);
+    display:grid;
+    padding: 1vh 1vw;
+    grid-gap: 0;
+    margin-bottom: 1vh;
+    row-gap: 0.25vh;
+    grid-template-columns: 1.25fr 0.75fr 1.25fr 0.75fr;
+    grid-template-areas: 
+    "EC1  EC2   EC2   EC2" 
+    "ED1  ED2   ED2   ."
+    "EE1  EE2   EE3   EE4"
+    "EF1  EF2   EF3   EF4"
+    "EG1  EG2   EG2   EG2"
+}
+
+
+#edit-food-carb-wrapper input {
+    text-align:center;
+}
+
+#edit-food-portion-descrip-label {
     grid-area: EC1;
 }
 
-#edit-carbs-wrapper {
+#edit-portion-descrip-wrapper {
     grid-area: EC2;
-    display:flex;
+    background: var(--green_honeydew);
     margin:0;
 }
 
-#edit-itm-cd-tags-label {
+#edit-food-portion-unit-label {
     grid-area: ED1;
 }
 
-#edit-itm-cd-tag-wrapper {
+#edit-portion-unit-wrapper {
     grid-area: ED2;
+    background: var(--green_honeydew);
+    margin:0;
+}
+
+#edit-food-portion-size-label {
+    grid-area: EE1;
+}
+
+#edit-portion-size-wrapper {
+    grid-area: EE2;
+    background: var(--green_honeydew);
+    margin:0;
+}
+
+#edit-food-carbs-per-portion-label {
+    grid-area: EE3;
+}   
+
+#edit-carbs-per-portion-wrapper {
+    grid-area: EE4;
+    background: var(--green_honeydew);
+    margin:0;
+}
+
+#edit-food-carbs-per100-label {
+    grid-area: EF1;
+}
+
+#edit-carbs-per100-wrapper {
+    grid-area: EF2;
+    background-color:var(--green_silver);
+    margin:0;
+}
+
+#edit-food-carbs-per-gram-label {
+    grid-area: EF3;
+}
+
+#edit-carbs-per-gram-wrapper {
+    grid-area: EF4;
+    background-color:var(--green_silver);
+    margin:0;
+}
+
+#edit-carbs-per100-wrapper input,
+#edit-carbs-per-gram-wrapper input {
+    color:var(--off_white);
+}
+
+
+#edit-food-carbs-source-label {
+    grid-area: EG1;
+}
+
+#edit-carbs-source-wrapper {
+    grid-area: EG2;
+    background: var(--green_honeydew);
+    margin:0;
+}
+
+
+#edit-food-tags-label {
+    grid-area: EI1;
+}
+
+#edit-food-tag-wrapper {
+    grid-area: EI2;
     border: 2px solid var(--green_silver);
     margin:0;
     color:var(--purpblue);
@@ -580,43 +671,43 @@ ul.dropdown-content.select-dropdown li span {
 
 
 #disabled-label {
-    grid-area: EE1;
+    grid-area: EJ1;
     margin-bottom:0;
 }
 
-#edit-itm-cd-created-label {
-    grid-area: EF1;
+#edit-food-created-label {
+    grid-area: EK1;
 }
 
 #edit-food-createdby {
-    grid-area: EF2;
+    grid-area: EK2;
     height:4.5rem; /*--BUG Fix - materialise input field height not matching siblings--*/
 }
 
-#edit-itm-cd-status-label {
-    grid-area: EF3;
+#edit-food-status-label {
+    grid-area: EK3;
 }
 
 #edit-food-status-wrapper {
-    grid-area: EF4;
+    grid-area: EK4;
     margin:0;
 }
 
-#edit-itm-cd-id-label {
-    grid-area: EG1;
+#edit-food-id-label {
+    grid-area: EL1;
 }
 
 #edit-food-id-wrapper {
-    grid-area: EG2;
+    grid-area: EL2;
     margin:0;
 }
 
-#edit-itm-cd-act-btns {
-    grid-area: EH1;
+#edit-food-act-btns {
+    grid-area: EM1;
 }
 
 
-#edit-itm-cd-new-btn {
+#edit-food-new-btn {
     margin-bottom: 1vh;
 }
 

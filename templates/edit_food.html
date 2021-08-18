@@ -3,13 +3,10 @@
 
 <h3 class="center-align title-txt filled-box">Edit Food</h3>
 
-<p>Please Note: You are viewing a global library item which you do not have permissions to change. Instead, please
-    follow the link below to create a new item. This will be available exclusively to you and would be editable here.
-</p>
 
-<a id="edit-itm-cd-new-btn" href="{{ url_for('add_food') }}" class="btn blue lighten-1">Add New Food Entry</a>
+<a id="edit-food-new-btn" href="{{ url_for('add_food') }}" class="btn blue lighten-1">Add New Food Entry</a>
 <div class="row">
-    <form id="edit-item-card" method="POST" action="{{ url_for('edit_food', food_id=food._id)}}" class="col s12">
+    <form id="edit-food-card" method="POST" action="{{ url_for('edit_food', food_id=food._id)}}" class="col s12">
 
         <!--Food Item Title-->
         <input id="edit-food-title" name="edit-food-title" class="large-label validate" minlength="3" maxlength="25"
@@ -20,8 +17,8 @@
             maxlength="25" type="text" value="{{ food.food_subtitle }}">
 
         <!--Food Category-->
-        <div id="edit-itm-cd-cat-label" class="itm-cd-label">Category:</div>
-        <div id="edit-cat-name-wrapper" class="input-field itm-cd-value med-label">
+        <div id="edit-food-cat-label" class="itm-cd-label">Category:</div>
+        <div id="edit-food-cat-wrapper" class="input-field itm-cd-value med-label">
             <select id="edit-cat-name" name="edit-cat-name" required>
                 <option value="" disabled selected>Choose Category</option>
                 
@@ -66,13 +63,13 @@
             <!--Carbs Per Portion-->
             <div id="edit-food-carbs-per-portion-label" class="itm-cd-label">Carbs Per Portion:</div>
             <div id="edit-carbs-per-portion-wrapper" class="input-field col itm-cd-value"> 
-                <input id="edit-carbs-per-portion" name="edit-carbs-per-portion" class="med-label" type="number" min="0" oninput="calcAddFoodCarbs();" step="0.5">
+                <input id="edit-carbs-per-portion" name="edit-carbs-per-portion" class="med-label" type="number" min="0" oninput="calcEditFoodCarbs();" step="0.5" value="{{ food.portion_carbs }}">
             </div>
 
             <!--Carbs Per 100 g/ml-->
             <div id="edit-food-carbs-per100-label" class="itm-cd-label">Carbs Per 100 g/ml:</div>
             <div id="edit-carbs-per100-wrapper" class="input-field col itm-cd-value"> 
-                <input id="edit-carbs-per100" name="edit-carbs-per100" class="med-label" type="number" value="0" disabled>
+                <input id="edit-carbs-per100" name="edit-carbs-per100" class="med-label" type="number" value="{{ food.carbs_per_100g }}" disabled>
             </div>
 
             <!--Carbs Per Gram-->
@@ -85,26 +82,14 @@
             <!--Source-->
             <div id="edit-food-carbs-source-label" class="itm-cd-label">Source:</div>
             <div id="edit-carbs-source-wrapper" class="input-field col itm-cd-value"> 
-                <input id="edit-carbs-source" name="edit-carbs-source" class="med-label validate" type="text" minlength="3" maxlength="25" required>
+                <input id="edit-carbs-source" name="edit-carbs-source" class="med-label validate" type="text" minlength="3" maxlength="25" value="{{ food.carb_source }}" required>
             </div>
 
-    </div> <!-- close Carb Section-->
-
-
-
-
-
-
-
-
-
-
-
-
+        </div> <!-- close Carb Section-->
 
         <!-- Tags -->
-        <div id="edit-itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-        <div id="edit-itm-cd-tag-wrapper" class="input-field col itm-cd-value med-label">
+        <div id="edit-food-tags-label" class="itm-cd-label">Tags:</div>
+        <div id="edit-food-tag-wrapper" class="input-field col itm-cd-value med-label">
             <select multiple id="edit-food-tag" name="edit-food-tag" required>
                 <option value="" disabled>Select Tags (optional)</option>
                 {% for tag in tags %}
@@ -122,17 +107,17 @@
             be edited</em>
 
         <!--Created By (locked for editing : display for info only)-->
-        <div id="edit-itm-cd-created-label" class="itm-cd-label">Created By:</div>
+        <div id="edit-food-created-label" class="itm-cd-label">Created By:</div>
         <input id="edit-food-createdby" name="food-createdby" class="itm-cd-value med-label" type="text" disabled value="{{ food.created_by }}">
 
         <!--Status (locked for editing : display for info only)-->
-        <div id="edit-itm-cd-status-label" class="itm-cd-label">Status:</div>
+        <div id="edit-food-status-label" class="itm-cd-label">Status:</div>
         <div id="edit-food-status-wrapper" class="input-field col itm-cd-value med-label">
             <input id="edit-food-status" name="food-status" class="itm-cd-value med-label" type="text" disabled value="{{ food.status }}">
         </div>
 
         <!--ID (locked for editing : display for info only)-->
-        <div id="edit-itm-cd-id-label" class="itm-cd-label">ID:</div>
+        <div id="edit-food-id-label" class="itm-cd-label">ID:</div>
         <div id="edit-food-id-wrapper" class="input-field col itm-cd-value med-label">
             <input id="edit-food-id" name="food-id" class="itm-cd-value small-label" type="text" disabled
             value="{{ food._id }}">
@@ -140,7 +125,7 @@
 
 
         <!--Action Buttons-->
-        <div id="edit-itm-cd-act-btns" class="center-align">
+        <div id="edit-food-act-btns" class="center-align">
             <button type="submit" class="btn-small green lighten-1">Save</button>
             <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
             <a href="#confirm-delete-modal2-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
