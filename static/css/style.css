@@ -641,7 +641,7 @@ ul.dropdown-content.select-dropdown li span {
    "AC1  AC2   AC2   AC2"
    "ZZ1  ZZ1   ZZ1   ZZ1"
     /*-- nested carb data grid inserted here--*/
-   "AH1  AH2   AH2   AH2"
+   "AI1  AI2   AI2   AI2"
 }
 
 #add-food-card > * {
@@ -708,12 +708,17 @@ ul.dropdown-content.select-dropdown li span {
     grid-gap: 0;
     margin-bottom: 1vh;
     row-gap: 0.25vh;
-    grid-template-columns: 4;
+    grid-template-columns: 1.25fr 0.75fr 1.25fr 0.75fr;
     grid-template-areas: 
     "AD1  AD2   AD2   AD2" 
-    "AE1  AE2   AE3   AE4"
+    "AE1  AE2   AE2   ."
     "AF1  AF2   AF3   AF4"
     "AG1  AG2   AG3   AG4"
+    "AH1  AH2   AH2   AH2"
+}
+
+#add-food-carb-wrapper input {
+    text-align:center;
 }
 
 #add-food-portion-descrip-label {
@@ -732,16 +737,6 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-portion-unit-wrapper {
     grid-area: AE2;
-    background: var(--green_honeydew);
-    margin:0;
-}
-
-#add-food-carbs-source-label {
-    grid-area: AE3;
-}
-
-#add-carbs-source-wrapper {
-    grid-area: AE4;
     background: var(--green_honeydew);
     margin:0;
 }
@@ -786,12 +781,22 @@ ul.dropdown-content.select-dropdown li span {
     margin:0;
 }
 
-#add-food-tags-label {
+#add-food-carbs-source-label {
     grid-area: AH1;
 }
 
-#add-tag-wrapper {
+#add-carbs-source-wrapper {
     grid-area: AH2;
+    background: var(--green_honeydew);
+    margin:0;
+}
+
+#add-food-tags-label {
+    grid-area: AI1;
+}
+
+#add-tag-wrapper {
+    grid-area: AI2;
     border: 2px solid var(--green_silver);
     margin:0;
     color:var(--purpblue);
