@@ -215,6 +215,7 @@ def add_food():
             "created_by": str(created_by[0]),
             "status": status
         }
+        
         mongo.db.foods.insert_one(food)
         flash("New Food Entry Added")
         return redirect(url_for("get_foods"))
