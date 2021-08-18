@@ -695,7 +695,18 @@ ul.dropdown-content.select-dropdown li span {
     margin:0;
 }
 
-#add-itm-cd-carbs-label {
+#add-itm-cd-carb-wrapper {
+    border: 2px solid var(--green_silver);
+    background:var(--purpblue);
+}
+
+add-itm-cd-portion-size-label
+add-portion-size-wrapper
+
+
+
+
+#add-itm-cd-carbs-per-gram-label {
     grid-area: AD1;
 }
 
