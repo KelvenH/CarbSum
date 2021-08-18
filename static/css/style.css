@@ -704,6 +704,7 @@ ul.dropdown-content.select-dropdown li span {
     background:var(--purpblue);
 }
 
+
 #add-food-portion-size-label {
     grid-area: AD1;
 }
@@ -711,6 +712,8 @@ ul.dropdown-content.select-dropdown li span {
 #add-portion-size-wrapper {
     grid-area: AD2;
 }
+
+
 
 #add-food-portion-unit-label {
     grid-area: AD3;
@@ -721,6 +724,8 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 
+
+
 #add-itm-cd-portion-descrip-label {
     grid-area: AE1;
 }
@@ -729,6 +734,8 @@ ul.dropdown-content.select-dropdown li span {
     grid-area: AE2;
 }
    
+
+
 #add-food-carbs-per-portion-label {
 
 }   
@@ -736,6 +743,16 @@ ul.dropdown-content.select-dropdown li span {
 #add-carbs-per-portion-wrapper {
 
 }
+
+#add-food-carbs-per100-label {
+
+}
+
+
+#add-carbs-per100-wrapper {
+
+}
+
 
     grid-area: AF1;
     grid-area: AF2;
@@ -745,14 +762,27 @@ ul.dropdown-content.select-dropdown li span {
     grid-area: AG2;
     
 
-#add-itm-cd-carbs-per-gram-label {
+#add-food-carbs-per-gram-label {
     grid-area: AG3;
 }
 
-#add-carbs-wrapper {
+#add-carbs-per-gram-wrapper {
     grid-area: AG4;
     margin:0;
 }
+
+
+#add-food-carbs-source-label {
+
+}
+
+#add-carbs-source-wrapper {
+
+}
+
+
+
+
 
 #add-itm-cd-tags-label {
     grid-area: AH1;
