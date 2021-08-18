@@ -640,7 +640,7 @@ ul.dropdown-content.select-dropdown li span {
    "AB1  AB2   AB2   AB2" 
    "AC1  AC2   AC2   AC2"
    "ZZ1  ZZ1   ZZ1   ZZ1"
-   
+    /*-- nested carb data grid inserted here--*/
    "AH1  AH2   AH2   AH2"
 }
 
@@ -702,13 +702,12 @@ ul.dropdown-content.select-dropdown li span {
 #add-food-carb-wrapper {
     grid-area:ZZ1;
     border: 2px solid var(--green_silver);
-    background:var(--purpblue);
+    background:var(--pink);
     display:grid;
     padding: 1vh 1vw;
-    /*--margin-bottom: 1vh;
-    
     grid-gap: 0;
-    row-gap: 0.25vh;--*/
+    margin-bottom: 1vh;
+    row-gap: 0.25vh;
     grid-template-columns: 4;
     grid-template-areas: 
     "AD1  AD2   AD2   AD2" 
@@ -723,6 +722,8 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-portion-descrip-wrapper {
     grid-area: AD2;
+    background: var(--green_honeydew);
+    margin:0;
 }
 
 #add-food-portion-unit-label {
@@ -731,6 +732,8 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-portion-unit-wrapper {
     grid-area: AE2;
+    background: var(--green_honeydew);
+    margin:0;
 }
 
 #add-food-carbs-source-label {
@@ -739,6 +742,8 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-carbs-source-wrapper {
     grid-area: AE4;
+    background: var(--green_honeydew);
+    margin:0;
 }
 
 #add-food-portion-size-label {
@@ -747,6 +752,8 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-portion-size-wrapper {
     grid-area: AF2;
+    background: var(--green_honeydew);
+    margin:0;
 }
 
 #add-food-carbs-per-portion-label {
@@ -755,6 +762,8 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-carbs-per-portion-wrapper {
     grid-area: AF4;
+    background: var(--green_honeydew);
+    margin:0;
 }
 
 #add-food-carbs-per100-label {
@@ -763,6 +772,8 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-carbs-per100-wrapper {
     grid-area: AG2;
+    background: var(--green_honeydew);
+    margin:0;
 }
 
 #add-food-carbs-per-gram-label {
@@ -771,6 +782,7 @@ ul.dropdown-content.select-dropdown li span {
 
 #add-carbs-per-gram-wrapper {
     grid-area: AG4;
+    background: var(--green_honeydew);
     margin:0;
 }
 
