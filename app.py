@@ -160,28 +160,7 @@ def user_view_food(food_id):
 # Delete Food Variant (Private)
 
 
-# View Favourites
 
-
-# Add Food to Favourites
-
-
-# Remove Food from Favourites
-
-
-# View Meals
-
-
-# Create Meals
-
-
-# Add Food to Meal
-
-
-# Edit Meal
-
-
-# Delete Meal
 
 
 # ADMIN Restricted Content
@@ -215,10 +194,9 @@ def add_food():
             "created_by": str(created_by[0]),
             "status": status
         }
-        
         mongo.db.foods.insert_one(food)
         flash("New Food Entry Added")
-       # return redirect(url_for("get_foods"))
+        return redirect(url_for("get_foods"))
 
     categories = mongo.db.food_categories.find().sort("cat_name", 1)
     tags = mongo.db.tags.find().sort("tag_name", 1)
@@ -251,7 +229,7 @@ def edit_food(food_id):
             "created_by": request.form.get("edit-food-createdby"),
             "status": request.form.get("edit-food-status")
         }
-        
+
         mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)
         flash("Food Item Successfully Updated")
         return redirect(url_for("get_foods"))

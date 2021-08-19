@@ -167,11 +167,6 @@ nav i.material-icons {
     margin-bottom:0; /*-- negative margin applied to pull nav-wrapper up --*/
 }
 
-
-.nav-wrapper {
-    /*--padding:1vh 3vw;--*/
-}
-
 /*--Override materialize font styles for nav & logo (class names insufficient)--*/
 nav ul a {
     color: var(--off_white);
