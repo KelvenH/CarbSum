@@ -351,7 +351,7 @@ ul.dropdown-content.select-dropdown li span {
 
  /*-- overide of materialize input fields requires higher specificty selections than class alone --*/
  
-.collapsible-body > .input-field {
+#quick-calc .collapsible-body > .input-field {
     padding-left: 5vw;
     padding-right:2vw;
     display:flex;
@@ -359,7 +359,7 @@ ul.dropdown-content.select-dropdown li span {
     justify-content: flex-end;
 }
 
-.collapsible-body > .input-field > input {
+#quick-calc .collapsible-body > .input-field > input {
     width:25%;
 }
 
@@ -1182,8 +1182,8 @@ ul.dropdown-content.select-dropdown li span {
     background-color: var(--off_white);
     border-radius: 20px;    
     color: var(--purpblue);
-   
 }
+
 #food-card-preset {
     padding:0;
 }
@@ -1208,6 +1208,36 @@ ul.dropdown-content.select-dropdown li span {
     right: 5vw;
 }
 
+
+ /*-- overide of materialize input fields requires higher specificty selections than class alone --*/
+ 
+ #user-food-card .collapsible-body .input-field {
+    
+    justify-content: space-between;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+#user-food-card .collapsible-body .input-field input {
+    /*----*/
+    width:25%;
+}
+
+#food-card-portion-no, 
+#food-card-portion-carbs {
+    border:solid 2px var(--blue_jeans);
+    border-radius: 20px;   
+}
+
+#food-card-portion-no {
+    background-color: var(--off_white);
+    color: var(--purpblue);
+}
+
+#food-card-portion-carbs {
+    background-color: var(--blue_jeans);
+    color: var(--off_white);
+}
 
 #food-card-actions-outer-wrapper {
    margin-bottom: 1vh;

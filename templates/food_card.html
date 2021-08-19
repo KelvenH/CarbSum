@@ -71,8 +71,14 @@
                         <div>Portion: <em>{{ food.portion_desc }}</em></div>
                         <div>Weight: <em>{{ food.portion_size }}g</em></div>
                         <div>Portion carbs: <em>{{ food.portion_carbs }}g</em></div>
-                        <div>Enter No. Portions:</div>
-                        <div>Carbs for No. Portions:</div>
+                        <div class="input-field">
+                            <div>Enter No. Portions:</div>
+                            <input id="food-card-portion-no" name="food-card-portion-no" class="center-align" value="" step="0.5" type="number" min="0" oninput="" validate>
+                        </div>
+                        <div class="input-field">
+                            <div>Carbs For Portion No:</div>
+                            <input id="food-card-portion-carbs" name="food-card-portion-carbs" class="center-align" step="0.5" type="number" min="0" readonly>
+                        </div>
                 </li>
             </ul>
 
