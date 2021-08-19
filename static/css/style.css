@@ -145,6 +145,12 @@ nav {
     border: none;
 }
 
+.btn-future-feature {
+    background-color: var(--silver);
+    color:var(--green_silver);
+}
+
+
 #nav-btn-return {
     margin-top: 1vh;
     margin-left:2vw;
@@ -1255,3 +1261,4 @@ ul.dropdown-content.select-dropdown li span {
     padding: 1vh 1vw 0vh 1vw;
     margin-bottom: -1vh;
 }
+
