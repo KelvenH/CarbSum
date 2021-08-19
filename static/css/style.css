@@ -2,19 +2,26 @@
 
 :root {
 /*---Color Variables---*/
-    --green_emerald: #79C384;
-    --green_celadon: #A1E0AD;
-    --green_honeydew: #D9EEDC;
     --off_white: #FFFAF1;
-    --salmon: #ED806C;
-    --danger: #ffeb3b;
-    --warning: #b71c1c;
+    --green_honeydew: #D9EEDC;
+    --green_celadon: #A1E0AD;
+    --green_emerald: #79C384;
+    --green_silver: #90A591;
+    --silver: #6C7479;
+    --dim_gray: #636363;
+  
     --champagne: #F9E3D6;
     --pink: #E7BEBF;
-    --silver: #6C7479;
-    --green_silver: #90A591;
-    --purpblue: #44578F;
     
+    --mauve: #D7A2F6;
+    --silk: #F9DAD0;
+    --blue_jeans: #49B8FD;
+    --purpblue: #44578F;
+
+    --danger: #ffeb3b;
+    --warning: #b71c1c;
+
+    --salmon: #ED806C;
 /*---Font Variables----------------------*/
 
 --standardfont: bilo, Arial, sans-serif;

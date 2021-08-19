@@ -20,9 +20,7 @@
         <div id="edit-food-cat-label" class="itm-cd-label">Category:</div>
         <div id="edit-food-cat-wrapper" class="input-field itm-cd-value med-label">
             <select id="edit-cat-name" name="edit-cat-name" required>
-                <option value="" disabled selected>Choose Category</option>
-                
-                <!--BUG - can't select category also selected in db-->
+                <option value="" disabled selected>Choose Category</option>              
                 {% for category in categories %}
                 {% if category.cat_name == food.cat_name %}
                 <option value="{{ category.cat_name }}" selected>{{ food.cat_name }}</option>
@@ -93,11 +91,11 @@
             <select multiple id="edit-food-tag" name="edit-food-tag" required>
                 <option value="" disabled>Select Tags (optional)</option>
                 {% for tag in tags %}
-                {% if tag.tag_name == tag.tag_name %}
-                <option value="{{ tag.tag_name }}" selected>{{ tag.tag_name }}</option>
-                {% else %}
-                <option value="{{ tag.tag_name }}">{{ tag.tag_name }}</option>
-                {% endif %}
+                    {% if tag.tag_name == food.tag_name %}
+                        <option value="{{ tag.tag_name }}" selected>{{ food.tag_name }}</option>
+                    {% else %}
+                        <option value="{{ tag.tag_name }}">{{ tag.tag_name }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
         </div>
