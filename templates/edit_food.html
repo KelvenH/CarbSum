@@ -69,13 +69,13 @@
             <!--Carbs Per 100 g/ml-->
             <div id="edit-food-carbs-per100-label" class="itm-cd-label">Carbs Per 100 g/ml:</div>
             <div id="edit-carbs-per100-wrapper" class="input-field col itm-cd-value"> 
-                <input id="edit-carbs-per100" name="edit-carbs-per100" class="med-label" type="number" value="{{ food.carbs_per_100g }}" disabled>
+                <input id="edit-carbs-per100" name="edit-carbs-per100" class="med-label" type="number" value="{{ food.carbs_per_100g }}" step="0.1" readonly>
             </div>
 
             <!--Carbs Per Gram-->
              <div id="edit-food-carbs-per-gram-label" class="itm-cd-label">Carbs Per Gram:</div>
             <div id="edit-carbs-per-gram-wrapper" class="input-field col itm-cd-value">
-                <input id="edit-carbs-per-gram" name="edit-carbs-per-gram" class="validate med-label" type="number" value="{{ food.base_carbs }}" disabled>
+                <input id="edit-carbs-per-gram" name="edit-carbs-per-gram" class="validate med-label" type="number" value="{{ food.base_carbs }}" step="0.01" readonly>
             </div>
 
             
@@ -108,18 +108,18 @@
 
         <!--Created By (locked for editing : display for info only)-->
         <div id="edit-food-created-label" class="itm-cd-label">Created By:</div>
-        <input id="edit-food-createdby" name="edit-food-createdby" class="itm-cd-value med-label" type="text" disabled value="{{ food.created_by }}">
+        <input id="edit-food-createdby" name="edit-food-createdby" class="itm-cd-value med-label" type="text" readonly value="{{ food.created_by }}">
 
         <!--Status (locked for editing : display for info only)-->
         <div id="edit-food-status-label" class="itm-cd-label">Status:</div>
         <div id="edit-food-status-wrapper" class="input-field col itm-cd-value med-label">
-            <input id="edit-food-status" name="edit-food-status" class="itm-cd-value med-label" type="text" disabled value="{{ food.status }}">
+            <input id="edit-food-status" name="edit-food-status" class="itm-cd-value med-label" type="text" readonly value="{{ food.status }}">
         </div>
 
         <!--ID (locked for editing : display for info only)-->
         <div id="edit-food-id-label" class="itm-cd-label">ID:</div>
         <div id="edit-food-id-wrapper" class="input-field col itm-cd-value med-label">
-            <input id="edit-food-id" name="edit-food-id" class="itm-cd-value small-label" type="text" disabled value="{{ food._id }}">
+            <input id="edit-food-id" name="edit-food-id" class="itm-cd-value small-label" type="text" readonly value="{{ food._id }}">
         </div>
 
 

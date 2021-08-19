@@ -208,16 +208,14 @@ def add_food():
             "portion_unit": request.form.get("add-portion-unit"),
             "portion_size": float(request.form.get("add-portion-size")),
             "portion_carbs": float(request.form.get("add-carbs-per-portion")),
-            "carbs_per_100g": request.form.get("add-carbs-per100"),
-            "base_carbs": request.form.get("add-carbs-per-gram"),
+            "carbs_per_100g": float(request.form.get("add-carbs-per100")),
+            "base_carbs": float(request.form.get("add-carbs-per-gram")),
             "carb_source": request.form.get("add-carbs-source"),
             "tag": request.form.getlist("add-tag-name"),
             "created_by": str(created_by[0]),
             "status": status
         }
         
-        print(food)
-
         mongo.db.foods.insert_one(food)
         flash("New Food Entry Added")
        # return redirect(url_for("get_foods"))
@@ -244,11 +242,14 @@ def edit_food(food_id):
             "cat_name": request.form.get("edit-cat-name"),
             "portion_desc": request.form.get("edit-portion-descrip"),
             "portion_unit": request.form.get("edit-portion-unit"),
-            "portion_size": request.form.get("edit-portion-size"),
-            "portion_carbs": request.form.get("edit-carbs-per-portion"),
-            "carbs_per_100g": request.form.get("edit-carbs-per100"),
-            "base_carbs": request.form.get("edit-base-carbs"),
-            "tag": request.form.getlist("edit-food-tag")
+            "portion_size": float(request.form.get("edit-portion-size")),
+            "portion_carbs": float(request.form.get("edit-carbs-per-portion")),
+            "carbs_per_100g": float(request.form.get("edit-carbs-per100")),
+            "base_carbs": float(request.form.get("edit-carbs-per-gram")),
+            "carb_source": request.form.get("edit-carbs-source"),
+            "tag": request.form.getlist("edit-food-tag"),
+            "created_by": request.form.get("edit-food-createdby"),
+            "status": request.form.get("edit-food-status")
         }
         
         mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)
