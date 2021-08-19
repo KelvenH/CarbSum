@@ -126,7 +126,7 @@ function qcItemCount() {
 
 };
 
-// Food Card Calculations
+// Food Card Calculations - Note as base carbs is pulled from db (unlike Add New Food Card) only the carbs per portion needs to be calculated. Second calc uses the preset portion sizes as alternative for user
 
 function calcFoodCardCarbs() {
   
@@ -134,7 +134,22 @@ function calcFoodCardCarbs() {
     let carbsPerG = parseFloat(document.getElementById("food-base-carbs").value, 10);
     let result = portionSize * carbsPerG;
     document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
-    
+    //clears out any values in alternative option of calc carbs (preset)
+    document.getElementById("food-card-portion-carbs").value = 0;
+};
+
+function calcFoodCardPresetCarbs() {
+  
+  let portionCarbs = parseFloat(document.getElementById("testcalc").value, 10);
+  console.log("portionCarbs", portionCarbs);
+  let portionNo = parseFloat(document.getElementById("food-card-portion-no").value, 10);
+  console.log("portionNo", portionNo);
+  let result = portionCarbs * portionNo;
+  console.log(result);
+  document.getElementById("food-card-portion-carbs").value = (parseFloat(result).toFixed(1) + "g");
+  document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
+  //clears out any values in alternative option of calc carbs (manual portion size)
+  document.getElementById("food-card-portion-data").value = 0;
 };
 
 // Add Food Card Calculations
@@ -145,12 +160,8 @@ function calcAddFoodCarbs() {
   let carbsPerPortion = parseFloat(document.getElementById("add-carbs-per-portion").value, 10);
   /*--divide carbs by portion for carb per g--*/
   let carbPerG = carbsPerPortion / portionSize;
-  console.log("Port Size:", portionSize);
-  console.log("Carb per Port:", carbsPerPortion);
-  console.log("CarbPerG", carbPerG);
   document.getElementById("add-carbs-per-gram").value = parseFloat(carbPerG).toFixed(2);
   let carbPer100 = carbPerG * 100;
-  console.log("carbPer100", carbPer100);
   document.getElementById("add-carbs-per100").value = parseFloat(carbPer100).toFixed(1);
 };
 

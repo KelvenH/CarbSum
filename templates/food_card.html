@@ -70,14 +70,15 @@
                     <div class="collapsible-body">
                         <div>Portion: <em>{{ food.portion_desc }}</em></div>
                         <div>Weight: <em>{{ food.portion_size }}g</em></div>
-                        <div>Portion carbs: <em>{{ food.portion_carbs }}g</em></div>
+                        <div>Portion carbs: <em id="food-card-preset-carbs">{{ food.portion_carbs }}g</em></div>
+                        <input id="testcalc" name="testcalc" type="hidden" step="0.1" value="{{ food.portion_carbs }}" > 
                         <div class="input-field">
                             <div>Enter No. Portions:</div>
-                            <input id="food-card-portion-no" name="food-card-portion-no" class="center-align" value="" step="0.5" type="number" min="0" oninput="" validate>
+                            <input id="food-card-portion-no" name="food-card-portion-no" class="center-align" value="" step="0.5" type="number" min="0" oninput="calcFoodCardPresetCarbs();" validate>
                         </div>
                         <div class="input-field">
                             <div>Carbs For Portion No:</div>
-                            <input id="food-card-portion-carbs" name="food-card-portion-carbs" class="center-align" step="0.5" type="number" min="0" readonly>
+                            <input id="food-card-portion-carbs" name="food-card-portion-carbs" class="center-align" type="text" min="0" readonly>
                         </div>
                 </li>
             </ul>
