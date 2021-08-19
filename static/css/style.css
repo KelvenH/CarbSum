@@ -16,6 +16,7 @@
     --mauve: #D7A2F6;
     --silk: #F9DAD0;
     --blue_jeans: #49B8FD;
+    --blue_jeans_light: #D8F0FF;
     --purpblue: #44578F;
 
     --danger: #ffeb3b;
@@ -1183,9 +1184,28 @@ ul.dropdown-content.select-dropdown li span {
     color: var(--purpblue);
    
 }
+#food-card-preset {
+    padding:0;
+}
+
 
 #food-card-preset .collapsible-header {
-    background-color: var(--green_celadon);
+    background-color: var(--blue_jeans);
+    color: var(--off_white);
+    text-align:center;
+    font-weight:bold;
+}
+
+#food-card-preset .collapsible-body {
+    background-color: var(--blue_jeans_light);
+    
+    position:relative;
+}
+
+#food-card-preset .collapsible-body em {
+    text-align:right;
+    position:absolute;
+    right: 5vw;
 }
 
 

@@ -64,10 +64,15 @@
             </div>
 
              <!--Preset Portion Size-->
-            <ul id="food-card-preset" class="col s10 offset-s1 outline-box collapsible">
+            <ul id="food-card-preset" class="col s10 offset-s1 collapsible">
                 <li>
-                    <div class="collapsible-header col s10">First</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header col s12">Click here to use pre-set portions</div>
+                    <div class="collapsible-body">
+                        <div>Portion: <em>{{ food.portion_desc }}</em></div>
+                        <div>Weight: <em>{{ food.portion_size }}g</em></div>
+                        <div>Portion carbs: <em>{{ food.portion_carbs }}g</em></div>
+                        <div>Enter No. Portions:</div>
+                        <div>Carbs for No. Portions:</div>
                 </li>
             </ul>
 
