@@ -8,7 +8,11 @@
 
         <!--food card title-->
         <div id="food-card-title-wrapper" class="col s12 filled-box">
-            <h4 class="col s12 center-align white-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
+            {% if food.food_subtitle|length > 0 %}
+                <h4 class="col s12 center-align white-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
+            {% else %}
+                <h4 class="col s12 center-align white-txt">{{ food.food_title }}
+            {% endif %}
         </div>
 
         <!--food card info-->
