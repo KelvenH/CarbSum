@@ -2,78 +2,84 @@
 {% block content %}
 
 <h3 class="center-align title-txt filled-box">Manage Food Items</h3>
-
-<div class="row">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('add_food') }}" class="btn-large btn-green">
-            Add New Food Entry<i class="fas fa-plus-square right"></i>
-        </a>
-    </div>
-</div>
-
-<div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('search') }}" method="POST" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix"></i>
-                <input type="text" name="query" id="query" class="validate" minlength="3" required>
-                <label for="query">Search Foods</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_foods') }}" class="orange darken-1 btn text-shadow">Reset</a>
-                <button type="submit" class="btn btn-green text-shadow">Search</i>
-                </button>
-            </div>
+    {% if 'admin_role' in session and session['admin_role'] %}
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_food') }}" class="btn-large btn-green">
+                Add New Food Entry<i class="fas fa-plus-square right"></i>
+            </a>
         </div>
-    </form>
-</div>
-
-{% if foods|length > 0 %}
-    {% for food in foods %}
-    <div id="item-card-admin">
-        <div id="itm-cd-title" class="itm-cd-label med-label">{{ food.food_title }}</div>
-        <div id="itm-cd-subtitle" class="itm-cd-value med-label">{{ food.food_subtitle }}</div>
-        <div id="itm-cd-cat-label" class="itm-cd-label">Category:</div>
-        <div id="itm-cd-category" class="itm-cd-value">{{ food.cat_name }}</div>
-        <div id="itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
-        <div id="itm-cd-carbs" class="itm-cd-value">{{ food.base_carbs }}</div>
-        <div id="itm-cd-tags-label" class="itm-cd-label">Tags:</div>
-        <div id="itm-cd-tags" class="itm-cd-value">{{ food.tag|join(', ') }}</div>
-        <div id="itm-cd-created-label" class="itm-cd-label">Created By:</div>
-        <div id="itm-cd-createdby" class="itm-cd-value">{{ food.created_by }}</div>
-        <div id="itm-cd-status-label" class="itm-cd-label">Status:</div>
-        <div id="itm-cd-status" class="itm-cd-value">{{ food.status }}</div>
-        <div id="itm-cd-id-label" class="itm-cd-label">ID:</div>
-        <div id="itm-cd-id" class="itm-cd-value small-label">{{ food._id }}</div>
-        <a href="{{ url_for('edit_food', food_id=food._id) }}" class="btn-small blue lighten-1">Edit</a>
-        <a href="#confirm-delete-modal-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
     </div>
 
-
-    <div id="confirm-delete-modal-{{ food._id }}" class="modal warning-box">
-
-        <div class="modal-content blue-grey lighten-4">
-            <div class="card-content red-text">
-                <i class="material-icons prefix yellow-text warning-icon">warning</i>
-                <h4 class="modal-title">Confirm Deletion</h4>
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search') }}" method="POST" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="query" id="query" class="validate" minlength="3" required>
+                    <label for="query">Search Foods</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_foods') }}" class="orange darken-1 btn text-shadow">Reset</a>
+                    <button type="submit" class="btn btn-green text-shadow">Search</i>
+                    </button>
+                </div>
             </div>
-            <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
-                proceeding! </p>
-            <p>ID of item to be deleted: {{ food._id }}</p>
-
-            <div class="card-action">
-                <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
-                <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm
-                    Deletion</a>
-            </div>
-        </div>
-
+        </form>
     </div>
 
-    {% endfor %}
+        {% if foods|length > 0 %}
+            {% for food in foods %}
+            <div id="item-card-admin">
+                <div id="itm-cd-title" class="itm-cd-label med-label">{{ food.food_title }}</div>
+                <div id="itm-cd-subtitle" class="itm-cd-value med-label">{{ food.food_subtitle }}</div>
+                <div id="itm-cd-cat-label" class="itm-cd-label">Category:</div>
+                <div id="itm-cd-category" class="itm-cd-value">{{ food.cat_name }}</div>
+                <div id="itm-cd-carbs-label" class="itm-cd-label">Carbs Per Gram:</div>
+                <div id="itm-cd-carbs" class="itm-cd-value">{{ food.base_carbs }}</div>
+                <div id="itm-cd-tags-label" class="itm-cd-label">Tags:</div>
+                <div id="itm-cd-tags" class="itm-cd-value">{{ food.tag|join(', ') }}</div>
+                <div id="itm-cd-created-label" class="itm-cd-label">Created By:</div>
+                <div id="itm-cd-createdby" class="itm-cd-value">{{ food.created_by }}</div>
+                <div id="itm-cd-status-label" class="itm-cd-label">Status:</div>
+                <div id="itm-cd-status" class="itm-cd-value">{{ food.status }}</div>
+                <div id="itm-cd-id-label" class="itm-cd-label">ID:</div>
+                <div id="itm-cd-id" class="itm-cd-value small-label">{{ food._id }}</div>
+                <a href="{{ url_for('edit_food', food_id=food._id) }}" class="btn-small blue lighten-1">Edit</a>
+                <a href="#confirm-delete-modal-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
+            </div>
 
-{% else %}
-    <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-{% endif %}
+
+            <div id="confirm-delete-modal-{{ food._id }}" class="modal warning-box">
+
+                <div class="modal-content blue-grey lighten-4">
+                    <div class="card-content red-text">
+                        <i class="material-icons prefix yellow-text warning-icon">warning</i>
+                        <h4 class="modal-title">Confirm Deletion</h4>
+                    </div>
+                    <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
+                        proceeding! </p>
+                    <p>ID of item to be deleted: {{ food._id }}</p>
+
+                    <div class="card-action">
+                        <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+                        <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm
+                            Deletion</a>
+                    </div>
+                </div>
+
+            </div>
+
+            {% endfor %}
+        
+        {% else %}
+            <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+        {% endif %}
+    
+    {% else %}    
+
+        <h4 class="center-align">This page is restricted to admin users</h4>
+        <button class="btn waves-effect waves-light" onclick="goBack()">Click here to return to previous page</button>
+    {% endif %}    
 
 {% endblock %}

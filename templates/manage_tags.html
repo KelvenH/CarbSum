@@ -2,54 +2,59 @@
 {% block content %}
 
 <h3 class="center-align title-txt filled-box">Manage Tags</h3>
-
-<div class="row">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('add_tag') }}" class="btn-large btn-green">
-            Add New Tag<i class="fas fa-plus-square right"></i>
-        </a>
-    </div>
-</div>
-
-
-
-<div id="tag-card-admin">
-
-    {% for tag in tags %}
-    <div class="row cat-row-wrap">
-        <div id="tag-cd-name" class="col s12 m6 med-label cat-cd-value center-align">{{ tag.tag_name }}</div>
-        <div id="tag-cd-id" class="col s6 m3 small-label cat-cd-value"> {{ tag._id }}</div>
-        <div id="tag-cd-btn-wrapper" class="col s6 m3 cat-cd-value">
-            <a href="{{ url_for('edit_tag', tag_id=tag._id) }}" class="btn-small blue lighten-1">Edit</a>
-            <a href="#confirm-delete-modal5-{{ tag._id }}" class="modal-trigger btn-small red">Delete</a>
-        </div>
-    </div>
-    <!--close looped row-->
-
-</div>
-<!--close card-->
-
-<div id="confirm-delete-modal5-{{ tag._id }}" class="modal warning-box">
-
-    <div class="modal-content blue-grey lighten-4">
-        <div class="card-content red-text">
-            <i class="material-icons prefix yellow-text warning-icon">warning</i>
-            <h4 class="modal-title">Confirm Deletion</h4>
-        </div>
-        <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
-            proceeding! </p>
-        <p>ID of item to be deleted: {{ tag._id }}</p>
-
-        <div class="card-action">
-            <a href="{{ url_for('get_tags') }}" class="btn-small grey lighten-1">Cancel</a>
-            <a href="{{ url_for('delete_tag', tag_id=tag._id) }}" class="modal-trigger btn-small red">Confirm
-                Deletion</a>
+{% if 'admin_role' in session and session['admin_role'] %}
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_tag') }}" class="btn-large btn-green">
+                Add New Tag<i class="fas fa-plus-square right"></i>
+            </a>
         </div>
     </div>
 
-</div>
 
-{% endfor %}
+
+    <div id="tag-card-admin">
+
+        {% for tag in tags %}
+        <div class="row cat-row-wrap">
+            <div id="tag-cd-name" class="col s12 m6 med-label cat-cd-value center-align">{{ tag.tag_name }}</div>
+            <div id="tag-cd-id" class="col s6 m3 small-label cat-cd-value"> {{ tag._id }}</div>
+            <div id="tag-cd-btn-wrapper" class="col s6 m3 cat-cd-value">
+                <a href="{{ url_for('edit_tag', tag_id=tag._id) }}" class="btn-small blue lighten-1">Edit</a>
+                <a href="#confirm-delete-modal5-{{ tag._id }}" class="modal-trigger btn-small red">Delete</a>
+            </div>
+        </div>
+        <!--close looped row-->
+       
+    </div>
+    <!--close card-->
+
+    <div id="confirm-delete-modal5-{{ tag._id }}" class="modal warning-box">
+
+        <div class="modal-content blue-grey lighten-4">
+            <div class="card-content red-text">
+                <i class="material-icons prefix yellow-text warning-icon">warning</i>
+                <h4 class="modal-title">Confirm Deletion</h4>
+            </div>
+            <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
+                proceeding! </p>
+            <p>ID of item to be deleted: {{ tag._id }}</p>
+
+            <div class="card-action">
+                <a href="{{ url_for('get_tags') }}" class="btn-small grey lighten-1">Cancel</a>
+                <a href="{{ url_for('delete_tag', tag_id=tag._id) }}" class="modal-trigger btn-small red">Confirm
+                    Deletion</a>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+    
+    {% else %}    
+
+    <h4 class="center-align">This page is restricted to admin users</h4>
+    <button class="btn waves-effect waves-light" onclick="goBack()">Click here to return to previous page</button>
+    {% endif %}
 
 
 {% endblock %}
