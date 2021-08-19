@@ -1198,28 +1198,27 @@ ul.dropdown-content.select-dropdown li span {
 
 #food-card-preset .collapsible-body {
     background-color: var(--blue_jeans_light);
-    
-    position:relative;
+}
+
+#food-card-preset .collapsible-body div {
+    position: relative;
 }
 
 #food-card-preset .collapsible-body em {
-    text-align:right;
     position:absolute;
-    right: 5vw;
+    right: 2vw;
 }
 
 
  /*-- overide of materialize input fields requires higher specificty selections than class alone --*/
  
  #user-food-card .collapsible-body .input-field {
-    
     justify-content: space-between;
     display:flex;
     flex-wrap: nowrap;
 }
 
 #user-food-card .collapsible-body .input-field input {
-    /*----*/
     width:25%;
 }
 
