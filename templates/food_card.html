@@ -46,6 +46,7 @@
                     <div id="food-calc-result" class="col s4 center-align white-box med-label">0<span>g</span></div>
                 </div>
             </div>
+
             <!--base carbs-->
             <div class="row">
                 <div id="food-card-base" class="col s10 offset-s1 info-box valign-wrapper">
@@ -53,13 +54,28 @@
                     <input id="food-base-carbs" name="food-base-carbs" class="col s3 right-align white-txt" type="number" step="0.001" min="0" value="{{ food.base_carbs }}" oninput="calcFoodCardCarbs();"><span>g</span></input>
                 </div>
             </div>
+
             <!--Portion-->
             <div class="row">
                 <div id="food-card-portion" class="col s10 offset-s1 outline-box valign-wrapper">
-                    <div class="col s9 right-align med-label">Portion Size:</div>
+                    <div class="col s9 right-align med-label">Enter Portion Size:</div>
                     <input id="food-card-portion-data" name="food-card-portion-data" type="number" step="1" min="0" class="col s3 center-align validate med-label" value="0" oninput="calcFoodCardCarbs();" required><span>g</span></input>
                 </div>
             </div>
+
+             <!--Preset Portion Size-->
+            <ul id="food-card-preset" class="col s10 offset-s1 outline-box collapsible">
+                <li>
+                    <div class="collapsible-header col s10">First</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+
+            <!--
+           <div class="col s9 right-align med-label">Enter Portion Size:</div>
+                    <input id="food-card-portion-data" name="food-card-portion-data" type="number" step="1" min="0" class="col s3 center-align validate med-label  " value="0" oninput="calcFoodCardCarbs();" required><span>g</span></input>  
+            
+           -->
 
         </div><!--close carbs data wrapper-->
 

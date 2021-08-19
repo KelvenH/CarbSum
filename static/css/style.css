@@ -1177,9 +1177,17 @@ ul.dropdown-content.select-dropdown li span {
 #food-card-portion input {
     margin:0.5vh;
     font-size:2rem;      /*--Bug - input field not appying font styles from class name re-applied here--*/
+    border:solid 2px var(--green_celadon);
+    background-color: var(--off_white);
+    border-radius: 20px;    
     color: var(--purpblue);
-    border-bottom: none;
+   
 }
+
+#food-card-preset .collapsible-header {
+    background-color: var(--green_celadon);
+}
+
 
 #food-card-actions-outer-wrapper {
    margin-bottom: 1vh;
