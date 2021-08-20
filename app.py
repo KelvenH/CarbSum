@@ -193,7 +193,34 @@ def user_search_my_foods():
     foods = list(mongo.db.foods.find({"$text": {"$search": user_query}}))
     return render_template("find_foods.html", foods=foods)
 
-# Update Food Variant (Private)
+# Update Own Food (Private)
+@app.route("/edit_my_food/<food_id>", methods=["GET", "POST"])
+def edit_my_food(food_id):
+    if request.method == "POST":
+        submit = {
+            "food_title": request.form.get("edit-food-title"),
+            "food_subtitle": request.form.get("edit-food-subtitle"),
+            "cat_name": request.form.get("edit-cat-name"),
+            "portion_desc": request.form.get("edit-portion-descrip"),
+            "portion_unit": request.form.get("edit-portion-unit"),
+            "portion_size": float(request.form.get("edit-portion-size")),
+            "portion_carbs": float(request.form.get("edit-carbs-per-portion")),
+            "carbs_per_100g": float(request.form.get("edit-carbs-per100")),
+            "base_carbs": float(request.form.get("edit-carbs-per-gram")),
+            "carb_source": request.form.get("edit-carbs-source"),
+            "tag": request.form.getlist("edit-food-tag"),
+            "created_by": request.form.get("edit-food-createdby"),
+            "status": request.form.get("edit-food-status")
+        }
+
+        mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)
+        flash("Food Item Successfully Updated")
+        return redirect(url_for("my_foods"))
+
+    food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
+    categories = mongo.db.food_categories.find().sort("cat_name", 1)
+    tags = mongo.db.tags.find().sort("tag_name", 1)
+    return render_template("edit_food.html", food=food, categories=categories, tags=tags)
 
 
 # Delete Food Variant (Private)

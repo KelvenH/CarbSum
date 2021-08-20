@@ -89,9 +89,9 @@
         <div  id="food-card-actions-outer-wrapper" class="col s12 outline-box">
             <div id="food-card-actions-inner-wrapper" class="row">
                 {% if session.user|lower == food.created_by|lower %}
-                    <a class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">create</i>Edit Food Card</a>
+                    <a href="{{ url_for('edit_my_food', food_id=food._id) }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">create</i>Edit Food Card</a>
+                    <a class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Delete Food Card</a>
                 {% endif %}
-                <a class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Create Own Version</a>
                 <em class="col s10 offset-s1 center-align">Meal functionality under development</em>
                 <a class="btn-future-feature btn btn-med-label col s10 offset-s1"><i class="material-icons left btn-icon">add restaurant</i>Add to Meal</a>
                    
