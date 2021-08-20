@@ -151,7 +151,35 @@ def user_view_food(food_id):
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     return render_template("food_card.html", food=food)
 
-# Create New Food Variant (Private)
+# Create New User Food (Private)
+@app.route("/add_userfood", methods=["GET", "POST"])
+def add_userfood():
+    if request.method == "POST":
+        created_by = "admin" if session['admin_role'] else session["user"],
+        status = "global" if session['admin_role'] else "private"
+        food = {
+            "food_title": request.form.get("add-food-title"),
+            "food_subtitle": request.form.get("add-food-subtitle"),
+            "cat_name": request.form.get("add-cat-name"),
+            "portion_desc": request.form.get("add-portion-descrip"),
+            "portion_unit": request.form.get("add-portion-unit"),
+            "portion_size": float(request.form.get("add-portion-size")),
+            "portion_carbs": float(request.form.get("add-carbs-per-portion")),
+            "carbs_per_100g": float(request.form.get("add-carbs-per100")),
+            "base_carbs": float(request.form.get("add-carbs-per-gram")),
+            "carb_source": request.form.get("add-carbs-source"),
+            "tag": request.form.getlist("add-tag-name"),
+            "created_by": str(created_by[0]),
+            "status": status
+        }
+        mongo.db.foods.insert_one(food)
+        flash("New Food Entry Added")
+        return redirect(url_for("dashboard", username=session["user"]))
+
+    categories = mongo.db.food_categories.find().sort("cat_name", 1)
+    tags = mongo.db.tags.find().sort("tag_name", 1)
+    return render_template("add_food.html", categories=categories, tags=tags)
+
 
 
 # Update Food Variant (Private)

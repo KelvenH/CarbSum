@@ -4,8 +4,11 @@
 <h3 class="center-align title-txt filled-box">Add New Food Entry</h3>
 
 <div class="row">
+    {% if 'admin_role' in session and session['admin_role'] %}
     <form class="col s12" method="POST" action="{{ url_for('add_food')}}">
-
+    {% else %}
+    <form class="col s12" method="POST" action="{{ url_for('add_userfood')}}">
+    {% endif %}
         <div id="add-food-card">
         
             <!--Food Item Title-->
