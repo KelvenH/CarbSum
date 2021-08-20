@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align title-txt filled-box">Food Card</h3>
+    <h3 class="center-align title-txt title-box">Food Card</h3>
 
     <div class="row">
         <form id="user-food-card" class="col s12">
@@ -9,9 +9,9 @@
             <!--food card title-->
             <div id="food-card-title-wrapper" class="col s12 filled-box">
                 {% if food.food_subtitle|length > 0 %}
-                    <h4 class="col s12 center-align white-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
+                    <h4 class="col s12 center-align">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
                 {% else %}
-                    <h4 class="col s12 center-align white-txt">{{ food.food_title }}</h4>
+                    <h4 class="col s12 center-align">{{ food.food_title }}</h4>
                 {% endif %}
             </div>
 

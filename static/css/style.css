@@ -2,27 +2,31 @@
 
 :root {
 /*---Color Variables---*/
-    --off_white: #FFFAF1;
-    --green_honeydew: #D9EEDC;
+
+    /*--moodboard--*/
     --green_celadon: #A1E0AD;
     --green_emerald: #79C384;
-    --green_silver: #90A591;
-    --silver: #6C7479;
-    --dim_gray: #636363;
-  
-    --champagne: #F9E3D6;
+    --champagne: #F9E3D6; 
     --pink: #E7BEBF;
-    
-    --mauve: #D7A2F6;
-    --silk: #F9DAD0;
+    --salmon: #ED806C;
+    --silver: #6C7479;
+    --purpblue: #44578F;
+    --alt: #F8FAD7;
+
+    /*--accents--*/
+    --turquoise: #07E3D5;
+    --green_honeydew: #D9EEDC; 
+    --off_white: #FFFAF1;
     --blue_jeans: #49B8FD;
     --blue_jeans_light: #D8F0FF;
-    --purpblue: #44578F;
+    --purpblue_light: #5E74B3;
 
+     /*--other--*/
+    --green_silver: #90A591;
+    --dim_gray: #636363;
     --danger: #ffeb3b;
-    --warning: #b71c1c;
-
-    --salmon: #ED806C;
+    --warning: #b71c1c; 
+   
 /*---Font Variables----------------------*/
 
 --standardfont: bilo, Arial, sans-serif;
@@ -66,14 +70,21 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
 
 .outline-box {
     border:solid 2px var(--green_celadon);
-    background-color: var(--green_honeydew);
+    background-color: var(--champagne);
     border-radius: 20px;
     padding: 2vh 0;
 }
 
-.filled-box {
+.title-box {
     border:solid 2px var(--green_celadon);
-    background-color: var(--green_emerald);
+    background-image: linear-gradient(to right top, var(--purpblue), var(--purpblue_light));
+    border-radius: 20px;
+    padding: 2vh 0;  
+}
+
+.filled-box {
+    border:solid 2px var(--purpblue_light);
+    background-color: var(--alt);
     border-radius: 20px;
     padding: 2vh 0;  
 }
@@ -130,9 +141,12 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
 /*--base.html ----*/
 
 body {
-    background-color: var(--champagne);
+    background-image: linear-gradient(to right top, var(--green_silver), var(--green_honeydew));
     font-family:filson-soft;
+    min-height:100vh;
 }
+
+
 
 nav {  
     background-color: var(--green_emerald);
@@ -202,8 +216,8 @@ nav .brand-logo {
 }
 
 .btn-neutral {
-    background-color:var(--champagne);
-    border: 1px solid var(--salmon);
+    background-color:var(--green_honeydew);
+    border: 1px solid var(--green_emerald);
 }
 
 .btn-green {
