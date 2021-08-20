@@ -11,7 +11,7 @@
                 {% if food.food_subtitle|length > 0 %}
                     <h4 class="col s12 center-align white-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
                 {% else %}
-                    <h4 class="col s12 center-align white-txt">{{ food.food_title }}
+                    <h4 class="col s12 center-align white-txt">{{ food.food_title }}</h4>
                 {% endif %}
             </div>
 
@@ -88,17 +88,18 @@
             <!--food card actions-->
             <div  id="food-card-actions-outer-wrapper" class="col s12 outline-box">
                 <div id="food-card-actions-inner-wrapper" class="row">
+                    <!--note: no EDIT / DELETE capability set for Admin users as these can be performed through Manage Foods-->
                     {% if session.user|lower == food.created_by|lower %}
                         <a href="{{ url_for('edit_my_food', food_id=food._id) }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">create</i>Edit Food Card</a>
                         
-                        <a href="#confirm-delete-modal7-{{ food._id }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Delete Food Card</a>
+                        <a href="#confirm-delete-myfood-modal-{{ food._id }}" class="modal-trigger waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Delete Food Card</a>
                     {% endif %}
 
                     <em class="col s10 offset-s1 center-align">Meal functionality under development</em>
                     <a class="btn-future-feature btn btn-med-label col s10 offset-s1"><i class="material-icons left btn-icon">add restaurant</i>Add to Meal</a>
                     
                 </div>
-        </div><!--close food card actions-->
+            </div><!--close food card actions-->
             
             <!--Food Admin Details-->
             <div id="food-card-admin-wrapper" class="col s12 inactive-box">
@@ -115,7 +116,7 @@
     </div>
     
     <!--Confirm Deletion Modal-->
-    <div id="confirm-delete-modal7-{{ food._id }}" class="modal warning-box">
+    <div id="confirm-delete-myfood-modal-{{ food._id }}" class="modal warning-box">
 
         <div class="modal-content blue-grey lighten-4">
             <div class="card-content red-text">
@@ -127,14 +128,9 @@
             <p>ID of item to be deleted: {{ food._id }}</p>
 
             <div class="card-action">
-                {% if 'admin_role' in session and session['admin_role'] %}
-                <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
-                <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
-
-                {% elif session.user|lower == food.created_by|lower %}
                 <a href="{{ url_for('user_view_food', food_id=food._id) }}" class="btn-small grey lighten-1">Cancel</a>
                 <a href="{{ url_for('delete_my_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
-                {% endif %}     
+               
             </div>
         </div>
     </div>
