@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align title-txt filled-box">Edit Food</h3>
+    <h3 class="center-align title-txt filled-box">Edit Food</h3>
 
     <div class="row">
         {% if 'admin_role' in session and session['admin_role'] %}
@@ -158,13 +158,14 @@
             <div class="card-action">
                 {% if 'admin_role' in session and session['admin_role'] %}
                 <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+                <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
 
                 {% elif session.user|lower == food.created_by|lower %}
                 <a href="{{ url_for('user_view_food', food_id=food._id) }}" class="btn-small grey lighten-1">Cancel</a>
+                <a href="{{ url_for('delete_my_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
                 {% endif %}  
 
-                <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm
-                    Deletion</a>
+                
             </div>
         </div>
     </div>

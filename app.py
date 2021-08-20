@@ -145,14 +145,14 @@ def search_categories():
             categories=categories, foods=foods)
 
 
-# View Food Card
+# View Food Card (All Global + User Created)
 @app.route("/user_view_food/<food_id>")
 def user_view_food(food_id):
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     return render_template("food_card.html", food=food)
 
 
-# Create New User Food (Private)
+# Create New Food (User Created)
 @app.route("/add_userfood", methods=["GET", "POST"])
 def add_userfood():
     if request.method == "POST":
@@ -182,14 +182,14 @@ def add_userfood():
     return render_template("add_food.html", categories=categories, tags=tags)
 
 
-# User View Own (Private) Foods
+# User View Own Foods (User Created)
 @app.route("/my_foods")
 def my_foods():
     foods = list(mongo.db.foods.find())
     return render_template("myfoods.html", foods=foods)
 
 
-# User Search Own Foods
+# User Search Own Foods (User Created)
 @app.route("/user_search_my_foods", methods=["GET", "POST"])
 def user_search_my_foods():
     user_query = request.form.get("user_query")
@@ -197,7 +197,7 @@ def user_search_my_foods():
     return render_template("find_foods.html", foods=foods)
 
 
-# Update Own Food (Private)
+# Update Own Food (User Created)
 @app.route("/edit_my_food/<food_id>", methods=["GET", "POST"])
 def edit_my_food(food_id):
     if request.method == "POST":
@@ -227,8 +227,12 @@ def edit_my_food(food_id):
     return render_template("edit_food.html", food=food, categories=categories, tags=tags)
 
 
-# Delete Food Variant (Private)
-
+# Delete Own Food (User Created)
+@app.route("/delete_my_food/<food_id>")
+def delete_my_food(food_id):
+    mongo.db.foods.delete_one({"_id": ObjectId(food_id)})
+    flash("Food entry has been successfully deleted")
+    return redirect(url_for("my_foods"))
 
 
 

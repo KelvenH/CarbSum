@@ -1,117 +1,144 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align title-txt filled-box">Food Card</h3>
+    <h3 class="center-align title-txt filled-box">Food Card</h3>
 
-<div class="row">
-    <form id="user-food-card" class="col s12">
+    <div class="row">
+        <form id="user-food-card" class="col s12">
 
-        <!--food card title-->
-        <div id="food-card-title-wrapper" class="col s12 filled-box">
-            {% if food.food_subtitle|length > 0 %}
-                <h4 class="col s12 center-align white-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
-            {% else %}
-                <h4 class="col s12 center-align white-txt">{{ food.food_title }}
-            {% endif %}
-        </div>
-
-        <!--food card info-->
-        <div id="food-card-info-wrapper" class="col s12 outline-box">
-
-            <!--category-->
-            <div class="row">
-                <div id="food-card-cat-wrapper" class="col s10 offset-s1 outline-box valign-wrapper">
-                    <div class="col s3 left-align">Category:</div>
-                    <div class="col s9 center-align">{{ food.cat_name }}</div>
-                </div>
-            </div>
-            <!--tags (on seperate row to enable full width)-->
-            <div class="row">
-                <div id="food-card-tag-wrapper" class="col s10 offset-s1 outline-box">
-                    <div class="col s11">Tags: {{ food.tag|join(', ') }}</div>
-                </div>
-            </div>
-
-
-        </div><!--close info wrapper-->
-
-        
-        <!--food carbs data-->
-        <div id="food-card-carbsdata-wrapper" class="col s12 outline-box">
-
-            <!--total carbs-->
-            <div class="row">
-                <div id="food-card-carbs" class="col s10 offset-s1 focus-box valign-wrapper large-label">
-                    <div class="col s8 right-align med-label">Total Carbs:</div>
-                    <div id="food-calc-result" class="col s4 center-align white-box med-label">0<span>g</span></div>
-                </div>
-            </div>
-
-            <!--base carbs-->
-            <div class="row">
-                <div id="food-card-base" class="col s10 offset-s1 info-box valign-wrapper">
-                    <div class="col s9 right-align white-txt">Carbs per gram:</div>
-                    <input id="food-base-carbs" name="food-base-carbs" class="col s3 right-align white-txt" type="number" step="0.001" min="0" value="{{ food.base_carbs }}" oninput="calcFoodCardCarbs();"><span>g</span></input>
-                </div>
-            </div>
-
-            <!--Portion-->
-            <div class="row">
-                <div id="food-card-portion" class="col s10 offset-s1 outline-box valign-wrapper">
-                    <div class="col s9 right-align med-label">Enter Portion Size:</div>
-                    <input id="food-card-portion-data" name="food-card-portion-data" type="number" step="1" min="0" class="col s3 center-align validate med-label" value="0" oninput="calcFoodCardCarbs();" required><span>g</span></input>
-                </div>
-            </div>
-
-             <!--Preset Portion Size-->
-            <ul id="food-card-preset" class="col s10 offset-s1 collapsible">
-                <li>
-                    <div class="collapsible-header col s12">Click here to use pre-set portions</div>
-                    <div class="collapsible-body">
-                        <div>Portion: <em>{{ food.portion_desc }}</em></div>
-                        <div>Weight: <em>{{ food.portion_size }}g</em></div>
-                        <div>Portion carbs: <em id="food-card-preset-carbs">{{ food.portion_carbs }}g</em></div>
-                        <input id="testcalc" name="testcalc" type="hidden" step="0.1" value="{{ food.portion_carbs }}" > 
-                        <div class="input-field">
-                            <div>Enter No. Portions:</div>
-                            <input id="food-card-portion-no" name="food-card-portion-no" class="center-align" value="" step="0.5" type="number" min="0" oninput="calcFoodCardPresetCarbs();" validate>
-                        </div>
-                        <div class="input-field">
-                            <div>Carbs For Portion No:</div>
-                            <input id="food-card-portion-carbs" name="food-card-portion-carbs" class="center-align" type="text" min="0" readonly>
-                        </div>
-                </li>
-            </ul>
-
-        </div><!--close carbs data wrapper-->
-
-        <!--food card actions-->
-        <div  id="food-card-actions-outer-wrapper" class="col s12 outline-box">
-            <div id="food-card-actions-inner-wrapper" class="row">
-                {% if session.user|lower == food.created_by|lower %}
-                    <a href="{{ url_for('edit_my_food', food_id=food._id) }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">create</i>Edit Food Card</a>
-                    <a class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Delete Food Card</a>
+            <!--food card title-->
+            <div id="food-card-title-wrapper" class="col s12 filled-box">
+                {% if food.food_subtitle|length > 0 %}
+                    <h4 class="col s12 center-align white-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
+                {% else %}
+                    <h4 class="col s12 center-align white-txt">{{ food.food_title }}
                 {% endif %}
-                <em class="col s10 offset-s1 center-align">Meal functionality under development</em>
-                <a class="btn-future-feature btn btn-med-label col s10 offset-s1"><i class="material-icons left btn-icon">add restaurant</i>Add to Meal</a>
-                   
             </div>
-       </div><!--close food card actions-->
-        
-        <!--Food Admin Details-->
-        <div id="food-card-admin-wrapper" class="col s12 inactive-box">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="white-txt">Created by: {{ food.created_by }}</div>
-                    <div class="white-txt">Status: {{ food.status }}</div>
-                    <div class="white-txt">ID: {{ food._id }}</div>
-                </div><!--Close Food Admin Details-->
+
+            <!--food card info-->
+            <div id="food-card-info-wrapper" class="col s12 outline-box">
+
+                <!--category-->
+                <div class="row">
+                    <div id="food-card-cat-wrapper" class="col s10 offset-s1 outline-box valign-wrapper">
+                        <div class="col s3 left-align">Category:</div>
+                        <div class="col s9 center-align">{{ food.cat_name }}</div>
+                    </div>
+                </div>
+                <!--tags (on seperate row to enable full width)-->
+                <div class="row">
+                    <div id="food-card-tag-wrapper" class="col s10 offset-s1 outline-box">
+                        <div class="col s11">Tags: {{ food.tag|join(', ') }}</div>
+                    </div>
+                </div>
+
+
+            </div><!--close info wrapper-->
+
+            
+            <!--food carbs data-->
+            <div id="food-card-carbsdata-wrapper" class="col s12 outline-box">
+
+                <!--total carbs-->
+                <div class="row">
+                    <div id="food-card-carbs" class="col s10 offset-s1 focus-box valign-wrapper large-label">
+                        <div class="col s8 right-align med-label">Total Carbs:</div>
+                        <div id="food-calc-result" class="col s4 center-align white-box med-label">0<span>g</span></div>
+                    </div>
+                </div>
+
+                <!--base carbs-->
+                <div class="row">
+                    <div id="food-card-base" class="col s10 offset-s1 info-box valign-wrapper">
+                        <div class="col s9 right-align white-txt">Carbs per gram:</div>
+                        <input id="food-base-carbs" name="food-base-carbs" class="col s3 right-align white-txt" type="number" step="0.001" min="0" value="{{ food.base_carbs }}" oninput="calcFoodCardCarbs();"><span>g</span></input>
+                    </div>
+                </div>
+
+                <!--Portion-->
+                <div class="row">
+                    <div id="food-card-portion" class="col s10 offset-s1 outline-box valign-wrapper">
+                        <div class="col s9 right-align med-label">Enter Portion Size:</div>
+                        <input id="food-card-portion-data" name="food-card-portion-data" type="number" step="1" min="0" class="col s3 center-align validate med-label" value="0" oninput="calcFoodCardCarbs();" required><span>g</span></input>
+                    </div>
+                </div>
+
+                <!--Preset Portion Size-->
+                <ul id="food-card-preset" class="col s10 offset-s1 collapsible">
+                    <li>
+                        <div class="collapsible-header col s12">Click here to use pre-set portions</div>
+                        <div class="collapsible-body">
+                            <div>Portion: <em>{{ food.portion_desc }}</em></div>
+                            <div>Weight: <em>{{ food.portion_size }}g</em></div>
+                            <div>Portion carbs: <em id="food-card-preset-carbs">{{ food.portion_carbs }}g</em></div>
+                            <input id="testcalc" name="testcalc" type="hidden" step="0.1" value="{{ food.portion_carbs }}" > 
+                            <div class="input-field">
+                                <div>Enter No. Portions:</div>
+                                <input id="food-card-portion-no" name="food-card-portion-no" class="center-align" value="" step="0.5" type="number" min="0" oninput="calcFoodCardPresetCarbs();" validate>
+                            </div>
+                            <div class="input-field">
+                                <div>Carbs For Portion No:</div>
+                                <input id="food-card-portion-carbs" name="food-card-portion-carbs" class="center-align" type="text" min="0" readonly>
+                            </div>
+                    </li>
+                </ul>
+
+            </div><!--close carbs data wrapper-->
+
+            <!--food card actions-->
+            <div  id="food-card-actions-outer-wrapper" class="col s12 outline-box">
+                <div id="food-card-actions-inner-wrapper" class="row">
+                    {% if session.user|lower == food.created_by|lower %}
+                        <a href="{{ url_for('edit_my_food', food_id=food._id) }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">create</i>Edit Food Card</a>
+                        
+                        <a href="#confirm-delete-modal7-{{ food._id }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Delete Food Card</a>
+                    {% endif %}
+
+                    <em class="col s10 offset-s1 center-align">Meal functionality under development</em>
+                    <a class="btn-future-feature btn btn-med-label col s10 offset-s1"><i class="material-icons left btn-icon">add restaurant</i>Add to Meal</a>
+                    
+                </div>
+        </div><!--close food card actions-->
+            
+            <!--Food Admin Details-->
+            <div id="food-card-admin-wrapper" class="col s12 inactive-box">
+                <div class="row">
+                    <div class="col s10 offset-s1">
+                        <div class="white-txt">Created by: {{ food.created_by }}</div>
+                        <div class="white-txt">Status: {{ food.status }}</div>
+                        <div class="white-txt">ID: {{ food._id }}</div>
+                    </div><!--Close Food Admin Details-->
+                </div>
+            </div>
+
+        </form>
+    </div>
+    
+    <!--Confirm Deletion Modal-->
+    <div id="confirm-delete-modal7-{{ food._id }}" class="modal warning-box">
+
+        <div class="modal-content blue-grey lighten-4">
+            <div class="card-content red-text">
+                <i class="material-icons prefix yellow-text warning-icon">warning</i>
+                <h4 class="modal-title">Confirm Deletion</h4>
+            </div>
+            <p class="red-text"> WARNING: This action cannot be undone - please ensure you wish to remove this item before
+                proceeding! </p>
+            <p>ID of item to be deleted: {{ food._id }}</p>
+
+            <div class="card-action">
+                {% if 'admin_role' in session and session['admin_role'] %}
+                <a href="{{ url_for('get_foods') }}" class="btn-small grey lighten-1">Cancel</a>
+                <a href="{{ url_for('delete_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
+
+                {% elif session.user|lower == food.created_by|lower %}
+                <a href="{{ url_for('user_view_food', food_id=food._id) }}" class="btn-small grey lighten-1">Cancel</a>
+                <a href="{{ url_for('delete_my_food', food_id=food._id) }}" class="modal-trigger btn-small red">Confirm Deletion</a>
+                {% endif %}     
             </div>
         </div>
-
-    </form>
-</div>
-
+    </div>
 
 
 {% endblock %}
+
