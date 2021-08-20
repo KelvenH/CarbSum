@@ -19,7 +19,7 @@
         </div> <!-- close top pane-->
         
         {% for food in foods %}
-        
+            {% if session.user|lower == food.created_by|lower or food.status == "global" %}
             <div id="find-food-user" class="row filled-box">
                 <a href="{{ url_for('user_view_food', food_id=food._id) }}">
                     <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
@@ -30,7 +30,7 @@
                     {% endif %}
                 </a>      
             </div>
-        
+            {% endif %}
         {% endfor %}
 
     </form>
