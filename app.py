@@ -151,6 +151,7 @@ def user_view_food(food_id):
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     return render_template("food_card.html", food=food)
 
+
 # Create New User Food (Private)
 @app.route("/add_userfood", methods=["GET", "POST"])
 def add_userfood():
@@ -180,11 +181,13 @@ def add_userfood():
     tags = mongo.db.tags.find().sort("tag_name", 1)
     return render_template("add_food.html", categories=categories, tags=tags)
 
+
 # User View Own (Private) Foods
 @app.route("/my_foods")
 def my_foods():
     foods = list(mongo.db.foods.find())
     return render_template("myfoods.html", foods=foods)
+
 
 # User Search Own Foods
 @app.route("/user_search_my_foods", methods=["GET", "POST"])
@@ -192,6 +195,7 @@ def user_search_my_foods():
     user_query = request.form.get("user_query")
     foods = list(mongo.db.foods.find({"$text": {"$search": user_query}}))
     return render_template("find_foods.html", foods=foods)
+
 
 # Update Own Food (Private)
 @app.route("/edit_my_food/<food_id>", methods=["GET", "POST"])
