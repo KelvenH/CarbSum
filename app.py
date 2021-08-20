@@ -194,7 +194,7 @@ def my_foods():
 def user_search_my_foods():
     user_query = request.form.get("user_query")
     foods = list(mongo.db.foods.find({"$text": {"$search": user_query}}))
-    return render_template("find_foods.html", foods=foods)
+    return render_template("myfoods.html", foods=foods)
 
 
 # Update Own Food (User Created)
