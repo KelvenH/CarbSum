@@ -9,9 +9,9 @@
             <!--food card title-->
             <div id="food-card-title-wrapper" class="col s12 filled-box">
                 {% if food.food_subtitle|length > 0 %}
-                    <h4 class="col s12 center-align">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
+                    <h4 class="col s12 center-align food-title-txt">{{ food.food_title }} - {{ food.food_subtitle }}</h4>
                 {% else %}
-                    <h4 class="col s12 center-align">{{ food.food_title }}</h4>
+                    <h4 class="col s12 center-align food-title-txt">{{ food.food_title }}</h4>
                 {% endif %}
             </div>
 
@@ -92,7 +92,7 @@
                     {% if session.user|lower == food.created_by|lower %}
                         <a href="{{ url_for('edit_my_food', food_id=food._id) }}" class="waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">create</i>Edit Food Card</a>
                         
-                        <a href="#confirm-delete-myfood-modal-{{ food._id }}" class="modal-trigger waves-effect waves-light btn btn-med-label btn-green col s10 offset-s1"><i class="material-icons left btn-icon">playlist_add</i>Delete Food Card</a>
+                        <a href="#confirm-delete-myfood-modal-{{ food._id }}" class="modal-trigger waves-effect waves-light btn btn-med-label btn-red col s10 offset-s1"><i class="material-icons left btn-icon">delete_forever</i>Delete Food Card</a>
                     {% endif %}
 
                     <em class="col s10 offset-s1 center-align">Meal functionality under development</em>

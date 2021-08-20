@@ -45,9 +45,7 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
 
 .white-txt {font-family: var(--standardfont);font-weight: 400;color: var(--off_white);}
 
-/*-- potentially remove as no different to standard text
-.focus-txt {font-family: var(--standardfont);font-weight: 400;color: var(--purpblue);}
---*/
+.food-title-txt {font-size:3rem;font-family: var(--specialfont);font-weight: 700;color: var(--purpblue);}
 
 .large-label {font-size:3rem;font-family: var(--specialfont);font-weight: 400;font-style:normal;color: var(--purpblue);}
 
@@ -164,6 +162,10 @@ nav {
     color:var(--green_silver);
 }
 
+.btn-red {
+    background-color:var(--warning);
+    color:var(--off_white);
+}
 
 #nav-btn-return {
     margin-top: 1vh;
