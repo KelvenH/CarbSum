@@ -52,14 +52,7 @@
     </div> <!--close user pane-->
 
     <div class="row outline-box s12" id="dashboard-top-pane">
-        <!--Search-->
-        <div class="row" id="dashboard-search-wrapper">
-            <div class="col s10 offset-s1">
-                <a href="{{ url_for('find_foods') }}"
-                    class="waves-effect waves-light btn-large btn-label btn-green"><i
-                        class="material-icons right-align icon">search</i>Search</a>
-            </div>
-        </div> <!-- close search wrapper-->
+        
         <!--Quick Calc-->
         <div class="row" id="dashboard-quick-calc-wrapper">
             <div class="col s10 offset-s1">
@@ -68,9 +61,18 @@
                         class="fas fa-calculator right-align icon"></i>Quick Calc</a>
             </div>
         </div> <!--close quick calc wrapper-->
+
+        <!--Search-->
+        <div class="row" id="dashboard-search-wrapper">
+            <div class="col s10 offset-s1">
+                <a href="{{ url_for('find_foods') }}"
+                    class="waves-effect waves-light btn-large btn-label btn-green"><i
+                        class="material-icons right-align icon">search</i>Search</a>
+            </div>
+        </div> <!-- close search wrapper-->
     </div> <!-- close top pane-->
 
-
+    
     <div class="row outline-box s12" id="dashboard-mid-pane">
 
         <div class="col s6" id="dashboard-favourite-wrapper">

@@ -45,13 +45,6 @@
 
     
     <div class="row outline-box s12" id="home-top-pane">
-            <!--Search-->
-        <div class="row" id="home-search-wrapper">
-            <div class="col s10 offset-s1">
-                <a href="{{ url_for('find_foods') }}" class="waves-effect waves-light btn-large btn-label btn-green"><i
-                        class="material-icons right-align icon">search</i>Search</a>
-            </div>
-        </div> <!-- close search wrapper-->
         <!--Quick Calc-->
         <div class="row" id="home-quick-calc-wrapper">
             <div class="col s10 offset-s1">
@@ -60,8 +53,16 @@
             </div>
         </div>
         <!--close quick calc wrapper-->
+        
+        <!--Search-->
+        <div class="row" id="home-search-wrapper">
+            <div class="col s10 offset-s1">
+                <a href="{{ url_for('find_foods') }}" class="waves-effect waves-light btn-large btn-label btn-green"><i
+                        class="material-icons right-align icon">search</i>Search</a>
+            </div>
+        </div> <!-- close search wrapper-->
+        
     </div> <!-- close top pane-->
-
 
     <div class="row inactive-box s12" id="home-mid-pane">
         <p id="disabled-txt" class="center-align white-txt">Sign In to access personalised features</p>
