@@ -45,14 +45,12 @@
                 <a class="waves-effect waves-light btn-large btn-label">How To Use</a>
             </div>
             <div class="col s6">
-                <a class="waves-effect waves-light btn-large btn-label">About CarbSum</a>
+                <a href="#home-about-modal" class="modal-trigger waves-effect waves-light btn-large btn-label">About CarbSum</a>
             </div>
         </div>
     </div> <!--close user pane-->
 
-
     
-
     <div class="row outline-box s12" id="home-top-pane">
             <!--Search-->
         <div class="row" id="home-search-wrapper">
@@ -97,7 +95,20 @@
                                                
     </div><!-- close mid pane-->
                 
-
+    <!--About Modal-->
+    <!-- Modal Structure -->
+    <div id="home-about-modal" class="modal">
+        <div class="modal-content">
+        <h4>About CarbSum</h4>
+        Carbsum has been developed as a project for educational purposes (please see disclaimer section below prior to use). As a parent to a Type 1 Diabetic, this 'tool' has been designed to support our daily carb counting regime which is one of two primary inputs to calculate insulin dosages (the second primary input being carb to insulin ratios which are agreed with our medical team).<br>
+        <br>
+        <h4>Disclaimer</h4>
+        <p>This app has been developed for educational purposes. The site does not provide any mecical / health advice. Information on carb data / portion sizes are provided 'in good faith' and for educational purposes only and is NOT suitable for professional advice. Persons using this site do so at their own risk.</p>
+        </div>
+        <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
     
 
 {% endblock %}
