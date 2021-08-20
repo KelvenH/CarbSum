@@ -20,13 +20,13 @@
                 <div id="cat-cd-id" class="col s6 m3 small-label cat-cd-value"> {{ category._id }}</div>
                 <div id="cat-cd-btn-wrapper" class="col s6 m3 cat-cd-value">
                     <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-small blue lighten-1">Edit</a>
-                    <a href="#confirm-delete-modal3-{{ category._id }}" class="modal-trigger btn-small red">Delete</a>
+                    <a href="#confirm-delete-cat-modal-{{ category._id }}" class="modal-trigger btn-small red">Delete</a>
                 </div>
             </div> <!--close looped row-->
                 
         </div> <!--close card-->
 
-        <div id="confirm-delete-modal3-{{ category._id }}" class="modal warning-box">
+        <div id="confirm-delete-cat-modal-{{ category._id }}" class="modal warning-box">
 
             <div class="modal-content blue-grey lighten-4">
                 <div class="card-content red-text">

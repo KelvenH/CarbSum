@@ -138,13 +138,13 @@
                 <a href="{{ url_for('user_view_food', food_id=food._id) }}" class="btn-small grey lighten-1">Cancel</a>
             
             {% endif %}   
-            <a href="#confirm-delete-modal2-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
+            <a href="#confirm-delete-editfood-modal-{{ food._id }}" class="modal-trigger btn-small red">Delete</a>
         </div>
 
         </form>
     </div>
     <!--Confirm Deletion Modal-->
-    <div id="confirm-delete-modal2-{{ food._id }}" class="modal warning-box">
+    <div id="confirm-delete-editfood-modal-{{ food._id }}" class="modal warning-box">
 
         <div class="modal-content blue-grey lighten-4">
             <div class="card-content red-text">
