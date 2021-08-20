@@ -79,7 +79,7 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
     border:solid 2px var(--green_celadon);
     background-image: linear-gradient(to right top, var(--purpblue), var(--purpblue_light));
     border-radius: 20px;
-    padding: 2vh 0;  
+    padding: 2vh 1vw;  
 }
 
 .filled-box {
@@ -257,13 +257,34 @@ ul.dropdown-content.select-dropdown li span {
 /*--index.html & Dashboard ---*/
 
 
-#home-user-pane {
+#home-welcome-pane {
     margin-top:2vh
+}
+
+#home-user-pane {
+    padding: 1vh 1vw;
 }
 
 #home-mid-pane div,
 #dashboard-mid-pane div {
     margin-bottom: 1vh;
+}
+
+#main-img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    max-height: 40vh;
+    width: 100%;
+}
+
+#strap-line {
+    margin-top:2vh;
+    font-weight:600;
+}
+
+#help-about-wrapper a {
+    background-image: linear-gradient(to right top, var(--purpblue), var(--purpblue_light));
+    color:var(--off_white);
 }
 
 #disabled-txt {

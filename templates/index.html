@@ -1,88 +1,103 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="col s12">
+    
+    <div class="row">
+        <div class="col s12" id="home-welcome-pane">
+            <h3 class="center-align title-txt title-box">Welcome to CarbSum</h3>
+            <h3 id="strap-line" class="center-align">A carb counting app for diabetics</h3>  
+            <div class="col s12" id="title-image">
+                <picture>
+                    <!--<source srcset="./assets/imags/Hero-v3-small.png 576w,
+                                    ./assets/images/Hero-v3-medium.png 768w,
+                                    ./assets/images/Hero-v3-large.png 992w,
+                                    ./assets/images/Hero-v3-xlarge.png 1200w,
+                                    ./assets/images/Hero-v3-xxlarge.png 1920w" sizes="100vw"> -->
+                    <img id="main-img" src="../static/assets/Main-image.svg" alt="image">
+                </picture>
+            </div>
+                
+        </div><!-- close welcome pane-->
+    </div><!--close row-->    
+
+    
+    <!--signup / log-in panel-->
+    <div class="row outline-box" id="home-user-pane">
+        <div class="row">
+            <!--Join-->
+            <div class="col s6">
+                <a class="waves-effect waves-light btn btn-label btn-neutral center-align" href="{{ url_for('join') }}">
+                    <i class="material-icons right-align icon">person_add</i>Join</a>
+                <p class="center-align">New to CarbSum? Create an account to access further features!</p>
+            </div>
+
+            <!--Sign Up-->
+            <div class="col s6">
+                <a class="waves-effect waves-light btn btn-label btn-green center-align" href="{{ url_for('signIn') }}"><i class="material-icons right-align icon">account_circle</i>Sign In</a>
+                <p class="center-align">Log-in to access your favourites</p>
+            </div>
+            <!--close Sign in wrapper-->
+        </div> <!--close join / signin row-->
+
+        <!--Link to Help / About-->
+        <div class="row" id="help-about-wrapper">
+            <div class="col s6">
+                <a class="waves-effect waves-light btn-large btn-label">How To Use</a>
+            </div>
+            <div class="col s6">
+                <a class="waves-effect waves-light btn-large btn-label">About CarbSum</a>
+            </div>
+        </div>
+    </div> <!--close user pane-->
+
+
+    
+
+    <div class="row outline-box s12" id="home-top-pane">
+            <!--Search-->
+        <div class="row" id="home-search-wrapper">
+            <div class="col s10 offset-s1">
+                <a href="{{ url_for('find_foods') }}" class="waves-effect waves-light btn-large btn-label btn-green"><i
+                        class="material-icons right-align icon">search</i>Search</a>
+            </div>
+        </div> <!-- close search wrapper-->
+        <!--Quick Calc-->
+        <div class="row" id="home-quick-calc-wrapper">
+            <div class="col s10 offset-s1">
+                <a href="{{ url_for('quick_calc') }}" class="waves-effect waves-light btn-large btn-label btn-green"><i
+                        class="fas fa-calculator right-align icon"></i>Quick Calc</a>
+            </div>
+        </div>
+        <!--close quick calc wrapper-->
+    </div> <!-- close top pane-->
+
+
+    <div class="row inactive-box s12" id="home-mid-pane">
+        <p id="disabled-txt" class="center-align white-txt">Sign In to access personalised features</p>
         
-            <!--signup / log-in panel-->
-            <div class="row outline-box s12" id="home-user-pane">
+        <div class="col s6" id="home-favourite-wrapper">
+            <a class="waves-effect waves-light btn btn-small-label disabled"><i
+                    class="material-icons right-align btn-icon">favorite</i>My Foods</a>
+        </div> <!-- close favourites wrapper-->
 
-                <!--Join-->
-                <div class="col s6">
-                    <a class="waves-effect waves-light btn btn-label btn-neutral center-align"
-                        href="{{ url_for('join') }}">
-                        <i class="material-icons right-align icon">person_add</i>Join</a>
-                    <p class="small-label">New to CarbSum? Create an account to access further features!</p>
-                </div>
+        <div class="col s6" id="home-create-food-wrapper">
+            <a class="waves-effect waves-light btn btn-small-label disabled"><i
+                    class="material-icons right-align btn-icon">create</i>Add Food</a>
+        </div> <!-- close create food wrapper-->
 
-                <!--Sign Up-->
-                <div class="col s6">
-                    <a class="waves-effect waves-light btn btn-label btn-green center-align" href="{{ url_for('signIn') }}"><i class="material-icons right-align icon">account_circle</i>Sign In</a>
-                    <p class="small-label">Remember to log-in to access your favourites and create meals</p>
-                </div>
-                <!--close Sign in wrapper-->
-            </div> <!-- close user pane-->
+        <div class="col s6" id="home-create-menu-wrapper">
+            <a id="alarm" class="waves-effect waves-light btn btn-small-label  disabled"><i
+                    class="material-icons right-align btn-icon">playlist_add</i>Create Meal</a>
+        </div> <!-- close create menu wrapper-->
 
-
-            <div class="row outline-box s12" id="home-top-pane">
-                <!--Search-->
-                <div class="row" id="home-search-wrapper">
-                    <div class="col s10 offset-s1">
-                        <a href="{{ url_for('find_foods') }}" class="waves-effect waves-light btn-large btn-label btn-green"><i
-                                class="material-icons right-align icon">search</i>Search</a>
-                    </div>
-                </div> <!-- close search wrapper-->
-                <!--Quick Calc-->
-                <div class="row" id="home-quick-calc-wrapper">
-                    <div class="col s10 offset-s1">
-                        <a href="{{ url_for('quick_calc') }}" class="waves-effect waves-light btn-large btn-label btn-green"><i
-                                class="fas fa-calculator right-align icon"></i>Quick Calc</a>
-                    </div>
-                </div>
-                <!--close quick calc wrapper-->
-            </div> <!-- close top pane-->
-
-
-            <div class="row inactive-box s12" id="home-mid-pane">
-                <p id="disabled-txt" class="center-align white-txt">Sign In to access personalised features</p>
+        <div class="col s6" id="home-meals-wrapper">
+            <a class="waves-effect waves-light btn btn-small-label disabled"><i
+                    class="material-icons right-align btn-icon">restaurant</i>Meals</a>
+        </div> <!-- close meals wrapper-->              
+                                               
+    </div><!-- close mid pane-->
                 
-                    <div class="col s6" id="home-favourite-wrapper">
-                        <a class="waves-effect waves-light btn btn-small-label disabled"><i
-                                class="material-icons right-align btn-icon">favorite</i>My Foods</a>
-                    </div> <!-- close favourites wrapper-->
 
-                    <div class="col s6" id="home-create-food-wrapper">
-                        <a class="waves-effect waves-light btn btn-small-label disabled"><i
-                                class="material-icons right-align btn-icon">create</i>Add Food</a>
-                    </div> <!-- close reminder wrapper-->
-
-                    <div class="col s6" id="home-create-menu-wrapper">
-                        <a id="alarm" class="waves-effect waves-light btn btn-small-label  disabled"><i
-                                class="material-icons right-align btn-icon">playlist_add</i>Create Meal</a>
-                    </div> <!-- close create new item wrapper-->
-
-                    <div class="col s6" id="home-meals-wrapper">
-                        <a class="waves-effect waves-light btn btn-small-label disabled"><i
-                                class="material-icons right-align btn-icon">restaurant</i>Meals</a>
-                    </div> <!-- close meals wrapper-->              
-                
-                                      
-                
-            </div><!-- close mid pane-->
-
-
-
-            <div class="row outline-box s12" id="home-bottom-pane">
-                
-                    <div class="col s10 offset-s1">
-                        <a class="waves-effect waves-light btn-large btn-label btn-green btn-label">How to Use</a>
-                    </div>
-
-                                   
-            </div><!-- close bottom pane-->
-
-        
-    </div><!--close full page col-->
-</div><!--close page row-->
+    
 
 {% endblock %}
