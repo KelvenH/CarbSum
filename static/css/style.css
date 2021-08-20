@@ -324,14 +324,14 @@ ul.dropdown-content.select-dropdown li span {
 
 /*-- Defect : Fix - materialize valign switches display to flex (centers), additional css to force right alignment--*/
 
-#calc-results-wrapper, 
-#calc-item-count-wrapper {
-    padding-right:2vw;
-}
-
 #qc-calc-result {
     display:flex;
     justify-content:flex-end;
+}
+
+#calc-results-wrapper, 
+#calc-item-count-wrapper {
+    padding-right:2vw;
 }
 
 /*--Materialize input styles cannot be overridden by class, specificty requires naming of IDs hence multiple ID listings--*/
@@ -371,6 +371,14 @@ ul.dropdown-content.select-dropdown li span {
     font-style: italic;
     color:var(--off_white);
 }
+
+#qc-carb-per-g-item1,
+#qc-carb-per-g-item2,
+#qc-carb-per-g-item3,
+#qc-carb-per-g-item4 {
+    padding-right:2vw;
+}
+
 
 /*-- animation on collapsible dropdown arrow  --*/ 
 
