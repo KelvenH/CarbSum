@@ -1,13 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="col s12">
-        <h3 class="center-align title-txt title-box">
-            {{ username|capitalize }}'s Dashboard
-        </h3>
-        {% if 'admin_role' in session and session['admin_role'] %}
+    <div class="row">
+        <div class="col s12" id="dashboard-welcome-pane">
+            <h3 class="center-align title-txt title-box">
+                {{ username|capitalize }}'s Dashboard
+            </h3>
+            <div class="col s12" id="title-image">
+                <img id="main-img" src="../static/assets/Main-image.svg" alt="image">
+            </div>
+        </div> <!--close welcome pane-->
+    </div> <!--close row-->
+        
+    {% if 'admin_role' in session and session['admin_role'] %}
         <p class=center-align>You are Logged in with Admin permissions</p>
+        
         <div class="row s12 admin-box" id="home-admin-pane">
             <div class="row">
                 <div id="manage-foods" class="col s10 offset-s1">
@@ -28,76 +35,82 @@
                 </div>
             </div>
         </div> <!-- close admin pane-->
+    {% endif %}
 
-        {% endif %}
+      
 
-        <div class="row outline-box s12" id="dashboard-top-pane">
-            <!--Search-->
-            <div class="row" id="dashboard-search-wrapper">
-                <div class="col s10 offset-s1">
-                    <a href="{{ url_for('find_foods') }}"
-                        class="waves-effect waves-light btn-large btn-label btn-green"><i
-                            class="material-icons right-align icon">search</i>Search</a>
-                </div>
-            </div> <!-- close search wrapper-->
-            <!--Quick Calc-->
-            <div class="row" id="dashboard-quick-calc-wrapper">
-                <div class="col s10 offset-s1">
-                    <a href="{{ url_for('quick_calc') }}"
-                        class="waves-effect waves-light btn-large btn-label btn-green"><i
-                            class="fas fa-calculator right-align icon"></i>Quick Calc</a>
-                </div>
+    <div class="row outline-box" id="dashboard-user-pane">    
+        <!--Link to Help / About-->
+        <div class="row" id="help-about-wrapper">
+            <div class="col s6">
+                <a class="waves-effect waves-light btn-large btn-label">How To Use</a>
             </div>
-            <!--close quick calc wrapper-->
-        </div> <!-- close top pane-->
+            <div class="col s6">
+                <a href="#dashboard-about-modal" class="modal-trigger waves-effect waves-light btn-large btn-label">About CarbSum</a>
+            </div>
+        </div>
+    </div> <!--close user pane-->
 
-
-        <div class="row outline-box s12" id="dashboard-mid-pane">
-
-            <div class="col s6" id="dashboard-favourite-wrapper">
-                <a href="{{ url_for('my_foods') }}" class="waves-effect waves-light btn btn-small-label btn-green"><i
-                        class="material-icons right-align btn-icon">favorite</i>My Foods</a>
-            </div> <!-- close favourites wrapper-->
-
-            <div class="col s6" id="dashboard-create-food-wrapper">
-                <a href="{{ url_for('add_userfood') }}" class="waves-effect waves-light btn btn-small-label btn-green"><i
-                        class="material-icons right-align btn-icon">create</i>Add Food</a>
-            </div> <!-- close reminder wrapper-->
-
-            <em class="col s10 offset-s1 center-align">Meal functionality under development</em>
-
-            <div class="col s6" id="dashboard-create-menu-wrapper">
-                <a id="alarm" class="waves-effect waves-light btn btn-small-label btn-future-feature"><i
-                        class="material-icons right-align btn-icon">playlist_add</i>Create Meal</a>
-            </div> <!-- close create new item wrapper-->
-
-            <div class="col s6" id="dashboard-meals-wrapper">
-                <a class="waves-effect waves-light btn btn-small-label btn-future-feature"><i
-                        class="material-icons right-align btn-icon">restaurant</i>Meals</a>
-            </div> <!-- close meals wrapper-->
-
-        </div><!-- close mid pane-->
-
-
-
-        <div class="row outline-box s12" id="dashboard-bottom-pane">
-
+    <div class="row outline-box s12" id="dashboard-top-pane">
+        <!--Search-->
+        <div class="row" id="dashboard-search-wrapper">
             <div class="col s10 offset-s1">
-                <a class="waves-effect waves-light btn-large btn-label btn-green btn-label">How to Use</a>
+                <a href="{{ url_for('find_foods') }}"
+                    class="waves-effect waves-light btn-large btn-label btn-green"><i
+                        class="material-icons right-align icon">search</i>Search</a>
             </div>
+        </div> <!-- close search wrapper-->
+        <!--Quick Calc-->
+        <div class="row" id="dashboard-quick-calc-wrapper">
+            <div class="col s10 offset-s1">
+                <a href="{{ url_for('quick_calc') }}"
+                    class="waves-effect waves-light btn-large btn-label btn-green"><i
+                        class="fas fa-calculator right-align icon"></i>Quick Calc</a>
+            </div>
+        </div> <!--close quick calc wrapper-->
+    </div> <!-- close top pane-->
 
 
+    <div class="row outline-box s12" id="dashboard-mid-pane">
 
-        </div><!-- close bottom pane-->
+        <div class="col s6" id="dashboard-favourite-wrapper">
+            <a href="{{ url_for('my_foods') }}" class="waves-effect waves-light btn btn-small-label btn-green"><i
+                    class="material-icons right-align btn-icon">favorite</i>My Foods</a>
+        </div> <!-- close favourites wrapper-->
+
+        <div class="col s6" id="dashboard-create-food-wrapper">
+            <a href="{{ url_for('add_userfood') }}" class="waves-effect waves-light btn btn-small-label btn-green"><i
+                    class="material-icons right-align btn-icon">create</i>Add Food</a>
+        </div> <!-- close reminder wrapper-->
+
+        <em class="col s10 offset-s1 center-align">Meal functionality under development</em>
+
+        <div class="col s6" id="dashboard-create-menu-wrapper">
+            <a id="alarm" class="waves-effect waves-light btn btn-small-label btn-future-feature"><i
+                    class="material-icons right-align btn-icon">playlist_add</i>Create Meal</a>
+        </div> <!-- close create new item wrapper-->
+
+        <div class="col s6" id="dashboard-meals-wrapper">
+            <a class="waves-effect waves-light btn btn-small-label btn-future-feature"><i
+                    class="material-icons right-align btn-icon">restaurant</i>Meals</a>
+        </div> <!-- close meals wrapper-->
+
+    </div><!-- close mid pane-->
 
 
-
+    <!--About Modal-->
+    <div id="dashboard-about-modal" class="modal">
+        <div class="modal-content">
+        <h4>About CarbSum</h4>
+        Carbsum has been developed as a project for educational purposes (please see disclaimer section below prior to use). As a parent to a Type 1 Diabetic, this 'tool' has been designed to support our daily carb counting regime which is one of two primary inputs to calculate insulin dosages (the second primary input being carb to insulin ratios which are agreed with our medical team).<br>
+        <br>
+        <h4>Disclaimer</h4>
+        <p>This app has been developed for educational purposes. The site does not provide any mecical / health advice. Information on carb data / portion sizes are provided 'in good faith' and for educational purposes only and is NOT suitable for professional advice. Persons using this site do so at their own risk.</p>
+        </div>
+        <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
     </div>
-</div>
-
-
-
-
 
 
 {% endblock %}

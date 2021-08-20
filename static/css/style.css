@@ -256,12 +256,8 @@ ul.dropdown-content.select-dropdown li span {
 
 /*--index.html & Dashboard ---*/
 
-
-#home-welcome-pane {
-    margin-top:2vh
-}
-
-#home-user-pane {
+#home-user-pane,
+#dashboard-user-pane {
     padding: 1vh 1vw;
 }
 
