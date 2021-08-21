@@ -136,6 +136,11 @@ body, div, p {font-size:1.6rem; font-family: var(--standardfont);font-weight: 40
     padding: 1vh 0; 
 }
 
+.divider {
+    border-top: 1vh solid var(--green_silver);
+    border-radius: 5px;
+}
+
 /*--base.html ----*/
 
 body {
@@ -247,6 +252,14 @@ nav .brand-logo {
 
 .long-txt>i {
     vertical-align: text-bottom;
+}
+
+.modal {
+    border-radius:20px;
+}
+
+.green-modal {
+    background-image: linear-gradient(to right top, var(--green_silver), var(--green_honeydew));
 }
 
 /*--Targets category dropdown and option values--*/
