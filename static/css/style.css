@@ -149,8 +149,6 @@ body {
     min-height:100vh;
 }
 
-
-
 nav {  
     background-color: var(--green_emerald);
 }
@@ -254,9 +252,12 @@ nav .brand-logo {
     vertical-align: text-bottom;
 }
 
-.modal {
+#home-media-modal {
     border-radius:20px;
+    width:90vw;
+    height:90vh;  
 }
+
 
 .green-modal {
     background-image: linear-gradient(to right top, var(--green_silver), var(--green_honeydew));
