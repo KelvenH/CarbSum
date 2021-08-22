@@ -47,7 +47,7 @@ Passive Event Listener | Console log reported 'Violation Added non-passive event
 
 ![lighthouse score](README%20Files/Lighthouse_scores.png)
 
-Scores were quite high, but each score was investigated further;
+Scores were quite high, but each section was investigated further. No changes were applied as a result - key reasons noted below), 1 point related to a known matter (passive event handler) which is noted in the summary table above;
 
 ### Performance 95%
 - There was a reported opportunity to improve page rendering times by 1.3s. However, the majority were related to externally linked tools (i.e. materialize & jquery). It signified there was a slight benefit in moving some styles from the linked style.css file to in line styles, but this was not deemed to be a significant benefit and could potentially make the site harder to maintain.
@@ -59,12 +59,15 @@ Scores were quite high, but each score was investigated further;
 
 ### Accessibility 92%
 
+- Background and foreground colors do not have a sufficient contrast ratio - point acknowledged but no changes applied to color scheme. Some of these relate to buttons intentionally 'de-focused' as relate to futture developments/ not currently active.
 
+- Link does not have discernible name - this related to materialize side-nav not having a href value. This is per the structure of the materialize element, whilst there is no href attribute for this item, it was not removed for concern of possible unkown consequences.
 
 ### Best Practices 100%
+- no recommendations / fails
 
 ### SEO 92%
-
+- Links are not crawable - this relates to few instances where planned functionality has been held back for future development. The buttons remain on the page, but are marked and styled to indicate inactive.
 
 
 
