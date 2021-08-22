@@ -3,7 +3,6 @@
 ## Contents
 - [Summary of Main Bugs and Status](#summary-of-main-bugs-and-status)
 - [Testing Against User Stories and Project Brief](#testing-against-user-stories-and-project-brief)
-- [Manual Testing](#manual-testing)
 - [Lighthouse Testing](#lighthouse-testing)
 - [Code Validation](#code-validation)
   * [HTML](#html)
@@ -31,29 +30,31 @@ Responsivess - layout for larger screens | Not a bug / failure, but noted for fu
 ## Testing Against User Stories and Project Brief
 
  | User | User Requirement | Testing Result | Notes |
- | ---- | ---------- | ------ | -------- |
- | User | I have the nutrional info and weight and want to be able to calculate the carbs quickly |
- | User | I am not in posession of the nutrional information and / or weight and want to be able to calculate the carbs quickly |
-| User | I want to be able to seach and find food items quickly |
-| User | I want to be able to register to access personalised features |
-| User | I want clear guidance how to use the site |
-| Returning User | I want to be able to log into my account / dashboard |
-| Returning User | I want to be able to create my own personalised food items |
-| Returning User | I want to be able to change the values of my own personally created foods |
-| Returning User | I want to be able to filter / search my personally created foods easily |
-| Returning User | I want to be able to delete any food items I create |
-| Returning User | I don't want other users to access / ammend / delete food items I create |
-| Site Owner | I want to be able to create an account with admin priviledges |
-| Site Owner | I want to be able to create / read / update and delete all site content |
+ | ---- | ---------------- | -------------- | -------- |
+ | User | I have the nutritional info and weight and want to be able to calculate the carbs quickly | PASSED | * |
+ | User | I am not in posession of the nutritional information and / or weight and want to be able to calculate the carbs quickly | PASSED | * |
+ | User | I want to be able to seach and find food items quickly | PASSED** | * |
+ | User | I want to be able to register to access personalised features | PASSED | * |
+ | User | I want clear guidance how to use the site | PASSED | * |
+ | Returning User | I want to be able to log into my account / dashboard | PASSED | * |
+ | Returning User | I want to be able to create my own personalised food items | PASSED | * |
+ | Returning User | I want to be able to change the values of my own personally created foods | PASSED** | * |
+ | Returning User | I want to be able to filter / search my personally created foods easily | PASSED** | * |
+ | Returning User | I want to be able to delete any food items I create | PASSED | * |
+ | Returning User | I don't want other users to access / ammend / delete food items I create | PASSED | - |
+ | Returning User | I  want to be able to create / read / edit and delete menus (collection of foods) | WITHDRAWN | Future Enhancement |
+ | Site Owner | I want to be able to create an account with admin priviledges | PASSED | Admin role is assigned in the backend |
+ | Site Owner | I want to be able to create / read / update and delete all site content | PASSED | A seperate Manage Foods / Categories / Tags menu is available exclusively to Admin users |
 
+* The passing of these tests can be evidenced in the recoded 'How To Use' guidance demos, which are available to site visitors 
+** These tests Passed, but are impacted by an existing bug affecting tags - see bug / defects for details
 
-
-
-------
-
-## Manual Testing
-
-
+ Links to recorded demo's as supporting evidence of user story and functionality testing.
+ [1. Join and Sign-In](static/assets/1.Join_Sign-Up.mp4)
+ [2. QuickCalc](static/assets/2.QuickCalc.mp4)
+ [3. Search & Use Food Database](static/assets/3.Search.mp4)
+ [4. Add, Search, Edit, Delete Own Items](static/assets/4.Add_Foods.mp4)
+ 
 
 ------
 
