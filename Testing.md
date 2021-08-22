@@ -43,6 +43,7 @@
 
 ## Lighthouse Testing
 
+![Lighthouse scores](README_Files/Lighthouse_scores.PNG)
 
 
 
