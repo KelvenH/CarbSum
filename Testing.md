@@ -49,7 +49,7 @@
 
 
 
-## Validation;
+## Code Validation
 
 ### HTML
 
