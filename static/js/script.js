@@ -6,7 +6,7 @@ $(document).ready(function () {
   $(document).on('click', '.toggle-password', function () {
     $(this).toggleClass("fa-eye fa-eye-slash");
     var input = $("#password");
-    input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+    input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password');
   });
   $('.modal').modal();
   $('select').formSelect();
@@ -87,7 +87,7 @@ function qcItemCarbs(selectObject) {
     document.getElementById("qc-carbs-big-item4").value = parseFloat(result).toFixed(1);
   }
 
-  qcItemCount()
+  qcItemCount();
 }
 
 //Update Item Count & Total Carbs
@@ -96,7 +96,7 @@ function qcItemCarbs(selectObject) {
 function qcItemCount() {
   let items = [];
   $('input[id*=qc-carbs-big]').each(function(index) {     
-    items.push(+$(this).val())  // note'+' after push converts string to number
+    items.push(+$(this).val());  // note'+' after push converts string to number
     //console.log("ITMSB", items);     
     }
   );
@@ -116,10 +116,10 @@ function qcItemCount() {
   let total=0;                                            
   for (let item in items){
     total += items[item];
-  };
+  }
   document.getElementById("qc-calc-result").innerHTML = (parseInt(Math.round(total) + "g"));
 
-};
+}
 
 // Food Card Calculations - Note as base carbs is pulled from db (unlike Add New Food Card) only the carbs per portion needs to be calculated. Second calc uses the preset portion sizes as alternative for user
 
@@ -131,7 +131,7 @@ function calcFoodCardCarbs() {
     document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
     //clears out any values in alternative option of calc carbs (preset)
     document.getElementById("food-card-portion-carbs").value = 0;
-};
+}
 
 function calcFoodCardPresetCarbs() {
   
@@ -144,7 +144,7 @@ function calcFoodCardPresetCarbs() {
   document.getElementById("food-calc-result").innerHTML = (parseFloat(result).toFixed(1) + "g");
   //clears out any values in alternative option of calc carbs (manual portion size)
   document.getElementById("food-card-portion-data").value = 0;
-};
+}
 
 // Add Food Card Calculations
 
@@ -157,7 +157,7 @@ function calcAddFoodCarbs() {
   document.getElementById("add-carbs-per-gram").value = parseFloat(carbPerG).toFixed(3);
   let carbPer100 = carbPerG * 100;
   document.getElementById("add-carbs-per100").value = parseFloat(carbPer100).toFixed(3);
-};
+}
 
 
 // Edit Food Card Calculations
@@ -175,4 +175,4 @@ function calcEditFoodCarbs() {
   let carbPer100 = carbPerG * 100;
   console.log("carbPer100", carbPer100);
   document.getElementById("edit-carbs-per100").value = parseFloat(carbPer100).toFixed(1);
-};
+}
