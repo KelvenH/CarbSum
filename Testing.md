@@ -18,10 +18,12 @@
 
 ## Summary of Main Bugs and Status
 
+Issue
 
 
-
-
+Issue | Details | Refer to Testing Section | Status | Comments |
+-----|----------|----------|-----|----------|
+Passive Event Listener | Console log reported 'Violation Added non-passive event listener to scroll-blocking 'touchmove' event materialize.min.js', also identified by Lighthouse | Lighthouse Testing - Performance | Unresolved | Unable to resolve, attempts to add passive event listeners did not affect materialize.js. No apparent impact on site despite Chrome and Lighthouse warnings|
 
 
 
@@ -43,9 +45,25 @@
 
 ## Lighthouse Testing
 
-![lighthouse score](README Files/Lighthouse_scores.png)
+![lighthouse score](README%20Files/Lighthouse_scores.png)
+
+Scores were quite high, but each score was investigated further;
+
+### Performance 95%
+- There was a reported opportunity to improve page rendering times by 1.3s. However, the majority were related to externally linked tools (i.e. materialize & jquery). It signified there was a slight benefit in moving some styles from the linked style.css file to in line styles, but this was not deemed to be a significant benefit and could potentially make the site harder to maintain.
+
+- Time savings of c. 0.1s were also identified for 'unused CSS and JavaScript', however these styles / scripts are used by the site.
+
+- Diagnostics - identified 'does not use passive listeners to improve scrolling performance'. This seemingly relates to a Violation reported in the console (Added non-opassive event listener). This relates to materialize.min.js. Attempts were made to resolve by adding passive event listeners but had no affect. Issue noted in bugs summary table.
+![chrome violation](README%20Files/Chrome_violation.png)
+
+### Accessibility 92%
 
 
+
+### Best Practices 100%
+
+### SEO 92%
 
 
 
