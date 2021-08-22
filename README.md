@@ -131,10 +131,11 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
    ### User Stories
    
    #### As a User; 
-   * I have the nutrional info and weight and want to be able to calculate the carbs quickly 
-   * I am not in posession of the nutrional information and / or weight and want to be able to calculate the carbs quickly
+   * I have the nutritional info and weight and want to be able to calculate the carbs quickly 
+   * I am not in posession of the nutritional information and / or weight and want to be able to calculate the carbs quickly
    * I want to be able to seach and find food items quickly
    * I want to be able to register to access personalised features
+   * I want clear guidance how to use the site
 
    #### As a Returning User; 
    * I want to be able to log into my account / dashboard
@@ -143,7 +144,6 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
    * I want to be able to filter / search my personally created foods easily
    * I want to be able to delete any food items I create
    * I don't want other users to access / ammend / delete food items I create
-
 
    #### As site owner;
    * I want to be able to create an account with admin priviledges
@@ -193,6 +193,7 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
  | Key Feature | Available | Delivered | Notes |
  |-------------|-----------|-----------|-------|
  | Nav bar + mobile side nav | All Users | Yes | - |
+ | Recorded Demos | All Users | Yes | 4 .mp4 files created |
  | Quick Calc. | All Users | Yes | includes upto 4 items + total |
  | Food Database | All Users | Yes | Loaded with c. 350 items |
  | Search Foods by text | Registered Users | Yes | - |
@@ -207,6 +208,7 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
  | Edit Own Foods | Registered Users | Yes | - |
  | Delete Own Foods | Registered Users | Yes | - |
  | Create / Edit / Delete Meal | Registered Users | No | Unable to implement in time, noted for future enhancement |
+
  
 
 ------
