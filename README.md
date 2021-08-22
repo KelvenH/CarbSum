@@ -39,6 +39,7 @@ Link to live site [here] (https://carbsum.herokuapp.com/)
     * [Design Principles and Features](#design-principles-and-features)
     * [Data](#data)
     * [Userflow and Screens](#userflow_and_screens)
+    * [Features](#features)
 - [Skeleton](#skeleton)
     * [Low Fidelity Wireframes](#low-fidelity-wireframes)
     * [Medium Fidelity Wireframes](#medium-fidelity-wireframes)
@@ -129,12 +130,24 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
 
    ### User Stories
    
-   #### User - 
+   #### As a User; 
    * I have the nutrional info and weight and want to be able to calculate the carbs quickly 
    * I am not in posession of the nutrional information and / or weight and want to be able to calculate the carbs quickly
    * I want to be able to seach and find food items quickly
+   * I want to be able to register to access personalised features
+
+   #### As a Returning User; 
+   * I want to be able to log into my account / dashboard
    * I want to be able to create my own personalised food items
    * I want to be able to change the values of my own personally created foods
+   * I want to be able to filter / search my personally created foods easily
+   * I want to be able to delete any food items I create
+   * I don't want other users to access / ammend / delete food items I create
+
+
+   #### As site owner;
+   * I want to be able to create an account with admin priviledges
+   * I want to be able to create / read / update and delete all site content
     
 
   
@@ -175,6 +188,26 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
   
 ![CarbSum Site Flow and Data Structure](https://user-images.githubusercontent.com/73842369/127577915-c7551ebc-8229-43d9-836a-8071a67f2109.png)
 
+ ### Features
+ 
+ | Key Feature | Available | Delivered | Notes |
+ |-------------|-----------|-----------|-------|
+ | Nav bar + mobile side nav | All Users | Yes | - |
+ | Quick Calc. | All Users | Yes | includes upto 4 items + total |
+ | Food Database | All Users | Yes | Loaded with c. 350 items |
+ | Search Foods by text | Registered Users | Yes | - |
+ | Search Foods by category | Registered Users | Yes | - |
+ | Search Foods by tag | Registered Users | Yes* | Note outstanding bug with tags which impacts reliability of tags |
+ | Create Account | All Users | Yes | - |
+ | Log In | Registered Users | Yes | - |
+ | Log Out | Registered Users | Yes | - |
+ | View Dashboard | Registered Users | Yes | - |
+ | Create Own Foods | Registered Users | Yes | - |
+ | Search Own Foods | Registered Users | Yes | - |
+ | Edit Own Foods | Registered Users | Yes | - |
+ | Delete Own Foods | Registered Users | Yes | - |
+ | Create / Edit / Delete Meal | Registered Users | No | Unable to implement in time, noted for future enhancement |
+ 
 
 ------
 
