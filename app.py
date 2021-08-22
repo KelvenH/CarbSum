@@ -50,7 +50,9 @@ def join():
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower(),
-        flash("Sign-up was successful. Welcome to CarbSum! We hope you find this a helpful aid to support your carb counting")
+        flash('''Sign-up was successful. Welcome to CarbSum!
+              We hope you find this a helpful aid to
+              support your carb counting''')
         return redirect(url_for("dashboard", username=session["user"]))
     return render_template("join.html")
 
@@ -137,12 +139,14 @@ def search_categories():
     categories = mongo.db.food_categories.find().sort("cat_name", 1)
 
     if request.method == "POST":
-        foods = list(mongo.db.foods.find({"cat_name": request.form.get("find-cat-name")}))
-        return render_template("search_categories.html", categories=categories, foods=foods)
+        foods = list(mongo.db.foods.find(
+            {"cat_name": request.form.get("find-cat-name")}))
+        return render_template("search_categories.html",
+                               categories=categories, foods=foods)
 
     foods = list(mongo.db.foods.find().sort("food_title", 1))
     return render_template("search_categories.html",
-            categories=categories, foods=foods)
+                           categories=categories, foods=foods)
 
 
 # View Food Card (All Global + User Created)
@@ -224,7 +228,8 @@ def edit_my_food(food_id):
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     categories = mongo.db.food_categories.find().sort("cat_name", 1)
     tags = mongo.db.tags.find().sort("tag_name", 1)
-    return render_template("edit_food.html", food=food, categories=categories, tags=tags)
+    return render_template("edit_food.html",
+                           food=food, categories=categories, tags=tags)
 
 
 # Delete Own Food (User Created)
@@ -233,8 +238,6 @@ def delete_my_food(food_id):
     mongo.db.foods.delete_one({"_id": ObjectId(food_id)})
     flash("Food entry has been successfully deleted")
     return redirect(url_for("my_foods"))
-
-
 
 
 # ADMIN Restricted Content
@@ -311,7 +314,8 @@ def edit_food(food_id):
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     categories = mongo.db.food_categories.find().sort("cat_name", 1)
     tags = mongo.db.tags.find().sort("tag_name", 1)
-    return render_template("edit_food.html", food=food, categories=categories, tags=tags)
+    return render_template("edit_food.html",
+                           food=food, categories=categories, tags=tags)
 
 
 # Foods - Delete
@@ -355,7 +359,8 @@ def edit_category(category_id):
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
 
-    category = mongo.db.food_categories.find_one({"_id": ObjectId(category_id)})
+    category = mongo.db.food_categories.find_one(
+        {"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
 
