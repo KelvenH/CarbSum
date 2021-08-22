@@ -12,14 +12,13 @@
   * [Python](#python)
 - [Browser Compatability](#browser-compatability)
 - [Responsiveness](#responsiveness)
-- [Details on Specific Bugs and Defects](#details-of-key-bugs-and-defects)
+
 
 ------
 
 ## Summary of Main Bugs and Status
 
-Issue
-
+The table below outlines key bugs / defects for which further information can be found from the related testing section. The table focuses on matters which remain outstanding and their affect.   
 
 Issue | Details | Refer to Testing Section | Status | Comments |
 -----|----------|----------|-----|----------|
@@ -27,7 +26,7 @@ Passive Event Listener | Console log reported 'Violation Added non-passive event
 
 
 
-
+------
 
 ## Testing Against User Stories and Project Brief
 
@@ -35,13 +34,13 @@ Passive Event Listener | Console log reported 'Violation Added non-passive event
 
 
 
-
+------
 
 ## Manual Testing
 
 
 
-
+------
 
 ## Lighthouse Testing
 
@@ -69,11 +68,20 @@ Scores were quite high, but each section was investigated further. No changes we
 ### SEO 92%
 - Links are not crawable - this relates to few instances where planned functionality has been held back for future development. The buttons remain on the page, but are marked and styled to indicate inactive.
 
-
+------
 
 ## Code Validation
 
-### HTML
+### HTML 
+![HTML Validator Initial](README%20Files/HTMLvalidator-initial.png)
+
+Reviewed with W3C Markup Validation Service. Initial check identified;
+- 5 instances of Bad Values - all related to white space in media file links. These were corrected (both media file names and related SRC links).
+- 1 Section Lacking H2 - H6 Heading. This relates to Section on HTML used for displaying Flash message. No further action taken as not required.
+ 
+![HTML Validator Post](README%20Files/HTMLvalidator-post.png)
+
+
 
 ### CSS
 
@@ -85,7 +93,7 @@ Scores were quite high, but each section was investigated further. No changes we
   
   
   
-  
+------  
   
 ## Browser Compatability
 
@@ -93,7 +101,7 @@ Scores were quite high, but each section was investigated further. No changes we
 
 
 
-
+------
 
 ## Responsiveness
 
@@ -103,9 +111,6 @@ Scores were quite high, but each section was investigated further. No changes we
 
 
 
-
-
-## Details on Specific Bugs
 
 
 
