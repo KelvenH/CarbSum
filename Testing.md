@@ -113,8 +113,21 @@ Reviewed with JSHint. Initially there were 51 findings, following review this wa
 
 
 ### Python
-  
-  
+
+![PEP8-initial](README%20Files/PEP8-initial.png)
+
+The app.py script was checked using PEP8 online. Initially, there were 10 findings all of which were resolved. These can be grouped as;
+- 6 x script too long : all fixed. Note that applying a fix to one of these required a break in a text string (flash message content). This was resolved by applying three quotation marks at the start and end of the multi-line string.
+- 1 x continutation line under-indented : (fixed)
+- 1 x too many blank lines : (fixed)
+- 1 x expected 2 blank lines found 4 : (fixed)
+- 1 x no new line at end of file : (fixed)
+ 
+![PEP8-initial](README%20Files/PEP8-initial.png)
+
+Note, there is an additional 'problem' reported in the IDE regarding 'env imported but unused'. Not found guidance on-line but unconcerned as this import is required for production site whereas development / workspace access via the env.py file (which is not shared online). 
+
+![app.py-problem](README%20Files/app.py-problem.png)
   
   
   
