@@ -252,7 +252,8 @@ nav .brand-logo {
     vertical-align: text-bottom;
 }
 
-#home-media-modal {
+#home-media-modal,
+#dashboard-media-modal {
     border-radius:20px;
     width:90vw;
     height:90vh;  
