@@ -141,8 +141,14 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
  ------
 
 ## Scope
+
+### In Scope;
    The scope is defined to the parameters of being able to calculate food carbohydrates and associated inputs (i.e. food weights /  portion sizes, carb values).
-   All other nutritional / dietary information is out of scope (i.e. calories, recommended food / carb intakes, etc)
+   Satisfy the requirements of the user stories and map to the problem statement.
+
+### Out of Scope;
+   All other nutritional / dietary information is out of scope (i.e. calories, recommended food / carb intakes, etc).
+   Any form of medical / diabetes advice.
 
 
 ------
@@ -159,8 +165,8 @@ Thank you for taking the time to read the above ........ now onto the fun stuff!
   * Further 'personalised' options available after sign-in
   * Minimal use of images and animations to enhance screen loading times
   * Allow user to build a menu of multiple items and save for future use
-  * Allow users to create their own entries and edit existing entries (including previously saved menus)
-  * Add an alarm feature - used to support reminder where later bolus is also required
+  * Allow users to create their own entries and edit existing entries 
+
   
   ### Data
   Data will be held in a series of collections hosted on MongoDB.
@@ -186,7 +192,9 @@ Recorded demo of wireframes & screen flow:
 https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-a49b-4599be8f1b3b.mp4
 
 
-### High Fidelity Wireframes
+### Mock-Up
+
+![mobile-mock-up](README%20Files/mobile-mockup.png)
 
 ------
 
@@ -212,37 +220,46 @@ https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-
 - Adobe XD (UI / UX development stage)
 - Lucidchart (process mapping of functions) 
 
+
 ### Build Stage
 - GitHub (host repo)
 - GitPod / VS Code (building code)
 - HTML5
 - CSS3
 - Materialize (html / css styles framework)
-- FontAwesome
 - Python
 - Flask
 - Jinja (templating HTML)
 
+
 ### Back End
 - MongoDB (hosting database)
+- Mongo Compass (bulk data uploader)
+
 
 ### Testing
 - Lighthouse
-- HTML Validator
-- .......css / python / responsiveness / pythontutor
+- W3C Markup Validation Service (HTML)
+- W3C CSS Validation Service (CSS)
+- JSHint (JS)
+- PEP8 online (Python)
+- autoprefixer (browser compatability extensions)
+- lamdatest.com (browser / os compatability, responsiveness testing)
+
 
 ### Deployment
 - Heroku 
 
 ### Miscellaneous
-Linters / extensions/ pword generator
+- Adobe Illustrator (hero image)
+- Adboke Photoshop (mobile screen mock-up)
 
 
 
 ------
 
 ## Testing
-- to cover user stories
+- please refer to seperate [testing.md](https://github.com/KelvenH/CarbSum/blob/main/Testing.md) page for full details of testing undertaken. Note that significant bugs / defects are summarised in the following section.
 
 
 ------
