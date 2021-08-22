@@ -23,7 +23,7 @@ The table below outlines key bugs / defects for which further information can be
 Issue | Details | Refer to Testing Section | Status | Comments |
 -----|----------|----------|-----|----------|
 Passive Event Listener | Console log reported 'Violation Added non-passive event listener to scroll-blocking 'touchmove' event materialize.min.js', also identified by Lighthouse | Lighthouse Testing - Performance | Unresolved | Unable to resolve, attempts to add passive event listeners did not affect materialize.js. No apparent impact on site despite Chrome and Lighthouse warnings|
-
+Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | Open | Future Enhancement
 
 
 ------
@@ -121,21 +121,32 @@ Reviewed with JSHint. Initially there were 51 findings, following review this wa
 ------  
   
 ## Browser Compatability
+The CSS was run through https://autoprefixer.github.io/ to apply additional CSS tags.
 
-
-
+Live testing was performed on https://www.lambdatest.com/ across key browsers, operating systems and resolution sizes. No major issues were noted.
 
 
 ------
 
 ## Responsiveness
 
+This site has been developed from a mobile first approach - as it is intended that this would primarily be used on small mobile devices. Pages can scale accordingly for larger screens if desired. Additionally the following development decisions support responsivness;
 
+- font unit sizes are primarily set in REM, with the based REM set to 10px (which has aided calculation of font sizes in development).
+- a series of responsive font groups were also established in the css file and used across the site. 
+- unit measurements (e.g. height / width / padding / margins) are typically set in VH / VW units (with the exception of measurements coming from materialize)
+- the site has been built using the materialize framework with all pages structured using grid layout which scales accordingly.
 
+It should be noted that whilst the page is responsive, it is acknowledged that aspects are larger than they need to be on wide / larger screens. Whilst this does not prohibt use of the site / features, further enhancmenets could be applied to improve the visual layout (noted as a future enhancement).
 
+Local testing was performed on;
 
+- mobile (iOS)
+- tablet (ios)
+- medium screen (Safari & Chrome)
+- wide-screen (Safari & Chrome
 
-
+Live testing performed on https://www.lambdatest.com/ for a selection of other screen resolution sizes / browsers.
 
 
 
