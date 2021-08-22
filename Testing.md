@@ -73,6 +73,7 @@ Scores were quite high, but each section was investigated further. No changes we
 ## Code Validation
 
 ### HTML 
+
 ![HTML Validator Initial](README%20Files/HTMLvalidator-initial.png)
 
 Reviewed with W3C Markup Validation Service. Initial check identified;
@@ -84,6 +85,7 @@ Reviewed with W3C Markup Validation Service. Initial check identified;
 
 
 ### CSS
+
 ![CSS Validator](README%20Files/CSSvalidator.png)
 
 Reviewed with W3C CSS Validation Service. Review identified 13 errors, which can be grouped as;
@@ -98,6 +100,17 @@ There were also 514 Warnings for which no action has been take as;
 ![CSS Validator Post](README%20Files/CSSvalidatorpost.png)
 
 ### JavaScript
+
+![JSHint initial](README%20Files/JSHint%20initial.png)
+
+Reviewed with JSHint. Initially there were 51 findings, following review this was reduced to 2;
+- 6 x missing / unneccessary semi-colons: reviewed and addressed (fixed)
+- 43 x 'let' is available in es6 (use 'esversion: 6'): these were not errors, but I needed to ammend the JSHint configuration to accept newer JS features (not errors)
+- 1 x Expected assignment or function call and saw an expression : this comes from a function i've acknowledged to another developer (to toggle show / hide of password). I have reviewed but not been able to remedy, but the function is providing the desired behaviour (not fixed, but no problem caused)
+- 1 x The body of a for in should be wrapped in an if statement : simple for loop, nt clear why this is flagged (no action taken)
+
+![JSHint post](README%20Files/JSHint%20post.png)
+
 
 ### Python
   
