@@ -123,7 +123,7 @@ The app.py script was checked using PEP8 online. Initially, there were 10 findin
 - 1 x expected 2 blank lines found 4 : (fixed)
 - 1 x no new line at end of file : (fixed)
  
-![PEP8-initial](README%20Files/PEP8-initial.png)
+![PEP8-post](README%20Files/PEP8-post.png)
 
 Note, there is an additional 'problem' reported in the IDE regarding 'env imported but unused'. Not found guidance on-line but unconcerned as this import is required for production site whereas development / workspace access via the env.py file (which is not shared online). 
 
