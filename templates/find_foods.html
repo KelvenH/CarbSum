@@ -1,60 +1,60 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align title-txt title-box">Find Food Items</h3>
+    <h3 class="center-align title-txt title-box">Find Food Items</h3>
 
-<div class="row outline-box s12" id="find-food-top-pane">
-   
-    <div class="row">
-        <div class="col s12 m6">
-            <a href="{{ url_for('search_categories') }}"class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
-                    class="material-icons left icon">view_list</i>Search Categories</a>
-        </div>
-        
-        <div class="col s12 m6">
-            <a href="{{ url_for('my_foods') }}"class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
-                    class="material-icons left icon">favorite</i>View My Foods</a>
-        </div>
+    <div class="row outline-box s12" id="find-food-top-pane">
     
-    </div> <!--close row-->
-</div> <!-- close top pane-->
-
-
-<div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('user_search') }}" method="POST" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix"></i>
-                <input type="text" name="user_query" id="user_query" class="validate" minlength="3" required>
-                <label for="user_query">Search Foods</label>
+        <div class="row">
+            <div class="col s12 m6">
+                <a href="{{ url_for('search_categories') }}"class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
+                        class="material-icons left icon">view_list</i>Search Categories</a>
             </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('find_foods') }}" class="orange darken-1 btn text-shadow">Reset</a>
-                <button type="submit" class="btn btn-green text-shadow">Search</i>
-                </button>
+            
+            <div class="col s12 m6">
+                <a href="{{ url_for('my_foods') }}"class="waves-effect waves-light btn-large med-label btn-green long-txt"><i
+                        class="material-icons left icon">favorite</i>View My Foods</a>
             </div>
-        </div>
-    </form>
-</div>
+        
+        </div> <!--close row-->
+    </div> <!-- close top pane-->
 
-{% if foods|length > 0 %}
-    {% for food in foods %}
-        {% if session.user|lower == food.created_by|lower or food.status == "global" %}
-    <div id="find-food-user" class="row filled-box">
-        <a href="{{ url_for('user_view_food', food_id=food._id) }}">
-            <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
-            {% if food.food_subtitle|length > 0 %}
-            <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
-            {% else %}
-            <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }}</div>
-            {% endif %}
-        </a>      
+
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('user_search') }}" method="POST" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="user_query" id="user_query" class="validate" minlength="3" required>
+                    <label for="user_query">Search Foods</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('find_foods') }}" class="orange darken-1 btn text-shadow">Reset</a>
+                    <button type="submit" class="btn btn-green text-shadow">Search</i>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
-        {% endif %}
-    {% endfor %}
 
-{% else %}
-    <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-{% endif %}
+    {% if foods|length > 0 %}
+        {% for food in foods %}
+            {% if session.user|lower == food.created_by|lower or food.status == "global" %}
+        <div id="find-food-user" class="row filled-box">
+            <a href="{{ url_for('user_view_food', food_id=food._id) }}">
+                <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
+                {% if food.food_subtitle|length > 0 %}
+                <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
+                {% else %}
+                <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }}</div>
+                {% endif %}
+            </a>      
+        </div>
+            {% endif %}
+        {% endfor %}
+
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+    {% endif %}
 
 {% endblock %}

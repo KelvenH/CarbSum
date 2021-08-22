@@ -2,51 +2,51 @@
 {% block content %}
 
 
-<h3 class="center-align title-txt">Join CarbSum</h3>
+    <h3 class="center-align title-txt">Join CarbSum</h3>
 
-<div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('join') }}">
-        <div class="card-panel">
-            <div class="row">
-                <!--username-->
-                <div class="input-field col s9">
-                    <i class="material-icons prefix">person_add</i>
-                    <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
-                    <label for="username">Username</label>
-                    <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">Usernames must be between 5 - 15 characters in length</span>
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('join') }}">
+            <div class="card-panel">
+                <div class="row">
+                    <!--username-->
+                    <div class="input-field col s9">
+                        <i class="material-icons prefix">person_add</i>
+                        <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                        <label for="username">Username</label>
+                        <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">Usernames must be between 5 - 15 characters in length</span>
+                    </div>
+                    
+
                 </div>
-                
-
-            </div>
-            <!--password-->
-            <div class="row">
-                <div id="password-wrapper" class="input-field col s12">
-                    <i class="material-icons prefix">lock</i>
-                    <!--added show / hide password toggle icon-->
-                    <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
-                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label for="password">Password</label>
-                    <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">Passwords must be between 5 - 15 characters in length</span>
+                <!--password-->
+                <div class="row">
+                    <div id="password-wrapper" class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <!--added show / hide password toggle icon-->
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="password">Password</label>
+                        <span class="helper-text" data-error="Incorrect Format" data-success="Format Accepted">Passwords must be between 5 - 15 characters in length</span>
+                    </div>
                 </div>
-            </div>
-            <!--submit-->
-            <div class="row">
-                <button id="submit-join" type="submit" class="col s12 btn-large btn-green"><i
-                        id="join-btn-img" class="material-icons prefix">border_color</i>Click to Join!</button>
-            </div>
+                <!--submit-->
+                <div class="row">
+                    <button id="submit-join" type="submit" class="col s12 btn-large btn-green"><i
+                            id="join-btn-img" class="material-icons prefix">border_color</i>Click to Join!</button>
+                </div>
 
-        </div>
-    </form>
-</div>
-
-<div class="row">
-    <div class="col s12">
-        <p class="center-align">
-            Already Registered?
-            <a href="{{ url_for('signIn') }}" class="focus-txt">Sign-In</a>
-        </p>
+            </div>
+        </form>
     </div>
-</div>
+
+    <div class="row">
+        <div class="col s12">
+            <p class="center-align">
+                Already Registered?
+                <a href="{{ url_for('signIn') }}" class="focus-txt">Sign-In</a>
+            </p>
+        </div>
+    </div>
 
 
 {% endblock %}

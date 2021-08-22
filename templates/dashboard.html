@@ -3,6 +3,7 @@
 
 
     <div class="row">
+        <!--Welcome pane-->
         <div class="col s12" id="dashboard-welcome-pane">
             <h3 class="center-align title-txt title-box">
                 {{ username|capitalize }}'s Dashboard
@@ -13,6 +14,7 @@
         </div> <!--close welcome pane-->
     </div> <!--close row-->
         
+        <!--Admin Restricted Content-->
     {% if 'admin_role' in session and session['admin_role'] %}
         <p class=center-align>You are Logged in with Admin permissions</p>
         
@@ -39,7 +41,7 @@
     {% endif %}
 
       
-
+    <!--User Dashboard pane-->   
     <div class="row outline-box" id="dashboard-user-pane">    
         <!--Link to Help / About-->
         <div class="row" id="help-about-wrapper">

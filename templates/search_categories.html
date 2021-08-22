@@ -1,37 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align title-txt title-box">Search Categories</h3>
-    <form method="POST" action="{{ url_for('search_categories') }}">
-        <div class="row outline-box s12" id="find-food-top-pane">
-        
-            <div class="row">
-                <div class="col s8" id="find-cat-name-wrapper">
-                    <select id="find-cat-name" name="find-cat-name">
-                        <option id="option-cat-name" value=""  disabled selected>Choose Category</option>
-                        {% for category in categories %}
-                            <option value="{{ category.cat_name }}">{{ category.cat_name }}</option>
-                        {% endfor %}
-                    </select>
+    <h3 class="center-align title-txt title-box">Search Categories</h3>
+        <form method="POST" action="{{ url_for('search_categories') }}">
+            <div class="row outline-box s12" id="find-food-top-pane">
+            
+                <div class="row">
+                    <div class="col s8" id="find-cat-name-wrapper">
+                        <select id="find-cat-name" name="find-cat-name">
+                            <option id="option-cat-name" value=""  disabled selected>Choose Category</option>
+                            {% for category in categories %}
+                                <option value="{{ category.cat_name }}">{{ category.cat_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button id="search-cats" type="submit" class="col s4 btn btn-green">Search</button>
+                </div> <!--close row-->
+            </div> <!-- close top pane-->
+            
+            {% for food in foods %}
+                {% if session.user|lower == food.created_by|lower or food.status == "global" %}
+                <div id="find-food-user" class="row filled-box">
+                    <a href="{{ url_for('user_view_food', food_id=food._id) }}">
+                        <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
+                        {% if food.food_subtitle|length > 0 %}
+                        <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
+                        {% else %}
+                        <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }}</div>
+                        {% endif %}
+                    </a>      
                 </div>
-                <button id="search-cats" type="submit" class="col s4 btn btn-green">Search</button>
-            </div> <!--close row-->
-        </div> <!-- close top pane-->
-        
-        {% for food in foods %}
-            {% if session.user|lower == food.created_by|lower or food.status == "global" %}
-            <div id="find-food-user" class="row filled-box">
-                <a href="{{ url_for('user_view_food', food_id=food._id) }}">
-                    <!--Bug fix : redundant hyphen betwen title and subtitle if no subtitle exists. Fix: conditional if statement to only display hyphen & subtitle if value exists-->
-                    {% if food.food_subtitle|length > 0 %}
-                    <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }} - {{ food.food_subtitle }}</div>
-                    {% else %}
-                    <div id="find-food-title" class="col s12 med-label center-align">{{ food.food_title }}</div>
-                    {% endif %}
-                </a>      
-            </div>
-            {% endif %}
-        {% endfor %}
+                {% endif %}
+            {% endfor %}
 
-    </form>
+        </form>
 {% endblock %}
