@@ -21,7 +21,7 @@
 The table below outlines key bugs / defects for which further information can be found from the related testing section. The table focuses on matters which remain outstanding and their affect.   
 
 Issue | Details | Refer to Testing Section | Status | Comments |
------|----------|----------|-----|----------|
+|-----|----------|----------|-----|----------|
 Passive Event Listener | Console log reported 'Violation Added non-passive event listener to scroll-blocking 'touchmove' event materialize.min.js', also identified by Lighthouse | Lighthouse Testing - Performance | Unresolved | Unable to resolve, attempts to add passive event listeners did not affect materialize.js. No apparent impact on site despite Chrome and Lighthouse warnings|
 Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | Open | Future Enhancement
 
@@ -30,6 +30,21 @@ Responsivess - layout for larger screens | Not a bug / failure, but noted for fu
 
 ## Testing Against User Stories and Project Brief
 
+ | User | User Requirement | Testing Result | Notes |
+ | ---- | ---------- | ------ | -------- |
+ | User | I have the nutrional info and weight and want to be able to calculate the carbs quickly |
+ | User | I am not in posession of the nutrional information and / or weight and want to be able to calculate the carbs quickly |
+| User | I want to be able to seach and find food items quickly |
+| User | I want to be able to register to access personalised features |
+| User | I want clear guidance how to use the site |
+| Returning User | I want to be able to log into my account / dashboard |
+| Returning User | I want to be able to create my own personalised food items |
+| Returning User | I want to be able to change the values of my own personally created foods |
+| Returning User | I want to be able to filter / search my personally created foods easily |
+| Returning User | I want to be able to delete any food items I create |
+| Returning User | I don't want other users to access / ammend / delete food items I create |
+| Site Owner | I want to be able to create an account with admin priviledges |
+| Site Owner | I want to be able to create / read / update and delete all site content |
 
 
 
