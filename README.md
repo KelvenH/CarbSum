@@ -1,15 +1,14 @@
-insert logo here
+![CarbSum image](README%20Files/Main-image.svg)
 
 ***
 
-TL:DR; 
-- `CarbSum` is a tool to support Type 1 Diabetics who perform carb counting to manage the amount of insulin taken with food and drinks. Carb counting is the practice of working out how many carbohydrates are present in the food and drink being consumed which is then calculated against their personal carb to insulin ratios to determine the correct level of insulin to be taken (which is called a bolus). The tool aims to act as both a reference tool (how much carbs are typically present in the food item) but also a simple calculator. More enhanced features such as saving favourites and building a complete meal aim to make daily life easier by reducing the time taken to establish the carbs useful when at home but also perhaps more importantly when eating out / on the go when you do not have access to weighing scales. 
+# Overview; 
+- `CarbSum` is a tool to support Type 1 Diabetics who perform carb counting to manage the amount of insulin taken with food and drinks. The tool aims to act as both a reference point (how much carbs are typically present in the food item) but also a simple calculator. The aim is to make daily life easier by reducing the time taken to establish carbs useful when at home but also perhaps more importantly when eating out / on the go when you do not have access to weighing scales! 
 
 This supports working with both labelled (nutritional values are printed) and unlabelled meals such as home cooked or raw (fruit / vegetables). Some common examples are;
-
-    - a packet of biscuits states 60g of carbs per 100g weight - but how do you determine the carbs for a single biscuit when you do not have access to weighing scales?
-    - packet of pasta states the uncooked nutritional values, but what is it once cooked (given the nutritional ratio changes due to the amount of water absorbed)?
-    - a home cooked meal consists of multiple ingredients, how can the calculations of each of these be more readily obtained?  
+ - a packet of biscuits states 60g of carbs per 100g weight - but how do you determine the carbs for a single biscuit when you do not have access to weighing scales?
+ - packet of pasta states the uncooked nutritional values, but what is it once cooked (given the nutritional ratio changes due to the amount of water absorbed)?
+ - a home cooked meal consists of multiple ingredients, how can the calculations of each of these be more readily obtained?  
 
 - Key features of `CarbSum`;
   Quick access (no log in required) to;
@@ -17,16 +16,13 @@ This supports working with both labelled (nutritional values are printed) and un
     - calculator which determines amount of carbs present when the value per 100g is provided
 
   If logged in, access to personalised features such as;
-    - save common items as favourites - making reference quicker
-    - build meals, i.e. equivalent to a playlist of multiple items which can be individually edited (both portion and carbs) 
     - create new items to expand the list
-    - apply tags to improve the search / find functionality (e.g. baked or fried, brand names)
+    - create variations of existing items
+ 
 
-- link to deployed site (with icons)
+Link to live site [here] (https://carbsum.herokuapp.com/)
 
-***
-Screenshot
-***
+
 
 ## Contents
 - [Disclaimer](#disclaimer)
@@ -34,7 +30,6 @@ Screenshot
     * [What is Diabetes?](#what-is-diabetes)
     * [How Is Diabetes Treated?](#how-is-diabetes-treated)
     * [So How Does CarbSum Come into This?](#so-how-does-carbsum-come-into-this)
-    * [Links to external references](#links-to-external-references)
 -  [User Experience UX](#user-experience-ux)
     * [Problem Statement](#problem-statement)
     * [Intended Users](#intended-users)
@@ -61,7 +56,7 @@ Screenshot
 ------
 
 ## Disclaimer
-Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of dietary or medical advice. Please see disclaimer section below which also provides links to external sites for more information on Diabetes, insulin therapy management and carb counting. 
+Special Note: This project is for educational purposes and to support management of Type 1 Diabetes via the 'carb counting' approach. It is not intended, nor should it be inferred that this provides any form of dietary or medical advice. 
 
 
 ------
@@ -69,7 +64,7 @@ Special Note: This project is for educational purposes and to support management
 ## About
 
 ### What is Diabetes?
-In its simplest form, Diabetes is a serious condition which affects the body's blood glucose levels. Everybody needs to fuel their body with glucose (sugar) as this provides energy for the body to function (both internally and physically). Glucose is present in many (but not all!) of the foods and drinks we consume. Our digestive system breaks down the nutrients into small molecules for our body to absorb, along with the breakdown of other nutrients, minerals and vitamins, carbohydrates are broken down into glucose. 
+In it's simplest form, Diabetes is a serious condition which affects the body's blood glucose levels. Everybody needs to fuel their body with glucose (sugar) as this provides energy for the body to function (both internally and physically). Glucose is present in many (but not all!) of the foods and drinks we consume. Our digestive system breaks down the nutrients into small molecules for our body to absorb and along with the breakdown of other nutrients, minerals and vitamins, carbohydrates are broken down into glucose. 
 
 In a typical healthy person, the pancreas senses when glucose has entered the bloodstream and releases the right amount of a hormone called insulin. This acts as a key which lets cells within muscles and organs absorb the glucose. There's far more to it than that (such as the body’s natural release of insulin at specific times of the day).
 
@@ -80,8 +75,9 @@ Type 1 Diabetes (T1) is an auto-immune disease whereby the immune system has att
 ### How Is Diabetes Treated?
 There is currently no 'cure' for T1 - but medical advancements coupled with good management techniques can significantly reduce the occurrence of hypos / hypers and therefore reduce the likelihood of short term and long-term health consequences. Diabetics need to administer insulin to mimic the natural rise and decrease of insulin - and that's 24hours not just at mealtimes!
 
-There are a variety of approaches, but typically diabetics will have an approach which manages levels 'round the clock' (basal) and for mealtimes /food in-take (bolus). 
+There are a variety of approaches, but typically diabetics will have an approach which manages levels 'round the clock' (basal) and for mealtimes / food in-take (bolus). 
 
+Carb counting is the practice of working out how many carbohydrates are present in the food and drink being consumed which is then calculated against their personal carb to insulin ratios to determine the correct level of insulin to be taken (which is called a bolus). 
 
 --
 ### So How Does CarbSum Come into This?
@@ -100,10 +96,7 @@ But what it does do is help with the initial input - the amount of carbs being c
 ### Isn't this information already available?
 Often yes, food labelling is generally good, restaurants tend to have better understanding & able to share nutritional information, good resources / apps exist. But as a parent of a T1 Diabetic (son was diagnosed at the age of 2!) my wife and I encounter a variety of 'challenges'. Each on their own may not be that significant but multiply that by the number of times we need to reach for the calculator each day and there's an opportunity to make life that bit easier. Additionally, as our son nears an age of having to take more control, I also want to ensure he has tools to minimise impact upon his life. The UI / UX section below goes into the specific challenges in more detail.
 
-Thank you for taking the time to read the above, below are some recommended links to external sites for more information and support on Diabetes ........ now onto the fun stuff!
-
-### Links to external references
-Add external links here!!!!
+Thank you for taking the time to read the above ........ now onto the fun stuff!
 
 
 
@@ -124,7 +117,6 @@ Add external links here!!!!
    
    * Multiple Calculations - meals prepared at home often consist of a mix of labelled and unlabelled and require multiple calculations. For example, a roast dinner consisting of potatoes & vegetables (unlabelled) with gravy (labelled). Throw a home-made Yorkshire pudding in and there's a mini collection for the flour, milk and eggs to consider! The ability to create a menu of meals would make this a lot quicker / easier especially if you could add / swap items and adjust the individual portion sizes.
 
-   * Fats Flag! (![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) earmarked for removal or consider as future enhancement) - the amount of fats being consumed can also affect glucose levels as they can lengthen the time it takes the body to absorb sugars. A higher fat content meal (like pizza) can take hours for the digestive system to extract the sugars by which time the rapid acting insulin delivered as a bolus may have ended - pushing glucose levels up. The ability to 'flag' certain food items helps  to remind users where additional considerations maybe needed (e.g. increase basal an hour later, or use a square wave bolus where a portion of the bolus is delivered gradually over a specified time period).
 
 
 ---
@@ -137,30 +129,20 @@ Add external links here!!!!
 
    ### User Stories
    
-   #### New User
-   * access the site without registering to see if this is use to me
-   * be able to register easily 
+   #### User - 
+   * I have the nutrional info and weight and want to be able to calculate the carbs quickly 
+   * I am not in posession of the nutrional information and / or weight and want to be able to calculate the carbs quickly
+   * I want to be able to seach and find food items quickly
+   * I want to be able to create my own personalised food items
+   * I want to be able to change the values of my own personally created foods
     
-   #### All Users (i.e. incl existing users without need to 'sign-in)
-   * easily find items by name and / or appropriate categorisations
-   * adjust parameters (e.g. weight / portion sizes; cooked / uncooked; preparation style e.g. fried / baked)
-   * understand / verify how the carb values have been calculated
-   * create / edit / delete own versions of item card & edit carb values
-   * ability to add notes
-  
-   #### Existing User (Signed in)
-   * sign in / out easily
-   * save 'favourite' items
-   * create 'menu' of a collection of items
-   * submit new card for review / approval by site admin for visibility by all site visitors
 
-
- 
   
  ------
 
 ## Scope
-
+   The scope is defined to the parameters of being able to calculate food carbohydrates and associated inputs (i.e. food weights /  portion sizes, carb values).
+   All other nutritional / dietary information is out of scope (i.e. calories, recommended food / carb intakes, etc)
 
 
 ------
