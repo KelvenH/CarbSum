@@ -6,10 +6,10 @@
 - [Manual Testing](#manual-testing)
 - [Lighthouse Testing](#lighthouse-testing)
 - [Code Validation](#code-validation)
-  * HTML
-  * CSS
-  * JavaScript
-  * Python
+  * [HTML](#html)
+  * [CSS](#css)
+  * [JavaScript](#javascript)
+  * [Python](#python)
 - [Browser Compatability](#browser-compatability)
 - [Responsiveness](#responsiveness)
 - [Details on Specific Bugs and Defects](#details-of-key-bugs-and-defects)
