@@ -84,6 +84,18 @@ Reviewed with W3C Markup Validation Service. Initial check identified;
 
 
 ### CSS
+![CSS Validator](README%20Files/CSSvalidator.png)
+
+Reviewed with W3C CSS Validation Service. Review identified 13 errors, which can be grouped as;
+- 1 x Value Error : caused by materialize.css (no action taken)
+- 3 x value + parse errors: caused by erroneous space between rgb and colo value (resolved)
+- 4 x background-image too few values : these are linear gradients using 2 var root color referrences. Not clear why identified as an error (reviewed but no action taken)
+- 4 x wrong value for grid-template-column : had been used to state the number of columns required, but now changed to reflect 1fr each (fixed)
+
+There were also 514 Warnings for which no action has been take as;
+- c. 20 x unknown vendor extensions : all relate to color vairables declared in root. These were reviewed and seem to be stated correctly (no action taken)
+- c. 500 x unkowne vendor extension errors relating to materialize (no further action taken)
+![CSS Validator Post](README%20Files/CSSvalidatorpost.png)
 
 ### JavaScript
 
