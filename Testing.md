@@ -3,6 +3,7 @@
 ## Contents
 - [Summary of Main Bugs and Status](#summary-of-main-bugs-and-status)
 - [Testing Against User Stories and Project Brief](#testing-against-user-stories-and-project-brief)
+- [Development](#development)
 - [Lighthouse Testing](#lighthouse-testing)
 - [Code Validation](#code-validation)
   * [HTML](#html)
@@ -21,9 +22,21 @@ The table below outlines key bugs / defects for which further information can be
 
 Issue | Details | Refer to Testing Section | Status | Comments |
 |-----|----------|----------|-----|----------|
-Passive Event Listener | Console log reported 'Violation Added non-passive event listener to scroll-blocking 'touchmove' event materialize.min.js', also identified by Lighthouse | Lighthouse Testing - Performance | Unresolved | Unable to resolve, attempts to add passive event listeners did not affect materialize.js. No apparent impact on site despite Chrome and Lighthouse warnings|
-Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | Open | Future Enhancement
+Passive Event Listener | Console log reported 'Violation Added non-passive event listener to scroll-blocking 'touchmove' event materialize.min.js', also identified by Lighthouse | Lighthouse Testing - Performance | OPEN | Unable to resolve, attempts to add passive event listeners did not affect materialize.js. No apparent impact on site despite Chrome and Lighthouse warnings|
+Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | OPEN | Future Enhancement
+Updating Tags | Updating an existing record caused all tags to be selected for the multiple select options, and not just those applied | Development | OPEN |  Given tags work, decision made not to back this feature out, but focus was not given in the recorded demos due to possible unreliability. Understand the issue to relate to method attempted to loop through options but unable to solve in time for project submission |
+Materialize Overrides | Complications / high number of unique css rules to target | Development | CLOSED | Styling issues resolved, but noted Future Enhancement to investigate alternative framework |
 
+
+------
+
+## Development
+
+Testing was performed continously through-out every stage of development. Most bugs / defects were therefore identified and resolved at the time - some of which have comments in the related HTML / CSS / JS file to explain the codes content / stucture / existence. However special mention should be given to the following;
+
+- Updating Tags (multiple select options) - the Tags feature is currently affected when a record is updated. This section is constructed with a Jinja for loop, but applying the 'Selected' attribute applies the status to all option values and not only where the option is currently selected. Removing the 'Selected' attribute results in no tags being applied. Bug has been captured on summary table. As this works up until a record is changed, it has been retained in the DOM, but focus was not given in the How To demos, and minimal usage was given in the upload of the data. This bug will be fixed through a future enhancement.
+
+- Materialize - whilst there are no outstanding bugs per se, a number of difficulties were encountered with this framework, particularly with the CSS specificity rules affecting Select / Input and Option tags. Due to the tructure of the materialize.css rules, some styles can be applied through application of classes, some could be applied by specific ID, but in some cases neither of these override the materialize settings and required targetting of it's parent and the field (primarily Select fields and children whereby materialize converts these to inputs with dynamically changing IDs!). This accounts for a higher number of css rules being scripted than perhaps expected. Additionally, width sizing & alignment of input fields also presented challenges and required the inclusion of nested display:grids within the materialize columns.
 
 ------
 
@@ -46,14 +59,15 @@ Responsivess - layout for larger screens | Not a bug / failure, but noted for fu
  | Site Owner | I want to be able to create an account with admin priviledges | PASSED | Admin role is assigned in the backend |
  | Site Owner | I want to be able to create / read / update and delete all site content | PASSED | A seperate Manage Foods / Categories / Tags menu is available exclusively to Admin users |
 
-* The passing of these tests can be evidenced in the recoded 'How To Use' guidance demos, which are available to site visitors 
-** These tests Passed, but are impacted by an existing bug affecting tags - see bug / defects for details
+\* The passing of these tests can be evidenced in the recoded 'How To Use' guidance demos, which are available to site visitors.
+
+\** These tests Passed, but are impacted by an existing bug affecting tags - see bug / defects for details
 
  Links to recorded demo's as supporting evidence of user story and functionality testing.
- [1. Join and Sign-In](static/assets/1.Join_Sign-Up.mp4)
- [2. QuickCalc](static/assets/2.QuickCalc.mp4)
- [3. Search & Use Food Database](static/assets/3.Search.mp4)
- [4. Add, Search, Edit, Delete Own Items](static/assets/4.Add_Foods.mp4)
+ - [1. Join and Sign-In](static/assets/1.Join_Sign-Up.mp4)
+ - [2. QuickCalc](static/assets/2.QuickCalc.mp4)
+ - [3. Search & Use Food Database](static/assets/3.Search.mp4)
+ - [4. Add, Search, Edit, Delete Own Items](static/assets/4.Add_Foods.mp4)
  
 
 ------
