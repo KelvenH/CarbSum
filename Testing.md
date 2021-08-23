@@ -26,6 +26,7 @@ Passive Event Listener | Console log reported 'Violation Added non-passive event
 Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | OPEN | Future Enhancement
 Updating Tags | Updating an existing record caused all tags to be selected for the multiple select options, and not just those applied | Development | OPEN |  Given tags work, decision made not to back this feature out, but focus was not given in the recorded demos due to possible unreliability. Understand the issue to relate to method attempted to loop through options but unable to solve in time for project submission |
 Materialize Overrides | Complications / high number of unique css rules to target | Development | CLOSED | Styling issues resolved, but noted Future Enhancement to investigate alternative framework |
+Fluid Measurements | Suspended inclusion of fluid measurements. Whilst ml appears as a dropdown alternative to grams, there are more widespread changes which need to be fully explored before these can be included.| Development | OPEN | Future Enhancement |
 
 
 ------
@@ -37,6 +38,9 @@ Testing was performed continously through-out every stage of development. Most b
 - Updating Tags (multiple select options) - the Tags feature is currently affected when a record is updated. This section is constructed with a Jinja for loop, but applying the 'Selected' attribute applies the status to all option values and not only where the option is currently selected. Removing the 'Selected' attribute results in no tags being applied. Bug has been captured on summary table. As this works up until a record is changed, it has been retained in the DOM, but focus was not given in the How To demos, and minimal usage was given in the upload of the data. This bug will be fixed through a future enhancement.
 
 - Materialize - whilst there are no outstanding bugs per se, a number of difficulties were encountered with this framework, particularly with the CSS specificity rules affecting Select / Input and Option tags. Due to the tructure of the materialize.css rules, some styles can be applied through application of classes, some could be applied by specific ID, but in some cases neither of these override the materialize settings and required targetting of it's parent and the field (primarily Select fields and children whereby materialize converts these to inputs with dynamically changing IDs!). This accounts for a higher number of css rules being scripted than perhaps expected. Additionally, width sizing & alignment of input fields also presented challenges and required the inclusion of nested display:grids within the materialize columns.
+
+- Fluid Measurements - an 'ml' value was included in the unit measurements, however given the site was built on carbs to gram weight measurements, further exploratry work needs to be performed before fluids / drinks can be added.
+
 
 ------
 
