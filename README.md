@@ -309,7 +309,7 @@ Passive Event Listener | Console log reported 'Violation Added non-passive event
 Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | OPEN | Future Enhancement
 Updating Tags | Updating an existing record caused all tags to be selected for the multiple select options, and not just those applied | Development | OPEN |  Given tags work, decision made not to back this feature out, but focus was not given in the recorded demos due to possible unreliability. Understand the issue to relate to method attempted to loop through options but unable to solve in time for project submission |
 Materialize Overrides | Complications / high number of unique css rules to target | Development | Closed | Styling issues resolved, but noted Future Enhancement to investigate alternative framework |
-
+Fluid Measurements | Suspended inclusion of fluid measurements. Whilst ml appears as a dropdown alternative to grams, there are more widespread changes which need to be fully explored before these can be included.| Development | OPEN | Future Enhancement |
 
 
 ------
