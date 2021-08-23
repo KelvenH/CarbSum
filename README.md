@@ -300,7 +300,15 @@ https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-
 ------
 
 ## Bugs and Defects 
-- link to list plus call out any major o/s
+
+- please refer to seperate [testing.md](https://github.com/KelvenH/CarbSum/blob/main/Testing.md) page for full details of testing undertaken. Note that significant bugs / defects are summarised in the following section.
+
+Issue | Details | Refer to Testing Section | Status | Comments |
+|-----|----------|----------|-----|----------|
+Passive Event Listener | Console log reported 'Violation Added non-passive event listener to scroll-blocking 'touchmove' event materialize.min.js', also identified by Lighthouse | Lighthouse Testing - Performance | OPEN | Unable to resolve, attempts to add passive event listeners did not affect materialize.js. No apparent impact on site despite Chrome and Lighthouse warnings|
+Responsivess - layout for larger screens | Not a bug / failure, but noted for future enhancement to improve the visual appeal on larger screens where content is strecthed wider than needed owing to the site being primarily built for mobile use | Responsiveness | OPEN | Future Enhancement
+Updating Tags | Updating an existing record caused all tags to be selected for the multiple select options, and not just those applied | Development | OPEN |  Given tags work, decision made not to back this feature out, but focus was not given in the recorded demos due to possible unreliability. Understand the issue to relate to method attempted to loop through options but unable to solve in time for project submission |
+Materialize Overrides | Complications / high number of unique css rules to target | Development | Closed | Styling issues resolved, but noted Future Enhancement to investigate alternative framework |
 
 
 
@@ -308,7 +316,10 @@ https://user-images.githubusercontent.com/73842369/127034187-cd119b08-f024-4296-
 
 ## Future Enhancements
 
-
+- Capability to create Meals (effecively combination of Food Cards and Quick Calc for collection of multiple items) - WITHDRAWN due to project time constraints 
+- Tags - (post fix of bug affecting updating records) expand list of Tags and apply to data-set
+- Materialize - identify alternative styling framework to improve ongoing manage-ability of site
+- Fluids - incorporate capability to capture carb values against fluid measurements (ml) 
 
 ------
 
